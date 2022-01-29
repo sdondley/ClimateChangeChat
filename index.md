@@ -16,6 +16,11 @@
         * keep track of shit
     * Under the hood tech:
         * all content is published to github to private repo
+            * all new content is publshed with vim map:
+                * <leader>www 
+                    * saves the file 
+                    * commits changes to repo
+                    * pushes changes out
         * content is pulled in every minute to web server running a cron
         * vim text editor
             * all pages are created and edited with it
@@ -26,12 +31,16 @@
             * plugins used
                 * vimwiki
                     * easily creates outline and links
-                    * pages written in markdown format
+                    * allows pages written in markdown format
                     * converts pages to html using a ruby gem
+                        * vimwiki 
                     * also uses some special sauce code that I wrote
                 * taskwiki
                     * a bridge between taskwarrior task software and vimwiki 
                     * allows vimwiki to be the interface for managing tasks
+    * Why is it written mostly in outline form:
+        * It's much faster to write this way
+        * Ideas can be conveyed very succinctly
     
 This is the ClimateChangeChat.com website, authored by:
 
