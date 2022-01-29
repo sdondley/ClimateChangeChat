@@ -10,6 +10,7 @@ https://www.youtube.com/channel/UCV8Zw3AmSS6F8kBgxW7Ql9A/featured
 
 ## Areas of current interest
 * [Raku Programming Language](Raku Programming Language)
+* [Climate Change](Climate Change)
 
 ## Test area
 
