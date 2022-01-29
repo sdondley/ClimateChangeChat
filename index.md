@@ -10,6 +10,7 @@ Some stuff goes here. Wowzers.
 ## YouTube vids
 
 https://www.youtube.com/watch?v=RjyO4vnINTI
+https://www.youtube.com/watch?v=DsJK9sYRUWc
 
 * Bullet practice
     * another bullet 
