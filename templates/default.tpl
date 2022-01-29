@@ -10,9 +10,9 @@
         <div id="menu">
         <ul>
 
-            <li><a href="/">Home</a></li>
+            <li><a href="%root_path%index.html">Home</a></li>
 
-            <li><a href="/about.html">About</a></li>
+            <li><a href="%root_path%about.html">About</a></li>
 
         </ul>
 

@@ -186,4 +186,6 @@ code {
   background-color: #f9f9f9;
 }
 
-#menu li { padding: 10px 10px }
+#menu { display: inline-block; }
+#menu ul { margin: 0px; }
+#menu li { padding-right: 10px; display: inline-block; margin: 0px; }
