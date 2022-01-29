@@ -19,3 +19,9 @@ https://www.youtube.com/watch?v=DsJK9sYRUWc
 some fenced code
 ```
 
+## On this site
+
+- [Climate Change Chat for Realists Home Page](index)
+- [Some page. Nothing to see here, really.](raku/This is a link)
+- [My foul-mouthed Raku notes](raku/index)
+- [This is the title](twitter/markdown)

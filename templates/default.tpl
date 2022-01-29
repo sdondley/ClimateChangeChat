@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <title>
-            <%title%>
+            %title%
         </title>
         %pygments%
         <link rel="stylesheet" href="/css/style.css" />
