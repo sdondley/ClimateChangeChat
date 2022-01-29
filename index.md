@@ -5,6 +5,12 @@ This is the ClimateChangeChat.com website, authored by:
 [Steve Dondley 💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉 (@steve_dondley) / Twitter: twitter.com](https://twitter.com/steve_dondley)
 ## This is a subsection
 
+Some stuff goes here. Wowzers.
+
+## YouTube vids
+
+https://www.youtube.com/watch?v=RjyO4vnINTI
+
 * Bullet practice
     * another bullet 
 
