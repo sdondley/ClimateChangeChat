@@ -4,7 +4,6 @@
 * It's a website
 * site is very new, not much to see here 
     * mostly experimenting with it right now
-
     
 This is the ClimateChangeChat.com website, authored by:
 
