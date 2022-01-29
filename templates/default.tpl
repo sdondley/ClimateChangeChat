@@ -3,6 +3,7 @@
         <title>
             %title%
         </title>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
         %pygments%
         <link rel="stylesheet" type="text/css" href="%root_path%css/style.css" />
     </head>
@@ -17,6 +18,16 @@
         </ul>
 
         </div>
+
+        <div id="toc" style="float: right; position: -webkit-sticky; position: sticky; top: 0px; border: 1px;">
+            <div>
+            </div>
+        </div>
         %content%
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]') {
+             speed: 1000;
+          }
+        </script>
     </body>
 </html>

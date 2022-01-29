@@ -1,5 +1,19 @@
 # Climate Change Chat for Realists Home Page
 
+# On This Page
+
+- [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
+    - [Hey](#hey)
+    - [What the Hell is This?](#what-the-hell-is-this)
+    - [Areas of current interest](#areas-of-current-interest)
+    - [Testing area](#testing-area)
+        - [hello](#hello)
+        - [This is a subsection](#this-is-a-subsection)
+    - [Will this be auto generated?](#will-this-be-auto-generated)
+        - [Let's see](#lets-see)
+
+## Hey
+
 ## What the Hell is This?
 * It's a website
 * site is very new, not much to see here 
@@ -12,25 +26,17 @@
 * [Raku Programming Language](Raku Programming Language)
 * [Climate Change](Climate Change)
 
-## Test area
+## Testing area
+
+### hello
 
 ### This is a subsection
 
 Some stuff goes here. Wowzers. Fuck yeah.
 
-### YouTube vids
+## Will this be auto generated?
+
+### Let's see
 
 
 
-
-### Task list
-* [ ] This is task  #335a9e95
-* [X] This is another task  #bdb9d8b8
-
-# Generated Links
-
-- [some bullet page](another bullet)
-- [Climate Change Chat for Realists Home Page](index)
-- [Some page Nothing to see here really](raku/This is a link)
-- [My foul-mouthed Raku notes](raku/index)
-- [This is the title](twitter/markdown)
