@@ -19,9 +19,6 @@ https://www.youtube.com/watch?v=DsJK9sYRUWc
 some fenced code
 ```
 
-
-
-
 # Generated Links
 
 - [some bullet page](another bullet)
