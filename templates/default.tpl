@@ -4,7 +4,7 @@
             %title%
         </title>
         %pygments%
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="%root_path%css/style.css" />
     </head>
     <body>
         <div id="menu">

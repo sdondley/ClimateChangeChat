@@ -27,11 +27,11 @@
             * absolutely the fastest way to input and maniupalate text 
         * plugins used
             * vimwiki
+                * designed to easily create wiki pages 
                 * has simple templating system for standardizing pages 
                 * easily creates outline and links
                 * allows pages written in markdown format
-                * converts pages to html using a ruby gem
-                    * vimwiki 
+                * converts vimwiki pages to html using a ruby gem called vimwiki_markdown
                 * also uses some special sauce code that I wrote
             * taskwiki
                 * a bridge between taskwarrior task software and vimwiki 
