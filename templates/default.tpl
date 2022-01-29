@@ -25,9 +25,9 @@
         </div>
         %content%
         <script>
-          var scroll = new SmoothScroll('a[href*="#"]', {
-             speed: 1000;
-          });
+        var scroll = new SmoothScroll('a[href*="#"]', {
+        	speed: 300
+        });
         </script>
     </body>
 </html>
