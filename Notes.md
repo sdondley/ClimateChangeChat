@@ -1,3 +1,3 @@
 # Raku Programming Language Note
 
-* Notes go herek
+* Notes go here
