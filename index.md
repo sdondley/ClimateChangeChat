@@ -5,6 +5,8 @@
 * site is very new, not much to see here 
     * mostly experimenting with it right now
 * [About](about)
+ 
+https://www.youtube.com/channel/UCV8Zw3AmSS6F8kBgxW7Ql9A/featured
 
 ## Areas of current interest
 * [Raku Programming Language](Raku Programming Language)
@@ -17,16 +19,8 @@ Some stuff goes here. Wowzers. Fuck yeah.
 
 ### YouTube vids
 
-https://www.youtube.com/watch?v=RjyO4vnINTI
-https://www.youtube.com/watch?v=DsJK9sYRUWc
 
-* Bullet practice
-    * [another bullet](another bullet) 
 
-```
-some fenced code
-some update
-```
 
 ### Task list
 * [ ] This is task  #335a9e95

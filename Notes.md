@@ -1,3 +1,3 @@
-# Raku Programming Language Note
+# Raku Programming Language Notes
 
 * Notes go here
