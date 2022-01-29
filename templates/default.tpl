@@ -9,6 +9,7 @@
     <body>
         <div id="menu">
         <a href="/">Home</a>
+        <a href="/about.html">About</a>
         </div>
         %content%
     </body>
