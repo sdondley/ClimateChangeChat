@@ -2,6 +2,8 @@
 
 ## What the hell is this?
 * It's a website
+* site is very new, not much to see here 
+    * mostly experimenting with 
 
 ## About the website
 * Authored by:
