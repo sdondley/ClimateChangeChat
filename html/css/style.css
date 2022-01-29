@@ -185,3 +185,5 @@ code {
   border: 1px solid #ccc;
   background-color: #f9f9f9;
 }
+
+#menu li { padding: 0px 10px }
