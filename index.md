@@ -50,11 +50,13 @@
     
 This is the ClimateChangeChat.com website, authored by:
 
-## This is a subsection
+## Test area
+
+### This is a subsection
 
 Some stuff goes here. Wowzers. Fuck yeah.
 
-## YouTube vids
+### YouTube vids
 
 https://www.youtube.com/watch?v=RjyO4vnINTI
 https://www.youtube.com/watch?v=DsJK9sYRUWc
@@ -67,11 +69,9 @@ some fenced code
 some update
 ```
 
-## Task list
+### Task list
 * [ ] This is task  #335a9e95
 * [X] This is another task  #bdb9d8b8
-
-     
 
 # Generated Links
 
