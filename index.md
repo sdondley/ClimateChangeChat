@@ -1,8 +1,22 @@
 # Climate Change Chat for Realists Home Page
+
+## What the hell is this?
+* It's a website
+    * Name:
+        * Climate Change Chat for Realists
+            * This is the same name as a livestream project I do 
+    * Authored by:
+        * [Steve Dondley on twitter.com](https://twitter.com/steve_dondley)
+    * Goals:
+        * make it exceptionally update and maintain
+        * share ideas and notes with the world easily and quickly
+    * Purpose:
+        * make it easy to update
+            * all updated and published totally using vim text editor 
+            * written 
     
 This is the ClimateChangeChat.com website, authored by:
 
-[Steve Dondley 💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉💉 (@steve_dondley) / Twitter: twitter.com](https://twitter.com/steve_dondley)
 ## This is a subsection
 
 Some stuff goes here. Wowzers. Fuck yeah.
