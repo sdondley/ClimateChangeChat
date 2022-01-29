@@ -41,5 +41,5 @@
     * Ideas can be conveyed very succinctly
 * Why is the design so plain?
     * I'm more concerned with content and functionality over design
-    * This will change over time as I work on it 
+    * This will improve over time as I work on it 
 
