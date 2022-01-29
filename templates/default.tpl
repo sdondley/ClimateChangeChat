@@ -8,8 +8,14 @@
     </head>
     <body>
         <div id="menu">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/about.html">About</a></li>
+
+        </ul>
+
         </div>
         %content%
     </body>
