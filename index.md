@@ -1,6 +1,6 @@
 # Climate Change Chat for Realists Home Page
 
-## What the hell is this?
+## What the Hell is This?
 * It's a website
 * site is very new, not much to see here 
     * mostly experimenting with 
@@ -15,7 +15,7 @@
                 * Because I want to call attention to my project
 * Goals:
     * make it exceptionally update and maintain
-        * will be less likely to abandon a project that is less of a paint to update 
+        * will be less likely to abandon a project that is less of a pain to update 
     * share ideas and notes with other easily and quickly
     * keep track of shit
 * Under the hood tech:
@@ -47,7 +47,7 @@
     * It's much faster to write this way
     * Ideas can be conveyed very succinctly
 * Why is the design so plain?
-    * I'm more concerned with content over
+    * I'm more concerned with content and functionality over design
     * This will change over time as I work on it 
     
 This is the ClimateChangeChat.com website, authored by:
