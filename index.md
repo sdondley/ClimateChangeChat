@@ -2,18 +2,36 @@
 
 ## What the hell is this?
 * It's a website
+    * Authored by:
+        * [Steve Dondley on twitter.com](https://twitter.com/steve_dondley)
     * Name:
         * Climate Change Chat for Realists
             * This is the same name as a livestream project I do 
-    * Authored by:
-        * [Steve Dondley on twitter.com](https://twitter.com/steve_dondley)
+                * Why? 
+                    * Because I want to call attention to my project
     * Goals:
         * make it exceptionally update and maintain
-        * share ideas and notes with the world easily and quickly
-    * Purpose:
-        * make it easy to update
-            * all updated and published totally using vim text editor 
-            * written 
+            * will be less likely to abandon a project that is less of a paint to update 
+        * share ideas and notes with other easily and quickly
+        * keep track of shit
+    * Under the hood tech:
+        * all content is published to github to private repo
+        * content is pulled in every minute to web server running a cron
+        * vim text editor
+            * all pages are created and edited with it
+            * about
+                * used heavily by open source coders 
+            * benefits 
+                * absolutely the fastest way to input and maniupalate text 
+            * plugins used
+                * vimwiki
+                    * easily creates outline and links
+                    * pages written in markdown format
+                    * converts pages to html using a ruby gem
+                    * also uses some special sauce code that I wrote
+                * taskwiki
+                    * a bridge between taskwarrior task software and vimwiki 
+                    * allows vimwiki to be the interface for managing tasks
     
 This is the ClimateChangeChat.com website, authored by:
 
