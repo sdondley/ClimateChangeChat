@@ -4,8 +4,8 @@
 * It's a website
 * site is very new, not much to see here 
     * mostly experimenting with it right now
+* [About](about)
     
-This is the ClimateChangeChat.com website, authored by:
 
 ## Test area
 
