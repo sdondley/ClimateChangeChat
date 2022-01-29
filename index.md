@@ -21,3 +21,11 @@ some fenced code
 
 
 
+
+# Generated Links
+
+- [some bullet page](another bullet)
+- [Climate Change Chat for Realists Home Page](index)
+- [Some page. Nothing to see here, really](raku/This is a link)
+- [My foul-mouthed Raku notes](raku/index)
+- [This is the title](twitter/markdown)
