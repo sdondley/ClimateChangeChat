@@ -6,6 +6,9 @@
     * mostly experimenting with it right now
 * [About](about)
 
+## Areas of current interest
+* [Raku Programming Language](Raku Programming Language)
+
 ## Test area
 
 ### This is a subsection

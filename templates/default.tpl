@@ -14,6 +14,8 @@
 
             <li><a href="%root_path%about.html">About</a></li>
 
+            <li><a href="%root_path%about.html">About</a></li>
+
         </ul>
 
         </div>
