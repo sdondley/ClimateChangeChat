@@ -50,6 +50,8 @@
                 * commits the markdown and HTML file to a git repo
                 * pushes changes out to the remote repo
     * I can quickly whip out text and publish it to web with litle effort
+    * git will give me an entire history of every change published to the site
+        * nothing will be lost to the historians who stumble upon my great work :) 
 * content is pulled in every minute to web server running a cron
 
 ## vim
