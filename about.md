@@ -18,8 +18,8 @@
     * Quick bio
         * Live in Westfield, MA
         * Have been running a small web/phone app development company and web hosting service for unions since 2004
-        * Ex-US Navy nuclear reactor operator
-        * One-term city councilor
+        * Ex-US Navy nuclear reactor operator (1988 - 1994)
+        * One-term city councilor (2016 - 2018)
         * Former labor organizer and political/labor activist
     * Political views
         * Pragmatic progressive
@@ -83,7 +83,9 @@
 
 # Why is the design so plain?
 * I'm more concerned with content and functionality than design
-* This will improve over time as I work on it 
+* I don't want it to be time-consuming
+    * A design that looks like a magazine and is both functional and not annoying to update and maintain takes a huge amount of effort 
+* This will improve somewhat over time as I work on it 
 
 # Coming Improvements
 * Better menu navigation and interlinking between pages
