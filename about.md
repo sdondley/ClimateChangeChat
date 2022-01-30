@@ -34,6 +34,7 @@
             * Because I want to call attention to my project
 
 # Goals
+* Have a creative outlet where I'm free of the chains and impositions of corporate social media platforms
 * make it exceptionally update and maintain
     * will be less likely to abandon a project that is less of a pain to update 
 * share ideas and notes with other easily and quickly
