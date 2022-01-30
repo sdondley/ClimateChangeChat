@@ -222,16 +222,17 @@
     </head>
     <body>
         <div id="menu">
-        <ul>
+            <ul>
 
-            <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
 
-            <li><a href="../about.html">About</a></li>
-
-        </ul>
+            </ul>
 
         </div>
-        <h1>
+        <div id="page">
+            <div id="content">
+              <h1>
 <a id="this-is-the-title" class="anchor" href="#this-is-the-title" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>This is the title</h1>
 <ul>
 <li>Hello world!
@@ -245,5 +246,16 @@
 <pre><code>some fenced code
 </code></pre>
 
+            </div>
+            <div id="toc" >
+                <div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/zenscroll/zenscroll-min.js">
+        </script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
     </body>
 </html>

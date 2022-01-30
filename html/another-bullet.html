@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <title>
-            Another bullet
+            Another-bullet
         </title>
         <style type="text/css">
         .highlight table td { padding: 5px; }
@@ -222,18 +222,27 @@
     </head>
     <body>
         <div id="menu">
-        <ul>
-
-            <li><a href="./index.html">Home</a></li>
-
-            <li><a href="./about.html">About</a></li>
-
-        </ul>
-
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
         </div>
-        <h1>
+        <div id="page">
+            <div id="content">
+              <h1>
 <a id="some-bullet-page" class="anchor" href="#some-bullet-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>some bullet page</h1>
 <p>yo</p>
 
+            </div>
+            <div id="toc" >
+                <div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/zenscroll/zenscroll-min.js">
+        </script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
     </body>
 </html>
