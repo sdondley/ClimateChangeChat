@@ -8,6 +8,7 @@
 - [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
     - [Ongoing project](#ongoing-project)
     - [Tips and Tutorials](#tips-and-tutorials)
+    - [My Stackoverlfow questions](#my-stackoverlfow-questions)
     - [Contributions](#contributions)
         - [Module's I've Written](#modules-ive-written)
         - [Other contributions](#other-contributions)
@@ -57,6 +58,10 @@
 ## Tips and Tutorials
 * [zef](zef)
 * [App::Mi6](App::Mi6)
+* Objects and classes
+
+## My Stackoverlfow questions
+* [raku - How to I make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/70919945/how-to-i-make-a-class-that-inherits-the-same-methods-as-iopath)
 
 ## Contributions
 
