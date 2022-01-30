@@ -10,18 +10,23 @@
 
 # Who is Steve Dondley?
 I am the owner and founder of [Prometheus Labor
-Communications](http://prometheuslabor.com), a US Navy submarine veteran
-and former labor organizer for UFCW Local 1459 in Springfield, MA. I've had an early
-[interest in computers](https://steve.dondley.com/Tech-stuff/#computer-hardware) and programming since childhood and a fascination with
-mass communication which I developed during my post secondary education at
-Grossmont Community College in San Diego and UMass. I combined these passions and
-began developing websites for labor unions in in the late 90s. I launched my
-company, Prometheus, in 2005.
+Communications](http://prometheuslabor.com), a US Navy submarine veteran and
+former labor organizer for UFCW Local 1459 in Springfield, MA. I've had an
+early [interest in
+computers](https://steve.dondley.com/Tech-stuff/#computer-hardware) and
+programming since childhood and a fascination with mass communication which I
+developed during my post secondary education at Grossmont Community College in
+San Diego and UMass. I combined these passions and began developing websites
+for labor unions in in the late 90s. I launched my company, Prometheus, in
+2005.
 
 I served a two-year term as a city councilor in the city of Westfield, MA from
 2016 to 2018. I am currently focused on the development of the [UnionConnect
 mobile app platform](https://unionconnect.com) my company developed for labor
 unions among many other projects.
+
+I enjoy computing. I'm like the guy in garage spending all day spending time on
+his time woodworking projects building chess boards and stools.
 
 # My Recommendations
 
