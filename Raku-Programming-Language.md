@@ -56,6 +56,7 @@
 
 ## Tips and Tutorials
 * [zef](zef)
+* [App::Mi6](App::Mi6)
 
 ## Contributions
 
