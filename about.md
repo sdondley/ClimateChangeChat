@@ -8,8 +8,9 @@
 - [Goals](#goals)
 - [The tech under the hood](#the-tech-under-the-hood)
     - [vim](#vim)
-- [Why is it written mostly in outline form?](#why-is-it-written-mostly-in-outline-form)
+- [Why is this site written mostly in outline form?](#why-is-this-site-written-mostly-in-outline-form)
 - [Why is the design so plain?](#why-is-the-design-so-plain)
+- [Coming Improvements](#coming-improvements)
 
 # Authored by
 
@@ -40,16 +41,25 @@
 
 # The tech under the hood
 * all content is published to github to private repo
-    * all new content is publshed with vim map:
-        * `<leader>www` 
-            * saves the file 
-            * commits changes to repo
-            * pushes changes out
+    * all new content is publshed with custom vim maps
+        * Example:
+            * `<leader>www` 
+                * saves the file 
+                * commits changes to repo
+                * pushes changes out
+    * I can quickly whip out text and publish it to web with litle effort
 * content is pulled in every minute to web server running a cron
 
 ## vim
 * all pages are created and edited with vim text editor
-* about
+* allows you to avoid using a mouse 
+    * I fucking hate using a mouse
+        * Way too slow
+        * Way too tedious
+        * I get around the computer as much as possible with keystrokes and hot keys
+            * It requires some obsession to get there
+            * But, in the end, it makes computing far more enjoyable for me
+* about vim
     * used heavily by open source coders 
 * benefits 
     * absolutely the fastest way to input and maniupalate text 
@@ -65,10 +75,17 @@
         * a bridge between taskwarrior task software and vimwiki 
         * allows vimwiki to be the interface for managing tasks
 
-# Why is it written mostly in outline form?
+# Why is this site written mostly in outline form?
+* It's inherent to the design of the vimwiki plugin
 * It's much faster to write this way
+    * No agonizing over how eloquent I'm being and how well ideas flow 
 * Ideas can be conveyed very succinctly
 
 # Why is the design so plain?
 * I'm more concerned with content and functionality than design
 * This will improve over time as I work on it 
+
+# Coming Improvements
+* Better menu navigation and interlinking between pages
+* Mobile friendly table of contents
+* Slightly more interesting design
