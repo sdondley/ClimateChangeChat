@@ -34,6 +34,8 @@ All listing partial and in no particular order
     * Raging Bull
     * All That Jazz
     * Network
+    * Hair
+    * Easy Rider
     * Sound of Music
 
 ## TV
