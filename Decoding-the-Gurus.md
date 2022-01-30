@@ -3,13 +3,13 @@
 - [Decoding the Gurus](#decoding-the-gurus)
 - [Links](#links)
 - [What is it?](#what-is-it)
-    - [Why I Like It](#why-i-like-it)
+- [What is it about?](#what-is-it-about)
+- [Why I Like It](#why-i-like-it)
 - [Hosts](#hosts)
     - [Matt Browne](#matt-browne)
         - [Links](#links-2)
     - [Chris Kavnaugh](#chris-kavnaugh)
         - [Links](#links-3)
-- [What do they talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
 
 # Decoding the Gurus
@@ -25,7 +25,22 @@
 * It's primarily a podcast
 * Started in late 2020
  
-## Why I Like It
+# What is it about?
+* Analyzes popular figures in media who have acquired large followings with their sweeping worldviews
+    * show hosts refer to them as gurus 
+    * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 
+    * Will occasionally cover individuals who have positive impac5
+        * Carl Sagan 
+    * Also sometimes interview experts on specific topics
+* Frequent targets
+    * Sam Harris
+    * Bret Weinstein
+    * Jordan Peterson
+    * Joe Rogan
+    * Eric Weinstein
+* Help audience members identify fake experts and false arguments and generally improve their ability to think critically about information
+ 
+# Why I Like It
 * I've always been fascinated by bullshitters
     * A bullshitter is what got me into local politics back around 2010
     * A bullshitter got me sucked into the climate change debate back around 2013
@@ -49,20 +64,6 @@
 ### Links
 * [Twitter](https://twitter.com/C_Kavanagh)
 
-# What do they talk about?
-* Analyze popular figures in media who have acquired large followings with their sweeping worldviews
-    * hosts refer to them as gurus 
-    * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 
-    * Will occasionally cover individuals who have positive impac5
-        * Carl Sagan 
-    * Also sometimes interview experts on specific topics
-* Frequent targets
-    * Sam Harris
-    * Bret Weinstein
-    * Jordan Peterson
-    * Joe Rogan
-    * Eric Weinstein
-* Help audience members identify fake experts and false arguments and generally improve their ability to think critically about information
 
 ### Highlights of Show
 * interview with Sam Harris
