@@ -30,6 +30,29 @@ ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0.5em;
 }
 
+h2 { margin-left: 25px; }
+h3 { margin-left: 50px; }
+h4 { margin-left: 75px; }
+h5 { margin-left: 100px; }
+
+h1 ~ ul {
+    margin-left: 45px;
+}
+
+h2 ~ ul {
+    margin-left: 70px;
+}
+
+h3 ~ ul {
+    margin-left: 95px;
+}
+
+h4 ~ ul {
+    margin-left: 120px;
+}
+
+
+
 h1:first-of-type { font-size: 3.0em; margin-top: 20px; margin-bottom: 5px; }
 
 #update_label { display: inline-block; width: 116px; font-weight: bold; }
