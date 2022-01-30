@@ -6,7 +6,7 @@
 - [Hosts](#hosts)
     - [Matt Browne](#matt-browne)
         - [Links](#links-2)
-    - [Chris Kavnaugh, cultural anthropolgist](#chris-kavnaugh-cultural-anthropolgist)
+    - [Chris Kavnaugh](#chris-kavnaugh)
         - [Links](#links-3)
 - [What do they talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
@@ -30,11 +30,11 @@
 ## Matt Browne
 * psychologist
     * currently specializing in research about gambling addictions and public policy 
-    * 
+
 ### Links
 * [Twitter](https://twitter.com/arthurcdent)
 
-## Chris Kavnaugh, cultural anthropolgist
+## Chris Kavnaugh
 * cultural anthropologist 
     * researches ritualistic practices
 
@@ -42,7 +42,8 @@
 * [Twitter](https://twitter.com/C_Kavanagh)
 
 # What do they talk about?
-* Analyze popular figures the hosts call "gurus" in media who have acquired large followings with their sweeping worldviews
+* Analyze popular figures in media who have acquired large followings with their sweeping worldviews
+    * hosts refer to them as gurus 
     * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 
     * Will occasionally cover individuals who have positive impac5
         * Carl Sagan 

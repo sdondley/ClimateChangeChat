@@ -55,10 +55,10 @@ h4 ~ ul {
 
 h1:first-of-type { font-size: 3.0em; margin-top: 20px; margin-bottom: 5px; }
 
-#update_label { display: inline-block; width: 116px; font-weight: bold; }
-#publish_label { font-weight: bold; }
-#toc div#update_date { margin-top: 3px; }
-#toc div#publish_date { margin-top: 0px; }
+#update_label { display: inline-block; font-weight: bold; text-align: right; }
+#publish_label { display: inline-block; font-weight: bold; text-align: right; margin-right: 5px;}
+#toc div#update_date { margin-top: 3px; font-size: .85em; text-align: right;}
+#toc div#publish_date { margin-top: 0px; font-size: .85em; text-align:right;}
 
 li { margin: 0.3em auto; }
 
