@@ -4,7 +4,7 @@
 
 - [About this website](#about-this-website)
 - [Authored by](#authored-by)
-- [Name](#name)
+- [Website Name](#website-name)
 - [Goals](#goals)
 - [The tech under the hood](#the-tech-under-the-hood)
     - [vim](#vim)
@@ -27,9 +27,9 @@
         * There are way too many idiots these days
     * Email: s@dondley.com
 
-# Name
+# Website Name
 * Climate Change Chat for Realists
-    * This is the same name as a livestream project I do 
+    * This is the same name as a livestream project about climate change I do
         * Why is the website named after the livestream project? 
             * Because I want to call attention to my project
 
