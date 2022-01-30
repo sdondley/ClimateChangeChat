@@ -8,6 +8,7 @@
 - [My Recommendations](#my-recommendations)
     - [Podcasts](#podcasts)
     - [Music](#music)
+    - [Gurus I Like](#gurus-i-like)
 
 # What the Hell is This?
 * It's a website
@@ -29,7 +30,9 @@
 * Weirdly, I've listening to a lot of Sitar music
     * Helps me focus while programming/writing 
 
-
-
-
+## Gurus I Like
+* Marshall McLuhan
+    * media expert 
+* Michael E. Mann
+    * climate scientist 
 
