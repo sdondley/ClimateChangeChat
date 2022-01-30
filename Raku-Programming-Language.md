@@ -61,7 +61,9 @@
 * Objects and classes
 
 ## My Stackoverlfow questions
-* [raku - How to I make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/70919945/how-to-i-make-a-class-that-inherits-the-same-methods-as-iopath)
+* [How to I make a class that inherits the same methods as IO::Path?](https://stackoverflow.com/questions/70919945/how-to-i-make-a-class-that-inherits-the-same-methods-as-iopath)
+* [Replacing YouTube HTML links with embed code](https://stackoverflow.com/questions/70899694/replacing-youtube-html-links-with-embed-code)
+* [Why are arrays passed as arguments mutable but scalars are not?](https://stackoverflow.com/questions/70779446/why-are-arrays-passed-as-arguments-mutable-but-scalars-are-not)
 
 ## Contributions
 
