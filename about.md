@@ -86,7 +86,7 @@
     * No agonizing over how eloquent I'm being and how well ideas flow 
 * Ideas can be conveyed very succinctly
 * I have a hunch prose is dead 
-    * 20th centure media killed poetry 
+    * 20th century media killed poetry 
     * prose killed by the internet 
 
 # Why is the design so plain?
