@@ -1,6 +1,5 @@
 # On This Page
 
-- [About Steve Dondley](#about-steve-dondley)
     - [Who is Steve Dondley?](#who-is-steve-dondley)
 - [My Recommendations](#my-recommendations)
     - [Movies](#movies)
@@ -8,10 +7,6 @@
     - [Music](#music)
     - [Podcasts](#podcasts)
     - [Gurus I Like](#gurus-i-like)
-
-# About Steve Dondley
-
-Steve Dondley maintains this [blog](/) and [digital garden (aka "Notes")](/notes/). The subject matter is primarily focused on sharing technical knowledge and a futile attempt at returning the favor to all of those who have done the same. I spice it up a bit with commentary on politics, news and other sociological phenomena.
 
 ## Who is Steve Dondley?
 I am the owner and founder of [Prometheus Labor
