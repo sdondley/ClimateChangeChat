@@ -190,4 +190,4 @@ code {
 #menu ul { margin: 0px; }
 #menu li { padding-right: 10px; display: inline-block; margin: 0px; }
 #toc { font-size: .8em; }
-body { padding-bottom: 1000px;  }
+#content { padding-bottom: 1000px;  }

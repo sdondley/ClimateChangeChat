@@ -23,7 +23,9 @@
             <div>
             </div>
         </div>
+        <div id="content">
         %content%
+        </div>
         <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
         	speed: 300
