@@ -3,6 +3,7 @@
 - [Decoding the Gurus](#decoding-the-gurus)
 - [Links](#links)
 - [What is it?](#what-is-it)
+    - [Why I Like It](#why-i-like-it)
 - [Hosts](#hosts)
     - [Matt Browne](#matt-browne)
         - [Links](#links-2)
@@ -10,7 +11,6 @@
         - [Links](#links-3)
 - [What do they talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
-    - [Why I Like It](#why-i-like-it)
 
 # Decoding the Gurus
 
@@ -24,6 +24,13 @@
 # What is it?
 * It's primarily a podcast
 * Started in late 2020
+ 
+## Why I Like It
+* I've always been fascinated by bullshitters
+    * A bullshitter is what got me into local politics back around 2010
+    * A bullshitter got me sucked into the climate change debate back around 2013
+    * The age old question of how and why people are bullshitters and why people follow them is endlessly fascinating to me
+* Hosts are funny and insightful and honest blokes
 
 # Hosts
 * Hosts are two researcher working in academia as professors
@@ -61,11 +68,5 @@
 * interview with Sam Harris
     * Came on the rebut Chris and Matt 
 
-## Why I Like It
-* I've always been fascinated by bullshitters
-    * A bullshitter is what got me into local politics back around 2010
-    * A bullshitter got me sucked into the climate change debate back around 2013
-    * The age old question of how and why people are bullshitters and why people follow them is endlessly fascinating to me
-* Hosts are funny and insightful and honest blokes
 
 ...more soon
