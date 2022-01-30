@@ -10,6 +10,7 @@
         - [Links](#links-3)
 - [What do they talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
+        - [Why I Like It](#why-i-like-it)
 
 # Decoding the Gurus
 
@@ -59,5 +60,12 @@
 ### Highlights of Show
 * interview with Sam Harris
     * Came on the rebut Chris and Matt 
+
+### Why I Like It
+* I've always been fascinated by bullshitters
+    * A bullshitter is what got me into local politics back around 2010
+    * A bullshitter got me sucked into the climate change debate back around 2013
+    * The age old question of how and why people are bullshitters and why people follow them is endlessly fascinating
+* Hosts are funny and insightful and honest blokes
 
 ...more soon
