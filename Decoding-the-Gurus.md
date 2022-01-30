@@ -23,6 +23,7 @@
 
 # What is it?
 * It's primarily a podcast
+    * It is growing more into a community 
 * Started in late 2020
  
 # What is it about?
