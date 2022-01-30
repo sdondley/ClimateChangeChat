@@ -31,6 +31,7 @@
         * the content there will soon be subsumed into this one 
         * written in jekyll
         * looks nice, but framework was too convoluted and confusing and a pain to keep upgraded 
+    * [More](Steve Dondley)
 
 # Website Name
 * Climate Change Chat for Realists

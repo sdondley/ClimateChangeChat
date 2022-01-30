@@ -1,0 +1,23 @@
+# On This Page
+
+- [About Steve Dondley](#about-steve-dondley)
+    - [Who is Steve Dondley?](#who-is-steve-dondley)
+
+# About Steve Dondley
+
+Steve Dondley maintains this [blog](/) and [digital garden (aka "Notes")](/notes/). The subject matter is primarily focused on sharing technical knowledge and a futile attempt at returning the favor to all of those who have done the same. I spice it up a bit with commentary on politics, news and other sociological phenomena.
+
+## Who is Steve Dondley?
+I am the owner and founder of [Prometheus Labor
+Communications](http://prometheuslabor.com), a US Navy submarine veteran
+and former labor organizer for UFCW Local 1459 in Springfield, MA. I've had an early
+[interest in computers](https://steve.dondley.com/Tech-stuff/#computer-hardware) and programming since childhood and a fascination with
+mass communication which I developed during my post secondary education at
+Grossmont Community College in San Diego and UMass. I combined these passions and
+began developing websites for labor unions in in the late 90s. I launched my
+company, Prometheus, in 2005.
+
+I served a two-year term as a city councilor in the city of Westfield, MA from
+2016 to 2018. I am currently focused on the development of the [UnionConnect
+mobile app platform](https://unionconnect.com) my company developed for labor
+unions among many other projects.
