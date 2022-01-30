@@ -8,7 +8,7 @@
 - [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
     - [Ongoing project](#ongoing-project)
     - [Tips and Tutorials](#tips-and-tutorials)
-    - [My Stackoverlfow questions](#my-stackoverlfow-questions)
+    - [My Raku questions on stackoverflow](#my-raku-questions-on-stackoverflow)
     - [Contributions](#contributions)
         - [Module's I've Written](#modules-ive-written)
         - [Other contributions](#other-contributions)
@@ -60,11 +60,8 @@
 * [App::Mi6](App::Mi6)
 * Objects and classes
 
-## My Stackoverlfow questions
-* [How to I make a class that inherits the same methods as IO::Path?](https://stackoverflow.com/questions/70919945/how-to-i-make-a-class-that-inherits-the-same-methods-as-iopath)
-* [Replacing YouTube HTML links with embed code](https://stackoverflow.com/questions/70899694/replacing-youtube-html-links-with-embed-code)
-* [Why are arrays passed as arguments mutable but scalars are not?](https://stackoverflow.com/questions/70779446/why-are-arrays-passed-as-arguments-mutable-but-scalars-are-not)
-
+## My Raku questions on stackoverflow
+* [Posts containing 'user:1641112' - Stack Overflow: stackoverflow.com](https://stackoverflow.com/search?q=user:1641112+[raku])
 ## Contributions
 
 ### Module's I've Written
