@@ -27,7 +27,7 @@
  
 # What is it about?
 * Analyzes popular figures in media who have acquired large followings with their sweeping worldviews
-    * show hosts refer to them as gurus 
+    * show hosts refer to them as "gurus"
     * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 
     * Will occasionally cover individuals who have positive impac5
         * Carl Sagan 
