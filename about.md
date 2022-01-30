@@ -43,10 +43,11 @@
 * all content is published to github to private repo
     * all new content is publshed with custom vim maps
         * Example:
-            * `<leader>www` 
-                * saves the file 
-                * commits changes to repo
-                * pushes changes out
+            * Typing `<leader>www` does the following:
+                * saves the markdown file I'm workig on
+                * processes the markdow file and converts to HTML
+                * commits the markdown and HTML file to a git repo
+                * pushes changes out to the remote repo
     * I can quickly whip out text and publish it to web with litle effort
 * content is pulled in every minute to web server running a cron
 
