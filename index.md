@@ -26,6 +26,8 @@
 * [Decoding the Gurus](Decoding-the-Gurus)
 
 ## Music
+* Weirdly, I've listening to a lot of Sitar music
+    * Helps me focus while programming/writing 
 
 
 
