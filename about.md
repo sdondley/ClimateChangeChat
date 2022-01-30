@@ -64,7 +64,7 @@
     * used heavily by open source coders 
 * benefits 
     * absolutely the fastest way to input and maniupalate text 
-* plugins used
+* primary plugins used to crate these pages
     * vimwiki
         * designed to easily create wiki pages 
         * has simple templating system for standardizing pages 
