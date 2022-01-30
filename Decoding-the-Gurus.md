@@ -9,6 +9,7 @@
     - [Chris Kavnaugh, cultural anthropolgist](#chris-kavnaugh-cultural-anthropolgist)
         - [Links](#links-3)
 - [What do they talk about?](#what-do-they-talk-about)
+        - [Highlights of Show](#highlights-of-show)
 
 # Decoding the Gurus
 
@@ -42,14 +43,20 @@
 
 # What do they talk about?
 * Analyze popular figures the hosts call "gurus" in media who have acquired large followings with their sweeping worldviews
-    * Mostly cover individuals who promulgate psuedoscience and misinformation 
-    * Will occasionally cover individuals who have positive impace
+    * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 
+    * Will occasionally cover individuals who have positive impac5
         * Carl Sagan 
     * Also sometimes interview experts on specific topics
 * Frequent targets
-    * Eric Weinstein
+    * Sam Harris
     * Bret Weinstein
     * Jordan Peterson
     * Joe Rogan
+    * Eric Weinstein
 * Help audience members identify fake experts and false arguments and generally improve their ability to think critically about information
 
+### Highlights of Show
+* interview with Sam Harris
+    * Came on the rebut Chris and Matt 
+
+...more soon
