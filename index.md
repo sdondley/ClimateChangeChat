@@ -8,8 +8,8 @@
 - [My Recommendations](#my-recommendations)
     - [Movies](#movies)
     - [TV](#tv)
-    - [Podcasts](#podcasts)
     - [Music](#music)
+    - [Podcasts](#podcasts)
     - [Gurus I Like](#gurus-i-like)
 
 # What the Hell is This?
@@ -28,23 +28,20 @@
 All listing partial and in no particular order
 
 ## Movies
-    * Barry Lyndon
-    * Ghost Dog: Sword of the Samurai
-    * Cabaret
-    * Raging Bull
-    * All That Jazz
-    * Network
-    * Hair
-    * Easy Rider
-    * Sound of Music
+* Barry Lyndon
+* Ghost Dog: Sword of the Samurai
+* Cabaret
+* Raging Bull
+* All That Jazz
+* Network
+* Hair
+* Easy Rider
+* Sound of Music
 
 ## TV
 * Succession
 * All in the Family
 * Six Feet Under
-
-## Podcasts
-* [Decoding the Gurus](Decoding-the-Gurus)
 
 ## Music
 * Weirdly, I've listening to a lot of Sitar music
@@ -64,6 +61,9 @@ All listing partial and in no particular order
     * Ivor Stravinsky
     * Fran Schubert
         * The stuff from Barry Lyndon 
+         
+## Podcasts
+* [Decoding the Gurus](Decoding-the-Gurus)
 
 ## Gurus I Like
 * Marshall McLuhan
