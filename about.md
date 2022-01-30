@@ -17,6 +17,7 @@
 * [Steve Dondley on twitter.com](https://twitter.com/steve_dondley) (**Caution:** f-bombs ahead)
     * Quick bio
         * Live in Westfield, MA
+        * Married with son in college, majoring in comp. sci. 
         * Have been running a small web/phone app development company and web hosting service for unions since 2004
         * Ex-US Navy nuclear reactor operator (1988 - 1994)
         * One-term city councilor (2016 - 2018)
