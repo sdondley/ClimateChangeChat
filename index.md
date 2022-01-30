@@ -5,11 +5,9 @@
 - [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
 - [What the Hell is This?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
-    - [goodbye](#goodbye)
-    - [This is a subsection](#this-is-a-subsection)
-- [Will this be auto generated?](#will-this-be-auto-generated)
-    - [Let's see](#lets-see)
-- [Testing area](#testing-area)
+- [My Recommendations](#my-recommendations)
+    - [Podcasts](#podcasts)
+    - [Music](#music)
 
 # What the Hell is This?
 * It's a website
@@ -22,19 +20,13 @@
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
 
+# My Recommendations
 
-## goodbye
+## Podcasts
+* [Decoding the Gurus](Decoding-the-Gurus)
 
-## This is a subsection
+## Music
 
-Some stuff goes here. Wowzers. Fuck yeah.
-
-# Will this be auto generated?
-
-## Let's see
-
-# Testing area
-this is a really long string of text this is a really long string of text this is a really long string of text 
 
 
 

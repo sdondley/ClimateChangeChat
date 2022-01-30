@@ -9,14 +9,15 @@
 # Climate Change
 
 # Why I'm Into Climate Change
-* Easy, this is the most important issue facing all people and living things on the planet
+* Easy. This is the most important issue facing all people and living things on the planet
+    * Would be impossible for me to do nothing 
 * Why is climate change so important?
     * Climate change has the potential to cause vase ecological damage, humand suffering, and social/economic upheaval 
 
 # What I'm Trying to Do
 * I obviously can't tackle the issue myself so I do what I can
 * Scientists and communication specialists tell us the best way for ordinary people to help address climate change is to talk about it
-    * This is why I started my "Climage Change Chat for Realists" project
+    * This is why I started my "Climate Change Chat for Realists" project
 
 ## Climate Change Chat for Realists
 * What is it?
