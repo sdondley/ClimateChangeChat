@@ -2,6 +2,12 @@
 
 - [About Steve Dondley](#about-steve-dondley)
     - [Who is Steve Dondley?](#who-is-steve-dondley)
+- [My Recommendations](#my-recommendations)
+    - [Movies](#movies)
+    - [TV](#tv)
+    - [Music](#music)
+    - [Podcasts](#podcasts)
+    - [Gurus I Like](#gurus-i-like)
 
 # About Steve Dondley
 
@@ -21,3 +27,52 @@ I served a two-year term as a city councilor in the city of Westfield, MA from
 2016 to 2018. I am currently focused on the development of the [UnionConnect
 mobile app platform](https://unionconnect.com) my company developed for labor
 unions among many other projects.
+
+# My Recommendations
+
+All listing partial and in no particular order
+
+## Movies
+* Barry Lyndon
+* Ghost Dog: Sword of the Samurai
+* Cabaret
+* Raging Bull
+* All That Jazz
+* Network
+* Hair
+* Easy Rider
+* Sound of Music
+
+## TV
+* Succession
+* All in the Family
+* Six Feet Under
+
+## Music
+* Weirdly, I've listening to a lot of Sitar music
+    * Helps me focus while programming/writing 
+* Old tyme favorites
+    * Who, Door, Rolling Stones, Beatles, etc 
+* Techno
+    * Front 242 
+    * Nitzer Ebb
+* Hip Hop
+    * Wu Tang Clan 
+    * Deltron the Funky Homosapien
+    * J Dilla
+    * 
+* Composers
+    * John Barry 
+    * Ivor Stravinsky
+    * Fran Schubert
+        * The stuff from Barry Lyndon 
+         
+## Podcasts
+* [Decoding the Gurus](Decoding-the-Gurus)
+
+## Gurus I Like
+* Marshall McLuhan
+    * media expert 
+* Michael E. Mann
+    * climate scientist 
+
