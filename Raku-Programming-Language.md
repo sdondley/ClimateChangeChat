@@ -22,9 +22,11 @@
 
 # Why Raku?
 * Easy to learn and start using right away
-    * The powerful tools in the language are kept hidden until you need it 
+    * The powerful tools in the language are kept hidden until you need them 
 * Very powerful, flexible language
 * Very easy to create and distribute new modules
+    * [App::Mi6 ](https://raku.land/cpan:SKAJI/App::Mi6)
+        * Highly recommended for creating modules 
 * Flexible
     * Can write in any common paradigm 
         * procedural

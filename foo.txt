@@ -1,1 +1,1 @@
-*+Karabiner::CompModGenerator
++*+App::Mi6
