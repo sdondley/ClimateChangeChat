@@ -61,7 +61,7 @@
 * Objects and classes
 
 ## My Raku questions on stackoverflow
-* [Posts containing 'user:1641112' - Stack Overflow: stackoverflow.com](https://stackoverflow.com/search?q=user:1641112+[raku])
+* [Newest posts containing 'user:1641112' and Raku](https://stackoverflow.com/search?tab=newest&q=user%253a1641112%2520%255braku%255d)
 ## Contributions
 
 ### Module's I've Written
