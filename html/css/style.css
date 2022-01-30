@@ -293,6 +293,7 @@ code {
 }
 
 @media only screen and (max-width: 1056px) {
+    body{ font-size: 1.4em; }
     #toc {
         margin-left: 10px;
         width: 200px;

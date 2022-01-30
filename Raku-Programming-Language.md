@@ -6,6 +6,8 @@
 - [What is Raku?](#what-is-raku)
 - [Why Raku?](#why-raku)
 - [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
+    - [Ongoing project](#ongoing-project)
+    - [Tips and Tutorials](#tips-and-tutorials)
     - [Contributions](#contributions)
         - [Module's I've Written](#modules-ive-written)
         - [Other contributions](#other-contributions)
@@ -48,6 +50,12 @@
 * Going to begin writing some code for helping me manage my vimwiki
 * Still have much to learn 
     * Learning functional programming style after years of using perl is bit of a mind-bender 
+
+## Ongoing project
+* a quite of [Raku vimwiki modules](Raku-vimwiki-modules)
+
+## Tips and Tutorials
+* [zef](zef)
 
 ## Contributions
 
