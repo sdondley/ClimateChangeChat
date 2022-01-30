@@ -27,6 +27,10 @@
         * Very worried about climate change
         * There are way too many idiots these days
     * Email: s@dondley.com
+    * [My older website](https://steve.dondley.com/)
+        * the content there will soon be subsumed into this one 
+        * written in jekyll
+        * looks nice, but framework was too convoluted and confusing and a pain to keep upgraded 
 
 # Website Name
 * Climate Change Chat for Realists
