@@ -65,7 +65,7 @@
 * I've always been fascinated by bullshitters
     * A bullshitter is what got me into local politics back around 2010
     * A bullshitter got me sucked into the climate change debate back around 2013
-    * The age old question of how and why people are bullshitters and why people follow them is endlessly fascinating
+    * The age old question of how and why people are bullshitters and why people follow them is endlessly fascinating to me
 * Hosts are funny and insightful and honest blokes
 
 ...more soon
