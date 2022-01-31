@@ -18,6 +18,7 @@
 * I obviously can't tackle the issue myself so I do what I can
 * Scientists and communication specialists tell us the best way for ordinary people to help address climate change is to talk about it
     * This is why I started my "Climate Change Chat for Realists" project
+        * [Climate Change Chat for Realists ](https://www.youtube.com/channel/UCV8Zw3AmSS6F8kBgxW7Ql9A)
 
 ## Climate Change Chat for Realists
 * What is it?
