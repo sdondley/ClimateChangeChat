@@ -102,5 +102,6 @@ methods.
         * yay! 
         * suggested the IO::Path may not be subcasslifiable 
             * suggested [submitting report](https://github.com/rakudo/rakudo/issues/new)
-                * this is what I'm going to do now 
+            * issue submitted 
+                *  [Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com](https://github.com/rakudo/rakudo/issues/4750)
 * I felt better and a lot less like a dummy
