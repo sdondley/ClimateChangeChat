@@ -9,16 +9,16 @@ methods.
 
 - [Vimwiki::Files Module](#vimwikifiles-module)
     - [Subclassing IO::Path](#subclassing-iopath)
-        - [Problems](#problems)
+            - [Problems](#problems)
         - [Help from Stackoverflow](#help-from-stackoverflow)
-        - [The Struggle Continues](#the-struggle-continues)
-        - [Help from IRC](#help-from-irc)
+            - [The Struggle Continues](#the-struggle-continues)
+            - [Help from IRC](#help-from-irc)
         - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
         - [Solution! Thanks raiph](#solution-thanks-raiph)
 
 ## Subclassing IO::Path
 
-### Problems
+#### Problems
 * I ran into problems right away trying to subclass Raku's IO::Path module
 * Looked for help from community
 
@@ -39,7 +39,7 @@ methods.
             * would conflict with original `IO::Path` module
         * raiph now recommended delegating IO::Path methods through an attribute
 
-### The Struggle Continues
+#### The Struggle Continues
 * I was still curious about how to subclass IO::Path
     * wanted to learn 
     * partially took raiph's recommendation and tried to get subclassing working
@@ -53,7 +53,7 @@ methods.
                 * not recommended to use 
                 * can't add your own attributes to the child class when using augment
 
-### Help from IRC
+#### Help from IRC
 * started to feel dumb, dejected and defeated :)
 * finally gave in and posted code IRC to see if anyone could help me figure this out
     * posted my last best attempt to get it working:
