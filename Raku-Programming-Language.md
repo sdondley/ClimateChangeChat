@@ -6,6 +6,7 @@
 - [What is Raku?](#what-is-raku)
 - [Why Raku?](#why-raku)
 - [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
+    - [Problems I've encounted](#problems-ive-encounted)
     - [Ongoing project](#ongoing-project)
     - [Tips and Tutorials](#tips-and-tutorials)
     - [My Raku questions on stackoverflow](#my-raku-questions-on-stackoverflow)
@@ -51,6 +52,9 @@
 * Going to begin writing some code for helping me manage my vimwiki
 * Still have much to learn 
     * Learning functional programming style after years of using perl is bit of a mind-bender 
+
+## Problems I've encounted
+* Subclassing IO::Path
 
 ## Ongoing project
 * a quite of [Raku vimwiki modules](Raku-vimwiki-modules)
