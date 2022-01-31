@@ -10,6 +10,6 @@ This project is a work in progress. This page will server as notes and to help m
 * for processing files in a vimwiki
 
 ## Modules
-* 
+* [Vimkiki::Files](Vimkiki::Files)
 
 

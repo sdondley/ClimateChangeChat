@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Vimkiki::files
+        </title>
+        <style type="text/css">
+        .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .il {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999;
+}
+.highlight .sa {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .sb {
+  color: #d14;
+}
+.highlight .sc {
+  color: #d14;
+}
+.highlight .sd {
+  color: #d14;
+}
+.highlight .s2 {
+  color: #d14;
+}
+.highlight .se {
+  color: #d14;
+}
+.highlight .sh {
+  color: #d14;
+}
+.highlight .si {
+  color: #d14;
+}
+.highlight .sx {
+  color: #d14;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #d14;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .s, .highlight .dl {
+  color: #d14;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .nb {
+  color: #0086B3;
+}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .nv, .highlight .vm {
+  color: #008080;
+}
+.highlight .ow {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight {
+  background-color: #f8f8f8;
+}
+      </style>
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              <h1>
+<a aria-hidden="true" class="anchor" href="#vimwikifiles-module" id="vimwikifiles-module"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vimwiki::Files Module</h1>
+<p>A module I&#39;m currently writing for analyzing a markdown file to help me process their conversion to HTML for output to this website</p>
+
+
+<h2>
+<a aria-hidden="true" class="anchor" href="#subclassing-iopath" id="subclassing-iopath"><span aria-hidden="true" class="octicon octicon-link"></span></a>Subclassing IO::Path</h2>
+<h3>
+<a aria-hidden="true" class="anchor" href="#problems" id="problems"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problems</h3>
+<ul>
+<li>I ran into problems right away trying to subclass Raku&#39;s IO::Path module</li>
+<li>Looked for help from community</li>
+</ul>
+<h3>
+<a aria-hidden="true" class="anchor" href="#help-from-stackoverflow" id="help-from-stackoverflow"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from Stackoverflow</h3>
+<ul>
+<li>Posted question to stackoverflow about it
+<ul>
+<li><a href="https://stackoverflow.com/questions/70919945/how-to-make-a-class-that-inherits-the-same-methods-as-iopath/70920126#70920126">raku - How to make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com</a></li>
+<li>recevied an answer
+<ul>
+<li>from user &quot;raiph&quot;</li>
+<li>gave me tips for subclassing IO::Path
+<ul>
+<li>create a <code>new</code> method in child class</li>
+<li>use <code>nextwith</code> function call in <code>new</code> method</li>
+</ul>
+</li>
+<li>at first the answer seemed to work
+<ul>
+<li>quickly ran into problems, however
+<ul>
+<li>I was unable to manipulate attributes of my subclass
+<ul>
+<li>unable to get my object to set/use its own attributes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>raiph then modified his original answer later
+<ul>
+<li>suggested that the <code>$.path</code> attribute I had in the child class was a problem
+<ul>
+<li>would conflict with original <code>IO::Path</code> module</li>
+</ul>
+</li>
+<li>raiph now recommended delegating IO::Path methods through an attribute</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a aria-hidden="true" class="anchor" href="#the-struggle-continues" id="the-struggle-continues"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Struggle Continues</h3>
+<ul>
+<li>I was still curious about how to subclass IO::Path
+<ul>
+<li>wanted to learn</li>
+<li>partially took raiph&#39;s recommendation and tried to get subclassing working
+<ul>
+<li>removed the <code>$!path</code> attribute</li>
+<li>still ran into a bunch of problems</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>spent hours trying to get it to work but was unable to
+<ul>
+<li>The good news is I learned some stuff in the process
+<ul>
+<li>One module I found extends IO::Path
+<ul>
+<li><a href="https://raku.land/github:labster/IO::Path::More">IO::Path::More </a></li>
+<li>Uses <a href="https://docs.raku.org/syntax/augment">augment</a>
+<ul>
+<li>not recommended to use</li>
+<li>can&#39;t add your own attributes to the child class when using augment</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a aria-hidden="true" class="anchor" href="#help-from-irc" id="help-from-irc"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from IRC</h3>
+<ul>
+<li>
+<p>started to feel dumb, dejected and defeated :)</p>
+</li>
+<li>
+<p>finally gave in and posted code IRC to see if anyone could help me figure this out</p>
+<ul>
+<li>posted my last best attempt to get it working:</li>
+</ul>
+<pre><code>    #! /usr/bin/env raku
+    use v6;
+
+    class Vimwiki::File is IO::Path {
+        has $.blah;
+
+        multi method new($path) {
+            self.bless;
+            nextwith($path);
+        }
+
+        submethod BUILD() {
+            say &#39;hi&#39;;
+            $!blah = &#39;test&#39;;
+            say $!blah;
+        }
+    }
+
+    my $vwf = Vimwiki::File.new(&#39;t/test_file.md&#39;);
+    say $vwf.^mro;
+    say $vwf.s;
+    say $vwf.blah;
+</code></pre>
+<ul>
+<li>the code outputs:</li>
+</ul>
+<pre><code>        hi
+        test
+        ((File) (Path) (Cool) (Any) (Mu))
+        0
+        (Any)
+</code></pre>
+<ul>
+<li>I asked why was <code>say $vwf.blah</code> not returning any results?</li>
+<li>went to bed, waited for Europeans to wake up
+<ul>
+<li>where are the American Raku developers, btw?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a aria-hidden="true" class="anchor" href="#upshot-iopath-may-not-be-subclassifiable" id="upshot-iopath-may-not-be-subclassifiable"><span aria-hidden="true" class="octicon octicon-link"></span></a>Upshot: IO::Path may not be subclassifiable</h3>
+<ul>
+<li>I wake up and check IRC</li>
+<li>lizmat responded in IRC
+<ul>
+<li>suggested the IO::Path may not be subcasslifiable</li>
+<li>suggested <a href="https://github.com/rakudo/rakudo/issues/new">submitting report</a>
+<ul>
+<li>this is what I&#39;m going to do now</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>I felt better and a lot less like a dummy</li>
+</ul>
+
+            </div>
+            <div id="toc">
+                <div>
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li>
+<a href="#vimwikifiles-module">Vimwiki::Files Module</a>
+<ul>
+<li>
+<a href="#subclassing-iopath">Subclassing IO::Path</a>
+<ul>
+<li><a href="#problems">Problems</a></li>
+<li><a href="#help-from-stackoverflow">Help from Stackoverflow</a></li>
+<li><a href="#the-struggle-continues">The Struggle Continues</a></li>
+<li><a href="#help-from-irc">Help from IRC</a></li>
+<li><a href="#upshot-iopath-may-not-be-subclassifiable">Upshot: IO::Path may not be subclassifiable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> January 31, 2022 12:47 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
+            </div>
+        </div>
+        <script src="./js/zenscroll/zenscroll-min.js">
+        </script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+

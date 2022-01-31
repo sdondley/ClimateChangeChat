@@ -1,0 +1,102 @@
+# Vimwiki::Files Module
+
+A module I'm currently writing for analyzing a markdown file to help me process their conversion to HTML for output to this website
+
+# On This Page
+
+- [Vimwiki::Files Module](#vimwikifiles-module)
+    - [Subclassing IO::Path](#subclassing-iopath)
+        - [Problems](#problems)
+        - [Help from Stackoverflow](#help-from-stackoverflow)
+        - [The Struggle Continues](#the-struggle-continues)
+        - [Help from IRC](#help-from-irc)
+        - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
+
+## Subclassing IO::Path
+
+### Problems
+* I ran into problems right away trying to subclass Raku's IO::Path module
+* Looked for help from community
+
+### Help from Stackoverflow
+* Posted question to stackoverflow about it
+    * [raku - How to make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/70919945/how-to-make-a-class-that-inherits-the-same-methods-as-iopath/70920126#70920126)
+    * recevied an answer
+        * from user "raiph"
+        * gave me tips for subclassing IO::Path
+            * create a `new` method in child class
+            * use `nextwith` function call in `new` method
+        * at first the answer seemed to work
+            * quickly ran into problems, however
+                * I was unable to manipulate attributes of my subclass
+                    * unable to get my object to set/use its own attributes
+    * raiph then modified his original answer later
+        * suggested that the `$.path` attribute I had in the child class was a problem
+            * would conflict with original `IO::Path` module
+        * raiph now recommended delegating IO::Path methods through an attribute
+### The Struggle Continues
+* I was still curious about how to subclass IO::Path
+    * wanted to learn 
+    * partially took raiph's recommendation and tried to get subclassing working
+        * removed the `$!path` attribute 
+        * still ran into a bunch of problems 
+* spent hours trying to get it to work but was unable to
+    * The good news is I learned some stuff in the process 
+        * One module I found extends IO::Path
+            * [IO::Path::More ](https://raku.land/github:labster/IO::Path::More)
+            * Uses [augment](https://docs.raku.org/syntax/augment)
+                * not recommended to use 
+                * can't add your own attributes to the child class when using augment
+### Help from IRC
+* started to feel dumb, dejected and defeated :)
+* finally gave in and posted code IRC to see if anyone could help me figure this out
+    * posted my last best attempt to get it working:
+    
+    ```
+        #! /usr/bin/env raku
+        use v6;
+
+        class Vimwiki::File is IO::Path {
+            has $.blah;
+
+            multi method new($path) {
+                self.bless;
+                nextwith($path);
+            }
+
+            submethod BUILD() {
+                say 'hi';
+                $!blah = 'test';
+                say $!blah;
+            }
+        }
+
+        my $vwf = Vimwiki::File.new('t/test_file.md');
+        say $vwf.^mro;
+        say $vwf.s;
+        say $vwf.blah;
+    ```
+    
+    
+    * the code outputs:
+        
+        
+    ```
+            hi
+            test
+            ((File) (Path) (Cool) (Any) (Mu))
+            0
+            (Any)
+    ```
+    
+    * I asked why was `say $vwf.blah` not returning any results?
+    * went to bed, waited for Europeans to wake up
+        * where are the American Raku developers, btw? 
+
+### Upshot: IO::Path may not be subclassifiable
+* I wake up and check IRC
+* lizmat responded in IRC
+    * suggested the IO::Path may not be subcasslifiable 
+    * suggested [submitting report](https://github.com/rakudo/rakudo/issues/new)
+        * this is what I'm going to do now 
+* I felt better and a lot less like a dummy
