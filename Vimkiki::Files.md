@@ -36,6 +36,7 @@ methods.
         * suggested that the `$.path` attribute I had in the child class was a problem
             * would conflict with original `IO::Path` module
         * raiph now recommended delegating IO::Path methods through an attribute
+
 ### The Struggle Continues
 * I was still curious about how to subclass IO::Path
     * wanted to learn 
@@ -49,6 +50,7 @@ methods.
             * Uses [augment](https://docs.raku.org/syntax/augment)
                 * not recommended to use 
                 * can't add your own attributes to the child class when using augment
+
 ### Help from IRC
 * started to feel dumb, dejected and defeated :)
 * finally gave in and posted code IRC to see if anyone could help me figure this out
