@@ -14,7 +14,7 @@ methods.
         - [The Struggle Continues](#the-struggle-continues)
         - [Help from IRC](#help-from-irc)
         - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
-- [Solution! Thanks raiph](#solution-thanks-raiph)
+    - [Solution! Thanks raiph](#solution-thanks-raiph)
 
 ## Subclassing IO::Path
 
@@ -107,7 +107,7 @@ methods.
                 *  [Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com](https://github.com/rakudo/rakudo/issues/4750)
 * I felt better and a lot less like a dummy
 
-# Solution! Thanks raiph
+## Solution! Thanks raiph
 * Finally got around to raiph's suggestion to delegate. This seems to work perfectly:
 ```
     unit class Vimwiki::File;
