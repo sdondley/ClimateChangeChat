@@ -14,7 +14,6 @@ methods.
         - [The Struggle Continues](#the-struggle-continues)
         - [Help from IRC](#help-from-irc)
         - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
-
 ## Subclassing IO::Path
 
 ### Problems

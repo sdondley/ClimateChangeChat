@@ -54,7 +54,7 @@
     * Learning functional programming style after years of using perl is bit of a mind-bender 
 
 ## Problems I've encounted
-* Subclassing IO::Path
+* [Subclassing IO::Path](Vimkiki::Files#Subclassing IOPath)
 
 ## Ongoing project
 * a suite of [Raku vimwiki modules](Raku-vimwiki-modules)
