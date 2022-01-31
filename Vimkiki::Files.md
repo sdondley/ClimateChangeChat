@@ -140,3 +140,5 @@ methods.
         * on the other hand
             * my diligence brought attention to a problem 
             * while frustrating, you can learn a lot during the process
+* if you're much more skilled
+    * Raku is an opportunity to build upon a great foundation and pick up skill building the language 
