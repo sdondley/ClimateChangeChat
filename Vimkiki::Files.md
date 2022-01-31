@@ -81,9 +81,7 @@ methods.
         say $vwf.blah;
     ```
     
-    
     * the code outputs:
-        
         
     ```
             hi
