@@ -9,20 +9,20 @@ methods.
 
 - [Vimwiki::Files Module](#vimwikifiles-module)
     - [Subclassing IO::Path](#subclassing-iopath)
-    - [Problem](#problem)
-        - [Help from Stackoverflow](#help-from-stackoverflow)
+        - [Problem](#problem)
+            - [Help from Stackoverflow](#help-from-stackoverflow)
             - [The Struggle Continues](#the-struggle-continues)
             - [Help from IRC](#help-from-irc)
-        - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
-    - [Solution! Thanks raiph](#solution-thanks-raiph)
+            - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
+        - [Solution! Thanks raiph](#solution-thanks-raiph)
 
 ## Subclassing IO::Path
 
-## Problem
+### Problem
 * I ran into problems right away trying to subclass Raku's IO::Path module
 * Looked for help from community
 
-### Help from Stackoverflow
+#### Help from Stackoverflow
 * Posted question to stackoverflow about it
     * [raku - How to make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/70919945/how-to-make-a-class-that-inherits-the-same-methods-as-iopath/70920126#70920126)
     * recevied an answer
@@ -97,7 +97,7 @@ methods.
     * went to bed, waited for Europeans to wake up
         * where are the American Raku developers, btw? 
 
-### Upshot: IO::Path may not be subclassifiable
+#### Upshot: IO::Path may not be subclassifiable
 * I wake up and check IRC
     * lizmat responded
         * yay! 
@@ -107,7 +107,7 @@ methods.
                 *  [Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com](https://github.com/rakudo/rakudo/issues/4750)
 * I felt better and a lot less like a dummy
 
-## Solution! Thanks raiph
+### Solution! Thanks raiph
 * Finally got around to raiph's suggestion to delegate. This seems to work perfectly:
 ```
     unit class Vimwiki::File;
