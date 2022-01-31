@@ -15,6 +15,7 @@ methods.
             - [Help from IRC](#help-from-irc)
             - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
         - [Solution! Thanks raiph](#solution-thanks-raiph)
+        - [What did we learn?](#what-did-we-learn)
 
 ## Subclassing IO::Path
 
@@ -127,3 +128,15 @@ methods.
 * Just not sure if I'm using `TWEAK` right or not 
     * I thought `TWEAK` took same arguments as new constructor
         * I don't appear to need any arguments, though 
+        
+### What did we learn?
+* Raku is still a little rough around the edges
+    * Probably somewhat expected
+        * It's fairly new
+        * It's a huge, complex language 
+* if you're a beginner
+    * You can kill a lot of time banging your head on a problem
+    * probably best to go with what works immedately and move on
+        * on the other hand
+            * my diligence brought attention to a problem 
+            * while frustrating, you can learn a lot during the process
