@@ -29,6 +29,7 @@
     * Email: s@dondley.com
     * [My older website](https://steve.dondley.com/)
         * the content there will soon be subsumed into this one 
+        * also uses vimwiki/markdown
         * uses jekyll framework
         * looks nice, but framework was too convoluted and confusing and a pain to keep upgraded 
     * [More about me](Steve Dondley)
