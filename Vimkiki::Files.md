@@ -14,6 +14,8 @@ methods.
         - [The Struggle Continues](#the-struggle-continues)
         - [Help from IRC](#help-from-irc)
         - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
+- [Solution! Thanks raiph](#solution-thanks-raiph)
+
 ## Subclassing IO::Path
 
 ### Problems
@@ -104,3 +106,24 @@ methods.
             * issue submitted 
                 *  [Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com](https://github.com/rakudo/rakudo/issues/4750)
 * I felt better and a lot less like a dummy
+
+# Solution! Thanks raiph
+* Finally got around to raiph's suggestion to delegate. This seems to work perfectly:
+```
+    unit class Vimwiki::File;
+
+    has IO::Path $.path is required handles * where *.IO.e;
+    has $.content;
+
+
+    multi method new($path) {
+        self.bless(path => IO::Path($path));
+    }
+
+    submethod TWEAK() {
+        $!content = $!path.slurp;
+    }
+```
+* Just not sure if I'm using `TWEAK` right or not 
+    * I thought `TWEAK` took same arguments as new constructor
+        * I don't appear to need any arguments, though 

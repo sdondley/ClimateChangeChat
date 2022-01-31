@@ -400,6 +400,36 @@ methods.</p>
 </li>
 <li>I felt better and a lot less like a dummy</li>
 </ul>
+<h1>
+<a aria-hidden="true" class="anchor" href="#solution-thanks-raiph" id="solution-thanks-raiph"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution! Thanks raiph</h1>
+<ul>
+<li>Finally got around to raiph&#39;s suggestion to delegate. This seems to work perfectly:</li>
+</ul>
+<pre><code>    unit class Vimwiki::File;
+
+    has IO::Path $.path is required handles * where *.IO.e;
+    has $.content;
+
+
+    multi method new($path) {
+        self.bless(path =&gt; IO::Path($path));
+    }
+
+    submethod TWEAK() {
+        $!content = $!path.slurp;
+    }
+</code></pre>
+<ul>
+<li>Just not sure if I&#39;m using <code>TWEAK</code> right or not
+<ul>
+<li>I thought <code>TWEAK</code> took same arguments as new constructor
+<ul>
+<li>I don&#39;t appear to need any arguments, though</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <div id="toc">
@@ -421,7 +451,8 @@ methods.</p>
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> January 31, 2022  1:48 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
+<li><a href="#solution-thanks-raiph">Solution! Thanks raiph</a></li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> January 31, 2022  2:27 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">
