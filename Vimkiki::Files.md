@@ -9,7 +9,7 @@ methods.
 
 - [Vimwiki::Files Module](#vimwikifiles-module)
     - [Subclassing IO::Path](#subclassing-iopath)
-            - [Problems](#problems)
+    - [Problems](#problems)
         - [Help from Stackoverflow](#help-from-stackoverflow)
             - [The Struggle Continues](#the-struggle-continues)
             - [Help from IRC](#help-from-irc)
@@ -18,7 +18,7 @@ methods.
 
 ## Subclassing IO::Path
 
-#### Problems
+## Problems
 * I ran into problems right away trying to subclass Raku's IO::Path module
 * Looked for help from community
 
