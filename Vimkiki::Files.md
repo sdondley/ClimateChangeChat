@@ -1,6 +1,9 @@
 # Vimwiki::Files Module
 
-A module I'm currently writing for analyzing a markdown file to help me process their conversion to HTML for output to this website
+A module I'm currently writing for analyzing a markdown file to help me process
+their conversion to HTML for output to this website. I want this module to be a
+subclass of [IO::Path](https://docs.raku.org/type/IO::Path) so it inherits its
+methods.
 
 # On This Page
 
@@ -95,8 +98,9 @@ A module I'm currently writing for analyzing a markdown file to help me process 
 
 ### Upshot: IO::Path may not be subclassifiable
 * I wake up and check IRC
-* lizmat responded in IRC
-    * suggested the IO::Path may not be subcasslifiable 
-    * suggested [submitting report](https://github.com/rakudo/rakudo/issues/new)
-        * this is what I'm going to do now 
+    * lizmat responded
+        * yay! 
+        * suggested the IO::Path may not be subcasslifiable 
+            * suggested [submitting report](https://github.com/rakudo/rakudo/issues/new)
+                * this is what I'm going to do now 
 * I felt better and a lot less like a dummy
