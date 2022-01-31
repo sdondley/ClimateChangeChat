@@ -3,16 +3,16 @@
 # On This Page
 
 - [About this website](#about-this-website)
-    - [Authored by](#authored-by)
-    - [Website Name](#website-name)
-    - [Goals](#goals)
-    - [The tech under the hood](#the-tech-under-the-hood)
-        - [vim](#vim)
-    - [Why is this site written mostly in outline form?](#why-is-this-site-written-mostly-in-outline-form)
-    - [Why is the design so plain?](#why-is-the-design-so-plain)
-    - [Coming Improvements](#coming-improvements)
+- [Authored by](#authored-by)
+- [Website Name](#website-name)
+- [Goals](#goals)
+- [The tech under the hood](#the-tech-under-the-hood)
+    - [vim](#vim)
+- [Why is this site written mostly in outline form?](#why-is-this-site-written-mostly-in-outline-form)
+- [Why is the design so plain?](#why-is-the-design-so-plain)
+- [Coming Improvements](#coming-improvements)
 
-## Authored by
+# Authored by
 
 * [Steve Dondley on twitter.com](https://twitter.com/steve_dondley) (**Caution:** f-bombs ahead)
     * Quick bio
@@ -33,20 +33,20 @@
         * looks nice, but framework was too convoluted and confusing and a pain to keep upgraded 
     * [More about me](Steve Dondley)
 
-## Website Name
+# Website Name
 * Climate Change Chat for Realists
     * This is the same name as a livestream project about climate change I do
         * Why is the website named after the livestream project? 
             * Because I want to call attention to my project
 
-## Goals
+# Goals
 * Have a creative outlet where I'm free of the chains and impositions of corporate social media platforms
 * make it exceptionally update and maintain
     * will be less likely to abandon a project that is less of a pain to update 
 * share ideas and notes with other easily and quickly
 * keep track of shit
 
-## The tech under the hood
+# The tech under the hood
 * all content is published to github to private repo
     * all new content is publshed with custom vim maps
         * Example:
@@ -60,7 +60,7 @@
         * nothing will be lost to the historians who stumble upon my great work :) 
 * content is pulled in every minute to web server running a cron
 
-### vim
+## vim
 * all pages are created and edited with vim text editor
 * allows you to avoid using a mouse 
     * I fucking hate using a mouse
@@ -85,7 +85,7 @@
         * a bridge between taskwarrior task software and vimwiki 
         * allows vimwiki to be the interface for managing tasks
 
-## Why is this site written mostly in outline form?
+# Why is this site written mostly in outline form?
 * It's inherent to the design of the vimwiki plugin
 * It's much faster to write this way
     * No agonizing over how eloquent I'm being and how well ideas flow 
@@ -94,13 +94,13 @@
     * 20th century media killed poetry 
     * prose killed by the internet 
 
-## Why is the design so plain?
+# Why is the design so plain?
 * I'm more concerned with content and functionality than design
 * I don't want it to be time-consuming
     * A design that looks like a magazine and is both functional and not annoying to update and maintain takes a huge amount of effort 
 * This will improve somewhat over time as I work on it 
 
-## Coming Improvements
+# Coming Improvements
 * Better menu navigation and interlinking between pages
 * Mobile friendly table of contents
 * Slightly more interesting design
