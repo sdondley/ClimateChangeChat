@@ -57,7 +57,7 @@
 * Subclassing IO::Path
 
 ## Ongoing project
-* a quite of [Raku vimwiki modules](Raku-vimwiki-modules)
+* a suite of [Raku vimwiki modules](Raku-vimwiki-modules)
 
 ## Tips and Tutorials
 * [zef](zef)
