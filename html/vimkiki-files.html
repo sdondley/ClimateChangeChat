@@ -464,6 +464,43 @@ methods.</p>
 </ul>
 </li>
 </ul>
+<h2>
+<a aria-hidden="true" class="anchor" href="#one-more-thing" id="one-more-thing"><span aria-hidden="true" class="octicon octicon-link"></span></a>One more thing</h2>
+<ul>
+<li>
+<p>lizmat has suggested a way for subclassing a core module</p>
+<ul>
+<li>See  <a href="https://github.com/rakudo/rakudo/issues/4750">Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com</a>
+</li>
+<li>No delegation required</li>
+</ul>
+</li>
+<li>
+<p>End result that I&#39;m going to build upon:</p>
+<p>unit class Vimwiki::File is IO::Path;
+has $.content;</p>
+<pre><code>  method !SET-SELF() {
+      $!content = self.slurp;
+      self;
+  }
+
+  method new($path) {
+      $path.IO.e ?? self.IO::Path::new($path)!SET-SELF() 
+                !! die &quot;$path is not a file&quot;;
+  }
+</code></pre>
+</li>
+<li>
+<p>The TWEAK and BUILD methods are still ignored</p>
+<ul>
+<li>the <code>SET-SELF</code> method takes care of that
+<ul>
+<li>is a private method, hence the <code>!</code> before the name</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <div id="toc">
@@ -489,9 +526,10 @@ methods.</p>
 <li><a href="#what-did-we-learn">What did we learn?</a></li>
 </ul>
 </li>
+<li><a href="#one-more-thing">One more thing</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> January 31, 2022  4:01 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> January 31, 2022  8:59 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">

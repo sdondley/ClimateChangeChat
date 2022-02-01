@@ -16,6 +16,7 @@ methods.
             - [Upshot: IO::Path may not be subclassifiable](#upshot-iopath-may-not-be-subclassifiable)
         - [Solution! Thanks raiph](#solution-thanks-raiph)
         - [What did we learn?](#what-did-we-learn)
+    - [One more thing](#one-more-thing)
 
 ## Subclassing IO::Path
 
@@ -142,3 +143,26 @@ methods.
             * while frustrating, you can learn a lot during the process
 * if you're much more skilled
     * Raku is an opportunity to build upon a great foundation and pick up skill building the language 
+
+## One more thing
+* lizmat has suggested a way for subclassing a core module
+    * See  [Unable to subclass IO::Path · Issue #4750 · rakudo/rakudo: github.com](https://github.com/rakudo/rakudo/issues/4750)
+    * No delegation required
+* End result that I'm going to build upon:
+    
+    unit class Vimwiki::File is IO::Path;
+        has $.content;
+        
+        method !SET-SELF() {
+            $!content = self.slurp;
+            self;
+        }
+
+        method new($path) {
+            $path.IO.e ?? self.IO::Path::new($path)!SET-SELF() 
+                      !! die "$path is not a file";
+        }
+
+* The TWEAK and BUILD methods are still ignored
+    * the `SET-SELF` method takes care of that 
+        * is a private method, hence the `!` before the name 
