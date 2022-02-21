@@ -5,6 +5,7 @@
 - [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
 - [What the Hell is This?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
+- [Public tech notes](#public-tech-notes)
 
 # What the Hell is This?
 * It's a website
@@ -16,4 +17,8 @@
 # Current projects and areas of current interest
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
+
+# Public tech notes
+This is where I share notes about tech stuff. Probably of little interest unless you dig computers.
+* [neovim](neovim)
 
