@@ -21,4 +21,5 @@
 # Public tech notes
 This is where I share notes about tech stuff. Probably of little interest unless you dig computers.
 * [neovim](neovim)
+* [git](git)
 
