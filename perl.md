@@ -1,11 +1,13 @@
+# Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
+
 # On This Page
 
+- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
 - [TLDR; The REAL thing you are here for](#tldr-the-real-thing-you-are-here-for)
     - [Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#install-the-following-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
     - [Cut and paste this code into `init.vim`:](#cut-and-paste-this-code-into-initvim)
     - [That's it. You're done!](#thats-it-youre-done)
         - [Looking for something more gratifying for your thirsty curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
-- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why an LSP?](#why-an-lsp)
@@ -161,8 +163,6 @@ cmp.setup {
 
 ### Looking for something more gratifying for your thirsty curious soul? 
 * continue below
-
-# Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
 
 # WTF
 * ...is an LSP?
