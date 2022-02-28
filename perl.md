@@ -16,7 +16,7 @@
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
     - [Will this work for Windows?](#will-this-work-for-windows)
-- ["The more technical stuff" or "What you probably came here for"](#the-more-technical-stuff-or-what-you-probably-came-here-for)
+- [The more technical stuff](#the-more-technical-stuff)
     - [Smaller picture stuff](#smaller-picture-stuff)
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
         - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
@@ -311,7 +311,7 @@ cmp.setup {
             * but I'm not looking for another box to manage 
                 * learning one OS really well is enough work for me
  
-# "The more technical stuff" or "What you probably came here for"
+# The more technical stuff
 
 ## Smaller picture stuff 
 * as mentioned above, my knowledge of LSPs is basically zero
@@ -325,7 +325,7 @@ cmp.setup {
 * you need to install the language server
     * language server can be used by neovim or another other piece of software that knows how
     * there's generally two or three for each programming language
-        * will be more for more popular languages 
+        * there are more for more popular languages 
         * why there is often more than server for each language?
             * I have no idea 
                 * geeks are sometimes territorial?
