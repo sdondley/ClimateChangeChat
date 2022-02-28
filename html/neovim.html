@@ -231,18 +231,31 @@
             <div id="content">
               <h1>
 <a id="neovim-notes" class="anchor" href="#neovim-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>neovim notes</h1>
+<p>vim is a modern software miracle. It's an insanely flexible and configurable text editor. It would take a lifetime to truly master it and populates the wet dreams of all true nerds. neovim has come along in recent years to give vim a run for it's money.</p>
 <ul>
-<li>What is it?
+<li>What is neovim?
 <ul>
+<li>neo = "new" vim</li>
 <li>It's a fork of the vim text editor</li>
 <li>Popular with newer developers</li>
 <li>Big advantage over vim is many more people work on it
 <ul>
+<li>Faster development cycle</li>
 <li>Does more innovative stuff than vim
 <ul>
-<li>Example: Language server protocol implementation
+<li>Examples:
+<ul>
+<li>Language server protocol implementation
 <ul>
 <li>useful for editing code like an IDE</li>
+</ul>
+</li>
+<li>Lua integration
+<ul>
+<li>claims to better to work with than vimscript</li>
+<li>vimscript can still be used with neovim</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -257,18 +270,47 @@
 <a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
 <p>Note: all notes below apply to default macOS. While the descriptions are accurate, directory locations may be different on your machine.</p>
 <ul>
-<li>two directories
+<li>two main directories
 <ul>
 <li>~/.local/share/nvim
 <ul>
-<li>for storing more tranisient data about vim files on the local machine</li>
+<li>for storing more tranisient data about vim files (which can be stored anywhere on the machine) on the local machine</li>
 </ul>
 </li>
 <li>~/.config/nvim/
 <ul>
 <li>this is where the user can configure vim to their liking</li>
+<li>Most time is spent here configuring vim to your heart's desire</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<h3>
+<a id="configuring-nvim-from-scratch" class="anchor" href="#configuring-nvim-from-scratch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring nvim from scratch</h3>
+<ul>
+<li>if you already have a neovim config:
+<ul>
+<li>good idea to create git repo of the nvim directory in .config
+<ul>
+<li>create new branch called 'clean'</li>
+<li>delete all config files on the branch</li>
+<li>commit the branch</li>
+<li>switch back to old config until clean config is where you need it to be</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>convert old init.vim to lua
+<ul>
+<li>tutorial <a href="https://www.notonlycode.org/neovim-lua-config/">https://www.notonlycode.org/neovim-lua-config/</a>
+</li>
+<li>config is in lua.init, not init.vim</li>
+<li>in general, use <code>vim.opt</code> over <code>vim.o</code>
+</li>
+<li>can use after/ftplugin/<filetype>.lua for lua code</filetype>
+</li>
+<li>
 </ul>
 </li>
 </ul>
