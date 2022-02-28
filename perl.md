@@ -329,6 +329,10 @@ cmp.setup {
         * why there is often more than server for each language?
             * I have no idea 
                 * geeks are sometimes territorial?
+        * How do I know which one to use?
+            * It depends on what you need it to do
+                * Not all language servers have the same feature set 
+            * The ones that seem to work are the better ones 
     * we will cover how to do this later 
 * you need to configure neovim to use the language server you installed
     * we will cover the settings need to connect to the perl language servers
