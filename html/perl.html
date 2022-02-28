@@ -447,16 +447,17 @@
 <li>As neovim matures, will probably get easier</li>
 </ul>
 <h2>
-<a aria-hidden="true" class="anchor" href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" id="why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem behing the curve on adopting LSPs?</h2>
+<a aria-hidden="true" class="anchor" href="#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps" id="why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem to be behind the curve on adopting LSPs?</h2>
 <ul>
 <li>Good question! (if I do say so myself)</li>
 <li>Is it really behind the curve?
 <ul>
 <li>It seems like it to me
 <ul>
-<li>based on my early experiences</li>
+<li>based on my amateur observations</li>
 </ul>
 </li>
+<li>I could definitely be wrong</li>
 </ul>
 </li>
 <li>I could take many guesses as to why
@@ -532,34 +533,273 @@
 <li>No idea. Good luck. You&#39;re on your own.</li>
 </ul>
 <h1>
-<a aria-hidden="true" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" id="the-important-stuff-or-what-you-probably-came-here-for"><span aria-hidden="true" class="octicon octicon-link"></span></a>&quot;The important stuff&quot; or &quot;What you probably came here for&quot;</h1>
+<a aria-hidden="true" class="anchor" href="#the-more-technical-stuff-or-what-you-probably-came-here-for" id="the-more-technical-stuff-or-what-you-probably-came-here-for"><span aria-hidden="true" class="octicon octicon-link"></span></a>&quot;The more technical stuff&quot; or &quot;What you probably came here for&quot;</h1>
 <h2>
-<a aria-hidden="true" class="anchor" href="#big-picture-stuff" id="big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Big picture stuff</h2>
-<h3>
-<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers" id="there-are-two-perl-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two perl language servers</h3>
+<a aria-hidden="true" class="anchor" href="#smaller-picture-stuff" id="smaller-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Smaller picture stuff</h2>
 <ul>
-<li>#1</li>
-<li>#2</li>
-<li>get links on cpan</li>
-<li>go over abbreviations</li>
-<li>names are confusing</li>
-<li>to neovim, they go by very different abbrevations:
+<li>as mentioned above, my knowledge of LSPs is basically zero
+<ul>
+<li>but from what I&#39;ve learned so far...
+<ul>
+<li>There is a client (vim)</li>
+<li>There is a server (the language server)</li>
+<li>There is the protocol
+<ul>
+<li>used by the server and client to talk to each other</li>
+</ul>
+</li>
+<li>a client can attach itself to multiple servers</li>
+<li>a server can service multiple clients but the clients have be use different ports (AFAICT)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>you need to install the language server
+<ul>
+<li>language server can be used by neovim or another other piece of software that knows how</li>
+<li>there&#39;s generally two or three for each programming language
+<ul>
+<li>will be more for more popular languages</li>
+<li>why there is often more than server for each language?
+<ul>
+<li>I have no idea
+<ul>
+<li>geeks are sometimes territorial?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>we will cover how to do this later</li>
+</ul>
+</li>
+<li>you need to configure neovim to use the language server you installed
+<ul>
+<li>we will cover the settings need to connect to the perl language servers</li>
+<li>this is where the nvim-lspconfig plugin comes in
+<ul>
+<li>written in a language called &quot;lua&quot;
+<ul>
+<li>why lua?
+<ul>
+<li>I have no idea other than neovim uses it
+<ul>
+<li>why does neovim use it?
+<ul>
+<li>I have no idea
+<ul>
+<li>my best explanation:
+<ul>
+<li>some hipster developer really liked it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>the important upshot is you have to write a bit of lua code to configure neovim
+<ul>
+<li>don&#39;t worry, mostly cutting and pasting small code snippets
+<ul>
+<li>seems like a pretty easy language, though</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>neovim has a new, built-in API for &quot;talking&quot; to a language server
+<ul>
+<li>in essence, neovim is the client for the server</li>
+</ul>
+</li>
+<li>but you still have to tell the API (neovim) which language server you want to use
+<ul>
+<li>so you configure nvim-lspconfig to tell neovim about the language server</li>
+</ul>
+</li>
+<li>you can also set other basic settings to nvim-lspconfig to change:
+<ul>
+<li>how neovim responds to the language server</li>
+<li>how you want the language server to respond to neovim</li>
+</ul>
+</li>
+<li>you can still use other plugins to connect to a language server and bypass neovim&#39;s built-in client
+<ul>
+<li>but it&#39;s wasteful to duplicate the same effort in each plugin</li>
+<li>nvim-lspconfig aims to simplify the process of building plugins that need a language server</li>
+<li>but will be slower than the built-in language client neovim provides</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In addition to nvim-lspconfig you will probably want to use other plugins
+<ul>
+<li>to try to achieve the &quot;true IDE&quot; experience</li>
+<li>plugins for code completion
+<ul>
+<li>you don&#39;t have to use a plugin
+<ul>
+<li>you can use omnifunc with nvim-lspconfig
+<ul>
+<li>but not as nice</li>
+<li>btw, using <c-x><c-whatever> is probably its worst design decision in vim
+<ul>
+<li>there might good reasons for it but I don&#39;t know what they are
+<ul>
+<li>so I&#39;ll just stick with &quot;it sucks&quot;</li>
+</ul>
+</li>
+</ul>
+</c-whatever></c-x>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>for snippets
+<ul>
+<li>again, totally optional to install a snippets plugin</li>
+<li>I know litte about snippets, never really used them much
+<ul>
+<li>too lazy to learn how to use them</li>
+</ul>
+</li>
+<li>the kids seem to go fuckign nuts about them</li>
+<li>I kind of like to type shit out
+<ul>
+<li>kind of relaxing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a aria-hidden="true" class="anchor" href="#the-stuff-in-between-probably-what-you-really-want-to-know" id="the-stuff-in-between-probably-what-you-really-want-to-know"><span aria-hidden="true" class="octicon octicon-link"></span></a>The stuff in between (probably what you really want to know)</h2>
+<h3>
+<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-i-know-of" id="there-are-two-perl-language-servers-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers (that I know of)</h3>
+<ul>
+<li>They are:
+<ul>
+<li>Perl::LanguageServer (P::LS)</li>
+<li>Perl-Language-Server (PLS)</li>
+</ul>
+</li>
+<li>What&#39;s the difference?
+<ul>
+<li>from a technical perspective, I have no idea</li>
+<li>PLS is newer
+<ul>
+<li>but has smaller feature set
+<ul>
+<li>can&#39;t tap into debug interface provided by perl
+<ul>
+<li>I just use <code>print &#39;hi&#39;;</code> as my goto debugging tool, anyway
+<ul>
+<li>or <code>print &#39;fuck you&#39;;</code> when I&#39;m frustrated</li>
+</ul>
+</li>
+<li>not a big loss for me</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>P:LS is older
+<ul>
+<li>but seems to have some kinks (see below)</li>
+</ul>
+</li>
+<li>they seem more similar than different
+<ul>
+<li>both are perl modules</li>
+<li>both are easily installed from cpan repo</li>
+<li>both are free to use</li>
+<li>names are easily confused</li>
+<li>both developers apparently code use vscode, not neovim</li>
+<li>but both can work with neovim (maybe, see below)</li>
+<li>both have kind of weak documentation for setting up with neovim
+<ul>
+<li>hence this tutorial</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Is one faster than the other?
+<ul>
+<li>no idea</li>
+<li>both seem about the same after limited use</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a aria-hidden="true" class="anchor" href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done" id="ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, the stuff you really need to know to get some real work done</h2>
+<ul>
+<li>
+<p>OK, with all that out of the way, we can finally get some shit done</p>
+</li>
+<li>
+<p>First, we download both language servers so you can try them both out</p>
+</li>
+<li>
+<p>Now we configure neovim</p>
+</li>
+<li>
+<p>#1</p>
+</li>
+<li>
+<p>#2</p>
+</li>
+<li>
+<p>get links on cpan</p>
+</li>
+<li>
+<p>go over abbreviations</p>
+</li>
+<li>
+<p>to neovim, they go by very different abbrevations:</p>
 <ul>
 <li>perllsp</li>
 <li>perlpls</li>
 </ul>
 </li>
-<li>figure out how long they&#39;ve been around</li>
-<li>both are in active development</li>
-<li>P::LS and PLS are my abbreviations</li>
-<li>get github links</li>
-<li>get names of developers</li>
-<li>installing the language servers
+<li>
+<p>figure out how long they&#39;ve been around</p>
+</li>
+<li>
+<p>both are in active development</p>
+</li>
+<li>
+<p>P::LS and PLS are my abbreviations</p>
+</li>
+<li>
+<p>get github links</p>
+</li>
+<li>
+<p>get names of developers</p>
+</li>
+<li>
+<p>installing the language servers</p>
 <ul>
 <li>briefly mention cpanm</li>
 </ul>
 </li>
 </ul>
+<h3></h3>
 
             </div>
             <div id="toc">
@@ -573,24 +813,26 @@
 <ul>
 <li><a href="#why-an-lsp">Why an LSP?</a></li>
 <li><a href="#is-an-lsp-hard-to-set-up">Is an LSP hard to set up?</a></li>
-<li><a href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps">Why does the Perl community seem behing the curve on adopting LSPs?</a></li>
+<li><a href="#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps">Why does the Perl community seem to be behind the curve on adopting LSPs?</a></li>
 <li><a href="#my-relevant-background">My relevant background</a></li>
 <li><a href="#assumptions-about-your-background">Assumptions about your background</a></li>
 <li><a href="#will-this-work-for-windows">Will this work for Windows?</a></li>
 </ul>
 </li>
 <li>
-<a href="#the-important-stuff-or-what-you-probably-came-here-for">&quot;The important stuff&quot; or &quot;What you probably came here for&quot;</a>
+<a href="#the-more-technical-stuff-or-what-you-probably-came-here-for">&quot;The more technical stuff&quot; or &quot;What you probably came here for&quot;</a>
 <ul>
+<li><a href="#smaller-picture-stuff">Smaller picture stuff</a></li>
 <li>
-<a href="#big-picture-stuff">Big picture stuff</a>
+<a href="#the-stuff-in-between-probably-what-you-really-want-to-know">The stuff in between (probably what you really want to know)</a>
 <ul>
-<li><a href="#there-are-two-perl-language-servers">There are two perl language servers</a></li>
+<li><a href="#there-are-two-perl-language-servers-that-i-know-of">There are two Perl language servers (that I know of)</a></li>
 </ul>
 </li>
+<li><a href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done">OK, the stuff you really need to know to get some real work done</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  3:32 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  5:21 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">

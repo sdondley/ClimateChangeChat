@@ -5,13 +5,15 @@
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why an LSP?](#why-an-lsp)
     - [Is an LSP hard to set up?](#is-an-lsp-hard-to-set-up)
-    - [Why does the Perl community seem behing the curve on adopting LSPs?](#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps)
+    - [Why does the Perl community seem to be behind the curve on adopting LSPs?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps)
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
     - [Will this work for Windows?](#will-this-work-for-windows)
-- ["The important stuff" or "What you probably came here for"](#the-important-stuff-or-what-you-probably-came-here-for)
-    - [Big picture stuff](#big-picture-stuff)
-        - [There are two perl language servers](#there-are-two-perl-language-servers)
+- ["The more technical stuff" or "What you probably came here for"](#the-more-technical-stuff-or-what-you-probably-came-here-for)
+    - [Smaller picture stuff](#smaller-picture-stuff)
+    - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
+        - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
+    - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
 
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
 
@@ -105,11 +107,12 @@
 * Hopefully this web page helps at least a little
 * As neovim matures, will probably get easier
 
-## Why does the Perl community seem behing the curve on adopting LSPs?
+## Why does the Perl community seem to be behind the curve on adopting LSPs?
 * Good question! (if I do say so myself)
 * Is it really behind the curve?
     * It seems like it to me 
-        * based on my early experiences 
+        * based on my amateur observations
+    * I could definitely be wrong
 * I could take many guesses as to why
     * but would just me speculating 
         * so no real point to it 
@@ -146,16 +149,106 @@
 ## Will this work for Windows?
 * No idea. Good luck. You're on your own.
  
-# "The important stuff" or "What you probably came here for"
+# "The more technical stuff" or "What you probably came here for"
 
-## Big picture stuff 
+## Smaller picture stuff 
+* as mentioned above, my knowledge of LSPs is basically zero
+    * but from what I've learned so far...
+        * There is a client (vim) 
+        * There is a server (the language server)
+        * There is the protocol
+            * used by the server and client to talk to each other 
+        * a client can attach itself to multiple servers
+        * a server can service multiple clients but the clients have be use different ports (AFAICT)
+* you need to install the language server
+    * language server can be used by neovim or another other piece of software that knows how
+    * there's generally two or three for each programming language
+        * will be more for more popular languages 
+        * why there is often more than server for each language?
+            * I have no idea 
+                * geeks are sometimes territorial?
+    * we will cover how to do this later 
+* you need to configure neovim to use the language server you installed
+    * we will cover the settings need to connect to the perl language servers
+    * this is where the nvim-lspconfig plugin comes in
+        * written in a language called "lua" 
+            * why lua? 
+                * I have no idea other than neovim uses it
+                    * why does neovim use it? 
+                        * I have no idea 
+                            * my best explanation: 
+                                * some hipster developer really liked it 
+            * the important upshot is you have to write a bit of lua code to configure neovim
+                * don't worry, mostly cutting and pasting small code snippets 
+                    * seems like a pretty easy language, though 
+        * neovim has a new, built-in API for "talking" to a language server
+            * in essence, neovim is the client for the server 
+        * but you still have to tell the API (neovim) which language server you want to use
+            * so you configure nvim-lspconfig to tell neovim about the language server 
+        * you can also set other basic settings to nvim-lspconfig to change:
+            * how neovim responds to the language server
+            * how you want the language server to respond to neovim 
+        * you can still use other plugins to connect to a language server and bypass neovim's built-in client
+            * but it's wasteful to duplicate the same effort in each plugin 
+            * nvim-lspconfig aims to simplify the process of building plugins that need a language server
+            * but will be slower than the built-in language client neovim provides
+* In addition to nvim-lspconfig you will probably want to use other plugins
+    * to try to achieve the "true IDE" experience 
+    * plugins for code completion
+        * you don't have to use a plugin
+            * you can use omnifunc with nvim-lspconfig
+                * but not as nice 
+                * btw, using <c-x><c-whatever> is probably its worst design decision in vim
+                    * there might good reasons for it but I don't know what they are 
+                        * so I'll just stick with "it sucks" 
+    * for snippets
+        * again, totally optional to install a snippets plugin
+        * I know litte about snippets, never really used them much 
+            * too lazy to learn how to use them 
+        * the kids seem to go fuckign nuts about them 
+        * I kind of like to type shit out
+            * kind of relaxing 
 
-### There are two perl language servers
+## The stuff in between (probably what you really want to know)
+
+### There are two Perl language servers (that I know of)
+* They are:
+    * Perl::LanguageServer (P::LS)
+    * Perl-Language-Server (PLS)
+* What's the difference?
+    * from a technical perspective, I have no idea 
+    * PLS is newer
+        * but has smaller feature set 
+            * can't tap into debug interface provided by perl 
+                * I just use `print 'hi';` as my goto debugging tool, anyway 
+                    * or `print 'fuck you';` when I'm frustrated
+                * not a big loss for me 
+    * P:LS is older
+        * but seems to have some kinks (see below) 
+    * they seem more similar than different 
+        * both are perl modules 
+        * both are easily installed from cpan repo 
+        * both are free to use
+        * names are easily confused
+        * both developers apparently code use vscode, not neovim
+        * but both can work with neovim (maybe, see below) 
+        * both have kind of weak documentation for setting up with neovim
+            * hence this tutorial 
+    * Is one faster than the other?
+        * no idea 
+        * both seem about the same after limited use 
+
+## OK, the stuff you really need to know to get some real work done
+* OK, with all that out of the way, we can finally get some shit done
+* First, we download both language servers so you can try them both out
+* Now we configure neovim
+
+
+
 * #1
 * #2
 * get links on cpan 
 * go over abbreviations
-* names are confusing
 * to neovim, they go by very different abbrevations:
     * perllsp
     * perlpls 
@@ -166,6 +259,8 @@
 * get names of developers
 * installing the language servers 
     * briefly mention cpanm 
+
+###
      
      
 
