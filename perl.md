@@ -181,7 +181,8 @@ cmp.setup {
         * Programmers have built a bazillion tools to minimize the amount they have to type
             * vim is one of those tools, used since the early 80s 
             * More recently, deverlopers have been using "IDE's"
-                * "IDE" is a stupid name that tries to impress with computer sciency words
+                * "IDE" is an inscutable name that tries to impress with computer sciency words
+                    * makes you sound impressive 
                     * stands for "Integrated Development Environment" 
                         * Programmers like talking about "environments" for some reason
                     * Just a tool for helping you write code faster
