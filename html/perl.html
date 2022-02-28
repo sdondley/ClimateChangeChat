@@ -899,10 +899,32 @@ cmp.setup {
 <h3>
 <a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-i-know-of" id="there-are-two-perl-language-servers-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers (that I know of)</h3>
 <ul>
-<li>They are:
+<li>First of all, thanks to the software authors of these language servers
 <ul>
-<li>Perl::LanguageServer (P::LS)</li>
-<li>Perl-Language-Server (PLS)</li>
+<li>I greatly appreciate your work!</li>
+<li>Be sure to pass along your gratitude and maybe even a tip</li>
+</ul>
+</li>
+<li>The two (known) Perl language servers are:
+<ul>
+<li>Perl::LanguageServer (P::LS)
+<ul>
+<li>Author: Gerald Richter</li>
+<li>GitHub Link: <a href="https://github.com/richterger/Perl-LanguageServer">https://github.com/richterger/Perl-LanguageServer</a>
+</li>
+<li>CPAN Link: <a href="https://metacpan.org/pod/Perl::LanguageServer">https://metacpan.org/pod/Perl::LanguageServer</a>
+</li>
+</ul>
+</li>
+<li>Perl-Language-Server (PLS)
+<ul>
+<li>Author: &quot;FractalBoy&quot;</li>
+<li>GitHub Link: <a href="https://github.com/FractalBoy/perl-language-server">https://github.com/FractalBoy/perl-language-server</a>
+</li>
+<li>CPAN Link: <a href="https://metacpan.org/pod/PLS">https://metacpan.org/pod/PLS</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>What&#39;s the difference?
@@ -917,9 +939,9 @@ cmp.setup {
 <li>I just use <code>print &#39;hi&#39;;</code> as my goto debugging tool, anyway
 <ul>
 <li>or <code>print &#39;fuck you&#39;;</code> when I&#39;m frustrated</li>
+<li>so not a big loss for me</li>
 </ul>
 </li>
-<li>not a big loss for me</li>
 </ul>
 </li>
 </ul>
@@ -958,30 +980,31 @@ cmp.setup {
 <h2>
 <a aria-hidden="true" class="anchor" href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done" id="ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, the stuff you really need to know to get some real work done</h2>
 <ul>
-<li>
-<p>with all that out of the way, we can finally get some shit done</p>
-</li>
-<li>
-<p>First, we download both language servers so you can try them both out</p>
+<li>with all that out of the way, we can finally get some shit done</li>
+<li>First, we download both language servers so you can try them both out
 <ul>
-<li>I use cpanm</li>
+<li>I use cpanm as my tool of choice for installing perl modules
+<ul>
+<li>not covered in this tutorial
+<ul>
+<li>googel it</li>
 </ul>
 </li>
-<li>
-<p>having perlbrew installed is fine</p>
+</ul>
+</li>
+</ul>
+</li>
+<li>having perlbrew installed is fine
 <ul>
 <li>I didn&#39;t run into any issues</li>
 <li>running 5.34.0 version of perl</li>
 </ul>
 </li>
-<li>
-<p>Now we configure neovim</p>
-</li>
-<li>
-<p>first complication we run into is which package manager to use to install nvim-lspconfig</p>
+<li>Now we configure neovim</li>
+<li>first complication we run into is which package manager to use to install the nvim-lspconfig plugin
 <ul>
 <li>there are a butt ton of them</li>
-<li>managing plugins is probably one of the most confusing parts of vim (among many things)</li>
+<li>managing plugins is probably one of the most confusing parts of vim (amongst many)</li>
 <li>this tutorial is not designed to be a vim package manager tutorial
 <ul>
 <li>it&#39;s long enough as it is</li>
@@ -990,14 +1013,13 @@ cmp.setup {
 </li>
 </ul>
 </li>
-<li>
-<p>OK, got your nvim-lspconfig installed and working?</p>
+<li>OK, got your nvim-lspconfig installed and working?
 <ul>
 <li>How do you tell?
 <ul>
 <li>type <code>:LspInfo</code> into vim
 <ul>
-<li>if you see something, it&#39;s working</li>
+<li>if you see something pop up, it&#39;s working</li>
 <li>if you don&#39;t, it&#39;s not working
 <ul>
 <li>google it
@@ -1034,54 +1056,27 @@ cmp.setup {
 </li>
 </ul>
 </li>
-<li>
-<p>Halfway home!</p>
+<li>Halfway home! Now:
 <ul>
-<li>Go back to the top of the page to finish this!</li>
-</ul>
-</li>
-<li>
-<p>#1</p>
-</li>
-<li>
-<p>#2</p>
-</li>
-<li>
-<p>get links on cpan</p>
-</li>
-<li>
-<p>go over abbreviations</p>
-</li>
-<li>
-<p>to neovim, they go by very different abbrevations:</p>
+<li>Go back to the top of the page
 <ul>
-<li>perllsp</li>
-<li>perlpls</li>
+<li>Follow the instructions in the TLDR; section</li>
+<li>The come back here if you want to suffer more through this tutorial to learn something</li>
 </ul>
 </li>
-<li>
-<p>figure out how long they&#39;ve been around</p>
+</ul>
 </li>
-<li>
-<p>both are in active development</p>
-</li>
-<li>
-<p>P::LS and PLS are my abbreviations</p>
-</li>
-<li>
-<p>get github links</p>
-</li>
-<li>
-<p>get names of developers</p>
-</li>
-<li>
-<p>installing the language servers</p>
+</ul>
+<h2>
+<a aria-hidden="true" class="anchor" href="#the-gory-details-for-those-who-thirst-for-knowledge" id="the-gory-details-for-those-who-thirst-for-knowledge"><span aria-hidden="true" class="octicon octicon-link"></span></a>The gory details for those who thirst for knowledge</h2>
 <ul>
-<li>briefly mention cpanm</li>
+<li>This section goes into more detail on what the code snippet you pasted above does</li>
+<li>One caveat: I&#39;m not an expert in Lua
+<ul>
+<li>take everything in this section with a bit of grain of salt</li>
 </ul>
 </li>
 </ul>
-<h3></h3>
 
             </div>
             <div id="toc">
@@ -1125,9 +1120,10 @@ cmp.setup {
 </ul>
 </li>
 <li><a href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done">OK, the stuff you really need to know to get some real work done</a></li>
+<li><a href="#the-gory-details-for-those-who-thirst-for-knowledge">The gory details for those who thirst for knowledge</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  6:28 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  6:40 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">

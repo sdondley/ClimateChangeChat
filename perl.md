@@ -19,6 +19,7 @@
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
         - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
+    - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
 
 # TLDR; The REAL thing you are here for
 * This section assumes:
@@ -370,9 +371,18 @@ cmp.setup {
 ## The stuff in between (probably what you really want to know)
 
 ### There are two Perl language servers (that I know of)
-* They are:
+* First of all, thanks to the software authors of these language servers
+    * I greatly appreciate your work! 
+    * Be sure to pass along your gratitude and maybe even a tip
+* The two (known) Perl language servers are:
     * Perl::LanguageServer (P::LS)
+        * Author: Gerald Richter
+        * GitHub Link: https://github.com/richterger/Perl-LanguageServer 
+        * CPAN Link: https://metacpan.org/pod/Perl::LanguageServer 
     * Perl-Language-Server (PLS)
+        * Author: "FractalBoy"
+        * GitHub Link: https://github.com/FractalBoy/perl-language-server
+        * CPAN Link: https://metacpan.org/pod/PLS
 * What's the difference?
     * from a technical perspective, I have no idea 
     * PLS is newer
@@ -380,7 +390,7 @@ cmp.setup {
             * can't tap into debug interface provided by perl 
                 * I just use `print 'hi';` as my goto debugging tool, anyway 
                     * or `print 'fuck you';` when I'm frustrated
-                * not a big loss for me 
+                    * so not a big loss for me 
     * P:LS is older
         * but seems to have some kinks (see below) 
     * they seem more similar than different 
@@ -399,21 +409,23 @@ cmp.setup {
 ## OK, the stuff you really need to know to get some real work done
 * with all that out of the way, we can finally get some shit done
 * First, we download both language servers so you can try them both out
-    * I use cpanm 
+    * I use cpanm as my tool of choice for installing perl modules 
+        * not covered in this tutorial 
+            * googel it 
 * having perlbrew installed is fine 
     * I didn't run into any issues 
     * running 5.34.0 version of perl
 * Now we configure neovim
-* first complication we run into is which package manager to use to install nvim-lspconfig
+* first complication we run into is which package manager to use to install the nvim-lspconfig plugin
     * there are a butt ton of them 
-    * managing plugins is probably one of the most confusing parts of vim (among many things) 
+    * managing plugins is probably one of the most confusing parts of vim (amongst many) 
     * this tutorial is not designed to be a vim package manager tutorial
         * it's long enough as it is
         * google it
 * OK, got your nvim-lspconfig installed and working?
     * How do you tell? 
         * type `:LspInfo` into vim
-            * if you see something, it's working 
+            * if you see something pop up, it's working 
             * if you don't, it's not working 
                 * google it 
                     * (oh, and fuck google, too) 
@@ -423,28 +435,12 @@ cmp.setup {
                                 * "hotbot" was the balls
                                     * for its time
                                         * can you tell I'm getting bored writing this? 
-* Halfway home!
-    * Go back to the top of the page to finish this!
+* Halfway home! Now:
+    * Go back to the top of the page
+        * Follow the instructions in the TLDR; section
+        * The come back here if you want to suffer more through this tutorial to learn something
 
-
-
-
-* #1
-* #2
-* get links on cpan 
-* go over abbreviations
-* to neovim, they go by very different abbrevations:
-    * perllsp
-    * perlpls 
-* figure out how long they've been around
-* both are in active development
-* P::LS and PLS are my abbreviations
-* get github links
-* get names of developers
-* installing the language servers 
-    * briefly mention cpanm 
-
-###
-     
-     
-
+## The gory details for those who thirst for knowledge
+* This section goes into more detail on what the code snippet you pasted above does
+* One caveat: I'm not an expert in Lua
+    * take everything in this section with a bit of grain of salt 
