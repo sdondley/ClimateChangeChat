@@ -27,6 +27,7 @@
                         * configuring an IDE to work they way you want can take up a shit ton of time from typing and getting some actual typing done
                     * adds a layer of abstraction between you and your code
                         * any time not thinking directly about your code and instead thinking about the tool that writes your code is a distraction 
+                            * the real productivity doesn't kick in until after you get over a confusing learning curve (and a very steep one with vim)
                     * Makes it easier to pump out lots of code...but bad, confusing code
                 * Rough advice not to be followed strictly
                     * Learn to type before learning to code
@@ -88,6 +89,16 @@
     * it required some trial and error 
 * Hopefully this web page helps at least a little
 
+### Why does the Perl community seem behing the curve on adopting LSPs?
+* Good question! (if I do say so myself)
+* Is it really behind the curve?
+    * It seems like it to me 
+        * based on my early experiences 
+* I could take many guesses as to why
+    * but would just me speculating 
+        * so no real point to it 
+* Maybe this tutorial will help things along
+
 ### My relevant background
 * totally new to LSPs and nvim-lspconfig 
     * until last week 
@@ -106,15 +117,39 @@
     * well enough, but very slow to code it 
     * no idea how to go about to architect a sophisticated plugin with it 
 * Never used an LSP until last week
+    * I know just about zilch about how they work
+        * beyond knowing they follow a traditional "client/server" paradigm 
 * Never used a proper IDE except for dabbling a little with XCode 
 * Never wrote a line of lua until last week 
 
 ### Assumptions about your background
 * Have been using vim for at least a few months
 * Know at least the basics of how to configure neovim
+* You know your way around perl and installing perl modules 
 
 ### Will this work for Windows?
 * No idea. Good luck. You're on your own.
  
 ## "The important stuff" or "What you probably came here for"
+
+### Big picture stuff 
+
+#### There are two perl language servers
+* #1
+* #2
+* get links on cpan 
+* go over abbreviations
+* names are confusing
+* to neovim, they go by very different abbrevations:
+    * perllsp
+    * perlpls 
+* figure out how long they've been around
+* both are in active development
+* P::LS and PLS are my abbreviations
+* get github links
+* get names of developers
+* installing the language servers 
+    * briefly mention cpanm 
+     
+     
 
