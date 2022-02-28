@@ -27,4 +27,17 @@ Note: all notes below apply to default macOS. While the descriptions are accurat
         * this is where the user can configure vim to their liking
         * Most time is spent here configuring vim to your heart's desire
 
-### Config directory
+### Configuring nvim from scratch
+* if you already have a neovim config:
+    * good idea to create git repo of the nvim directory in .config
+        * create new branch called 'clean'
+        * delete all config files on the branch
+        * commit the branch
+        * switch back to old config until clean config is where you need it to be
+* convert old init.vim to lua
+    * tutorial https://www.notonlycode.org/neovim-lua-config/
+    * config is in lua.init, not init.vim
+    * in general, use `vim.opt` over `vim.o`
+    * can use after/ftplugin/<filetype>.lua for lua code
+    * 
+        

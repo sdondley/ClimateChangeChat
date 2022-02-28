@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Perl
+        </title>
+        <style type="text/css">
+        .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .il {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999;
+}
+.highlight .sa {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .sb {
+  color: #d14;
+}
+.highlight .sc {
+  color: #d14;
+}
+.highlight .sd {
+  color: #d14;
+}
+.highlight .s2 {
+  color: #d14;
+}
+.highlight .se {
+  color: #d14;
+}
+.highlight .sh {
+  color: #d14;
+}
+.highlight .si {
+  color: #d14;
+}
+.highlight .sx {
+  color: #d14;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #d14;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .s, .highlight .dl {
+  color: #d14;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .nb {
+  color: #0086B3;
+}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .nv, .highlight .vm {
+  color: #008080;
+}
+.highlight .ow {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight {
+  background-color: #f8f8f8;
+}
+      </style>
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              <h1>
+<a id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</h1>
+<h2>
+<a id="wtf" class="anchor" href="#wtf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h2>
+<ul>
+<li>...is an LSP?</li>
+<li>...is nvim-lspconfig?</li>
+<li>...is perl?</li>
+<li>...is neovim</li>
+</ul>
+<h2>
+<a id="the-big-picture-stuff" class="anchor" href="#the-big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h2>
+<h3>
+<a id="why-an-lsp" class="anchor" href="#why-an-lsp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h3>
+<ul>
+<li>To write code you use a text editor
+<ul>
+<li>Text editors require you to type
+<ul>
+<li>But typing sucks
+<ul>
+<li>Would you rather use a steam shovel or a spade to dig your home's foundation?</li>
+</ul>
+</li>
+<li>Programmers have built a bazillion tools to minimize the amount they have to type
+<ul>
+<li>vim is one of those tools</li>
+<li>More recently, they came up with "IDE's"
+<ul>
+<li>"IDE" is a stupid name that tries to impress with computer sciency words
+<ul>
+<li>stands for "Integrated Development Environment"
+<ul>
+<li>Programmers like talking about "environments" for some reason</li>
+</ul>
+</li>
+<li>Just a tool for helping you write code faster
+<ul>
+<li>How about a "Coding Assistant" instead?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>also help make it easier to look shit up and navigate lots of code</li>
+<li>Not without some disadvantages
+<ul>
+<li>added complexity
+<ul>
+<li>configuring an IDE to work they way you want can take up a shit ton of time from typing and getting some actual typing done</li>
+</ul>
+</li>
+<li>adds a layer of abstraction between you and your code
+<ul>
+<li>any time not thinking directly about your code and instead thinking about the tool that writes your code is a distraction</li>
+</ul>
+</li>
+<li>Makes it easier to pump out lots of code...but bad, confusing code</li>
+</ul>
+</li>
+<li>Rough advice not to be followed strictly
+<ul>
+<li>Learn to type before learning to code</li>
+<li>Learn to code "by hand" before using an IDE</li>
+<li>Use an IDE after you learn to program manually</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>So why use an "LSP?"
+<ul>
+<li>Takes away some of the tedious work of typing and looking shit up</li>
+<li>It's kind of magical and fun to use</li>
+<li>Allows you to turn vim into a poor man's IDE
+<ul>
+<li>But an IDE you have absolute full control over (if you know what you are doing)</li>
+</ul>
+</li>
+<li>Common "killer" features that programmers realy like that LSP's can provide:
+<ul>
+<li>Syntax checking
+<ul>
+<li>tells you in real time if your code has an obvious mistake</li>
+<li>but cannot tell you if your code behaves the way you want it to
+<ul>
+<li>use tests for that
+<ul>
+<li>IDE can hlep you manage and run your tests, not an LSP</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Auto completion
+<ul>
+<li>Type in the first few characters of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write
+<ul>
+<li>You don't have to type in the full name of the identifier, just choose it from the menu</li>
+<li>Choosing from menu might often be a little slower for shorter names, but:
+<ul>
+<li>Prevents spelling mistakes, which might end up costing time</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Documentation lookup
+<ul>
+<li>Forgot what arguments a function takes?</li>
+<li>Forgot what a function does?</li>
+<li>Need a quick reminder of how classes work in language A?</li>
+<li>Forgot how a variable is declared?</li>
+<li>An LSP helps you find the answers you are looking for</li>
+</ul>
+</li>
+<li>Code formatting
+<ul>
+<li>Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable</li>
+</ul>
+</li>
+<li>There's more an LSP can do, but these are the big ones</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Can't I already to this with vim without an LSP?
+<ul>
+<li>Yes, most of it
+<ul>
+<li>But not quite as conveniently and not as quite fast</li>
+<li>Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>What about using coc plugins instead?
+<ul>
+<li>I haven't used coc up until last week when I started using it in conjunction with an LSP
+<ul>
+<li>Not really qualified to weigh in on the matter
+<ul>
+<li>sorry</li>
+<li>FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Why Perl?
+<ul>
+<li>like English, it's my native language</li>
+<li>I had difficultly getting an LSP set up with Perl and neovim
+<ul>
+<li>Not a huge amount of documentation for it
+<ul>
+<li>Stuff I did find was wrong or incomplete
+<ul>
+<li>Some of it has since been updated
+<ul>
+<li>thanks to my tireless efforts :)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The two LSPs for Perl are not written by people who use neovim
+<ul>
+<li>they use Perl LSP with "VSCode"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wanted other to avoid my initial confusion
+<ul>
+<li>wrote this</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a id="is-an-lsp-hard-to-set-up" class="anchor" href="#is-an-lsp-hard-to-set-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is an LSP hard to set up?</h3>
+<ul>
+<li>if you are new to vim
+<ul>
+<li>it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
+<ul>
+<li>but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If you have at least some experience with neovim
+<ul>
+<li>It's not too bad</li>
+<li>still a learning curve</li>
+<li>it required some trial and error</li>
+</ul>
+</li>
+<li>Hopefully this web page helps at least a little</li>
+</ul>
+<h3>
+<a id="my-relevant-background" class="anchor" href="#my-relevant-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h3>
+<ul>
+<li>totally new to LSPs and nvim-lspconfig
+<ul>
+<li>until last week</li>
+</ul>
+</li>
+<li>Coding in Perl since late 90s
+<ul>
+<li>When Perl was king of the web</li>
+</ul>
+</li>
+<li>Mac user since 2008
+<ul>
+<li>for daily computing</li>
+<li>used windows from about 1998 until 2008</li>
+</ul>
+</li>
+<li>GNU/Linux user since early 2000s
+<ul>
+<li>Most familiar with Debian</li>
+</ul>
+</li>
+<li>Vim user since early 2000s
+<ul>
+<li>when I started using Linux</li>
+<li>still far from an expert</li>
+</ul>
+</li>
+<li>neovim user for maybe 2 years</li>
+<li>Know some vimscript
+<ul>
+<li>well enough, but very slow to code it</li>
+<li>no idea how to go about to architect a sophisticated plugin with it</li>
+</ul>
+</li>
+<li>Never used an LSP until last week</li>
+<li>Never used a proper IDE except for dabbling a little with XCode</li>
+<li>Never wrote a line of lua until last week</li>
+</ul>
+<h3>
+<a id="assumptions-about-your-background" class="anchor" href="#assumptions-about-your-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h3>
+<ul>
+<li>Have been using vim for at least a few months</li>
+<li>Know at least the basics of how to configure neovim</li>
+</ul>
+<h3>
+<a id="will-this-work-for-windows" class="anchor" href="#will-this-work-for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h3>
+<ul>
+<li>No idea. Good luck. You're on your own.</li>
+</ul>
+<h2>
+<a id="the-important-stuff-or-what-you-probably-came-here-for" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"The important stuff" or "What you probably came here for"</h2>
+
+            </div>
+            <div id="toc" >
+                <div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/zenscroll/zenscroll-min.js">
+        </script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+</html>

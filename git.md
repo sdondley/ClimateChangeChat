@@ -10,3 +10,5 @@
 * creating
     * `git checkout -b <branch_name>` 
 
+## import file from current branch to 
+* `git restore --source otherbranch path/to/myfile.txt`
