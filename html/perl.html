@@ -218,7 +218,7 @@
   background-color: #f8f8f8;
 }
       </style>
-        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div id="menu">
@@ -229,10 +229,12 @@
         </div>
         <div id="page">
             <div id="content">
-              <h1>
-<a id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</h1>
+              
+
 <h1>
-<a id="wtf" class="anchor" href="#wtf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1>
+<a aria-hidden="true" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</h1>
+<h1>
+<a aria-hidden="true" class="anchor" href="#wtf" id="wtf"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1>
 <ul>
 <li>...is an LSP?</li>
 <li>...is nvim-lspconfig?</li>
@@ -240,9 +242,9 @@
 <li>...is neovim?</li>
 </ul>
 <h1>
-<a id="the-big-picture-stuff" class="anchor" href="#the-big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1>
+<a aria-hidden="true" class="anchor" href="#the-big-picture-stuff" id="the-big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1>
 <h2>
-<a id="why-an-lsp" class="anchor" href="#why-an-lsp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h2>
+<a aria-hidden="true" class="anchor" href="#why-an-lsp" id="why-an-lsp"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h2>
 <ul>
 <li>To write code you use a text editor
 <ul>
@@ -250,24 +252,24 @@
 <ul>
 <li>But typing sucks
 <ul>
-<li>Would you rather use a steam shovel or a spade to dig your home's foundation?</li>
+<li>Would you rather use a steam shovel or a spade to dig your home&#39;s foundation?</li>
 </ul>
 </li>
 <li>Programmers have built a bazillion tools to minimize the amount they have to type
 <ul>
 <li>vim is one of those tools</li>
-<li>More recently, they came up with "IDE's"
+<li>More recently, they came up with &quot;IDE&#39;s&quot;
 <ul>
-<li>"IDE" is a stupid name that tries to impress with computer sciency words
+<li>&quot;IDE&quot; is a stupid name that tries to impress with computer sciency words
 <ul>
-<li>stands for "Integrated Development Environment"
+<li>stands for &quot;Integrated Development Environment&quot;
 <ul>
-<li>Programmers like talking about "environments" for some reason</li>
+<li>Programmers like talking about &quot;environments&quot; for some reason</li>
 </ul>
 </li>
 <li>Just a tool for helping you write code faster
 <ul>
-<li>How about a "Coding Assistant" instead?</li>
+<li>How about a &quot;Coding Assistant&quot; instead?</li>
 </ul>
 </li>
 </ul>
@@ -284,7 +286,7 @@
 <ul>
 <li>any time not thinking directly about your code and instead thinking about the tool that writes your code is a distraction
 <ul>
-<li>the real productivity doesn't kick in until after you get over a confusing learning curve (and a very steep one with vim)</li>
+<li>the real productivity doesn&#39;t kick in until after you get over a confusing learning curve (and a very steep one with vim)</li>
 </ul>
 </li>
 </ul>
@@ -295,7 +297,7 @@
 <li>Rough advice not to be followed strictly
 <ul>
 <li>Learn to type before learning to code</li>
-<li>Learn to code "by hand" before using an IDE</li>
+<li>Learn to code &quot;by hand&quot; before using an IDE</li>
 <li>Use an IDE after you learn to program manually</li>
 </ul>
 </li>
@@ -307,16 +309,16 @@
 </li>
 </ul>
 </li>
-<li>So why use an "LSP?"
+<li>So why use an &quot;LSP?&quot;
 <ul>
 <li>Takes away some of the tedious work of typing and looking shit up</li>
-<li>It's kind of magical and fun to use</li>
-<li>Allows you to turn vim into a poor man's IDE
+<li>It&#39;s kind of magical and fun to use</li>
+<li>Allows you to turn vim into a poor man&#39;s IDE
 <ul>
 <li>But an IDE you have absolute full control over (if you know what you are doing)</li>
 </ul>
 </li>
-<li>Common "killer" features that programmers realy like that LSP's can provide:
+<li>Common &quot;killer&quot; features that programmers realy like that LSP&#39;s can provide:
 <ul>
 <li>Syntax checking
 <ul>
@@ -336,7 +338,7 @@
 <ul>
 <li>Type in the first few characters of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write
 <ul>
-<li>You don't have to type in the full name of the identifier, just choose it from the menu</li>
+<li>You don&#39;t have to type in the full name of the identifier, just choose it from the menu</li>
 <li>Choosing from menu might often be a little slower for shorter names, but:
 <ul>
 <li>Prevents spelling mistakes, which might end up costing time</li>
@@ -360,29 +362,29 @@
 <li>Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable</li>
 </ul>
 </li>
-<li>There's more an LSP can do, but these are the big ones</li>
+<li>There&#39;s more an LSP can do, but these are the big ones</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Can't I already to this with vim without an LSP?
+<li>Can&#39;t I already to this with vim without an LSP?
 <ul>
 <li>Yes, most of it
 <ul>
 <li>But not quite as conveniently and not as quite fast</li>
-<li>Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools</li>
+<li>Bundles an extra layer of abstraction to provide a bunch of different features so you don&#39;t have to do so much manual configuration and set up of other tools</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>What about using coc plugins instead?
 <ul>
-<li>I haven't used coc up until last week when I started using it in conjunction with an LSP
+<li>I haven&#39;t used coc up until last week when I started using it in conjunction with an LSP
 <ul>
 <li>Not really qualified to weigh in on the matter
 <ul>
 <li>sorry</li>
-<li>FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim</li>
+<li>FWIW, from what I&#39;ve read, the nvim-lspconfig seems to be the future of neovim</li>
 </ul>
 </li>
 </ul>
@@ -391,7 +393,7 @@
 </li>
 <li>Why Perl?
 <ul>
-<li>like English, it's my native language</li>
+<li>like English, it&#39;s my native language</li>
 <li>I had difficultly getting an LSP set up with Perl and neovim
 <ul>
 <li>Not a huge amount of documentation for it
@@ -407,7 +409,7 @@
 </li>
 <li>The two LSPs for Perl are not written by people who use neovim
 <ul>
-<li>they use Perl LSP with "VSCode"</li>
+<li>they use Perl LSP with &quot;VSCode&quot;</li>
 </ul>
 </li>
 </ul>
@@ -423,11 +425,11 @@
 </li>
 </ul>
 <h2>
-<a id="is-an-lsp-hard-to-set-up" class="anchor" href="#is-an-lsp-hard-to-set-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is an LSP hard to set up?</h2>
+<a aria-hidden="true" class="anchor" href="#is-an-lsp-hard-to-set-up" id="is-an-lsp-hard-to-set-up"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is an LSP hard to set up?</h2>
 <ul>
 <li>if you are new to vim
 <ul>
-<li>it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
+<li>it&#39;s basically impossible to figure out unless you find a step-by-step recipe identical to your needs
 <ul>
 <li>but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality</li>
 </ul>
@@ -436,7 +438,7 @@
 </li>
 <li>If you have at least some experience with neovim
 <ul>
-<li>It's not too bad</li>
+<li>It&#39;s not too bad</li>
 <li>still a learning curve</li>
 <li>it requires some trial and error</li>
 </ul>
@@ -445,7 +447,7 @@
 <li>As neovim matures, will probably get easier</li>
 </ul>
 <h2>
-<a id="why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" class="anchor" href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem behing the curve on adopting LSPs?</h2>
+<a aria-hidden="true" class="anchor" href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" id="why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem behing the curve on adopting LSPs?</h2>
 <ul>
 <li>Good question! (if I do say so myself)</li>
 <li>Is it really behind the curve?
@@ -469,7 +471,7 @@
 <li>Maybe this tutorial will help things along</li>
 </ul>
 <h2>
-<a id="my-relevant-background" class="anchor" href="#my-relevant-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h2>
+<a aria-hidden="true" class="anchor" href="#my-relevant-background" id="my-relevant-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h2>
 <ul>
 <li>totally new to LSPs and nvim-lspconfig
 <ul>
@@ -509,7 +511,7 @@
 <ul>
 <li>I know just about zilch about how they work
 <ul>
-<li>beyond knowing they follow a traditional "client/server" paradigm</li>
+<li>beyond knowing they follow a traditional &quot;client/server&quot; paradigm</li>
 </ul>
 </li>
 </ul>
@@ -518,23 +520,23 @@
 <li>Never wrote a line of lua until last week</li>
 </ul>
 <h2>
-<a id="assumptions-about-your-background" class="anchor" href="#assumptions-about-your-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h2>
+<a aria-hidden="true" class="anchor" href="#assumptions-about-your-background" id="assumptions-about-your-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h2>
 <ul>
 <li>Have been using vim for at least a few months</li>
 <li>Know at least the basics of how to configure neovim</li>
 <li>You know your way around perl and installing perl modules</li>
 </ul>
 <h2>
-<a id="will-this-work-for-windows" class="anchor" href="#will-this-work-for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h2>
+<a aria-hidden="true" class="anchor" href="#will-this-work-for-windows" id="will-this-work-for-windows"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h2>
 <ul>
-<li>No idea. Good luck. You're on your own.</li>
+<li>No idea. Good luck. You&#39;re on your own.</li>
 </ul>
 <h1>
-<a id="the-important-stuff-or-what-you-probably-came-here-for" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"The important stuff" or "What you probably came here for"</h1>
+<a aria-hidden="true" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" id="the-important-stuff-or-what-you-probably-came-here-for"><span aria-hidden="true" class="octicon octicon-link"></span></a>&quot;The important stuff&quot; or &quot;What you probably came here for&quot;</h1>
 <h2>
-<a id="big-picture-stuff" class="anchor" href="#big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Big picture stuff</h2>
+<a aria-hidden="true" class="anchor" href="#big-picture-stuff" id="big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Big picture stuff</h2>
 <h3>
-<a id="there-are-two-perl-language-servers" class="anchor" href="#there-are-two-perl-language-servers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two perl language servers</h3>
+<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers" id="there-are-two-perl-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two perl language servers</h3>
 <ul>
 <li>#1</li>
 <li>#2</li>
@@ -547,7 +549,7 @@
 <li>perlpls</li>
 </ul>
 </li>
-<li>figure out how long they've been around</li>
+<li>figure out how long they&#39;ve been around</li>
 <li>both are in active development</li>
 <li>P::LS and PLS are my abbreviations</li>
 <li>get github links</li>
@@ -560,9 +562,35 @@
 </ul>
 
             </div>
-            <div id="toc" >
+            <div id="toc">
                 <div>
-                </div>
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li><a href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061">Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</a></li>
+<li><a href="#wtf">WTF</a></li>
+<li>
+<a href="#the-big-picture-stuff">The Big Picture Stuff</a>
+<ul>
+<li><a href="#why-an-lsp">Why an LSP?</a></li>
+<li><a href="#is-an-lsp-hard-to-set-up">Is an LSP hard to set up?</a></li>
+<li><a href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps">Why does the Perl community seem behing the curve on adopting LSPs?</a></li>
+<li><a href="#my-relevant-background">My relevant background</a></li>
+<li><a href="#assumptions-about-your-background">Assumptions about your background</a></li>
+<li><a href="#will-this-work-for-windows">Will this work for Windows?</a></li>
+</ul>
+</li>
+<li>
+<a href="#the-important-stuff-or-what-you-probably-came-here-for">&quot;The important stuff&quot; or &quot;What you probably came here for&quot;</a>
+<ul>
+<li>
+<a href="#big-picture-stuff">Big picture stuff</a>
+<ul>
+<li><a href="#there-are-two-perl-language-servers">There are two perl language servers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  3:32 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">
@@ -571,4 +599,4 @@
           zenscroll.setup(200, 50);
           </script>
     </body>
-</html>
+

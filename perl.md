@@ -1,3 +1,18 @@
+# On This Page
+
+- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
+- [WTF](#wtf)
+- [The Big Picture Stuff](#the-big-picture-stuff)
+    - [Why an LSP?](#why-an-lsp)
+    - [Is an LSP hard to set up?](#is-an-lsp-hard-to-set-up)
+    - [Why does the Perl community seem behing the curve on adopting LSPs?](#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps)
+    - [My relevant background](#my-relevant-background)
+    - [Assumptions about your background](#assumptions-about-your-background)
+    - [Will this work for Windows?](#will-this-work-for-windows)
+- ["The important stuff" or "What you probably came here for"](#the-important-stuff-or-what-you-probably-came-here-for)
+    - [Big picture stuff](#big-picture-stuff)
+        - [There are two perl language servers](#there-are-two-perl-language-servers)
+
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
 
 # WTF
