@@ -7,7 +7,7 @@
     - [Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#install-the-following-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
     - [Cut and paste this code into `init.vim`:](#cut-and-paste-this-code-into-initvim)
     - [That's it. You're done!](#thats-it-youre-done)
-        - [Looking for something more gratifying for your thirsty curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
+    - [Looking for something more gratifying for your thirsty curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why an LSP?](#why-an-lsp)
@@ -157,11 +157,12 @@ cmp.setup {
     * Does it look like it's connected?
         * "Yes, you're a genius!"
             * OK, get on your way and go get some coding coding done
+            * Or continue if you feel cheated and want to learn more
         * "No, you're an asshole!"
             * OK, google it
             * Or continue reading to try to gain more insight as to the problem
 
-### Looking for something more gratifying for your thirsty curious soul? 
+## Looking for something more gratifying for your thirsty curious soul? 
 * continue below
 
 # WTF
@@ -298,7 +299,7 @@ cmp.setup {
 ## Will this work for Windows?
 * No idea. Good luck. You're on your own.
 * Fuck Windows
-    * old perceptions die hard 
+    * sure, it's better than it used to be but old perceptions die hard 
     * no OS without a decent command line built in is worth anything
     * I have only so much time to figure this shit out
         * no time to learn whatever you have to hack to get something working in Windows 
