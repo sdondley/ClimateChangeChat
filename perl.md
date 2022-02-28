@@ -9,7 +9,7 @@
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why an LSP?](#why-an-lsp)
-    - [Is an LSP hard to set up?](#is-an-lsp-hard-to-set-up)
+    - [Is an LSP hard to set up in neovim?](#is-an-lsp-hard-to-set-up-in-neovim)
     - [Why does the Perl community seem to be behind the curve on adopting LSPs?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps)
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
@@ -243,7 +243,9 @@ cmp.setup {
         * Wanted other to avoid my initial confusion 
             * wrote this 
 
-## Is an LSP hard to set up?
+## Is an LSP hard to set up in neovim?
+* really depends on the language server
+    * for perl, it's super, super easy 
 * if you are new to vim
     * it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
         * but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality 
