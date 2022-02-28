@@ -179,8 +179,8 @@ cmp.setup {
         * But typing sucks
             * Would you rather use a steam shovel or a spade to dig your home's foundation?
         * Programmers have built a bazillion tools to minimize the amount they have to type
-            * vim is one of those tools 
-            * More recently, they came up with "IDE's"
+            * vim is one of those tools, used since the early 80s 
+            * More recently, deverlopers have been using "IDE's"
                 * "IDE" is a stupid name that tries to impress with computer sciency words
                     * stands for "Integrated Development Environment" 
                         * Programmers like talking about "environments" for some reason
