@@ -1,5 +1,10 @@
 # On This Page
 
+- [TLDR; The REAL thing you are here for](#tldr-the-real-thing-you-are-here-for)
+    - [Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#install-the-following-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
+    - [Cut and paste this code into `init.vim`:](#cut-and-paste-this-code-into-initvim)
+    - [That's it. You're done!](#thats-it-youre-done)
+        - [Looking for something more gratifying for your thirsty curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
@@ -14,6 +19,147 @@
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
         - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
+
+# TLDR; The REAL thing you are here for
+* This section assumes:
+    * you know what an LSP is, what an IDE is
+    * you installed the two known perl language servers
+    * you got the nvim-lspconfig plugin installed in neovim
+    * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
+        * otherwise, proceed
+
+## Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):
+* `christoomey/vim-tmux-navigator` 
+* `hrsh7th/nvim-cmp`
+* `hrsh7th/cmp-nvim-lsp`
+* `saadparwaiz1/cmp_luasnip`
+* `hrsh7th/cmp-nvim-lsp`
+* `L3MON4D3/LuaSnip`
+
+## Cut and paste this code into `init.vim`:
+* Yeah, you might not have any clue what this does
+    * some people don't care, so let's not waste their time 
+    * so just do it
+        * ask questions later 
+            * I'll hopefully answer at least some of them down lower on the page
+
+```
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+end
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local lspconfig = require('lspconfig');
+--local servers = { 'perlpls', 'perlls' }
+local servers = { 'perlpls' }
+for _, lsp in pairs(servers) do
+  lspconfig[lsp].setup {
+    --root_dir = util.find_git_ancestor,
+    settings = { 
+    perl = { 
+        perlcritic = { enabled = true },
+        syntax = { enabled = true },
+    } 
+  },
+    single_file_support = true,
+	on_attach = on_attach,
+    capabilities = capabilities,
+	flags = {
+		-- This will be the default in neovim 0.7+
+		debounce_text_changes = 100,
+	}
+  }
+end
+
+local luasnip = require 'luasnip'
+
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      --elseif luasnip.expand_or_jumpable() then
+        --luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+}
+```
+
+## That's it. You're done!
+* Was that so hard?
+* Check that's it's working:
+    * Open neovim
+    * Type `:LspInfo`
+    * Does it look like it's connected?
+        * "Yes, you're a genius!"
+            * OK, get on your way and go get some coding coding done
+        * "No, you're an asshole!"
+            * OK, google it
+            * Or continue reading to try to gain more insight as to the problem
+
+### Looking for something more gratifying for your thirsty curious soul? 
+* continue below
 
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
 
@@ -148,6 +294,18 @@
 
 ## Will this work for Windows?
 * No idea. Good luck. You're on your own.
+* Fuck Windows
+    * old perceptions die hard 
+    * no OS without a decent command line built in is worth anything
+    * I have only so much time to figure this shit out
+        * no time to learn whatever you have to hack to get something working in Windows 
+            * I'll leave it to more qualified people than me 
+* My advice? 
+    * if you're gonna do open source, use `*nix`
+        * macs are fine
+        * using a virtual linux box is better 
+            * but I'm not looking for another box to manage 
+                * learning one OS really well is enough work for me
  
 # "The more technical stuff" or "What you probably came here for"
 
@@ -239,9 +397,35 @@
         * both seem about the same after limited use 
 
 ## OK, the stuff you really need to know to get some real work done
-* OK, with all that out of the way, we can finally get some shit done
+* with all that out of the way, we can finally get some shit done
 * First, we download both language servers so you can try them both out
+    * I use cpanm 
+* having perlbrew installed is fine 
+    * I didn't run into any issues 
+    * running 5.34.0 version of perl
 * Now we configure neovim
+* first complication we run into is which package manager to use to install nvim-lspconfig
+    * there are a butt ton of them 
+    * managing plugins is probably one of the most confusing parts of vim (among many things) 
+    * this tutorial is not designed to be a vim package manager tutorial
+        * it's long enough as it is
+        * google it
+* OK, got your nvim-lspconfig installed and working?
+    * How do you tell? 
+        * type `:LspInfo` into vim
+            * if you see something, it's working 
+            * if you don't, it's not working 
+                * google it 
+                    * (oh, and fuck google, too) 
+                        * don't be evil, my ass 
+                        * duck duck go sucks, though, too
+                            * all search engines kind of suck 
+                                * "hotbot" was the balls
+                                    * for its time
+                                        * can you tell I'm getting bored writing this? 
+* Halfway home!
+    * Go back to the top of the page to finish this!
+
 
 
 
