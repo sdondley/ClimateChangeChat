@@ -1,14 +1,14 @@
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
 
-## WTF
+# WTF
 * ...is an LSP?
 * ...is nvim-lspconfig?
 * ...is perl?
-* ...is neovim
+* ...is neovim?
 
-## The Big Picture Stuff
+# The Big Picture Stuff
 
-### Why an LSP?
+## Why an LSP?
 * To write code you use a text editor
     * Text editors require you to type
         * But typing sucks
@@ -79,17 +79,18 @@
         * Wanted other to avoid my initial confusion 
             * wrote this 
 
-### Is an LSP hard to set up?
+## Is an LSP hard to set up?
 * if you are new to vim
     * it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
         * but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality 
 * If you have at least some experience with neovim
     * It's not too bad 
     * still a learning curve 
-    * it required some trial and error 
+    * it requires some trial and error 
 * Hopefully this web page helps at least a little
+* As neovim matures, will probably get easier
 
-### Why does the Perl community seem behing the curve on adopting LSPs?
+## Why does the Perl community seem behing the curve on adopting LSPs?
 * Good question! (if I do say so myself)
 * Is it really behind the curve?
     * It seems like it to me 
@@ -99,7 +100,7 @@
         * so no real point to it 
 * Maybe this tutorial will help things along
 
-### My relevant background
+## My relevant background
 * totally new to LSPs and nvim-lspconfig 
     * until last week 
 * Coding in Perl since late 90s
@@ -122,19 +123,19 @@
 * Never used a proper IDE except for dabbling a little with XCode 
 * Never wrote a line of lua until last week 
 
-### Assumptions about your background
+## Assumptions about your background
 * Have been using vim for at least a few months
 * Know at least the basics of how to configure neovim
 * You know your way around perl and installing perl modules 
 
-### Will this work for Windows?
+## Will this work for Windows?
 * No idea. Good luck. You're on your own.
  
-## "The important stuff" or "What you probably came here for"
+# "The important stuff" or "What you probably came here for"
 
-### Big picture stuff 
+## Big picture stuff 
 
-#### There are two perl language servers
+### There are two perl language servers
 * #1
 * #2
 * get links on cpan 

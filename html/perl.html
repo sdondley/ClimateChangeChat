@@ -231,18 +231,18 @@
             <div id="content">
               <h1>
 <a id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</h1>
-<h2>
-<a id="wtf" class="anchor" href="#wtf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h2>
+<h1>
+<a id="wtf" class="anchor" href="#wtf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1>
 <ul>
 <li>...is an LSP?</li>
 <li>...is nvim-lspconfig?</li>
 <li>...is perl?</li>
-<li>...is neovim</li>
+<li>...is neovim?</li>
 </ul>
+<h1>
+<a id="the-big-picture-stuff" class="anchor" href="#the-big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1>
 <h2>
-<a id="the-big-picture-stuff" class="anchor" href="#the-big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h2>
-<h3>
-<a id="why-an-lsp" class="anchor" href="#why-an-lsp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h3>
+<a id="why-an-lsp" class="anchor" href="#why-an-lsp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h2>
 <ul>
 <li>To write code you use a text editor
 <ul>
@@ -422,8 +422,8 @@
 </ul>
 </li>
 </ul>
-<h3>
-<a id="is-an-lsp-hard-to-set-up" class="anchor" href="#is-an-lsp-hard-to-set-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is an LSP hard to set up?</h3>
+<h2>
+<a id="is-an-lsp-hard-to-set-up" class="anchor" href="#is-an-lsp-hard-to-set-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is an LSP hard to set up?</h2>
 <ul>
 <li>if you are new to vim
 <ul>
@@ -438,13 +438,14 @@
 <ul>
 <li>It's not too bad</li>
 <li>still a learning curve</li>
-<li>it required some trial and error</li>
+<li>it requires some trial and error</li>
 </ul>
 </li>
 <li>Hopefully this web page helps at least a little</li>
+<li>As neovim matures, will probably get easier</li>
 </ul>
-<h3>
-<a id="why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" class="anchor" href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem behing the curve on adopting LSPs?</h3>
+<h2>
+<a id="why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" class="anchor" href="#why-does-the-perl-community-seem-behing-the-curve-on-adopting-lsps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem behing the curve on adopting LSPs?</h2>
 <ul>
 <li>Good question! (if I do say so myself)</li>
 <li>Is it really behind the curve?
@@ -467,8 +468,8 @@
 </li>
 <li>Maybe this tutorial will help things along</li>
 </ul>
-<h3>
-<a id="my-relevant-background" class="anchor" href="#my-relevant-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h3>
+<h2>
+<a id="my-relevant-background" class="anchor" href="#my-relevant-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h2>
 <ul>
 <li>totally new to LSPs and nvim-lspconfig
 <ul>
@@ -516,24 +517,24 @@
 <li>Never used a proper IDE except for dabbling a little with XCode</li>
 <li>Never wrote a line of lua until last week</li>
 </ul>
-<h3>
-<a id="assumptions-about-your-background" class="anchor" href="#assumptions-about-your-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h3>
+<h2>
+<a id="assumptions-about-your-background" class="anchor" href="#assumptions-about-your-background" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h2>
 <ul>
 <li>Have been using vim for at least a few months</li>
 <li>Know at least the basics of how to configure neovim</li>
 <li>You know your way around perl and installing perl modules</li>
 </ul>
-<h3>
-<a id="will-this-work-for-windows" class="anchor" href="#will-this-work-for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h3>
+<h2>
+<a id="will-this-work-for-windows" class="anchor" href="#will-this-work-for-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h2>
 <ul>
 <li>No idea. Good luck. You're on your own.</li>
 </ul>
+<h1>
+<a id="the-important-stuff-or-what-you-probably-came-here-for" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"The important stuff" or "What you probably came here for"</h1>
 <h2>
-<a id="the-important-stuff-or-what-you-probably-came-here-for" class="anchor" href="#the-important-stuff-or-what-you-probably-came-here-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"The important stuff" or "What you probably came here for"</h2>
+<a id="big-picture-stuff" class="anchor" href="#big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Big picture stuff</h2>
 <h3>
-<a id="big-picture-stuff" class="anchor" href="#big-picture-stuff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Big picture stuff</h3>
-<h4>
-<a id="there-are-two-perl-language-servers" class="anchor" href="#there-are-two-perl-language-servers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two perl language servers</h4>
+<a id="there-are-two-perl-language-servers" class="anchor" href="#there-are-two-perl-language-servers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two perl language servers</h3>
 <ul>
 <li>#1</li>
 <li>#2</li>
