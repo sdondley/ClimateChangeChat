@@ -332,6 +332,8 @@ cmp.setup {
         * How do I know which one to use?
             * It depends on what you need it to do
                 * Not all language servers have the same feature set 
+                    * read the langauge server's documentation 
+                        * should spell things out 
             * The ones that seem to work are the better ones 
     * we will cover how to do this later 
 * you need to configure neovim to use the language server you installed
