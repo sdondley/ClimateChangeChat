@@ -12,7 +12,7 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
         - [Step 4](#step-4)
     - [Advanced set up](#advanced-set-up)
         - [Step 1: Do steps 1 and 2 in the basic setup](#step-1-do-steps-1-and-2-in-the-basic-setup)
-        - [Step 2: Install these plugins into neovim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-plugins-into-neovim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
+        - [Step 2: Install these plugins into neovim (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin)
         - [Step 3: Cut and paste a giant lua code snippet into your vim configuration](#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration)
     - [That's it. You're done!](#thats-it-youre-done)
     - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
@@ -43,14 +43,16 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
 
 ## Basic setup: Get a Perl language server up and running with neovim
 * No bells or whistles 
-* Good just to make sure it works
-* Recommended to do this first then do advanced set up below
+* Good for just making sure you can get something working before trying more sophisticated configs
+    * Recommended to do this first then do advanced set up below
 
 ### Step 1: Install the language server(s)
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
-    * From the command line, install one of both if you want to try them both: 
+    * From the command line, install one or both if you want to try them both: 
         * `cpanm PLS` 
+            * I recommend this one 
         * `cpanm Perl::LanguageServer`
+            * I could not get completion working with this one
 * Step 1 is done
 
 ### Step 2: Install the nvim-lspconfig plugin with git and install into neovim
@@ -62,23 +64,23 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
 * Step 2 is done
 
 ### Step 3: Throw one line of lua code into neovim's init file
+* neovim has complicated things by offering two different way to load neovim's configurtion 
+    * old way: with vimscript 
+    * new way: with lua 
 * WTF is lua, you say?
     * Sounds like you're probably using `init.vim` to configure neovim 
-        * Throw this code into the file: 
+        * Throw this code into `init.vim`: 
             *  `lua require('lspconfig').perlpls.setup{}`
                 * for the PLS language server 
-                    * I recommend using this one 
+                    * again, I recommend this one
             * OR for the Perl::LanguageServer
                 *  `lua require('lspconfig').perlls.setup{}`
-                    * I couldn't figure out how to get completion working with this one 
-                        * not recommended 
-* On the other hand, if you're using `init.lua     
-    * require'lspconfig'.perlpls.setup{}`
+* If you're into lua, edit the `init.lua` file instead:    
+    * `require'lspconfig'.perlpls.setup{}`
         * for the PLS language server 
-            * recommended 
     * `require'lspconfig'.perlls.setup{}`
         * for the Perl::LanguageServer language server 
-            * ok, if you don't care about code completion 
+            * ok, if you don't care about not having code completion 
                 * or maybe you'll have better luck than me 
 * Step 3 is done
 
@@ -96,12 +98,12 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
     * or let me know if you think I fucked up this simple tutorial 
 
 ## Advanced set up 
-* If you want the lsp to do cooler stuff and set up maps and have fancier code completion and snippets, follow these steps:
+* If you want the lsp to do cooler stuff using maps and have fancier code completion and snippets, follow these steps:
 
 ### Step 1: Do steps 1 and 2 in the basic setup
 * If you've already done them, don't forget to remove the one-line snippet in step 2 before proceeding
 
-### Step 2: Install these plugins into neovim from github (in addition to the `neovim/nvim-lspconfig` plugin):
+### Step 2: Install these plugins into neovim (in addition to the `neovim/nvim-lspconfig` plugin):
     hrsh7th/nvim-cmp
     hrsh7th/cmp-nvim-lsp
     saadparwaiz1/cmp_luasnip
@@ -117,13 +119,14 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `lsp_config.lua`
                 * drop the code beloow into it
-* Yeah, you might not have any clue what this does
+* Yeah, you might not have any clue what this code does
     * This is the TLDR; section 
         * not covered here 
         * read the boring details further down in this tutorial 
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
     * you can ask questions later 
+        * just focus on getting it working for now 
         * I'll hopefully answer at least some of them down lower on the page
 
 ```
