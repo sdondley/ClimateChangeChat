@@ -5,6 +5,13 @@
         </title>
         %pygments%
         <link rel="stylesheet" type="text/css" href="%root_path%css/style.css" />
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="%root_path%js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+        </script>
     </head>
     <body>
         <div id="menu">
@@ -22,8 +29,7 @@
                 </div>
             </div>
         </div>
-        <script src="%root_path%js/zenscroll/zenscroll-min.js">
-        </script>
+        <script src="%root_path%js/zenscroll/zenscroll-min.js"></script>
         <script>
           zenscroll.setup(200, 50);
           </script>

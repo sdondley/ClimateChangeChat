@@ -1,5 +1,5 @@
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
-CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed opinions just to spice things up a little. If you're humorless or just think my sense of humor sucks, go RTFM instead.
+**CAUTION:** This tutorial is sprinkled with expletives and opinions that are a bit uninformed just to spice things up a little. If you're humorless or just think my sense of humor sucks, go RTFM instead.
 
 # On This Page
 
@@ -48,7 +48,7 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
 
 ### Step 1: Install the language server(s)
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
-    * From the command line, install one or both if you want to try them both: 
+    * From the command line, install one or both: 
         * `cpanm PLS` 
             * I recommend this one 
         * `cpanm Perl::LanguageServer`
@@ -64,7 +64,7 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
 * Step 2 is done
 
 ### Step 3: Throw one line of lua code into neovim's init file
-* neovim has complicated things by offering two different way to load neovim's configurtion 
+* neovim has complicated vim (even more) by offering two different scripts for writing neovim's configurtion 
     * old way: with vimscript 
     * new way: with lua 
 * WTF is lua, you say?
@@ -98,7 +98,7 @@ CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed 
     * or let me know if you think I fucked up this simple tutorial 
 
 ## Advanced set up 
-* If you want the lsp to do cooler stuff using maps and have fancier code completion and snippets, follow these steps:
+* If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow these steps:
 
 ### Step 1: Do steps 1 and 2 in the basic setup
 * If you've already done them, don't forget to remove the one-line snippet in step 2 before proceeding

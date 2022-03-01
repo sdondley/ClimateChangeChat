@@ -23,6 +23,7 @@ h6 {font-size: 1em; color: #9c9c9c;}
 p, pre, blockquote, table, ul, ol, dl {
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-left: 50px;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -75,9 +76,14 @@ pre {
   border-left: 5px solid #dcdcdc;
   background-color: #f5f5f5;
   padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   font-size: 0.8em;
   border-radius: 6px;
+  max-width: 100%;
+  overflow: auto;
+  max-height: 350px;
 }
 
 p > a {
@@ -202,19 +208,29 @@ del {
   padding-left: 1.5em;
 }
 
+
+
 code {
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  padding: 0px 3px;
+  padding: 5px;
   display: inline-block;
   color: #52595d;
-  border: 1px solid #ccc;
   background-color: #f9f9f9;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+pre code:before {
+    -webkit-user-select: none;
+}
+
+pre code {
+  padding: 20px;
+  max-width: 100%;
+  user-select: all;
 }
 
 #page {
@@ -312,4 +328,38 @@ code {
     #content {
         width: 100%;
     }
+}
+.hljs-ln td {
+    padding: 2px;
+    border: none;
+}
+
+table.hljs-ln {
+    margin-left: 0px;
+}
+
+pre code.hljs.language-bash .hljs-ln-n {
+    display: none;
+}
+
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding-right: 5px;
+
+    /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px;
 }
