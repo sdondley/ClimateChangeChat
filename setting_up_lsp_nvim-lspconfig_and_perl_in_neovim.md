@@ -283,7 +283,7 @@ I've googled these for you. You're welcome.
                 * "IDE" is an inscutable name that tries to impress with computer sciency words
                     * makes you sound impressive 
                     * stands for "Integrated Development Environment" 
-                        * Weird how programmers are obesessed with "environments" even though they barely go outside
+                        * Weird how programmers love talking about "environments" yet barely go outside
                     * Just a tool for helping you write code faster
                         * call it a "coding assistant" to sound less pretentious around real people
                             * I've never used this term before, I just made it up 
