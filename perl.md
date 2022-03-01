@@ -40,10 +40,10 @@
 
 ## Cut and paste this code into `init.vim`:
 * Yeah, you might not have any clue what this does
-    * some people don't care, so let's not waste their time 
-    * so just do it
-        * ask questions later 
-            * I'll hopefully answer at least some of them down lower on the page
+    * some people don't care how it works as long as it does
+        * trying to be considerate of them 
+    * ask questions later 
+        * I'll hopefully answer at least some of them down lower on the page
 
 ```
 local opts = { noremap=true, silent=true }
@@ -154,12 +154,13 @@ cmp.setup {
     * Open neovim
     * Type `:LspInfo`
     * Does it look like it's connected?
+        * You should see: "Configured servers list: perlpls" at the bottom of a popup box
         * "Yes, you're a genius!"
             * OK, get on your way and go get some coding coding done
             * Or continue if you feel cheated and want to learn more
         * "No, you're an asshole!"
-            * OK, google it
-            * Or continue reading to try to gain more insight as to the problem
+            * OK, then google it
+            * Or continue reading to try to gain more insight as to what the problem might be
 
 ## Looking for something more gratifying for your thirsty curious soul? 
 * continue below
