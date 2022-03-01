@@ -462,7 +462,7 @@ I've googled these for you. You're welcome.
                             * some hipster developer thought it provided a new, edgy look
             * the upshot is you have to write a bit of lua code to configure neovim
                 * don't worry, just cut and paste
-                    * seems like a pretty easy language, though 
+                    * seems like a pretty easy language to pick up, though 
         * neovim has a built-in client for "talking" to a language server
             * in essence, neovim is the client for the server 
         * but you still have to tell the client (neovim) which language server you want to use
