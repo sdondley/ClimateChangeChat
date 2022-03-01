@@ -352,7 +352,7 @@ I've googled these for you. You're welcome.
                     * thanks to my tireless efforts :) 
             * The two LSPs for Perl are not written by people who use neovim 
                 * they use Perl LSP with "VSCode" 
-        * Wanted other to avoid my initial confusion 
+        * I wanted others to avoid my initial confusion 
             * wrote this 
     * Perl community has the best people
         * IMO, of course 
