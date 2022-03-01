@@ -463,8 +463,8 @@ I've googled these for you. You're welcome.
         * neovim has a built-in client for "talking" to a language server
             * in essence, neovim is the client for the server 
         * but you still have to tell the client (neovim) which language server you want to use
-            * so you configure nvim-lspconfig to tell neovim about the language server 
-        * you can also set other basic settings to nvim-lspconfig to change:
+            * so you use nvim-lspconfig, a plugin, to tell neovim about the language server 
+        * you can also set other basic settings with nvim-lspconfig to change:
             * how neovim responds to the language server
             * how you want the language server to respond to neovim 
         * you can still use other plugins to connect to a language server and bypass neovim's built-in client
