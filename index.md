@@ -21,5 +21,6 @@
 # Public tech notes
 This is where I share notes about tech stuff. Probably of little interest unless you dig computers.
 * [neovim](neovim)
+    * [Setting up neovim with a Perl language server](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md)
 * [git](git)
 
