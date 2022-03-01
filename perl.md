@@ -203,8 +203,10 @@ cmp.setup {
 * So why use an "LSP?"
     * Takes away some of the tedious work of typing and looking shit up 
     * It's kind of magical and fun to use 
-    * Allows you to turn vim into a poor man's IDE
+    * Allows you to turn vim into a somewhat kludgy, poor man's IDE
         * But an IDE you have absolute full control over (if you know what you are doing) 
+        * neovim's goal seems to be to want to turn vim into a serious IDE 
+            * that's my take, anyway 
     * Common "killer" features that programmers realy like that LSP's can provide:
         * Syntax checking 
             * tells you in real time if your code has an obvious mistake 
