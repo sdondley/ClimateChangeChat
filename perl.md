@@ -4,8 +4,15 @@
 
 - [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
 - [TLDR; The REAL thing you are here for](#tldr-the-real-thing-you-are-here-for)
-    - [Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#install-the-following-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
-    - [Cut and paste this code into `init.vim`:](#cut-and-paste-this-code-into-initvim)
+    - [Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:](#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min)
+        - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
+        - [Step 2: Install the nvim-lspconfig plugin with git and install into neovim](#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim)
+        - [Step 3: Throw in a little lua code into neovim's init file](#step-3-throw-in-a-little-lua-code-into-neovims-init-file)
+        - [Step 4](#step-4)
+    - [Advanced set up](#advanced-set-up)
+        - [Step 1: Do steps 1 and 2 in the basic setup above](#step-1-do-steps-1-and-2-in-the-basic-setup-above)
+        - [Step 2: Install these additional plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-additional-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
+        - [Step 3: Cut and paste a giant lua code snippet into your vim configuration](#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration)
     - [That's it. You're done!](#thats-it-youre-done)
     - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [WTF](#wtf)
@@ -22,6 +29,7 @@
         - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
     - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
+        - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
 
 # TLDR; The REAL thing you are here for
 * This TLDR; section assumes:
@@ -31,18 +39,79 @@
     * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
         * otherwise, proceed to the very next step
 
-## Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):
+## Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:
+* ok, maybe 3 min 
+
+### Step 1: Install the language server(s)
+* There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
+    * Install one of both if you want to try them both: 
+        * `cpanm PLS` 
+        * `cpanm Perl::LanguageServer`
+* Step 1 is done
+
+### Step 2: Install the nvim-lspconfig plugin with git and install into neovim
+* Use your favorite vim package manager     
+    * Don't know what a package manager is?
+        * Google "how to isntall a vim plugin"
+* Github repo for nvim-lspconfig 
+    * `https://github.com/neovim/nvim-lspconfig` 
+* Step 2 is done
+
+### Step 3: Throw in a little lua code into neovim's init file
+* WTF is lua, you say?
+    * Sounds like you're probably using `init.vim` to configure neovim 
+        * Throw this code into the file: 
+            *  `lua require('lspconfig').perlpls.setup{}`
+                * for the PLS language server 
+                    * I recommend using this one 
+            * OR for the Perl::LanguageServer
+                *  `lua require('lspconfig').perlls.setup{}`
+                    * I couldn't figure out how to get completion working with this one 
+                        * not recommended 
+* On the other hand, if you're using `init.lua     
+    * require'lspconfig'.perlpls.setup{}`
+        * for the PLS language server 
+    * `require'lspconfig'.perlls.setup{}`
+        * for the Perl::LanguageServer language server 
+
+### Step 4
+* There is no step 4. You're done.
+* Fire up neovim 
+* Run `:LspInfo` 
+* Does it looks like it's working? 
+    * Yup, you're done  
+* "I can't tell if it's working."
+    * Then it probably isn't. 
+    * But you should see: "Configured servers list: perlpls" (or perlls) at the bottom of a popup box
+* "It's not working, you idiot!" 
+    * go back and check for typos
+    * or let me know if you think I fucked up this simple tutorial 
+
+## Advanced set up
+* If you want the lsp to do cooler stuff and set up maps and better code completion snippets, follow these steps:
+
+### Step 1: Do steps 1 and 2 in the basic setup above
+
+### Step 2: Install these additional plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):
     hrsh7th/nvim-cmp
     hrsh7th/cmp-nvim-lsp
     saadparwaiz1/cmp_luasnip
     hrsh7th/cmp-nvim-lsp
     L3MON4D3/LuaSnip
 
-## Cut and paste this code into `init.vim`:
+### Step 3: Cut and paste a giant lua code snippet into your vim configuration
+* If you use `init.lua` for your vim confguration file, drop the code below directly into it
+* If you use `init.vim` for your configuration file:
+    * Open `init.vim`
+    * Add `lua require('lsp_config')` to the file
+    * Now, in the root of you your vim config directory:
+        * create a `lua` directory if it doesn't already exist 
+            * In this directory, create a file called `lsp_config.lua`
+                * drop the code beloow into it
 * Yeah, you might not have any clue what this does
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
-    * ask questions later 
+    * you can ask questions later 
         * I'll hopefully answer at least some of them down lower on the page
 
 ```
@@ -80,8 +149,8 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local lspconfig = require('lspconfig');
---local servers = { 'perlpls', 'perlls' }
-local servers = { 'perlpls' }
+local servers = { 'perlpls' }  -- this will load the Perl Language Server (PLS)
+--local servers = { 'perlls' } -- uncomment this line to use the Perl::LanguageServer language server instead
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
     --root_dir = util.find_git_ancestor,
@@ -159,8 +228,9 @@ cmp.setup {
             * OK, get on your way and go get some coding coding done
             * Or continue if you feel cheated and want to learn more
         * "No, you're an asshole!"
-            * OK, then google it
-            * Or continue reading to try to gain more insight as to what the problem might be
+            * OK, then google around and figure it out
+                * Go bug someoen on reddit/stackoverflow with your troubles
+                * Or continue reading to try to gain more insight as to what the problem might be
 
 ## Looking for something more gratifying for your thirsty, curious soul? 
 * continue below
@@ -466,3 +536,8 @@ I've googled these for you. You're welcome.
 * This section goes into more detail on what the code snippet you pasted above does
 * One caveat: I'm not an expert in Lua
     * so take the technical discussion in this section with a bit of grain of salt 
+
+### Analzying the giant lua code snippet
+* first dirty secret of the giant code snippet above is just about none of it is necessary
+    * all you need is this one single line to connect to the perl language server: 
+        * `require'lspconfig.perlpls'.setup{}` 
