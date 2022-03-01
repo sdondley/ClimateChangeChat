@@ -395,7 +395,7 @@ I've googled these for you. You're welcome.
 * neovim user for maybe 2 years
 * Know some vimscript
     * well enough, but very slow to code it 
-    * no idea how to go about to architect a sophisticated plugin with it 
+    * no idea how to go about architecting a sophisticated plugin with it 
 * Never used an LSP until last week
     * I know just about zilch about how they work
         * beyond knowing they follow a traditional "client/server" paradigm 
