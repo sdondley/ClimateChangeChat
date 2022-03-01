@@ -111,6 +111,9 @@
     L3MON4D3/LuaSnip
 
 ### Step 3: Cut and paste a giant lua code snippet into your neovim configuration
+* **IMPORTANT**
+    * The lua code below is for the `PLS` language server (not the Perl::LangaugeServer)
+        * Ensure you have downloaded this langauge server from CPAN before proceeding 
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.neovim` for your configuration file:
     * Open `init.neovim`
