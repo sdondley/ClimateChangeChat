@@ -247,7 +247,7 @@ cmp.setup {
 
 ## That's it. You're done!
 * Was that so hard?
-* Check that's it's working:
+* Check that it's working:
     * Open neovim
     * Type `:LspInfo`
 * Does it look like it's connected?
