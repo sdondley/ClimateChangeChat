@@ -386,7 +386,7 @@ I've googled these for you. You're welcome.
     * When Perl was king of the web 
 * Mac user since 2008
     * for daily computing 
-    * used windows from early 90s until 2008
+    * used windows (and PC-DOS) from early 90s until 2008
 * GNU/Linux user since early 2000s 
     * Most familiar with Debian 
 * Vim user since early 2000s 
