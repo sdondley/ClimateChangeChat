@@ -285,7 +285,7 @@ I've googled these for you. You're welcome.
                     * stands for "Integrated Development Environment" 
                         * Weird how programmers are obesessed with "environments" even though they barely go outside
                     * Just a tool for helping you write code faster
-                        * call it a "coding assistant" to sound down to earth
+                        * call it a "coding assistant" to sound less pretentious
                             * I've never used this term before, I just made it up 
                 * also help make it easier to look shit up and navigate lots of code
                 * Not without some disadvantages
