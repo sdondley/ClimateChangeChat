@@ -474,7 +474,7 @@ I've googled these for you. You're welcome.
     * you don't have to use a plugin
         * you can use omnifunc with nvim-lspconfig for completion instead
             * but not as nice 
-            * btw, using &lt;c-x>&lt;c-whatever> is probably its worst design decision in vim
+            * btw, using `<c-x><c-whatever>` is probably its worst design decision in vim
                 * there might good reasons for it but I don't know what they are 
                     * so I'll just stick with "it sucks" 
     * for snippets
