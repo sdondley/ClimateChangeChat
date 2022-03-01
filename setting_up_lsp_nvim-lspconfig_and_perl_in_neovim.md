@@ -315,7 +315,7 @@ I've googled these for you. You're welcome.
         * neovim's goal seems to be to want to turn vim into a serious IDE 
             * that's my take, anyway 
                 * may not be exactly accurate 
-    * Common "killer" features that programmers really like that LSP's can provide:
+    * Some common "killer" LSP features that programmers really like:
         * Syntax checking 
             * tells you in real time if your code has an obvious mistake 
             * but cannot tell you if your code behaves the way you want it to 
