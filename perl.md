@@ -7,7 +7,7 @@
     - [Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#install-the-following-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
     - [Cut and paste this code into `init.vim`:](#cut-and-paste-this-code-into-initvim)
     - [That's it. You're done!](#thats-it-youre-done)
-    - [Looking for something more gratifying for your thirsty curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
+    - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why an LSP?](#why-an-lsp)
@@ -162,7 +162,7 @@ cmp.setup {
             * OK, then google it
             * Or continue reading to try to gain more insight as to what the problem might be
 
-## Looking for something more gratifying for your thirsty curious soul? 
+## Looking for something more gratifying for your thirsty, curious soul? 
 * continue below
 
 # WTF
