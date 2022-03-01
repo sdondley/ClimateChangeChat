@@ -705,7 +705,7 @@ end
 
 * I know very little about completions or snippets
 * Not going to weigh in on this code 
-    * Except to say it seems to work (at least the completion)k
+    * Except to say it seems to work (at least the completion)
     * I haven't experimented with snippets yet
      
 ```
