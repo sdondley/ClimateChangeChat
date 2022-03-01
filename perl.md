@@ -126,7 +126,6 @@
                 * drop the code beloow into it
 * Yeah, you might not have any clue what this code does
     * This is the TLDR; section 
-        * not covered here 
         * read the boring details further down in this tutorial 
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
