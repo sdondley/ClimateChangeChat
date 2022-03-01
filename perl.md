@@ -255,13 +255,14 @@ I've googled these for you. You're welcome.
 ## Is an LSP hard to set up in neovim?
 * really depends on the language server
     * for perl, it's super, super easy 
-* if you are new to vim
-    * it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
-        * but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality 
-* If you have at least some experience with neovim
-    * It's not too bad 
-    * still a learning curve 
-    * it requires some trial and error 
+* also depends on your skill level 
+    * if you are new to vim
+        * it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
+            * but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality 
+    * If you have at least some experience with neovim
+        * It's not too bad 
+        * still a learning curve 
+        * it requires some trial and error 
 * Hopefully this web page helps at least a little
 * As neovim matures, will probably get easier
 
