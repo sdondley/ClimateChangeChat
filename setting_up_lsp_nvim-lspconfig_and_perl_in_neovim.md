@@ -448,7 +448,7 @@ I've googled these for you. You're welcome.
                         * should spell things out 
             * The ones that seem to work are the better ones 
 * you need to configure neovim to use the language server you installed
-    * we will cover the settings need to connect to the perl language servers in a bit
+    * we will cover the settings needed to connect to the perl language servers in a bit
     * this is where the nvim-lspconfig plugin comes in
         * written in a language called "lua" 
             * why lua? 
