@@ -13,7 +13,7 @@
     - [Advanced set up](#advanced-set-up)
         - [Step 1: Do steps 1 and 2 in the basic setup](#step-1-do-steps-1-and-2-in-the-basic-setup)
         - [Step 2: Install these plugins into neovim (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin)
-        - [Step 3: Cut and paste a giant lua code snippet into your vim configuration](#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration)
+        - [Step 3: Cut and paste a giant lua code snippet into your neovim configuration](#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration)
     - [That's it. You're done!](#thats-it-youre-done)
     - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [WTF](#wtf)
@@ -37,7 +37,7 @@
     * you know what an LSP is and what it might be good for
     * you know what the nvim-lspconfig plugin is and what it's for
     * you can install a perl module from cpan
-    * you can install a vim plugin 
+    * you can install a neovim plugin 
     * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
         * otherwise, proceed to the very next step
 
@@ -56,7 +56,7 @@
 * Step 1 is done
 
 ### Step 2: Install the nvim-lspconfig plugin with git and install into neovim
-* Use your favorite vim package manager to install it     
+* Use your favorite neovim package manager to install it     
     * or the one you hate 
         * makes no difference to me 
 * Github repo for nvim-lspconfig is here:
@@ -110,12 +110,12 @@
     hrsh7th/cmp-nvim-lsp
     L3MON4D3/LuaSnip
 
-### Step 3: Cut and paste a giant lua code snippet into your vim configuration
-* If you use `init.lua` for your vim confguration file, you can drop the code below directly into it
-* If you use `init.vim` for your configuration file:
-    * Open `init.vim`
+### Step 3: Cut and paste a giant lua code snippet into your neovim configuration
+* If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
+* If you use `init.neovim` for your configuration file:
+    * Open `init.neovim`
     * Add `lua require('lsp_config')` to the file
-    * Now, in the root of you your vim config directory:
+    * Now, in the root of you your neovim config directory:
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `lsp_config.lua`
                 * drop the code beloow into it
@@ -321,7 +321,7 @@ I've googled these for you. You're welcome.
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
         * There's more an LSP can do, but these are the big ones
-* Can't I already do this with vim without an LSP?
+* Can't I already do this with newvim without an LSP?
     * Yes, most of it 
         * But not quite as conveniently and not as quite fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
@@ -347,7 +347,7 @@ I've googled these for you. You're welcome.
 * really depends on the language server
     * for perl, it's super, super easy 
 * also depends on your skill level 
-    * if you are new to vim
+    * if you are new to vim/neovim
         * it's basically impossible to figure out unless you find a step-by-step recipe identical to your needs
             * but still probably a lot easier than setting up a bunch of different non-LSP plugins to provide similar functionality 
     * If you have at least some experience with neovim
