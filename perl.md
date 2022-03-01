@@ -241,20 +241,20 @@ cmp.setup {
 * Check that's it's working:
     * Open neovim
     * Type `:LspInfo`
-    * Does it look like it's connected?
-        * You should see: "Configured servers list: perlpls" at the bottom of a popup box
-        * "Yes, you're a genius!"
-            * Congrats, you know how to copy and the right place to paste things
-            * Or continue if you feel unfulfilled and want to learn more
-        * "No, you're an asshole!"
-            * OK, then google around and figure it out
-                * Or, go bug someone on reddit/stackoverflow with your troubles
-                * Or continue reading to try to gain more insight as to what the problem might be
-                * Or pay me 25 bucks and call me for help
-                    * Sorry, I don't do Windows 
+* Does it look like it's connected?
+    * You should see: "Configured servers list: perlpls" at the bottom of a popup box
+    * "Yes, you're a genius!"
+        * Congrats, you know how to copy and the right place to paste things
+        * Or continue if you feel unfulfilled and want to learn more
+    * "No, you're an asshole!"
+        * OK, then google around and figure it out
+            * Or, go bug someone on reddit/stackoverflow with your troubles
+            * Or continue reading to try to gain more insight as to what the problem might be
+            * Or pay me 25 bucks and call me for help
+                * Sorry, I don't do Windows 
 
 ## Looking for something more gratifying for your thirsty, curious soul? 
-* continue below
+Continue below
 
 # WTF
 * ...is an [LSP](https://microsoft.github.io/language-server-protocol/)?
