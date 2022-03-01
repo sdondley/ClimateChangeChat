@@ -649,7 +649,6 @@ local servers = { 'perlpls' }  -- this will connect to the Perl Language Server 
 ```
 * Note that we can add more than one languager server here. Just add the name of it to the comma separated list
     * consult the language server documenation for the name
-
 * Now we are ready to connect to the server(s) by looping over the `servers` list:
 ```
 -- Use a loop to conveniently call 'setup' on multiple servers and
