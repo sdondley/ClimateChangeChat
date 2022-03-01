@@ -329,7 +329,7 @@ I've googled these for you. You're welcome.
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
         * There's more an LSP can do, but these are the big ones
-* Can't I already do this with newvim without an LSP?
+* Can't I already do this with neovim without an LSP?
     * Yes, most of it 
         * But not quite as conveniently and not as quite fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
