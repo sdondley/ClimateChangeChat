@@ -186,7 +186,7 @@ cmp.setup {
                     * stands for "Integrated Development Environment" 
                         * Programmers like talking about "environments" for some reason
                     * Just a tool for helping you write code faster
-                        * Call it a "coding assistant" to sound down to earth
+                        * call it a "coding assistant" to sound down to earth
                             * I've never used this term before, I just made it up 
                 * also help make it easier to look shit up and navigate lots of code
                 * Not without some disadvantages
