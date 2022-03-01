@@ -522,6 +522,7 @@ I've googled these for you. You're welcome.
         * both developers apparently code use vscode, not neovim
         * but both can work with neovim (maybe, see below) 
         * both have kind of weak documentation for setting up with neovim
+            * at least they when I started writing this
             * hence this tutorial 
     * Is one faster than the other?
         * no idea 
