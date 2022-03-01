@@ -1058,57 +1058,41 @@ cmp.setup {
 <li>google it</li>
 </ul>
 </li>
-</ul>
+<li>If you use packer, here&#39;s the relevant parts of my packer config:
+<pre><code>return require(&#39;packer&#39;).startup( {
+    function()
+        use { &#39;neovim/nvim-lspconfig&#39;, opt = true, ft = &#39;perl&#39; }  -- LSP config plugin
+        use { &#39;hrsh7th/nvim-cmp&#39; } -- Autocompletion plugin
+        use &#39;hrsh7th/cmp-nvim-lsp&#39; -- LSP source for nvim-cmp
+        use &#39;saadparwaiz1/cmp_luasnip&#39; -- Snippets source for nvim-cmp
+        use &#39;L3MON4D3/LuaSnip&#39; -- Snippets plugin
+    end,
+})
+</code></pre>
 </li>
-<li>OK, got your nvim-lspconfig installed and working?
+<li>Note the 4 other plugins I use besides nvim-lspconfig
 <ul>
-<li>How do you tell?
-<ul>
-<li>type <code>:LspInfo</code> into vim
-<ul>
-<li>if you see something pop up, it&#39;s working</li>
-<li>if you don&#39;t, it&#39;s not working
-<ul>
-<li>google it
-<ul>
-<li>(oh, and fuck google, too)
-<ul>
-<li>don&#39;t be evil, my ass</li>
-<li>duck duck go sucks, though, too
-<ul>
-<li>all search engines kind of suck
-<ul>
-<li>&quot;hotbot&quot; was the balls
-<ul>
-<li>for its time
-<ul>
-<li>can you tell I&#39;m getting bored writing this?</li>
+<li>Not strictly needed to get the Perl LS working</li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Halfway home! Now:
+<li>Got nvim-lspconfig installed? Good! Now:
 <ul>
 <li>Go back to the top of the page
 <ul>
-<li>Follow the instructions in the TLDR; section</li>
-<li>The come back here if you want to suffer more through this tutorial to learn something</li>
+<li>Follow the instructions in the TLDR; section
+<ul>
+<li>Ensure you get all the plugins installed</li>
+<li>Paste in the code snippet there into <code>init.lua</code>
+</li>
+</ul>
+</li>
+<li>Then come back here if you want to suffer more through this tutorial to learn something
+<ul>
+<li>Continue on in next section below</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1166,7 +1150,7 @@ cmp.setup {
 <li><a href="#the-gory-details-for-those-who-thirst-for-knowledge">The gory details for those who thirst for knowledge</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  7:19 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> February 28, 2022  7:30 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">

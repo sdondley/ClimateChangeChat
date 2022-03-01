@@ -440,23 +440,27 @@ I've googled these for you. You're welcome.
     * this tutorial is not designed to be a vim package manager tutorial
         * it's long enough as it is
         * google it
-* OK, got your nvim-lspconfig installed and working?
-    * How do you tell? 
-        * type `:LspInfo` into vim
-            * if you see something pop up, it's working 
-            * if you don't, it's not working 
-                * google it 
-                    * (oh, and fuck google, too) 
-                        * don't be evil, my ass 
-                        * duck duck go sucks, though, too
-                            * all search engines kind of suck 
-                                * "hotbot" was the balls
-                                    * for its time
-                                        * can you tell I'm getting bored writing this? 
-* Halfway home! Now:
+    * If you use packer, here's the relevant parts of my packer config:
+        ```
+        return require('packer').startup( {
+            function()
+                use { 'neovim/nvim-lspconfig', opt = true, ft = 'perl' }  -- LSP config plugin
+                use { 'hrsh7th/nvim-cmp' } -- Autocompletion plugin
+                use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+                use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+                use 'L3MON4D3/LuaSnip' -- Snippets plugin
+            end,
+        })
+        ```
+    * Note the 4 other plugins I use besides nvim-lspconfig
+        * Not strictly needed to get the Perl LS working 
+* Got nvim-lspconfig installed? Good! Now:
     * Go back to the top of the page
         * Follow the instructions in the TLDR; section
-        * The come back here if you want to suffer more through this tutorial to learn something
+            * Ensure you get all the plugins installed 
+            * Paste in the code snippet there into `init.lua`
+        * Then come back here if you want to suffer more through this tutorial to learn something
+            * Continue on in next section below 
 
 ## The gory details for those who thirst for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
