@@ -688,6 +688,8 @@ I've googled these for you. You're welcome.
             * enables syntax checking 
                 * compiles your code on the fly and throws a warning if there's a problem 
                     * huge time saver 
+                    * my biggest motiviation for using an LSP 
+                        * I make a shit ton of dumb mistakes 
         * `--single_file_support`
             * I only have a vague idea what this does
             * won't specualte 
