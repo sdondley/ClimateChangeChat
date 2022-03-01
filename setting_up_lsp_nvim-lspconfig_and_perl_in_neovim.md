@@ -644,7 +644,7 @@ local lspconfig = require('lspconfig');
 ```
 * Now we add the list of language servers we want to use to the `servers` variable:
 ```
-local servers = { 'perlpls' }  -- this will load the Perl Language Server (PLS)
+local servers = { 'perlpls' }  -- this will connect to the Perl Language Server (PLS)
 --local servers = { 'perlls' } -- uncomment this line to use the Perl::LanguageServer language server instead
 ```
 * Note that we can add more than one languager server here. Just add the name of it to the comma separated list
