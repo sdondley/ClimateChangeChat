@@ -250,6 +250,7 @@ I've googled these for you. You're welcome.
         * Wanted other to avoid my initial confusion 
             * wrote this 
     * Perl community has the best people
+        * IMO, of course 
 
 ## Is an LSP hard to set up in neovim?
 * really depends on the language server
