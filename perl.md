@@ -31,6 +31,9 @@
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
     - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
         - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
+            - [Setting up mappings](#setting-up-mappings)
+            - [Connecting vim to our language servers](#connecting-vim-to-our-language-servers)
+            - [Set up completion, completion mappings, and snippets](#set-up-completion-completion-mappings-and-snippets)
 
 # TLDR;
 * This TLDR; section assumes:
@@ -185,7 +188,7 @@ for _, lsp in pairs(servers) do
     capabilities = capabilities,
 	flags = {
 		-- This will be the default in neovim 0.7+
-		debounce_text_changes = 100,
+		debounce_text_changes = 150,
 	}
   }
 end
@@ -527,7 +530,7 @@ I've googled these for you. You're welcome.
 ## OK, the stuff you really need to know to get some real work done
 * with all that out of the way, we can finally get some shit done
 * First, we download both language servers so you can try them both out
-    * I use cpanm as my tool of choice for installing perl modules 
+    * I use `cpanm` as my tool of choice for installing perl modules 
         * see TLDR; above for the commands 
 * having perlbrew installed is fine 
     * I didn't run into any issues 
@@ -539,7 +542,7 @@ I've googled these for you. You're welcome.
     * this tutorial is not designed to be a vim package manager tutorial
         * it's long enough as it is
         * google it
-    * If you use packer, here's the relevant parts of my packer config:
+    * If you use the packer package manager, here's the relevant parts of my packer config:
         ```
         return require('packer').startup( {
             function()
@@ -552,7 +555,8 @@ I've googled these for you. You're welcome.
         })
         ```
     * Note the 4 other plugins listed here, in addition ot `nvim-lspconfig`
-        * These plugins are not strictly needed to get the Perl LS working 
+        * These plugins are not strictly needed
+            * add bells and whistles like better auto completion and snippets 
 * Got nvim-lspconfig installed? Good! Now:
     * Go back to the top of the page
         * Follow the rest of the instructions in the TLDR; section
@@ -567,6 +571,186 @@ I've googled these for you. You're welcome.
     * so take the technical discussion in this section with a bit of grain of salt 
 
 ### Analzying the giant lua code snippet
-* first dirty secret of the giant code snippet above is just about none of it is necessary
-    * all you need is this one single line to connect to the perl language server: 
+* as mentioned all you really need is this one single line to connect to the perl language server: 
         * `require'lspconfig.perlpls'.setup{}` 
+* The bulk of the lua code is mostly dedicated to adding mappings for lspconfig
+
+#### Setting up mappings
+* Mappings make it easier to interact with the language server
+* This code sets up some gobal key maps, common to all buffers and all langauge servers:
+
+```
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+```
+
+* Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
+    * You might have one buffer programming perl 
+    * Another buffer for programming c 
+
+```
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+end
+```
+
+* Note these mappings get wrapped in a function called `attach`. They are added only when you connect to a language server
+* What do these key mappings do?
+    * This isn't an IDE tutorial 
+        * Not going to cover them here 
+    * Plus, I don't know what all of them do
+        * the code above was cargo culted from lspconfig documentation 
+    * If you've used an IDE before, you probably know more than me 
+    * Some maps are pretty obvious from the description 
+    * Play with them and find out
+
+#### Connecting vim to our language servers
+* Now we get to the meat of the matter
+* First we set up the capabilities of the server
+```
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+```
+* I really don't know what exactly this does, TBH
+* Looks like we are telling neovim to use our plugin for completion
+
+* Now we connect to the lspconfig
+* First we assign our lspconfig plugin to a variable
+```
+local lspconfig = require('lspconfig');
+```
+* Now we add the list of language servers we want to use to the `servers` variable:
+```
+local servers = { 'perlpls' }  -- this will load the Perl Language Server (PLS)
+--local servers = { 'perlls' } -- uncomment this line to use the Perl::LanguageServer language server instead
+```
+* Note that we can add more than one languager server here. Just add the name of it to the comma separated list
+    * consult the language server documenation for the name
+
+* Now we are ready to connect to the server(s) by looping over the `servers` list:
+```
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+for _, lsp in pairs(servers) do
+  lspconfig[lsp].setup {
+    --root_dir = util.find_git_ancestor,
+    settings = { 
+    perl = { 
+        perlcritic = { enabled = true },
+        syntax = { enabled = true },
+    } 
+  },
+    single_file_support = true,
+	on_attach = on_attach,
+    capabilities = capabilities,
+	flags = {
+		-- This will be the default in neovim 0.7+
+		debounce_text_changes = 150,
+	}
+  }
+end
+```
+* A breakdown of these settings 
+    * Not sure what `--root_dir` setting does  
+        * Cargo culted it 
+        * Don't even think it's needed
+    * `settings`:
+        * This is the most important part of the lua code
+        * Consult language server documentation for what goes here
+        * Settings above work with PLS, not P::LS 
+            * enables perlcritic 
+                * nags you with warning about how your code style sucks 
+            * enables syntax checking 
+                * compiles your code on the fly and throws a warning if there's a problem 
+                    * huge time saver 
+        * `--single_file_support`
+            * I only have a vague idea what this does
+            * won't specualte 
+        * `on_attach`
+            * attaches our buffer maps 
+        * `capabilities` 
+            * tells `lspconfig` what plugin to use for certain features
+                * I think 
+                * here we tell it to use the completion capability we set earlier using `nvim-cmp` 
+        * `flags`
+            * passes config settings to the language client 
+            * consult neovim's [lsp documentation](https://neovim.io/doc/user/lsp.html) 
+        * `debounce_text_changes`
+            * don't touch this unless you know what you are doing 
+                * I don't 
+
+#### Set up completion, completion mappings, and snippets 
+
+* I know very little about completions or snippets
+* Not going to weigh in on this code 
+    * Except to say it seems to work 
+
+```
+local luasnip = require 'luasnip'
+
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      --elseif luasnip.expand_or_jumpable() then
+        --luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+}
+```

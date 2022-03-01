@@ -532,7 +532,7 @@ for _, lsp in pairs(servers) do
     capabilities = capabilities,
 	flags = {
 		-- This will be the default in neovim 0.7+
-		debounce_text_changes = 100,
+		debounce_text_changes = 150,
 	}
   }
 end
@@ -1267,7 +1267,7 @@ cmp.setup {
 <li>with all that out of the way, we can finally get some shit done</li>
 <li>First, we download both language servers so you can try them both out
 <ul>
-<li>I use cpanm as my tool of choice for installing perl modules
+<li>I use <code>cpanm</code> as my tool of choice for installing perl modules
 <ul>
 <li>see TLDR; above for the commands</li>
 </ul>
@@ -1291,7 +1291,7 @@ cmp.setup {
 <li>google it</li>
 </ul>
 </li>
-<li>If you use packer, here&#39;s the relevant parts of my packer config:
+<li>If you use the packer package manager, here&#39;s the relevant parts of my packer config:
 <pre><code>return require(&#39;packer&#39;).startup( {
     function()
         use { &#39;neovim/nvim-lspconfig&#39;, opt = true, ft = &#39;perl&#39; }  -- LSP config plugin
@@ -1305,7 +1305,11 @@ cmp.setup {
 </li>
 <li>Note the 4 other plugins listed here, in addition ot <code>nvim-lspconfig</code>
 <ul>
-<li>These plugins are not strictly needed to get the Perl LS working</li>
+<li>These plugins are not strictly needed
+<ul>
+<li>add bells and whistles like better auto completion and snippets</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1344,16 +1348,273 @@ cmp.setup {
 <h3>
 <a aria-hidden="true" class="anchor" href="#analzying-the-giant-lua-code-snippet" id="analzying-the-giant-lua-code-snippet"><span aria-hidden="true" class="octicon octicon-link"></span></a>Analzying the giant lua code snippet</h3>
 <ul>
-<li>first dirty secret of the giant code snippet above is just about none of it is necessary
+<li>as mentioned all you really need is this one single line to connect to the perl language server:
+* <code>require&#39;lspconfig.perlpls&#39;.setup{}</code>
+</li>
+<li>The bulk of the lua code is mostly dedicated to adding mappings for lspconfig</li>
+</ul>
+<h4>
+<a aria-hidden="true" class="anchor" href="#setting-up-mappings" id="setting-up-mappings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up mappings</h4>
 <ul>
-<li>all you need is this one single line to connect to the perl language server:
+<li>Mappings make it easier to interact with the language server</li>
+<li>This code sets up some gobal key maps, common to all buffers and all langauge servers:</li>
+</ul>
+<pre><code>local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;e&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.open_float()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;[d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_prev()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;]d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_next()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.setloclist()&lt;CR&gt;&#39;, opts)
+</code></pre>
 <ul>
-<li><code>require&#39;lspconfig.perlpls&#39;.setup{}</code></li>
+<li>Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
+<ul>
+<li>You might have one buffer programming perl</li>
+<li>Another buffer for programming c</li>
+</ul>
+</li>
+</ul>
+<pre><code>-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by &lt;c-x&gt;&lt;c-o&gt;
+  vim.api.nvim_buf_set_option(bufnr, &#39;omnifunc&#39;, &#39;v:lua.vim.lsp.omnifunc&#39;)
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gD&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.declaration()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gd&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.definition()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;K&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.hover()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gi&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.implementation()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;C-\&gt;&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.signature_help()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wa&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.add_workspace_folder()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.remove_workspace_folder()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wl&#39;, &#39;&lt;cmd&gt;lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;D&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.type_definition()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;rn&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.rename()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;ca&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.code_action()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.references()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
+end
+</code></pre>
+<ul>
+<li>Note these mappings get wrapped in a function called <code>attach</code>. They are added only when you connect to a language server</li>
+<li>What do these key mappings do?
+<ul>
+<li>This isn&#39;t an IDE tutorial
+<ul>
+<li>Not going to cover them here</li>
+</ul>
+</li>
+<li>Plus, I don&#39;t know what all of them do
+<ul>
+<li>the code above was cargo culted from lspconfig documentation</li>
+</ul>
+</li>
+<li>If you&#39;ve used an IDE before, you probably know more than me</li>
+<li>Some maps are pretty obvious from the description</li>
+<li>Play with them and find out</li>
+</ul>
+</li>
+</ul>
+<h4>
+<a aria-hidden="true" class="anchor" href="#connecting-vim-to-our-language-servers" id="connecting-vim-to-our-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connecting vim to our language servers</h4>
+<ul>
+<li>Now we get to the meat of the matter</li>
+<li>First we set up the capabilities of the server</li>
+</ul>
+<pre><code>local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require(&#39;cmp_nvim_lsp&#39;).update_capabilities(capabilities)
+</code></pre>
+<ul>
+<li>
+<p>I really don&#39;t know what exactly this does, TBH</p>
+</li>
+<li>
+<p>Looks like we are telling neovim to use our plugin for completion</p>
+</li>
+<li>
+<p>Now we connect to the lspconfig</p>
+</li>
+<li>
+<p>First we assign our lspconfig plugin to a variable</p>
+</li>
+</ul>
+<pre><code>local lspconfig = require(&#39;lspconfig&#39;);
+</code></pre>
+<ul>
+<li>Now we add the list of language servers we want to use to the <code>servers</code> variable:</li>
+</ul>
+<pre><code>local servers = { &#39;perlpls&#39; }  -- this will load the Perl Language Server (PLS)
+--local servers = { &#39;perlls&#39; } -- uncomment this line to use the Perl::LanguageServer language server instead
+</code></pre>
+<ul>
+<li>
+<p>Note that we can add more than one languager server here. Just add the name of it to the comma separated list</p>
+<ul>
+<li>consult the language server documenation for the name</li>
+</ul>
+</li>
+<li>
+<p>Now we are ready to connect to the server(s) by looping over the <code>servers</code> list:</p>
+</li>
+</ul>
+<pre><code>-- Use a loop to conveniently call &#39;setup&#39; on multiple servers and
+-- map buffer local keybindings when the language server attaches
+for _, lsp in pairs(servers) do
+  lspconfig[lsp].setup {
+    --root_dir = util.find_git_ancestor,
+    settings = { 
+    perl = { 
+        perlcritic = { enabled = true },
+        syntax = { enabled = true },
+    } 
+  },
+    single_file_support = true,
+	on_attach = on_attach,
+    capabilities = capabilities,
+	flags = {
+		-- This will be the default in neovim 0.7+
+		debounce_text_changes = 150,
+	}
+  }
+end
+</code></pre>
+<ul>
+<li>A breakdown of these settings
+<ul>
+<li>Not sure what <code>--root_dir</code> setting does
+<ul>
+<li>Cargo culted it</li>
+<li>Don&#39;t even think it&#39;s needed</li>
+</ul>
+</li>
+<li>
+<code>settings</code>:
+<ul>
+<li>This is the most important part of the lua code</li>
+<li>Consult language server documentation for what goes here</li>
+<li>Settings above work with PLS, not P::LS
+<ul>
+<li>enables perlcritic
+<ul>
+<li>nags you with warning about how your code style sucks</li>
+</ul>
+</li>
+<li>enables syntax checking
+<ul>
+<li>compiles your code on the fly and throws a warning if there&#39;s a problem
+<ul>
+<li>huge time saver</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<code>--single_file_support</code>
+<ul>
+<li>I only have a vague idea what this does</li>
+<li>won&#39;t specualte</li>
+</ul>
+</li>
+<li>
+<code>on_attach</code>
+<ul>
+<li>attaches our buffer maps</li>
+</ul>
+</li>
+<li>
+<code>capabilities</code>
+<ul>
+<li>tells <code>lspconfig</code> what plugin to use for certain features
+<ul>
+<li>I think</li>
+<li>here we tell it to use the completion capability we set earlier using <code>nvim-cmp</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<code>flags</code>
+<ul>
+<li>passes config settings to the language client</li>
+<li>consult neovim&#39;s <a href="https://neovim.io/doc/user/lsp.html">lsp documentation</a>
+</li>
+</ul>
+</li>
+<li>
+<code>debounce_text_changes</code>
+<ul>
+<li>don&#39;t touch this unless you know what you are doing
+<ul>
+<li>I don&#39;t</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>
+<a aria-hidden="true" class="anchor" href="#set-up-completion-completion-mappings-and-snippets" id="set-up-completion-completion-mappings-and-snippets"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set up completion, completion mappings, and snippets</h4>
+<ul>
+<li>I know very little about completions or snippets</li>
+<li>Not going to weigh in on this code
+<ul>
+<li>Except to say it seems to work</li>
+</ul>
+</li>
+</ul>
+<pre><code>local luasnip = require &#39;luasnip&#39;
+
+-- nvim-cmp setup
+local cmp = require &#39;cmp&#39;
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      require(&#39;luasnip&#39;).lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    [&#39;&lt;C-p&gt;&#39;] = cmp.mapping.select_prev_item(),
+    [&#39;&lt;C-n&gt;&#39;] = cmp.mapping.select_next_item(),
+    [&#39;&lt;C-d&gt;&#39;] = cmp.mapping.scroll_docs(-4),
+    [&#39;&lt;C-f&gt;&#39;] = cmp.mapping.scroll_docs(4),
+    [&#39;&lt;C-Space&gt;&#39;] = cmp.mapping.complete(),
+    [&#39;&lt;C-e&gt;&#39;] = cmp.mapping.close(),
+    [&#39;&lt;CR&gt;&#39;] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    [&#39;&lt;Tab&gt;&#39;] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      --elseif luasnip.expand_or_jumpable() then
+        --luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end,
+    [&#39;&lt;S-Tab&gt;&#39;] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end,
+  },
+  sources = {
+    { name = &#39;nvim_lsp&#39; },
+    { name = &#39;luasnip&#39; },
+  },
+}
+</code></pre>
 
             </div>
             <div id="toc">
@@ -1411,12 +1672,19 @@ cmp.setup {
 <li>
 <a href="#the-gory-details-for-those-who-thirst-for-knowledge">The gory details for those who thirst for knowledge</a>
 <ul>
-<li><a href="#analzying-the-giant-lua-code-snippet">Analzying the giant lua code snippet</a></li>
+<li>
+<a href="#analzying-the-giant-lua-code-snippet">Analzying the giant lua code snippet</a>
+<ul>
+<li><a href="#setting-up-mappings">Setting up mappings</a></li>
+<li><a href="#connecting-vim-to-our-language-servers">Connecting vim to our language servers</a></li>
+<li><a href="#set-up-completion-completion-mappings-and-snippets">Set up completion, completion mappings, and snippets</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022 12:58 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  1:36 PM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
