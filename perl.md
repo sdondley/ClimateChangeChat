@@ -207,6 +207,7 @@ cmp.setup {
         * But an IDE you have absolute full control over (if you know what you are doing) 
         * neovim's goal seems to be to want to turn vim into a serious IDE 
             * that's my take, anyway 
+                * may not be exactly accurate 
     * Common "killer" features that programmers realy like that LSP's can provide:
         * Syntax checking 
             * tells you in real time if your code has an obvious mistake 
