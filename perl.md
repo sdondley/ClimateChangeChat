@@ -427,7 +427,7 @@ I've googled these for you. You're welcome.
             * The ones that seem to work are the better ones 
     * we will cover how to do this later 
 * you need to configure neovim to use the language server you installed
-    * we will cover the settings need to connect to the perl language servers
+    * we will cover the settings need to connect to the perl language servers in a bit
     * this is where the nvim-lspconfig plugin comes in
         * written in a language called "lua" 
             * why lua? 
@@ -436,8 +436,8 @@ I've googled these for you. You're welcome.
                         * I have no idea 
                             * my best explanation: 
                                 * some hipster developer really liked it 
-            * the important upshot is you have to write a bit of lua code to configure neovim
-                * don't worry, mostly cutting and pasting small code snippets 
+            * the upshot is you have to write a bit of lua code to configure neovim
+                * don't worry, just cut and paste
                     * seems like a pretty easy language, though 
         * neovim has a new, built-in API for "talking" to a language server
             * in essence, neovim is the client for the server 
@@ -451,7 +451,7 @@ I've googled these for you. You're welcome.
             * nvim-lspconfig aims to simplify the process of building plugins that need a language server
             * will be slower than the built-in language client neovim provides
 * In addition to nvim-lspconfig you will probably want to use other plugins
-    * to try to achieve the "true IDE" experience 
+    * to try to achieve a "true IDE" experience 
     * plugins for code completion
         * you don't have to use a plugin
             * you can use omnifunc with nvim-lspconfig
@@ -461,7 +461,8 @@ I've googled these for you. You're welcome.
                         * so I'll just stick with "it sucks" 
     * for snippets
         * again, totally optional to install a snippets plugin
-        * I know litte about snippets, never really used them much 
+        * help you automatically write code from templates 
+        * I know litte about snippets, never used them much 
             * too lazy to learn how to use them 
         * the kids seem to go fuckign nuts about them 
         * I kind of like to type shit out
