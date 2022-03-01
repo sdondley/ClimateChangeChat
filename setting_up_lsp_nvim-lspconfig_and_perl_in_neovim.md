@@ -46,7 +46,7 @@
     * you know what the nvim-lspconfig plugin is and what it's for
     * you can install a perl module from cpan
     * you can install a neovim plugin 
-    * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
+    * If any of these assumption are wrong or are confusing to you, you should scroll down to the [next major section](#wtf)
         * otherwise, proceed to the very next step
 
 ## Basic setup: Get a Perl language server up and running with neovim
