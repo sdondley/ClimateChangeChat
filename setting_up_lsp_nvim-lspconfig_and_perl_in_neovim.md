@@ -759,7 +759,7 @@ I've googled these for you. You're welcome.
     
 # RTFM
 * eating vegetables sucks too but they're good for you
-* get answers for things I didn't bother RTFM for
+* get answers for things I didn't bother to RTFM for
 
 ## neovim docs
 * `:h lsp`
