@@ -1,5 +1,5 @@
 # Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
-**CAUTION:** This tutorial is sprinkled with expletives and opinions that may be a bit uninformed just to spice things up a little. If you're humorless or just think my sense of humor sucks, go RTFM instead.
+**CAUTION:** This tutorial is sprinkled with expletives and opinions that may be a bit uninformed just to spice things up a little. If you're humorless or just think my sense of humor sucks, go [#RTFM] instead.
 
 # On This Page
 
