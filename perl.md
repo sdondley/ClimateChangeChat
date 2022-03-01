@@ -3,7 +3,7 @@
 # On This Page
 
 - [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
-- [TLDR; The REAL thing you are here for](#tldr-the-real-thing-you-are-here-for)
+- [TLDR;](#tldr)
     - [Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:](#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min)
         - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
         - [Step 2: Install the nvim-lspconfig plugin with git and install into neovim](#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim)
@@ -31,7 +31,7 @@
     - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
         - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
 
-# TLDR; The REAL thing you are here for
+# TLDR;
 * This TLDR; section assumes:
     * you know what an LSP is, what an IDE is
     * you know what the nvim-lspconfig plugin is and have it installed already
