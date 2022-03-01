@@ -414,7 +414,7 @@ I've googled these for you. You're welcome.
 * No idea. Good luck. You're on your own.
 * Fuck Windows
     * sure, it's better than it used to be but old perceptions die hard 
-    * no OS without a decent command line built in is worth anything
+    * no OS without a decent command line built into it is worth anything
     * I have only so much time to figure this shit out
         * no time to learn whatever you have to hack to get something working in Windows 
             * I'll leave it to more qualified people than me 
