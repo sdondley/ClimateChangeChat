@@ -485,7 +485,7 @@ I've googled these for you. You're welcome.
         * helps you automatically write code from templates 
         * I know litte about snippets, never used them much 
             * too lazy to learn how to use them 
-        * the kids seem to go fuckign nuts about them 
+        * the kids seem to go fucking nuts about them 
         * I kind of like to type shit out
             * kind of relaxing 
 
@@ -592,8 +592,9 @@ I've googled these for you. You're welcome.
     ```
 
 * Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
-    * You might have one buffer programming perl 
+    * You might have one buffer open for programming in perl 
     * Another buffer for programming c 
+    * each buffer will connect to the approprate language server 
 
     ```
     -- Use an on_attach function to only map the following keys
