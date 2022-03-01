@@ -34,6 +34,8 @@
             - [Setting up mappings](#setting-up-mappings)
             - [Connecting vim to our language servers](#connecting-vim-to-our-language-servers)
             - [Set up completion, completion mappings, and snippets](#set-up-completion-completion-mappings-and-snippets)
+- [RTFM](#rtfm)
+    - [neovim docs](#neovim-docs)
 
 # TLDR;
 * This TLDR; section assumes:
@@ -754,3 +756,10 @@ I've googled these for you. You're welcome.
       },
     }
     ```
+    
+# RTFM
+* eating vegetables suck to but they're good for you
+
+## neovim docs
+* `:h lsp`
+* `:h lspconfig`
