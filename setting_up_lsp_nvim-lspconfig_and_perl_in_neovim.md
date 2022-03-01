@@ -296,7 +296,7 @@ I've googled these for you. You're welcome.
                 * also help make it easier to look shit up and navigate lots of code
                 * Not without some disadvantages
                     * added complexity
-                        * configuring an IDE to work the way you want can take up a shit ton of time from typing and getting some actual typing done
+                        * configuring an IDE to work the way you want can take away a shit ton of time from typing and getting actual coding done
                     * adds a layer of abstraction between you and your code
                         * any time not thinking directly about your code and instead thinking about the tool that writes your code is a distraction 
                             * the real productivity doesn't kick in until after you get over a confusing learning curve (and a very steep one with vim)
