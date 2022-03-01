@@ -459,7 +459,7 @@ I've googled these for you. You're welcome.
                     * why does neovim use it? 
                         * I have no idea 
                         * my best guess: 
-                            * some hipster developer really liked it 
+                            * some hipster developer thought it was a new, edgy look
             * the upshot is you have to write a bit of lua code to configure neovim
                 * don't worry, just cut and paste
                     * seems like a pretty easy language, though 
