@@ -124,12 +124,12 @@
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `lsp_config.lua`
                 * drop the code beloow into it
-* Yeah, you might not have any clue what this code does
-    * This is the TLDR; section 
+* You might not have any clue what this code does
+    * This is the TLDR; section so not covered here
         * read the boring details further down in this tutorial 
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
-    * you can ask questions later 
+    * ask questions later 
         * just focus on getting it working for now 
         * I'll hopefully answer at least some of them down lower on the page
 
