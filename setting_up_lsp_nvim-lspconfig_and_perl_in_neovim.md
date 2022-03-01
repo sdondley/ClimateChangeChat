@@ -692,7 +692,7 @@ I've googled these for you. You're welcome.
                         * I make a shit ton of dumb mistakes 
         * `--single_file_support`
             * I only have a vague idea what this does
-            * won't specualte 
+            * won't speculate 
         * `on_attach`
             * attaches our buffer maps 
         * `capabilities` 
