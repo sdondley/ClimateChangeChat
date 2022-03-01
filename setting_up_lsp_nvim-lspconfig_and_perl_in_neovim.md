@@ -281,7 +281,8 @@ I've googled these for you. You're welcome.
         * But typing sucks
         * Programmers have built a bazillion tools to minimize the amount they have to type
             * Wouldn't you rather use a steam shovel than a spade to dig your home's foundation?
-            * vim is one of those tools, used since the early 80s 
+            * vim is one of those tools
+                * used since the early 80s 
             * More recently, deverlopers have been using "IDEs"
                 * not to be confused with "IEDs" or the "IUD" 
                     * totally different things
