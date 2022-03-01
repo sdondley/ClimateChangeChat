@@ -706,8 +706,9 @@ end
 
 * I know very little about completions or snippets
 * Not going to weigh in on this code 
-    * Except to say it seems to work 
-
+    * Except to say it seems to work (at least the completion)k
+    * I haven't experimented with snippets yet
+     
 ```
 local luasnip = require 'luasnip'
 
