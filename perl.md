@@ -1,17 +1,18 @@
-# Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1
+# Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
+CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed opinions just to spice things up a little. It's art.
 
 # On This Page
 
-- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061)
+- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
 - [TLDR;](#tldr)
-    - [Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:](#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min)
+    - [Basic setup: Get a Perl language server up and running with neovim](#basic-setup-get-a-perl-language-server-up-and-running-with-neovim)
         - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
         - [Step 2: Install the nvim-lspconfig plugin with git and install into neovim](#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim)
         - [Step 3: Throw one line of lua code into neovim's init file](#step-3-throw-one-line-of-lua-code-into-neovims-init-file)
         - [Step 4](#step-4)
     - [Advanced set up](#advanced-set-up)
-        - [Step 1: Do steps 1 and 2 in the basic setup above](#step-1-do-steps-1-and-2-in-the-basic-setup-above)
-        - [Step 2: Install these additional plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-additional-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
+        - [Step 1: Do steps 1 and 2 in the basic setup](#step-1-do-steps-1-and-2-in-the-basic-setup)
+        - [Step 2: Install these plugins into neovim from github (in addition to the `neovim/nvim-lspconfig` plugin):](#step-2-install-these-plugins-into-neovim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin)
         - [Step 3: Cut and paste a giant lua code snippet into your vim configuration](#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration)
     - [That's it. You're done!](#thats-it-youre-done)
     - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
@@ -40,8 +41,10 @@
     * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
         * otherwise, proceed to the very next step
 
-## Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:
-* ok, maybe 3 min 
+## Basic setup: Get a Perl language server up and running with neovim
+* No bells or whistles 
+* Good just to make sure it works
+* Recommended to do this first then do advanced set up below
 
 ### Step 1: Install the language server(s)
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
@@ -92,12 +95,13 @@
     * go back and check for typos
     * or let me know if you think I fucked up this simple tutorial 
 
-## Advanced set up
+## Advanced set up 
 * If you want the lsp to do cooler stuff and set up maps and have fancier code completion and snippets, follow these steps:
 
-### Step 1: Do steps 1 and 2 in the basic setup above
+### Step 1: Do steps 1 and 2 in the basic setup
+* If you've already done them, don't forget to remove the one-line snippet in step 2 before proceeding
 
-### Step 2: Install these additional plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):
+### Step 2: Install these plugins into neovim from github (in addition to the `neovim/nvim-lspconfig` plugin):
     hrsh7th/nvim-cmp
     hrsh7th/cmp-nvim-lsp
     saadparwaiz1/cmp_luasnip
@@ -105,7 +109,7 @@
     L3MON4D3/LuaSnip
 
 ### Step 3: Cut and paste a giant lua code snippet into your vim configuration
-* If you use `init.lua` for your vim confguration file, drop the code below directly into it
+* If you use `init.lua` for your vim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
     * Open `init.vim`
     * Add `lua require('lsp_config')` to the file
@@ -115,6 +119,7 @@
                 * drop the code beloow into it
 * Yeah, you might not have any clue what this does
     * This is the TLDR; section 
+        * not covered here 
         * read the boring details further down in this tutorial 
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
@@ -238,6 +243,8 @@ cmp.setup {
             * OK, then google around and figure it out
                 * Or, go bug someone on reddit/stackoverflow with your troubles
                 * Or continue reading to try to gain more insight as to what the problem might be
+                * Or pay me 25 bucks and call me for help
+                    * Sorry, I don't do Windows 
 
 ## Looking for something more gratifying for your thirsty, curious soul? 
 * continue below
@@ -256,8 +263,8 @@ I've googled these for you. You're welcome.
 * To write code you use a text editor
     * Text editors require you to type
         * But typing sucks
-            * Would you rather use a steam shovel or a spade to dig your home's foundation?
         * Programmers have built a bazillion tools to minimize the amount they have to type
+            * Wouldn't you rather use a steam shovel than a spade to dig your home's foundation?
             * vim is one of those tools, used since the early 80s 
             * More recently, deverlopers have been using "IDEs"
                 * not to be confused with "IEDs" or the "IUD" 
@@ -439,9 +446,9 @@ I've googled these for you. You're welcome.
             * the upshot is you have to write a bit of lua code to configure neovim
                 * don't worry, just cut and paste
                     * seems like a pretty easy language, though 
-        * neovim has a new, built-in API for "talking" to a language server
+        * neovim has a built-in client for "talking" to a language server
             * in essence, neovim is the client for the server 
-        * but you still have to tell the API (neovim) which language server you want to use
+        * but you still have to tell the client (neovim) which language server you want to use
             * so you configure nvim-lspconfig to tell neovim about the language server 
         * you can also set other basic settings to nvim-lspconfig to change:
             * how neovim responds to the language server
@@ -452,16 +459,16 @@ I've googled these for you. You're welcome.
             * will be slower than the built-in language client neovim provides
 * In addition to nvim-lspconfig you will probably want to use other plugins
     * to try to achieve a "true IDE" experience 
-    * plugins for code completion
-        * you don't have to use a plugin
-            * you can use omnifunc with nvim-lspconfig
-                * but not as nice 
-                * btw, using <c-x><c-whatever> is probably its worst design decision in vim
-                    * there might good reasons for it but I don't know what they are 
-                        * so I'll just stick with "it sucks" 
+        * plugins for code completion, for example
+    * you don't have to use a plugin
+        * you can use omnifunc with nvim-lspconfig for completion instead
+            * but not as nice 
+            * btw, using <c-x><c-whatever> is probably its worst design decision in vim
+                * there might good reasons for it but I don't know what they are 
+                    * so I'll just stick with "it sucks" 
     * for snippets
         * again, totally optional to install a snippets plugin
-        * help you automatically write code from templates 
+        * helps you automatically write code from templates 
         * I know litte about snippets, never used them much 
             * too lazy to learn how to use them 
         * the kids seem to go fuckign nuts about them 
@@ -497,21 +504,20 @@ I've googled these for you. You're welcome.
         * both are perl modules 
         * both are easily installed from cpan repo 
         * both are free to use
-        * names are easily confused
+        * they have nearly the same name
         * both developers apparently code use vscode, not neovim
         * but both can work with neovim (maybe, see below) 
         * both have kind of weak documentation for setting up with neovim
             * hence this tutorial 
     * Is one faster than the other?
         * no idea 
-        * both seem about the same after limited use 
+        * after my very limited use, both seem about the same to me
 
 ## OK, the stuff you really need to know to get some real work done
 * with all that out of the way, we can finally get some shit done
 * First, we download both language servers so you can try them both out
     * I use cpanm as my tool of choice for installing perl modules 
-        * not covered in this tutorial 
-            * googel it 
+        * see TLDR; above for the commands 
 * having perlbrew installed is fine 
     * I didn't run into any issues 
     * running 5.34.0 version of perl
@@ -534,13 +540,13 @@ I've googled these for you. You're welcome.
             end,
         })
         ```
-    * Note the 4 other plugins I use besides nvim-lspconfig
-        * Not strictly needed to get the Perl LS working 
+    * Note the 4 other plugins listed here, in addition ot `nvim-lspconfig`
+        * These plugins are not strictly needed to get the Perl LS working 
 * Got nvim-lspconfig installed? Good! Now:
     * Go back to the top of the page
-        * Follow the instructions in the TLDR; section
+        * Follow the rest of the instructions in the TLDR; section
             * Ensure you get all the plugins installed 
-            * Paste in the code snippet there into `init.lua`
+            * Paste in the appropriate code snippets into `init.lua` or `init.vim`
         * Then come back here if you want to suffer more through this tutorial to learn something
             * Continue on in next section below 
 

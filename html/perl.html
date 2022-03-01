@@ -230,7 +230,8 @@
         <div id="page">
             <div id="content">
               <h1>
-<a aria-hidden="true" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061" id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</h1>
+<a aria-hidden="true" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
+<p>CAUTION: This tutorial is sprinkled with expletives and perhaps some uninformed opinions just to spice things up a little. It&#39;s art.</p>
 
 
 <h1>
@@ -251,9 +252,11 @@
 </li>
 </ul>
 <h2>
-<a aria-hidden="true" class="anchor" href="#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min" id="basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:</h2>
+<a aria-hidden="true" class="anchor" href="#basic-setup-get-a-perl-language-server-up-and-running-with-neovim" id="basic-setup-get-a-perl-language-server-up-and-running-with-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic setup: Get a Perl language server up and running with neovim</h2>
 <ul>
-<li>ok, maybe 3 min</li>
+<li>No bells or whistles</li>
+<li>Good just to make sure it works</li>
+<li>Recommended to do this first then do advanced set up below</li>
 </ul>
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-1-install-the-language-servers" id="step-1-install-the-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the language server(s)</h3>
@@ -388,9 +391,12 @@
 <li>If you want the lsp to do cooler stuff and set up maps and have fancier code completion and snippets, follow these steps:</li>
 </ul>
 <h3>
-<a aria-hidden="true" class="anchor" href="#step-1-do-steps-1-and-2-in-the-basic-setup-above" id="step-1-do-steps-1-and-2-in-the-basic-setup-above"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Do steps 1 and 2 in the basic setup above</h3>
+<a aria-hidden="true" class="anchor" href="#step-1-do-steps-1-and-2-in-the-basic-setup" id="step-1-do-steps-1-and-2-in-the-basic-setup"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Do steps 1 and 2 in the basic setup</h3>
+<ul>
+<li>If you&#39;ve already done them, don&#39;t forget to remove the one-line snippet in step 2 before proceeding</li>
+</ul>
 <h3>
-<a aria-hidden="true" class="anchor" href="#step-2-install-these-additional-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin" id="step-2-install-these-additional-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install these additional plugins into vim from github (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</h3>
+<a aria-hidden="true" class="anchor" href="#step-2-install-these-plugins-into-neovim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin" id="step-2-install-these-plugins-into-neovim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install these plugins into neovim from github (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</h3>
 <pre><code>hrsh7th/nvim-cmp
 hrsh7th/cmp-nvim-lsp
 saadparwaiz1/cmp_luasnip
@@ -400,7 +406,7 @@ L3MON4D3/LuaSnip
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration" id="step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Cut and paste a giant lua code snippet into your vim configuration</h3>
 <ul>
-<li>If you use <code>init.lua</code> for your vim confguration file, drop the code below directly into it</li>
+<li>If you use <code>init.lua</code> for your vim confguration file, you can drop the code below directly into it</li>
 <li>If you use <code>init.vim</code> for your configuration file:
 <ul>
 <li>Open <code>init.vim</code>
@@ -425,6 +431,7 @@ L3MON4D3/LuaSnip
 <ul>
 <li>This is the TLDR; section
 <ul>
+<li>not covered here</li>
 <li>read the boring details further down in this tutorial</li>
 </ul>
 </li>
@@ -566,6 +573,11 @@ cmp.setup {
 <ul>
 <li>Or, go bug someone on reddit/stackoverflow with your troubles</li>
 <li>Or continue reading to try to gain more insight as to what the problem might be</li>
+<li>Or pay me 25 bucks and call me for help
+<ul>
+<li>Sorry, I don&#39;t do Windows</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -598,13 +610,10 @@ cmp.setup {
 <ul>
 <li>Text editors require you to type
 <ul>
-<li>But typing sucks
-<ul>
-<li>Would you rather use a steam shovel or a spade to dig your home&#39;s foundation?</li>
-</ul>
-</li>
+<li>But typing sucks</li>
 <li>Programmers have built a bazillion tools to minimize the amount they have to type
 <ul>
+<li>Wouldn&#39;t you rather use a steam shovel than a spade to dig your home&#39;s foundation?</li>
 <li>vim is one of those tools, used since the early 80s</li>
 <li>More recently, deverlopers have been using &quot;IDEs&quot;
 <ul>
@@ -1052,12 +1061,12 @@ cmp.setup {
 </li>
 </ul>
 </li>
-<li>neovim has a new, built-in API for &quot;talking&quot; to a language server
+<li>neovim has a built-in client for &quot;talking&quot; to a language server
 <ul>
 <li>in essence, neovim is the client for the server</li>
 </ul>
 </li>
-<li>but you still have to tell the API (neovim) which language server you want to use
+<li>but you still have to tell the client (neovim) which language server you want to use
 <ul>
 <li>so you configure nvim-lspconfig to tell neovim about the language server</li>
 </ul>
@@ -1081,12 +1090,14 @@ cmp.setup {
 </li>
 <li>In addition to nvim-lspconfig you will probably want to use other plugins
 <ul>
-<li>to try to achieve a &quot;true IDE&quot; experience</li>
-<li>plugins for code completion
+<li>to try to achieve a &quot;true IDE&quot; experience
 <ul>
+<li>plugins for code completion, for example</li>
+</ul>
+</li>
 <li>you don&#39;t have to use a plugin
 <ul>
-<li>you can use omnifunc with nvim-lspconfig
+<li>you can use omnifunc with nvim-lspconfig for completion instead
 <ul>
 <li>but not as nice</li>
 <li>btw, using <c-x><c-whatever> is probably its worst design decision in vim
@@ -1103,12 +1114,10 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li>for snippets
 <ul>
 <li>again, totally optional to install a snippets plugin</li>
-<li>help you automatically write code from templates</li>
+<li>helps you automatically write code from templates</li>
 <li>I know litte about snippets, never used them much
 <ul>
 <li>too lazy to learn how to use them</li>
@@ -1189,7 +1198,7 @@ cmp.setup {
 <li>both are perl modules</li>
 <li>both are easily installed from cpan repo</li>
 <li>both are free to use</li>
-<li>names are easily confused</li>
+<li>they have nearly the same name</li>
 <li>both developers apparently code use vscode, not neovim</li>
 <li>but both can work with neovim (maybe, see below)</li>
 <li>both have kind of weak documentation for setting up with neovim
@@ -1202,7 +1211,7 @@ cmp.setup {
 <li>Is one faster than the other?
 <ul>
 <li>no idea</li>
-<li>both seem about the same after limited use</li>
+<li>after my very limited use, both seem about the same to me</li>
 </ul>
 </li>
 </ul>
@@ -1216,11 +1225,7 @@ cmp.setup {
 <ul>
 <li>I use cpanm as my tool of choice for installing perl modules
 <ul>
-<li>not covered in this tutorial
-<ul>
-<li>googel it</li>
-</ul>
-</li>
+<li>see TLDR; above for the commands</li>
 </ul>
 </li>
 </ul>
@@ -1254,9 +1259,9 @@ cmp.setup {
 })
 </code></pre>
 </li>
-<li>Note the 4 other plugins I use besides nvim-lspconfig
+<li>Note the 4 other plugins listed here, in addition ot <code>nvim-lspconfig</code>
 <ul>
-<li>Not strictly needed to get the Perl LS working</li>
+<li>These plugins are not strictly needed to get the Perl LS working</li>
 </ul>
 </li>
 </ul>
@@ -1265,10 +1270,10 @@ cmp.setup {
 <ul>
 <li>Go back to the top of the page
 <ul>
-<li>Follow the instructions in the TLDR; section
+<li>Follow the rest of the instructions in the TLDR; section
 <ul>
 <li>Ensure you get all the plugins installed</li>
-<li>Paste in the code snippet there into <code>init.lua</code>
+<li>Paste in the appropriate code snippets into <code>init.lua</code> or <code>init.vim</code>
 </li>
 </ul>
 </li>
@@ -1311,12 +1316,12 @@ cmp.setup {
                 <div>
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061">Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1</a></li>
+<li><a href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</a></li>
 <li>
 <a href="#tldr">TLDR;</a>
 <ul>
 <li>
-<a href="#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min">Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:</a>
+<a href="#basic-setup-get-a-perl-language-server-up-and-running-with-neovim">Basic setup: Get a Perl language server up and running with neovim</a>
 <ul>
 <li><a href="#step-1-install-the-language-servers">Step 1: Install the language server(s)</a></li>
 <li><a href="#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim">Step 2: Install the nvim-lspconfig plugin with git and install into neovim</a></li>
@@ -1327,8 +1332,8 @@ cmp.setup {
 <li>
 <a href="#advanced-set-up">Advanced set up</a>
 <ul>
-<li><a href="#step-1-do-steps-1-and-2-in-the-basic-setup-above">Step 1: Do steps 1 and 2 in the basic setup above</a></li>
-<li><a href="#step-2-install-these-additional-plugins-into-vim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin">Step 2: Install these additional plugins into vim from github (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</a></li>
+<li><a href="#step-1-do-steps-1-and-2-in-the-basic-setup">Step 1: Do steps 1 and 2 in the basic setup</a></li>
+<li><a href="#step-2-install-these-plugins-into-neovim-from-github-in-addition-to-the-neovimnvim-lspconfig-plugin">Step 2: Install these plugins into neovim from github (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</a></li>
 <li><a href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-vim-configuration">Step 3: Cut and paste a giant lua code snippet into your vim configuration</a></li>
 </ul>
 </li>
@@ -1367,7 +1372,7 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  3:34 AM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  9:44 AM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">
