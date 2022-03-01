@@ -437,7 +437,7 @@ I've googled these for you. You're welcome.
     * language server can be used by neovim or another other piece of software that knows how
     * there's generally two or three for each programming language
         * there are more for more popular languages 
-        * why there is often more than server for each language?
+        * why is there often more than server for each language?
             * I have no idea 
                 * geeks are sometimes territorial?
         * How do I know which one to use?
