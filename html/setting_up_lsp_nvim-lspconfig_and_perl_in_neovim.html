@@ -1356,22 +1356,23 @@ cmp.setup {
 <h4>
 <a aria-hidden="true" class="anchor" href="#setting-up-mappings" id="setting-up-mappings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up mappings</h4>
 <ul>
-<li>Mappings make it easier to interact with the language server</li>
-<li>This code sets up some gobal key maps, common to all buffers and all langauge servers:</li>
-</ul>
+<li>
+<p>Mappings make it easier to interact with the language server</p>
+</li>
+<li>
+<p>This code sets up some gobal key maps, common to all buffers and all langauge servers:</p>
 <pre><code>local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;e&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.open_float()&lt;CR&gt;&#39;, opts)
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;[d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_prev()&lt;CR&gt;&#39;, opts)
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;]d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_next()&lt;CR&gt;&#39;, opts)
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.setloclist()&lt;CR&gt;&#39;, opts)
 </code></pre>
-<ul>
-<li>Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
+</li>
+<li>
+<p>Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server</p>
 <ul>
 <li>You might have one buffer programming perl</li>
 <li>Another buffer for programming c</li>
-</ul>
-</li>
 </ul>
 <pre><code>-- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -1396,9 +1397,12 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
 end
 </code></pre>
-<ul>
-<li>Note these mappings get wrapped in a function called <code>attach</code>. They are added only when you connect to a language server</li>
-<li>What do these key mappings do?
+</li>
+<li>
+<p>Note these mappings get wrapped in a function called <code>attach</code>. They are added only when you connect to a language server</p>
+</li>
+<li>
+<p>What do these key mappings do?</p>
 <ul>
 <li>This isn&#39;t an IDE tutorial
 <ul>
@@ -1420,41 +1424,29 @@ end
 <a aria-hidden="true" class="anchor" href="#connecting-vim-to-our-language-servers" id="connecting-vim-to-our-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connecting vim to our language servers</h4>
 <ul>
 <li>Now we get to the meat of the matter</li>
-<li>First we set up the capabilities of the server</li>
-</ul>
+<li>First we set up the capabilities of the server
 <pre><code>local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require(&#39;cmp_nvim_lsp&#39;).update_capabilities(capabilities)
 </code></pre>
-<ul>
-<li>
-<p>I really don&#39;t know what exactly this does, TBH</p>
 </li>
-<li>
-<p>Looks like we are telling neovim to use our plugin for completion</p>
-</li>
-<li>
-<p>Now we connect to the lspconfig</p>
-</li>
-<li>
-<p>First we assign our lspconfig plugin to a variable</p>
-</li>
-</ul>
+<li>I really don&#39;t know what exactly this does, TBH</li>
+<li>Looks like we are telling neovim to use our plugin for completion</li>
+<li>Now we connect to the lspconfig</li>
+<li>First we assign our lspconfig plugin to a variable
 <pre><code>local lspconfig = require(&#39;lspconfig&#39;);
 </code></pre>
-<ul>
-<li>Now we add the list of language servers we want to use to the <code>servers</code> variable:</li>
-</ul>
+</li>
+<li>Now we add the list of language servers we want to use to the <code>servers</code> variable:
 <pre><code>local servers = { &#39;perlpls&#39; }  -- this will connect to the Perl Language Server (PLS)
 --local servers = { &#39;perlls&#39; } -- uncomment this line to use the Perl::LanguageServer language server instead
 </code></pre>
-<ul>
+</li>
 <li>Note that we can add more than one languager server here. Just add the name of it to the comma separated list
 <ul>
 <li>consult the language server documenation for the name</li>
 </ul>
 </li>
-<li>Now we are ready to connect to the server(s) by looping over the <code>servers</code> list:</li>
-</ul>
+<li>Now we are ready to connect to the server(s) by looping over the <code>servers</code> list:
 <pre><code>-- Use a loop to conveniently call &#39;setup&#39; on multiple servers and
 -- map buffer local keybindings when the language server attaches
 for _, lsp in pairs(servers) do
@@ -1467,16 +1459,16 @@ for _, lsp in pairs(servers) do
     } 
   },
     single_file_support = true,
-	on_attach = on_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
-	flags = {
-		-- This will be the default in neovim 0.7+
-		debounce_text_changes = 150,
-	}
+    flags = {
+        -- This will be the default in neovim 0.7+
+        debounce_text_changes = 150,
+    }
   }
 end
 </code></pre>
-<ul>
+</li>
 <li>A breakdown of these settings
 <ul>
 <li>Not sure what <code>--root_dir</code> setting does
@@ -1559,13 +1551,14 @@ end
 <h4>
 <a aria-hidden="true" class="anchor" href="#set-up-completion-completion-mappings-and-snippets" id="set-up-completion-completion-mappings-and-snippets"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set up completion, completion mappings, and snippets</h4>
 <ul>
-<li>I know very little about completions or snippets</li>
-<li>Not going to weigh in on this code
+<li>
+<p>I know very little about completions or snippets</p>
+</li>
+<li>
+<p>Not going to weigh in on this code</p>
 <ul>
 <li>Except to say it seems to work (at least the completion)</li>
 <li>I haven&#39;t experimented with snippets yet</li>
-</ul>
-</li>
 </ul>
 <pre><code>local luasnip = require &#39;luasnip&#39;
 
@@ -1613,6 +1606,8 @@ cmp.setup {
   },
 }
 </code></pre>
+</li>
+</ul>
 
             </div>
             <div id="toc">
@@ -1682,7 +1677,7 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  3:23 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  3:39 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
