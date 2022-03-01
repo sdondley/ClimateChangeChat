@@ -166,10 +166,10 @@ cmp.setup {
 * continue below
 
 # WTF
-* ...is an (LSP)[https://microsoft.github.io/language-server-protocol/]?
-* ...is nvim-lspconfig?
-* ...is perl?
-* ...is neovim?
+* ...is an [LSP](https://microsoft.github.io/language-server-protocol/)?
+* ...is [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)?
+* ...is [Perl](https://www.perl.org)?
+* ...is [neovim](https://neovim.io)?
 
 I've googled these for you. You're welcome.
 
@@ -249,6 +249,7 @@ I've googled these for you. You're welcome.
                 * they use Perl LSP with "VSCode" 
         * Wanted other to avoid my initial confusion 
             * wrote this 
+    * Perl community has the best people
 
 ## Is an LSP hard to set up in neovim?
 * really depends on the language server
