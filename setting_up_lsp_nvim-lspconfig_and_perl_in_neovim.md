@@ -455,8 +455,8 @@ I've googled these for you. You're welcome.
                 * I have no idea other than neovim uses it
                     * why does neovim use it? 
                         * I have no idea 
-                            * my best explanation: 
-                                * some hipster developer really liked it 
+                        * my best guess: 
+                            * some hipster developer really liked it 
             * the upshot is you have to write a bit of lua code to configure neovim
                 * don't worry, just cut and paste
                     * seems like a pretty easy language, though 
