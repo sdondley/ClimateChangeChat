@@ -456,4 +456,4 @@ cmp.setup {
 ## The gory details for those who thirst for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
 * One caveat: I'm not an expert in Lua
-    * take everything in this section with a bit of grain of salt 
+    * so take the technical discussion in this section with a bit of grain of salt 
