@@ -166,10 +166,12 @@ cmp.setup {
 * continue below
 
 # WTF
-* ...is an LSP?
+* ...is an (LSP)[https://microsoft.github.io/language-server-protocol/]?
 * ...is nvim-lspconfig?
 * ...is perl?
 * ...is neovim?
+
+I've googled these for you. You're welcome.
 
 # The Big Picture Stuff
 
