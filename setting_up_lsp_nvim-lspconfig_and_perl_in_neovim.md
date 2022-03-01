@@ -638,8 +638,8 @@ I've googled these for you. You're welcome.
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
     ```
-* I really don't know what exactly this does, TBH
-* Looks like we are telling neovim to use our plugin for completion
+    * I really don't know what exactly this does, TBH
+    * Looks like we are telling neovim to use our plugin for completion
 * Now we connect to the lspconfig
 * First we assign our lspconfig plugin to a variable
     ```
