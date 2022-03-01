@@ -503,10 +503,11 @@ I've googled these for you. You're welcome.
         * but has smaller feature set 
             * can't tap into debug interface provided by perl 
                 * I just use `print 'hi';` as my goto debugging tool, anyway 
-                    * or `print 'fuck you';` when I'm frustrated
-                    * so not a big loss for me 
+                    * or `print 'fuck you';` when I'm feeling frustrated
+                * not a deall breaker for me 
     * P:LS is older
-        * but seems to have some kinks (see below) 
+        * but seems to have some kinks
+            * I could not get completion working with it 
     * they seem more similar than different 
         * both are perl modules 
         * both are easily installed from cpan repo 
