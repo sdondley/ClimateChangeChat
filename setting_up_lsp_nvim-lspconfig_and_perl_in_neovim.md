@@ -255,7 +255,7 @@ cmp.setup {
         * Feel free to continue with the rest of the tutorial if you're inclined
     * "No, you're an asshole!"
         * OK, then google around and figure it out
-            * Or, go bug someone on reddit/stackoverflow with your troubles
+            * Or, go bug someone on reddit/stackoverflow/perlmonks with your troubles
             * Or continue reading to try to gain more insight as to what the problem might be
             * Or pay me 25 bucks and call me for help
                 * Sorry, I don't do Windows 
