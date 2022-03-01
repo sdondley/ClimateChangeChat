@@ -97,6 +97,7 @@
     * go back and check for typos
     * or let me know if you think I fucked up somewhere
         * wouldn't be the first time 
+        * email: s@dondley.com
 
 ## Advanced set up 
 * If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow the steps below
@@ -504,10 +505,12 @@ I've googled these for you. You're welcome.
             * can't tap into debug interface provided by perl 
                 * I just use `print 'hi';` as my goto debugging tool, anyway 
                     * or `print 'fuck you';` when I'm feeling frustrated
-                * not a deall breaker for me 
+                * not a deal breaker for me 
     * P:LS is older
         * but seems to have some kinks
-            * I could not get completion working with it 
+            * I could not get completion feature working  
+                * If you got it working, let me know how:
+                    * s@dondley.com
     * they seem more similar than different 
         * both are perl modules 
         * both are easily installed from cpan repo 
