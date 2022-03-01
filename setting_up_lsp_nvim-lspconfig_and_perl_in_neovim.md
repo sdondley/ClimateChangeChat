@@ -470,7 +470,7 @@ I've googled these for you. You're welcome.
         * you can still use other plugins to connect to a language server and bypass neovim's built-in client
             * but it's wasteful to duplicate the same effort in each plugin 
             * nvim-lspconfig aims to simplify the process of building plugins that need a language server
-            * will be slower than the built-in language client neovim provides
+            * those plugins will be slower than the built-in language client neovim provides
 * In addition to nvim-lspconfig you will probably want to use other plugins
     * to try to achieve a "true IDE" experience 
         * plugins for code completion, for example
