@@ -36,6 +36,7 @@
             - [Set up completion, completion mappings, and snippets](#set-up-completion-completion-mappings-and-snippets)
 - [RTFM](#rtfm)
     - [neovim docs](#neovim-docs)
+    - [Language server docs](#language-server-docs)
 
 # TLDR;
 * This TLDR; section assumes:
@@ -764,3 +765,8 @@ I've googled these for you. You're welcome.
 ## neovim docs
 * `:h lsp`
 * `:h lspconfig`
+
+## Language server docs
+* [Perl::LanguageServer](https://metacpan.org/pod/Perl::LanguageServer) 
+* [Perl-Language-Server (PLS)](CPAN Link: https://metacpan.org/pod/PLS)
+
