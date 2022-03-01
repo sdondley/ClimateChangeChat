@@ -434,6 +434,7 @@ I've googled these for you. You're welcome.
         * a client can attach itself to multiple servers
         * a server can service multiple clients but the clients have be use different ports (AFAICT)
 * you need to install the language server
+    * we will cover how to do this later 
     * language server can be used by neovim or another other piece of software that knows how
     * there's generally two or three for each programming language
         * there are more for more popular languages 
@@ -446,7 +447,6 @@ I've googled these for you. You're welcome.
                     * read the langauge server's documentation 
                         * should spell things out 
             * The ones that seem to work are the better ones 
-    * we will cover how to do this later 
 * you need to configure neovim to use the language server you installed
     * we will cover the settings need to connect to the perl language servers in a bit
     * this is where the nvim-lspconfig plugin comes in
