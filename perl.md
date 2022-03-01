@@ -228,14 +228,13 @@ cmp.setup {
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
         * There's more an LSP can do, but these are the big ones
-* Can't I already to this with vim without an LSP?
+* Can't I already do this with vim without an LSP?
     * Yes, most of it 
         * But not quite as conveniently and not as quite fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
 * What about using coc plugins instead?
     * I haven't used coc up until last week when I started using it in conjunction with an LSP
-        * Not really qualified to weigh in on the matter
-            * sorry 
+        * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim
 * Why Perl?
     * like English, it's my native language 
