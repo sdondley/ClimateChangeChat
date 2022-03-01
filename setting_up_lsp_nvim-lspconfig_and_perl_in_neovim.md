@@ -331,7 +331,7 @@ I've googled these for you. You're welcome.
         * There's more an LSP can do, but these are the big ones
 * Can't I already do this with neovim without an LSP?
     * Yes, most of it 
-        * But not quite as conveniently and not as quite fast 
+        * But not quite as conveniently and not quite as fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
 * What about using coc plugins instead?
     * I haven't used coc up until last week when I started using it in conjunction with an LSP
