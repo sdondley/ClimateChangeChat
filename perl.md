@@ -7,7 +7,7 @@
     - [Basic setup: All you need to get a Perl language server up and running with neovim in under 2 min:](#basic-setup-all-you-need-to-get-a-perl-language-server-up-and-running-with-neovim-in-under-2-min)
         - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
         - [Step 2: Install the nvim-lspconfig plugin with git and install into neovim](#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim)
-        - [Step 3: Throw in a little lua code into neovim's init file](#step-3-throw-in-a-little-lua-code-into-neovims-init-file)
+        - [Step 3: Throw one line of lua code into neovim's init file](#step-3-throw-one-line-of-lua-code-into-neovims-init-file)
         - [Step 4](#step-4)
     - [Advanced set up](#advanced-set-up)
         - [Step 1: Do steps 1 and 2 in the basic setup above](#step-1-do-steps-1-and-2-in-the-basic-setup-above)
@@ -57,7 +57,7 @@
     * `https://github.com/neovim/nvim-lspconfig` 
 * Step 2 is done
 
-### Step 3: Throw in a little lua code into neovim's init file
+### Step 3: Throw one line of lua code into neovim's init file
 * WTF is lua, you say?
     * Sounds like you're probably using `init.vim` to configure neovim 
         * Throw this code into the file: 
@@ -73,6 +73,7 @@
         * for the PLS language server 
     * `require'lspconfig'.perlls.setup{}`
         * for the Perl::LanguageServer language server 
+* Step 3 is done
 
 ### Step 4
 * There is no step 4. You're done.
@@ -81,14 +82,14 @@
 * Does it looks like it's working? 
     * Yup, you're done  
 * "I can't tell if it's working."
-    * Then it probably isn't. 
+    * Then it probably isn't 
     * But you should see: "Configured servers list: perlpls" (or perlls) at the bottom of a popup box
 * "It's not working, you idiot!" 
     * go back and check for typos
     * or let me know if you think I fucked up this simple tutorial 
 
 ## Advanced set up
-* If you want the lsp to do cooler stuff and set up maps and better code completion snippets, follow these steps:
+* If you want the lsp to do cooler stuff and set up maps and better code completion and snippets, follow these steps:
 
 ### Step 1: Do steps 1 and 2 in the basic setup above
 
@@ -109,6 +110,8 @@
             * In this directory, create a file called `lsp_config.lua`
                 * drop the code beloow into it
 * Yeah, you might not have any clue what this does
+    * This is the TLDR; section 
+        * read the boring details further down in this tutorial 
     * some people don't care how it works as long as it does
         * trying to be considerate of them 
     * you can ask questions later 
@@ -226,10 +229,10 @@ cmp.setup {
         * You should see: "Configured servers list: perlpls" at the bottom of a popup box
         * "Yes, you're a genius!"
             * OK, get on your way and go get some coding coding done
-            * Or continue if you feel cheated and want to learn more
+            * Or continue if you feel unfulfilled and want to learn more
         * "No, you're an asshole!"
             * OK, then google around and figure it out
-                * Go bug someoen on reddit/stackoverflow with your troubles
+                * Or, go bug someone on reddit/stackoverflow with your troubles
                 * Or continue reading to try to gain more insight as to what the problem might be
 
 ## Looking for something more gratifying for your thirsty, curious soul? 
