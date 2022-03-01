@@ -24,7 +24,7 @@
     - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
 
 # TLDR; The REAL thing you are here for
-* This section assumes:
+* This TLDR; section assumes:
     * you know what an LSP is, what an IDE is
     * you know what the nvim-lspconfig plugin is and have it installed already
     * you installed the two known perl language servers
