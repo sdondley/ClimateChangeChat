@@ -112,7 +112,7 @@
 
 ### Step 1: Do steps 1 and 2 in the basic setup
 * Already did these steps?
-    * **Don't forget to remove the one-line snippet in step 2 before proceeding**
+    * **Don't forget to remove the one-line snippet in step 2 above before proceeding**
 
 ### Step 2: Install these plugins into neovim (in addition to the `neovim/nvim-lspconfig` plugin):
     hrsh7th/nvim-cmp
