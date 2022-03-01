@@ -127,7 +127,7 @@
     * Now, in the root of you your neovim config directory:
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `lsp_config.lua`
-                * drop the code beloow into it
+                * drop the code below into it
 * You might not have any clue what this code does
     * This is the TLDR; section so not covered here
         * read the boring details further down in this tutorial 
