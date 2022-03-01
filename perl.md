@@ -286,7 +286,7 @@ I've googled these for you. You're welcome.
 * So why use an "LSP?"
     * Takes away some of the tedious work of typing and looking shit up 
     * It's kind of magical and fun to use 
-    * Allows you to turn vim into a somewhat kludgy, poor man's IDE
+    * Allows you to turn neovim into a somewhat kludgy, poor man's IDE
         * But an IDE you have absolute full control over (if you know what you are doing) 
         * neovim's goal seems to be to want to turn vim into a serious IDE 
             * that's my take, anyway 
@@ -322,7 +322,7 @@ I've googled these for you. You're welcome.
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting an LSP set up with Perl and neovim
-        * Not a huge amount of documentation for it
+        * Not a huge amount of documentation for perl language servers
             * Stuff I did find was wrong or incomplete
                 * Some of it has since been updated 
                     * thanks to my tireless efforts :) 
@@ -356,7 +356,7 @@ I've googled these for you. You're welcome.
 * I could take many guesses as to why
     * but would just me speculating 
         * so no real point to it 
-* Maybe this tutorial will help things along
+* Maybe this tutorial will help things along in some small way
 
 ## My relevant background
 * totally new to LSPs and nvim-lspconfig 
