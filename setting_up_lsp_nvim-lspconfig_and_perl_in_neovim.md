@@ -684,7 +684,7 @@ I've googled these for you. You're welcome.
         * Consult language server documentation for what goes here
         * Settings above work with PLS, not P::LS 
             * enables perlcritic 
-                * nags you with warning about how your code style sucks 
+                * nags you with warnings about how your code style sucks 
             * enables syntax checking 
                 * compiles your code on the fly and throws a warning if there's a problem 
                     * huge time saver 
