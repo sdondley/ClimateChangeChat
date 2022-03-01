@@ -32,7 +32,6 @@
         * otherwise, proceed to the very next step
 
 ## Install the following plugins into vim from github (in addition to the `neovim/nvim-lspconfig` plugin):
-    christoomey/vim-tmux-navigator 
     hrsh7th/nvim-cmp
     hrsh7th/cmp-nvim-lsp
     saadparwaiz1/cmp_luasnip
