@@ -693,6 +693,7 @@ I've googled these for you. You're welcome.
         * `--single_file_support`
             * I only have a vague idea what this does
             * won't speculate 
+                * Don't be like me, [RTFM](#rtfm) 
         * `on_attach`
             * attaches our buffer maps 
         * `capabilities` 
