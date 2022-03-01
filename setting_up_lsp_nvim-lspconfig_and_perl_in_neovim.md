@@ -253,7 +253,7 @@ cmp.setup {
 * Does it look like it's connected?
     * You should see: "Configured servers list: perlpls" at the bottom of a popup box
     * "Yes, you're a genius!"
-        * Congrats, you know how to copy and the right place to paste things
+        * Congrats, you know how to copy and paste things into the right place
         * Feel free to continue with the rest of the tutorial if you're inclined
     * "No, you're an asshole!"
         * OK, then google around and figure it out
