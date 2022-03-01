@@ -254,7 +254,7 @@ cmp.setup {
                 * Sorry, I don't do Windows 
 
 ## Looking for something more gratifying for your thirsty, curious soul? 
-Continue below
+Continue below...
 
 # WTF
 * ...is an [LSP](https://microsoft.github.io/language-server-protocol/)?
