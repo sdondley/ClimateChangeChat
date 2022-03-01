@@ -95,7 +95,8 @@
     * But you should see: "Configured servers list: perlpls" (or perlls) at the bottom of a popup box
 * "It's not working, you idiot!" 
     * go back and check for typos
-    * or let me know if you think I fucked up this simple tutorial 
+    * or let me know if you think I fucked up somewhere
+        * wouldn't be the first time 
 
 ## Advanced set up 
 * If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow these steps:
