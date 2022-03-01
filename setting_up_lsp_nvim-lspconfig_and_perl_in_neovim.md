@@ -29,7 +29,7 @@
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
         - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
-    - [The gory details for those who thirst for knowledge](#the-gory-details-for-those-who-thirst-for-knowledge)
+    - [Some gory details for those who thirst for knowledge](#some-gory-details-for-those-who-thirst-for-knowledge)
         - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
             - [Setting up mappings](#setting-up-mappings)
             - [Connecting vim to our language servers](#connecting-vim-to-our-language-servers)
@@ -565,7 +565,7 @@ I've googled these for you. You're welcome.
         * Then come back here if you want to suffer more through this tutorial to learn something
             * Continue on in next section below 
 
-## The gory details for those who thirst for knowledge
+## Some gory details for those who thirst for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
 * One caveat: I'm not an expert in Lua
     * so take the technical discussion in this section with a bit of grain of salt 
