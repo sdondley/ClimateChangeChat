@@ -238,9 +238,10 @@
 <ul>
 <li>This TLDR; section assumes:
 <ul>
-<li>you know what an LSP is, what an IDE is</li>
-<li>you know what the nvim-lspconfig plugin is and have it installed already</li>
-<li>you installed the two known perl language servers</li>
+<li>you know what an LSP is and what it might be good for</li>
+<li>you know what the nvim-lspconfig plugin is and what it&#39;s for</li>
+<li>you can install a perl module from cpan</li>
+<li>you can install a vim plugin</li>
 <li>If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
 <ul>
 <li>otherwise, proceed to the very next step</li>
@@ -259,7 +260,7 @@
 <ul>
 <li>There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
 <ul>
-<li>Install one of both if you want to try them both:
+<li>From the command line, install one of both if you want to try them both:
 <ul>
 <li><code>cpanm PLS</code></li>
 <li><code>cpanm Perl::LanguageServer</code></li>
@@ -272,16 +273,16 @@
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim" id="step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install the nvim-lspconfig plugin with git and install into neovim</h3>
 <ul>
-<li>Use your favorite vim package manager
+<li>Use your favorite vim package manager to install it
 <ul>
-<li>Don&#39;t know what a package manager is?
+<li>or the one you hate
 <ul>
-<li>Google &quot;how to isntall a vim plugin&quot;</li>
+<li>makes no difference to me</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Github repo for nvim-lspconfig
+<li>Github repo for nvim-lspconfig is here:
 <ul>
 <li><code>https://github.com/neovim/nvim-lspconfig</code></li>
 </ul>
@@ -331,13 +332,25 @@
 <ul>
 <li>require&#39;lspconfig&#39;.perlpls.setup{}`
 <ul>
-<li>for the PLS language server</li>
+<li>for the PLS language server
+<ul>
+<li>recommended</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <code>require&#39;lspconfig&#39;.perlls.setup{}</code>
 <ul>
-<li>for the Perl::LanguageServer language server</li>
+<li>for the Perl::LanguageServer language server
+<ul>
+<li>ok, if you don&#39;t care about code completion
+<ul>
+<li>or maybe you&#39;ll have better luck than me</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -372,7 +385,7 @@
 <h2>
 <a aria-hidden="true" class="anchor" href="#advanced-set-up" id="advanced-set-up"><span aria-hidden="true" class="octicon octicon-link"></span></a>Advanced set up</h2>
 <ul>
-<li>If you want the lsp to do cooler stuff and set up maps and better code completion and snippets, follow these steps:</li>
+<li>If you want the lsp to do cooler stuff and set up maps and have fancier code completion and snippets, follow these steps:</li>
 </ul>
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-1-do-steps-1-and-2-in-the-basic-setup-above" id="step-1-do-steps-1-and-2-in-the-basic-setup-above"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Do steps 1 and 2 in the basic setup above</h3>
@@ -543,7 +556,7 @@ cmp.setup {
 <li>You should see: &quot;Configured servers list: perlpls&quot; at the bottom of a popup box</li>
 <li>&quot;Yes, you&#39;re a genius!&quot;
 <ul>
-<li>OK, get on your way and go get some coding coding done</li>
+<li>Congrats, you know how to copy and the right place to paste things</li>
 <li>Or continue if you feel unfulfilled and want to learn more</li>
 </ul>
 </li>
@@ -593,14 +606,19 @@ cmp.setup {
 <li>Programmers have built a bazillion tools to minimize the amount they have to type
 <ul>
 <li>vim is one of those tools, used since the early 80s</li>
-<li>More recently, deverlopers have been using &quot;IDE&#39;s&quot;
+<li>More recently, deverlopers have been using &quot;IDEs&quot;
 <ul>
+<li>not to be confused with &quot;IEDs&quot; or the &quot;IUD&quot;
+<ul>
+<li>totally different things</li>
+</ul>
+</li>
 <li>&quot;IDE&quot; is an inscutable name that tries to impress with computer sciency words
 <ul>
 <li>makes you sound impressive</li>
 <li>stands for &quot;Integrated Development Environment&quot;
 <ul>
-<li>Programmers like talking about &quot;environments&quot; for some reason</li>
+<li>Programmers like talking about &quot;environments&quot; even though they barely go outside</li>
 </ul>
 </li>
 <li>Just a tool for helping you write code faster
@@ -631,10 +649,18 @@ cmp.setup {
 </li>
 </ul>
 </li>
-<li>Makes it easier to pump out lots of code...but bad, confusing code</li>
+<li>Makes it easier to pump out lots of code
+<ul>
+<li>but not always good or well-organized code
+<ul>
+<li>but hey, looks nicely tabbed and spaced like a real pro</li>
 </ul>
 </li>
-<li>Rough advice not to be followed strictly
+</ul>
+</li>
+</ul>
+</li>
+<li>Rough advice, not to be followed strictly
 <ul>
 <li>Learn to type before learning to code</li>
 <li>Learn to code &quot;by hand&quot; before using an IDE</li>
@@ -1340,7 +1366,7 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  3:15 AM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  3:26 AM</div><div id="publish_date"><span id="publish_label">First published: </span>February 28, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js">

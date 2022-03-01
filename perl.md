@@ -33,9 +33,10 @@
 
 # TLDR;
 * This TLDR; section assumes:
-    * you know what an LSP is, what an IDE is
-    * you know what the nvim-lspconfig plugin is and have it installed already
-    * you installed the two known perl language servers
+    * you know what an LSP is and what it might be good for
+    * you know what the nvim-lspconfig plugin is and what it's for
+    * you can install a perl module from cpan
+    * you can install a vim plugin 
     * If any of these assumption are wrong or are confusing to you, you should scroll down to the next major section
         * otherwise, proceed to the very next step
 
@@ -44,16 +45,16 @@
 
 ### Step 1: Install the language server(s)
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
-    * Install one of both if you want to try them both: 
+    * From the command line, install one of both if you want to try them both: 
         * `cpanm PLS` 
         * `cpanm Perl::LanguageServer`
 * Step 1 is done
 
 ### Step 2: Install the nvim-lspconfig plugin with git and install into neovim
-* Use your favorite vim package manager     
-    * Don't know what a package manager is?
-        * Google "how to isntall a vim plugin"
-* Github repo for nvim-lspconfig 
+* Use your favorite vim package manager to install it     
+    * or the one you hate 
+        * makes no difference to me 
+* Github repo for nvim-lspconfig is here:
     * `https://github.com/neovim/nvim-lspconfig` 
 * Step 2 is done
 
@@ -71,8 +72,11 @@
 * On the other hand, if you're using `init.lua     
     * require'lspconfig'.perlpls.setup{}`
         * for the PLS language server 
+            * recommended 
     * `require'lspconfig'.perlls.setup{}`
         * for the Perl::LanguageServer language server 
+            * ok, if you don't care about code completion 
+                * or maybe you'll have better luck than me 
 * Step 3 is done
 
 ### Step 4
@@ -89,7 +93,7 @@
     * or let me know if you think I fucked up this simple tutorial 
 
 ## Advanced set up
-* If you want the lsp to do cooler stuff and set up maps and better code completion and snippets, follow these steps:
+* If you want the lsp to do cooler stuff and set up maps and have fancier code completion and snippets, follow these steps:
 
 ### Step 1: Do steps 1 and 2 in the basic setup above
 
@@ -228,7 +232,7 @@ cmp.setup {
     * Does it look like it's connected?
         * You should see: "Configured servers list: perlpls" at the bottom of a popup box
         * "Yes, you're a genius!"
-            * OK, get on your way and go get some coding coding done
+            * Congrats, you know how to copy and the right place to paste things
             * Or continue if you feel unfulfilled and want to learn more
         * "No, you're an asshole!"
             * OK, then google around and figure it out
@@ -255,11 +259,13 @@ I've googled these for you. You're welcome.
             * Would you rather use a steam shovel or a spade to dig your home's foundation?
         * Programmers have built a bazillion tools to minimize the amount they have to type
             * vim is one of those tools, used since the early 80s 
-            * More recently, deverlopers have been using "IDE's"
+            * More recently, deverlopers have been using "IDEs"
+                * not to be confused with "IEDs" or the "IUD" 
+                    * totally different things
                 * "IDE" is an inscutable name that tries to impress with computer sciency words
                     * makes you sound impressive 
                     * stands for "Integrated Development Environment" 
-                        * Programmers like talking about "environments" for some reason
+                        * Programmers like talking about "environments" even though they barely go outside
                     * Just a tool for helping you write code faster
                         * call it a "coding assistant" to sound down to earth
                             * I've never used this term before, I just made it up 
@@ -270,8 +276,10 @@ I've googled these for you. You're welcome.
                     * adds a layer of abstraction between you and your code
                         * any time not thinking directly about your code and instead thinking about the tool that writes your code is a distraction 
                             * the real productivity doesn't kick in until after you get over a confusing learning curve (and a very steep one with vim)
-                    * Makes it easier to pump out lots of code...but bad, confusing code
-                * Rough advice not to be followed strictly
+                    * Makes it easier to pump out lots of code
+                        * but not always good or well-organized code 
+                            * but hey, looks nicely tabbed and spaced like a real pro 
+                * Rough advice, not to be followed strictly
                     * Learn to type before learning to code
                     * Learn to code "by hand" before using an IDE
                     * Use an IDE after you learn to program manually
