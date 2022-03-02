@@ -63,8 +63,11 @@
     * From the command line, install one or both: 
         * `cpanm PLS` 
             * I recommend this one 
+            * But no code debugging features
         * `cpanm Perl::LanguageServer`
             * I could not get completion working with this one
+            * But does have debugging features
+                * I did not confirm if debugging works with neovim 
 * Step 1 is done
 
 ### Step 2: Install the nvim-lspconfig plugin with git and install into neovim
