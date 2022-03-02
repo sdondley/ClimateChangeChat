@@ -135,12 +135,6 @@
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `lsp_config.lua`
                 * drop the code below into it
-* You might not have any clue what this code does
-    * This is the TLDR; section so not covered here
-        * read the boring details further down in this tutorial 
-    * ask questions later 
-        * just focus on getting it working for now 
-        * I'll hopefully answer at least some of them down lower on the page
     ```
     local opts = { noremap=true, silent=true }
     vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -243,6 +237,12 @@
       },
     }
     ```
+* You might not have any clue what this code does
+    * This is the TLDR; section so not covered here
+        * read the boring details further down in this tutorial 
+    * ask questions later 
+        * just focus on getting it working for now 
+        * I'll hopefully answer at least some of them down lower on the page
 
 ## That's it. You're done!
 * Was that so hard?
