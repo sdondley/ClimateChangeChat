@@ -694,6 +694,7 @@ I've googled these for you. You're welcome.
     ```
 * A breakdown of these settings 
     * Not sure what `--root_dir` setting does  
+        * Confession: I don't always RTFM 
         * Cargo culted it 
         * Don't even think it's needed
     * `settings`:
