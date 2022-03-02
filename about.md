@@ -63,6 +63,7 @@
 
 ## vim
 * all pages are created and edited with vim text editor
+    * more accurately, neovim, a fork of vim 
 * allows you to avoid using a mouse 
     * I fucking hate using a mouse
         * Way too slow
@@ -87,7 +88,7 @@
         * allows vimwiki to be the interface for managing tasks
 
 # Why is this site written mostly in outline form?
-* It's inherent to the design of the vimwiki plugin
+* It's inherent to the design of the vimwiki plugin I use
 * It's much faster to write this way
     * no agonizing over how eloquent I'm being and how well ideas flow 
     * much fucking faster to edit/revise
