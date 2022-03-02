@@ -360,7 +360,7 @@ I've googled these for you. You're welcome.
     * Another neovim plugin but that has very fast fuzzy completion
     * Works with nvim-lspconfig, apparently
         * On my list of things to experiment more with 
-    * neovim authors appear to have potty mouths
+    * neovim plugin authors appear to have potty mouths
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting a language server set up with Perl and neovim
