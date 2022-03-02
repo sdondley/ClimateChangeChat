@@ -731,7 +731,6 @@ I've googled these for you. You're welcome.
     * Except to say it seems to work (at least the completion)
         * and it sets up maps 
     * I haven't experimented with snippets yet
-         
     ```
     local luasnip = require 'luasnip'
 
@@ -779,7 +778,6 @@ I've googled these for you. You're welcome.
       },
     }
     ```
-    
 # RTFM
 * eating vegetables sucks too but they're good for you
 * get answers for things I didn't bother to RTFM for
