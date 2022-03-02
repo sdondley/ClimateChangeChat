@@ -589,7 +589,7 @@ I've googled these for you. You're welcome.
 
 ## Some gory details for those with a relentless thirst for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
-* One caveat: I'm not an expert in Lua
+* One caveat: I'm not an expert in Lua or configuing the language server
     * so take the technical discussion in this section with a bit of grain of salt 
 
 ### Analzying the giant lua code snippet
