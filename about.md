@@ -89,8 +89,9 @@
 # Why is this site written mostly in outline form?
 * It's inherent to the design of the vimwiki plugin
 * It's much faster to write this way
-    * No agonizing over how eloquent I'm being and how well ideas flow 
+    * no agonizing over how eloquent I'm being and how well ideas flow 
     * much fucking faster to edit/revise
+    * aiming for quantity over quality
 * Ideas can be conveyed very succinctly
 * I have a hunch prose is dead 
     * 20th century media killed poetry 
