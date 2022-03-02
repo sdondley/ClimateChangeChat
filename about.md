@@ -94,7 +94,7 @@
 * I have a hunch prose is dead 
     * 20th century media killed poetry 
     * prose killed by the internet 
-    * I have an increasing impatience with wordy shit
+    * I have an increasing impatience reading wordy shit
         * just get me to the meat of the matter, especially on reality-based topics
             * I'll fill in the emotional details with my own imagination 
         * Perhaps others feel the same 
