@@ -320,7 +320,6 @@ I've googled these for you. You're welcome.
         * But an IDE you have absolute full control over (if you know what you are doing) 
         * neovim's goal seems to be to want to turn vim into a serious IDE 
             * that's my take, anyway 
-                * may not be exactly accurate 
     * Some common "killer" language server features that programmers really like:
         * Syntax checking 
             * tells you in real time if your code has an obvious mistake 
