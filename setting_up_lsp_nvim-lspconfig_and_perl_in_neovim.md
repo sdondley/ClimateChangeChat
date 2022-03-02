@@ -351,6 +351,7 @@ I've googled these for you. You're welcome.
     * I haven't used coc up until last week when I started using it in conjunction with a language server
         * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, using neovim's built-in LSP client is the future of neovim
+                * My guess is coc will just retool and eventually use the built-in client at some point 
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting a language server set up with Perl and neovim
