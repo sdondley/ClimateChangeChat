@@ -317,58 +317,30 @@
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-3-throw-one-line-of-lua-code-into-neovims-init-file" id="step-3-throw-one-line-of-lua-code-into-neovims-init-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Throw one line of lua code into neovim&#39;s init file</h3>
 <ul>
-<li>neovim has complicated vim (even more) by offering two different scripting languages for writing neovim&#39;s configuration files
+<li>neovim has complicated vim (even more) by offering two different scripting languages for writing neovim&#39;s configuration files</li>
+<li>If you don&#39;t know which language your&#39;re using to configure vim with, it&#39;s save to say you&#39;re using vimscript</li>
+<li>Now decide which langauge server you want to use
 <ul>
-<li>old way: with vimscript</li>
-<li>new way: with lua</li>
+<li>I recommend PLS</li>
 </ul>
 </li>
-<li>WTF is lua, you say?
+<li>Add the appropriate lua code into your vim configuration
 <ul>
-<li>Sounds like you&#39;re probably using <code>init.vim</code> to configure neovim
+<li>for vimscript
 <ul>
-<li>Throw this code into <code>init.vim</code>:
-<ul>
-<li>
-<code>lua require(&#39;lspconfig&#39;).perlpls.setup{}</code>
-<ul>
-<li>for the PLS language server
-<ul>
-<li>again, I recommend this one</li>
-</ul>
+<li>goes into <code>init.vim</code> file</li>
+<li>for PLS: <code>lua require(&#39;lspconfig&#39;).perlpls.setup{}</code>
+</li>
+<li>for Perl::LangaugeServer: <code>lua require(&#39;lspconfig&#39;).perlls.setup{}</code>
 </li>
 </ul>
 </li>
-<li>OR for the Perl::LanguageServer
+<li>for lua
 <ul>
-<li><code>lua require(&#39;lspconfig&#39;).perlls.setup{}</code></li>
-</ul>
+<li>goes into <code>init.lua</code> file</li>
+<li>for lua with PLS: <code>require&#39;lspconfig&#39;.perlpls.setup{}</code>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>If you&#39;re into lua, edit the <code>init.lua</code> file instead:
-<ul>
-<li>
-<code>require&#39;lspconfig&#39;.perlpls.setup{}</code>
-<ul>
-<li>for the PLS language server</li>
-</ul>
-</li>
-<li>
-<code>require&#39;lspconfig&#39;.perlls.setup{}</code>
-<ul>
-<li>for the Perl::LanguageServer language server
-<ul>
-<li>ok, if you don&#39;t care about not having code completion
-<ul>
-<li>or maybe you&#39;ll have better luck than me</li>
-</ul>
-</li>
-</ul>
+<li>for lua with Perl::LanguageServer: <code>require&#39;lspconfig&#39;.perlpls.setup{}</code>
 </li>
 </ul>
 </li>
@@ -1759,7 +1731,7 @@ cmp.setup {
 <li><a href="#perl-language-server-docs">Perl language server docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  8:47 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  8:57 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
