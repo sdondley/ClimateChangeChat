@@ -357,7 +357,7 @@ I've googled these for you. You're welcome.
     * [check this document](https://github.com/neovim/nvim-lspconfig/wiki/Comparison-to-other-LSP-ecosystems-(CoC,-vim-lsp,-etc.)) for a more technical comparison of nvim-lspconfig and coc
     * I think I've read that it's more laggy than using the built-in client
 * What about [coq](https://github.com/ms-jpq/coq_nvim), the "fast as FUCK" completion plugin?
-    * Another neovim plugin but that has very fast fuzzy completion
+    * Another neovim plugin but that advertises itself as having very fast fuzzy completion
     * Apparently works with neovim's built-in LSP client nvim-lspconfig, apparently
         * On my list of things to experiment more with 
     * neovim plugin authors appear to have potty mouths
