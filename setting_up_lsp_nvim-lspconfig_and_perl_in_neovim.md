@@ -268,7 +268,7 @@ Continue below...
 
 # WTF
 * ...is a language server?
-    * a "LS" part of an "LSP", the "Language Server Protocol"
+    * the "LS" part of an "LSP", the "Language Server Protocol"
         * see next question 
     * "LSP" and "language server" are often used interchangeably
         * in reality, they are two separate components
@@ -292,7 +292,7 @@ I've googled these for you. You're welcome.
             * More recently, deverlopers have been using "IDEs"
                 * not to be confused with "IEDs" or the "IUD" 
                     * totally different things
-                * "IDE" is an inscutable name that tries to impress with computer sciency words
+                * "IDE" is an inscutable name
                     * makes you sound impressive 
                     * stands for "Integrated Development Environment" 
                         * Weird how programmers love talking about "environments" yet barely go outside
