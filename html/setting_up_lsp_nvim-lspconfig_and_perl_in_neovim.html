@@ -237,7 +237,7 @@
         <div id="page">
             <div id="content">
               <h1>
-<a aria-hidden="true" class="anchor" href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
+<a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
 <p><strong>CAUTION:</strong> This tutorial is sprinkled with expletives and opinions that may be a bit uninformed just to spice things up a little. If you&#39;re humorless or just think my sense of humor sucks, go <a href="#rtfm">RTFM</a> instead.</p>
 <p><strong>PREFACE</strong>: I was pretty much clueless about language servers and using them with neovim until recently. It took a few days of fiddling and trial and error to get somewhat of a clue. But it&#39;s actually surprisingly easy to get set up once you know how. Hopefully, this tutorial will help you get clued in shrter time than I did. Good luck!</p>
 
@@ -247,7 +247,7 @@
 <ul>
 <li>This TLDR; section assumes:
 <ul>
-<li>you know what an LSP is and what it might be good for</li>
+<li>you know what an language server is and what it might be good for</li>
 <li>you know what the nvim-lspconfig plugin is and what it&#39;s for</li>
 <li>you can install a perl module from cpan</li>
 <li>you can install a neovim plugin</li>
@@ -629,6 +629,20 @@ cmp.setup {
 <h1>
 <a aria-hidden="true" class="anchor" href="#wtf" id="wtf"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1>
 <ul>
+<li>...is a language server?
+<ul>
+<li>a &quot;LS&quot; part of an &quot;LSP&quot;
+<ul>
+<li>see next question</li>
+</ul>
+</li>
+<li>&quot;LSP&quot; and &quot;language server&quot; are often used interchaneably
+<ul>
+<li>in reality, they are two separate components</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>...is an <a href="https://microsoft.github.io/language-server-protocol/">LSP</a>?</li>
 <li>...is <a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a>?</li>
 <li>...is <a href="https://www.perl.org">Perl</a>?</li>
@@ -638,7 +652,7 @@ cmp.setup {
 <h1>
 <a aria-hidden="true" class="anchor" href="#the-big-picture-stuff" id="the-big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1>
 <h2>
-<a aria-hidden="true" class="anchor" href="#why-an-lsp" id="why-an-lsp"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why an LSP?</h2>
+<a aria-hidden="true" class="anchor" href="#why-a-language-server" id="why-a-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why a language server?</h2>
 <ul>
 <li>To write code you use a text editor
 <ul>
@@ -1652,7 +1666,7 @@ cmp.setup {
                 <div>
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</a></li>
+<li><a href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</a></li>
 <li>
 <a href="#tldr">TLDR;</a>
 <ul>
@@ -1681,7 +1695,7 @@ cmp.setup {
 <li>
 <a href="#the-big-picture-stuff">The Big Picture Stuff</a>
 <ul>
-<li><a href="#why-an-lsp">Why an LSP?</a></li>
+<li><a href="#why-a-language-server">Why a language server?</a></li>
 <li><a href="#is-an-lsp-hard-to-set-up-in-neovim">Is an LSP hard to set up in neovim?</a></li>
 <li><a href="#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps">Why does the Perl community seem to be behind the curve on adopting LSPs?</a></li>
 <li><a href="#my-relevant-background">My relevant background</a></li>
@@ -1722,7 +1736,7 @@ cmp.setup {
 <li><a href="#perl-language-server-docs">Perl language server docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  8:44 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022  8:51 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>

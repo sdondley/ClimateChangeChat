@@ -1,11 +1,11 @@
-# Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
+# Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
 **CAUTION:** This tutorial is sprinkled with expletives and opinions that may be a bit uninformed just to spice things up a little. If you're humorless or just think my sense of humor sucks, go [RTFM](#rtfm) instead.
 
 **PREFACE**: I was pretty much clueless about language servers and using them with neovim until recently. It took a few days of fiddling and trial and error to get somewhat of a clue. But it's actually surprisingly easy to get set up once you know how. Hopefully, this tutorial will help you get clued in shrter time than I did. Good luck! 
 
 # On This Page
 
-- [Setting up an LSP with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-an-lsp-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
+- [Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
 - [TLDR;](#tldr)
     - [Basic setup: Get a Perl language server up and running with neovim](#basic-setup-get-a-perl-language-server-up-and-running-with-neovim)
         - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
@@ -20,7 +20,7 @@
     - [Looking for something more gratifying for your thirsty, curious soul?](#looking-for-something-more-gratifying-for-your-thirsty-curious-soul)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
-    - [Why an LSP?](#why-an-lsp)
+    - [Why a language server?](#why-a-language-server)
     - [Is an LSP hard to set up in neovim?](#is-an-lsp-hard-to-set-up-in-neovim)
     - [Why does the Perl community seem to be behind the curve on adopting LSPs?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps)
     - [My relevant background](#my-relevant-background)
@@ -42,7 +42,7 @@
 
 # TLDR;
 * This TLDR; section assumes:
-    * you know what an LSP is and what it might be good for
+    * you know what an language server is and what it might be good for
     * you know what the nvim-lspconfig plugin is and what it's for
     * you can install a perl module from cpan
     * you can install a neovim plugin 
@@ -267,6 +267,11 @@ cmp.setup {
 Continue below...
 
 # WTF
+* ...is a language server?
+    * a "LS" part of an "LSP"
+        * see next question 
+    * "LSP" and "language server" are often used interchaneably
+        * in reality, they are two separate components
 * ...is an [LSP](https://microsoft.github.io/language-server-protocol/)?
 * ...is [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)?
 * ...is [Perl](https://www.perl.org)?
@@ -276,7 +281,7 @@ I've googled these for you. You're welcome.
 
 # The Big Picture Stuff
 
-## Why an LSP?
+## Why a language server?
 * To write code you use a text editor
     * Text editors require you to type
         * But typing sucks
