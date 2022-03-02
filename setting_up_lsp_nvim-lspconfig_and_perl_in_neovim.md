@@ -482,7 +482,7 @@ I've googled these for you. You're welcome.
         * you can also set other basic settings with nvim-lspconfig to change:
             * how neovim responds to the language server
             * how you want the language server to respond to neovim 
-        * you can still use other plugins to connect to a language server and bypass neovim's built-in client
+        * you can still use other plugins to connect to a language server and even bypass neovim's built-in client
             * those plugins will be slower than the built-in language client neovim provides
             * and it's wasteful to duplicate the same effort in each plugin 
             * nvim-lspconfig aims to simplify the process of building plugins that need a language server
