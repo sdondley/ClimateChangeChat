@@ -490,7 +490,7 @@ I've googled these for you. You're welcome.
     * to try to achieve a "true IDE" experience 
         * plugins for code completion, for example
     * you don't have to use other plugins
-        * you can use omnifunc with nvim-lspconfig for completion instead
+        * for example, you can use omnifunc with nvim-lspconfig for completion
             * but not as nice 
             * btw, using `<c-x><c-whatever>` is probably its worst design decision in vim
                 * there might good reasons for it but I don't know what they are 
