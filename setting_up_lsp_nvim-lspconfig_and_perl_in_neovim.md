@@ -29,7 +29,8 @@
 - [The more technical stuff](#the-more-technical-stuff)
     - [Smaller picture stuff](#smaller-picture-stuff)
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
-        - [There are two Perl language servers (that I know of)](#there-are-two-perl-language-servers-that-i-know-of)
+        - [There are two Perl language servers that work with neovim (that I know of)](#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of)
+            - [A third Perl langauge server?](#a-third-perl-langauge-server)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
     - [Some gory details for those who thirst for knowledge](#some-gory-details-for-those-who-thirst-for-knowledge)
         - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
@@ -142,7 +143,6 @@
     * ask questions later 
         * just focus on getting it working for now 
         * I'll hopefully answer at least some of them down lower on the page
-
     ```
     local opts = { noremap=true, silent=true }
     vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -504,7 +504,7 @@ I've googled these for you. You're welcome.
 
 ## The stuff in between (probably what you really want to know)
 
-### There are two Perl language servers (that I know of)
+### There are two Perl language servers that work with neovim (that I know of)
 * First of all, thanks to the software authors of these language servers
     * I greatly appreciate your work! 
     * Be sure to pass along your gratitude and maybe even a tip
@@ -544,6 +544,14 @@ I've googled these for you. You're welcome.
         * no idea 
         * after my very limited use, both seem about the same to me
 
+#### A third Perl langauge server?  
+* There is another Perl language server project
+* Came to my attention after writing this blog post 
+* Called ["PerlNavigator"](https://github.com/bscan/PerlNavigator)
+* Does not yet work with neovim
+* Developer "bscan" [is looking for help](https://www.reddit.com/r/perl/comments/t4inwe/comment/hz0dg4j/?utm_source=share&utm_medium=web2x&context=3) getting it working with neovim
+
+
 ## OK, the stuff you really need to know to get some real work done
 * with all that out of the way, we can finally get some shit done
 * First, we download both language servers so you can try them both out
@@ -575,8 +583,8 @@ I've googled these for you. You're welcome.
         * These plugins are not strictly needed
             * add bells and whistles like better auto completion and snippets 
 * Got nvim-lspconfig installed? Good! Now:
-    * Go back to the top of the page
-        * Follow the rest of the instructions in the TLDR; section
+    * Go back to the top of the this page
+        * Follow the rest of the instructions in the [TLDR;](#tldr;) section
             * Ensure you get all the plugins installed 
             * Paste in the appropriate code snippets into `init.lua` or `init.vim`
         * Then come back here if you want to suffer more through this tutorial to learn something
@@ -592,9 +600,9 @@ I've googled these for you. You're welcome.
 * The bulk of the lua code is mostly dedicated to adding mappings for lspconfig
 
 #### Setting up mappings
-* Mappings make it easier to interact with the language server
-* This code sets up some gobal key maps, common to all buffers and all langauge servers:
 
+* Mappings make it easier to interact with the language server
+* This code sets up some gobal key maps, common to all buffers and all langauge servers
     ```
     local opts = { noremap=true, silent=true }
     vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -602,37 +610,34 @@ I've googled these for you. You're welcome.
     vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
     vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
     ```
-
 * Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
     * You might have one buffer open for programming in perl 
     * Another buffer for programming c 
     * each buffer will connect to the approprate language server 
-
     ```
     -- Use an on_attach function to only map the following keys
     -- after the language server attaches to the current buffer
     local on_attach = function(client, bufnr)
-      -- Enable completion triggered by <c-x><c-o>
-      vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+          -- Enable completion triggered by <c-x><c-o>
+          vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-      -- Mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+          -- Mappings.
+          -- See `:help vim.lsp.*` for documentation on any of the below functions
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     end
     ```
-
 * Note these mappings get wrapped in a function called `attach`. They are added only when you connect to a language server
 * What do these key mappings do?
     * This isn't an IDE tutorial 

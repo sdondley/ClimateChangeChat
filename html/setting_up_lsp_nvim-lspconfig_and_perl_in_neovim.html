@@ -437,7 +437,7 @@ L3MON4D3/LuaSnip
 <a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration" id="step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Cut and paste a giant lua code snippet into your neovim configuration</h3>
 <ul>
 <li>
-<p><strong>MUY IMPORTANTE</strong></p>
+<strong>MUY IMPORTANTE</strong>
 <ul>
 <li>The lua code works for the <code>PLS</code> language server (not the Perl::LangaugeServer)
 <ul>
@@ -447,11 +447,8 @@ L3MON4D3/LuaSnip
 <li>And make sure you remove the one-line of lspconfig code from the basic setup above</li>
 </ul>
 </li>
-<li>
-<p>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</p>
-</li>
-<li>
-<p>If you use <code>init.vim</code> for your configuration file:</p>
+<li>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</li>
+<li>If you use <code>init.vim</code> for your configuration file:
 <ul>
 <li>Open <code>init.neovim</code>
 </li>
@@ -471,8 +468,7 @@ L3MON4D3/LuaSnip
 </li>
 </ul>
 </li>
-<li>
-<p>You might not have any clue what this code does</p>
+<li>You might not have any clue what this code does
 <ul>
 <li>This is the TLDR; section so not covered here
 <ul>
@@ -1202,7 +1198,7 @@ cmp.setup {
 <h2>
 <a aria-hidden="true" class="anchor" href="#the-stuff-in-between-probably-what-you-really-want-to-know" id="the-stuff-in-between-probably-what-you-really-want-to-know"><span aria-hidden="true" class="octicon octicon-link"></span></a>The stuff in between (probably what you really want to know)</h2>
 <h3>
-<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-i-know-of" id="there-are-two-perl-language-servers-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers (that I know of)</h3>
+<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of" id="there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers that work with neovim (that I know of)</h3>
 <ul>
 <li>First of all, thanks to the software authors of these language servers
 <ul>
@@ -1295,6 +1291,16 @@ cmp.setup {
 </ul>
 </li>
 </ul>
+<h4>
+<a aria-hidden="true" class="anchor" href="#a-third-perl-langauge-server" id="a-third-perl-langauge-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>A third Perl langauge server?</h4>
+<ul>
+<li>There is another Perl language server project</li>
+<li>Came to my attention after writing this blog post</li>
+<li>Called <a href="https://github.com/bscan/PerlNavigator">&quot;PerlNavigator&quot;</a>
+</li>
+<li>Does not yet work with neovim</li>
+<li>Developer &quot;bscan&quot; <a href="https://www.reddit.com/r/perl/comments/t4inwe/comment/hz0dg4j/?utm_source=share&amp;utm_medium=web2x&amp;context=3">is looking for help</a> getting it working with neovim</li>
+</ul>
 <h2>
 <a aria-hidden="true" class="anchor" href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done" id="ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, the stuff you really need to know to get some real work done</h2>
 <ul>
@@ -1350,9 +1356,9 @@ cmp.setup {
 </li>
 <li>Got nvim-lspconfig installed? Good! Now:
 <ul>
-<li>Go back to the top of the page
+<li>Go back to the top of the this page
 <ul>
-<li>Follow the rest of the instructions in the TLDR; section
+<li>Follow the rest of the instructions in the <a href="#tldr;">TLDR;</a> section
 <ul>
 <li>Ensure you get all the plugins installed</li>
 <li>Paste in the appropriate code snippets into <code>init.lua</code> or <code>init.vim</code>
@@ -1386,11 +1392,8 @@ cmp.setup {
 <h4>
 <a aria-hidden="true" class="anchor" href="#setting-up-mappings" id="setting-up-mappings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up mappings</h4>
 <ul>
-<li>
-<p>Mappings make it easier to interact with the language server</p>
-</li>
-<li>
-<p>This code sets up some gobal key maps, common to all buffers and all langauge servers:</p>
+<li>Mappings make it easier to interact with the language server</li>
+<li>This code sets up some gobal key maps, common to all buffers and all langauge servers
 <pre><code>local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;e&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.open_float()&lt;CR&gt;&#39;, opts)
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;[d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_prev()&lt;CR&gt;&#39;, opts)
@@ -1398,8 +1401,7 @@ vim.api.nvim_set_keymap(&#39;n&#39;, &#39;]d&#39;, &#39;&lt;cmd&gt;lua vim.diagn
 vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.setloclist()&lt;CR&gt;&#39;, opts)
 </code></pre>
 </li>
-<li>
-<p>Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server</p>
+<li>Next, we set up more keymaps that are specific to buffers, each of which might be connetected to a different language server
 <ul>
 <li>You might have one buffer open for programming in perl</li>
 <li>Another buffer for programming c</li>
@@ -1408,32 +1410,29 @@ vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;l
 <pre><code>-- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  -- Enable completion triggered by &lt;c-x&gt;&lt;c-o&gt;
-  vim.api.nvim_buf_set_option(bufnr, &#39;omnifunc&#39;, &#39;v:lua.vim.lsp.omnifunc&#39;)
+      -- Enable completion triggered by &lt;c-x&gt;&lt;c-o&gt;
+      vim.api.nvim_buf_set_option(bufnr, &#39;omnifunc&#39;, &#39;v:lua.vim.lsp.omnifunc&#39;)
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gD&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.declaration()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gd&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.definition()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;K&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.hover()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gi&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.implementation()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;C-\&gt;&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.signature_help()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wa&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.add_workspace_folder()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.remove_workspace_folder()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wl&#39;, &#39;&lt;cmd&gt;lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;D&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.type_definition()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;rn&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.rename()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;ca&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.code_action()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.references()&lt;CR&gt;&#39;, opts)
-  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
+      -- Mappings.
+      -- See `:help vim.lsp.*` for documentation on any of the below functions
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gD&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.declaration()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gd&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.definition()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;K&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.hover()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gi&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.implementation()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;C-\&gt;&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.signature_help()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wa&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.add_workspace_folder()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.remove_workspace_folder()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wl&#39;, &#39;&lt;cmd&gt;lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;D&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.type_definition()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;rn&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.rename()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;ca&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.code_action()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.references()&lt;CR&gt;&#39;, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
 end
 </code></pre>
 </li>
-<li>
-<p>Note these mappings get wrapped in a function called <code>attach</code>. They are added only when you connect to a language server</p>
-</li>
-<li>
-<p>What do these key mappings do?</p>
+<li>Note these mappings get wrapped in a function called <code>attach</code>. They are added only when you connect to a language server</li>
+<li>What do these key mappings do?
 <ul>
 <li>This isn&#39;t an IDE tutorial
 <ul>
@@ -1723,7 +1722,12 @@ cmp.setup {
 <li>
 <a href="#the-stuff-in-between-probably-what-you-really-want-to-know">The stuff in between (probably what you really want to know)</a>
 <ul>
-<li><a href="#there-are-two-perl-language-servers-that-i-know-of">There are two Perl language servers (that I know of)</a></li>
+<li>
+<a href="#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of">There are two Perl language servers that work with neovim (that I know of)</a>
+<ul>
+<li><a href="#a-third-perl-langauge-server">A third Perl langauge server?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done">OK, the stuff you really need to know to get some real work done</a></li>
@@ -1749,7 +1753,7 @@ cmp.setup {
 <li><a href="#perl-language-server-docs">Perl language server docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  6:51 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  7:12 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
