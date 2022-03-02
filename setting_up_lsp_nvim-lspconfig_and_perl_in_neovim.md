@@ -52,7 +52,7 @@
 ## Basic setup: Get a Perl language server up and running with neovim
 * No bells or whistles 
 * Good for just making sure you can get something working before trying more sophisticated configs
-    * Recommended to do this first then do advanced set up below
+    * Good idea to do this first then do advanced set up below
 
 ### Step 1: Install the language server(s)
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
