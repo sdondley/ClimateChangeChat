@@ -268,9 +268,9 @@ Continue below...
 
 # WTF
 * ...is a language server?
-    * a "LS" part of an "LSP"
+    * a "LS" part of an "LSP", the "Language Server Protocol"
         * see next question 
-    * "LSP" and "language server" are often used interchaneably
+    * "LSP" and "language server" are often used interchangeably
         * in reality, they are two separate components
 * ...is an [LSP](https://microsoft.github.io/language-server-protocol/)?
 * ...is [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)?
