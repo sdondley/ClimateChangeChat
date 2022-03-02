@@ -111,8 +111,8 @@
 * If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow the steps below
 
 ### Step 1: Do steps 1 and 2 in the basic setup
-* Already did these steps?
-    * **Don't forget to remove the one-line snippet in step 2 above before proceeding**
+* Already did the basic set up?
+    * **Don't forget to remove the one-line snippet in step 3 above before proceeding**
 
 ### Step 2: Install these plugins into neovim (in addition to the `neovim/nvim-lspconfig` plugin):
     hrsh7th/nvim-cmp
@@ -125,6 +125,7 @@
 * **MUY IMPORTANTE**
     * The lua code below is for the `PLS` language server (not the Perl::LangaugeServer)
         * Ensure you have downloaded this langauge server from CPAN before proceeding 
+    * And make sure you remove the lspconfig code from the basic setup above
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
     * Open `init.neovim`
