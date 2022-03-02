@@ -293,8 +293,8 @@ I've googled these for you. You're welcome.
                 * not to be confused with "IEDs" or the "IUD" 
                     * totally different things
                 * "IDE" is an inscutable name
-                    * makes you sound impressive 
                     * stands for "Integrated Development Environment" 
+                    * makes you sound impressive 
                         * Weird how programmers love talking about "environments" yet barely go outside
                     * Just a tool for helping you write code faster
                         * call it a "coding assistant" to sound less pretentious around real people
