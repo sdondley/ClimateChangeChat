@@ -77,7 +77,7 @@
 
 ### Step 3: Throw one line of lua code into neovim's init file
 * neovim has complicated vim (even more) by offering two different scripting languages for writing neovim's configuration files
-* If you don't know which language your're using to configure vim with, it's save to say you're using vimscript 
+* If you don't know which language your're using to configure neovim with, it's safe to say you're using vimscript 
 * Now decide which langauge server you want to use
     * I recommend PLS 
 * Add the appropriate lua code into your vim configuration
@@ -88,7 +88,7 @@
     * for lua 
         * goes into `init.lua` file
         * for lua with PLS: `require'lspconfig'.perlpls.setup{}`
-        * for lua with Perl::LanguageServer: `require'lspconfig'.perlpls.setup{}`
+        * for lua with Perl::LanguageServer: `require'lspconfig'.perlls.setup{}`
 * Step 3 is done
 
 ### Step 4
