@@ -21,8 +21,8 @@
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why a language server?](#why-a-language-server)
-    - [Is an LSP hard to set up in neovim?](#is-an-lsp-hard-to-set-up-in-neovim)
-    - [Why does the Perl community seem to be behind the curve on adopting LSPs?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-lsps)
+    - [Is setting up a language server hard to set up in neovim?](#is-setting-up-a-language-server-hard-to-set-up-in-neovim)
+    - [Why does the Perl community seem to be behind the curve on adopting languages servers?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers)
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
     - [Will this work for Windows?](#will-this-work-for-windows)
@@ -313,7 +313,7 @@ I've googled these for you. You're welcome.
                     * Learn to type before learning to code
                     * Learn to code "by hand" before using an IDE
                     * Use an IDE after you learn to program manually
-* So why use a language server
+* So why use a language server?
     * Takes away some of the tedious work of typing and looking shit up 
     * It's kind of magical and fun to use 
     * Allows you to turn neovim into a somewhat kludgy, poor man's IDE
@@ -321,12 +321,12 @@ I've googled these for you. You're welcome.
         * neovim's goal seems to be to want to turn vim into a serious IDE 
             * that's my take, anyway 
                 * may not be exactly accurate 
-    * Some common "killer" LSP features that programmers really like:
+    * Some common "killer" language server features that programmers really like:
         * Syntax checking 
             * tells you in real time if your code has an obvious mistake 
             * but cannot tell you if your code behaves the way you want it to 
                 * use tests for that 
-                    * IDE can hlep you manage and run your tests, not an LSP 
+                    * IDE can hlep you manage and run your tests, not a language server 
         * Auto completion 
             * Type in the first few characters of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write 
                 * You don't have to type in the full name of the identifier, just choose it from the menu 
@@ -337,33 +337,33 @@ I've googled these for you. You're welcome.
             * Forgot what a function does?
             * Need a quick reminder of how classes work in language A? 
             * Forgot how a variable is declared?
-            * An LSP helps you find the answers you are looking for
+            * An langauge server helps you find the answers you are looking for
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
-        * There's more an LSP can do, but these are the big ones
-* Can't I already do this with neovim without an LSP?
+        * There's more a language server can do, but these are the big ones
+* Can't I already do this with neovim without a language server?
     * Yes, most of it 
         * But not quite as conveniently and not quite as fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
 * What about using coc plugins instead?
-    * I haven't used coc up until last week when I started using it in conjunction with an LSP
+    * I haven't used coc up until last week when I started using it in conjunction with an language server
         * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim
 * Why Perl?
     * like English, it's my native language 
-    * I had difficultly getting an LSP set up with Perl and neovim
+    * I had difficultly getting an language server set up with Perl and neovim
         * Not a huge amount of documentation for perl language servers
             * Stuff I did find was wrong or incomplete
                 * Some of it has since been updated 
                     * thanks to my tireless efforts :) 
-            * The two LSPs for Perl are not written by people who use neovim 
-                * they use Perl LSP with "VSCode" 
+            * The two language servers for Perl are not written by people who use neovim 
+                * they use Perl language servers with "VSCode" 
         * I wanted others to avoid my initial confusion 
             * wrote this 
     * Perl community has the best people
         * IMO, of course 
 
-## Is an LSP hard to set up in neovim?
+## Is setting up a language server hard to set up in neovim?
 * really depends on the language server
     * for perl, it's super, super easy 
 * also depends on your skill level 
@@ -377,7 +377,7 @@ I've googled these for you. You're welcome.
 * Hopefully this web page helps at least a little
 * As neovim matures, will probably get easier
 
-## Why does the Perl community seem to be behind the curve on adopting LSPs?
+## Why does the Perl community seem to be behind the curve on adopting languages servers?
 * Good question! (if I do say so myself)
 * Is it really behind the curve?
     * It seems like it to me 
@@ -389,7 +389,7 @@ I've googled these for you. You're welcome.
 * Maybe this tutorial will help things along in some small way
 
 ## My relevant background
-* totally new to LSPs and nvim-lspconfig 
+* totally new to languages servers and nvim-lspconfig 
     * until last week 
 * Coding in Perl since late 90s
     * When Perl was king of the web 
@@ -405,7 +405,7 @@ I've googled these for you. You're welcome.
 * Know some vimscript
     * well enough, but very slow to code it 
     * no idea how to go about architecting a sophisticated plugin with it 
-* Never used an LSP until last week
+* Never used an languages server until last week
     * I know just about zilch about how they work
         * beyond knowing they follow a traditional "client/server" paradigm 
 * Never used a proper IDE except for dabbling a little with XCode 
@@ -434,7 +434,7 @@ I've googled these for you. You're welcome.
 # The more technical stuff
 
 ## Smaller picture stuff 
-* as mentioned above, my knowledge of LSPs is basically zero
+* as mentioned above, my knowledge of language servers is basically zero
     * but from what I've learned so far...
         * There is a client (vim) 
         * There is a server (the language server)
