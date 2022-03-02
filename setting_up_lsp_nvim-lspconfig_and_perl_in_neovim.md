@@ -343,7 +343,7 @@ I've googled these for you. You're welcome.
 * Can't I already do this with neovim without a language server?
     * Yes, most of it 
         * But not quite as conveniently and not quite as fast 
-        * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
+        * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools and plugins
 * What about using coc plugins instead?
     * I haven't used coc up until last week when I started using it in conjunction with a language server
         * Not really qualified to weigh in on the matter, sorry
