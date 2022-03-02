@@ -34,7 +34,7 @@
         - [There are two Perl language servers that work with neovim (that I know of)](#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of)
             - [A third Perl langauge server?](#a-third-perl-langauge-server)
     - [OK, the stuff you really need to know to get some real work done](#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done)
-    - [Some gory details for those with a relentless thirst for knowledge](#some-gory-details-for-those-with-a-relentless-thirst-for-knowledge)
+    - [Some gory details for those with a relentless quest for knowledge](#some-gory-details-for-those-with-a-relentless-quest-for-knowledge)
         - [Analzying the giant lua code snippet](#analzying-the-giant-lua-code-snippet)
             - [Setting up mappings](#setting-up-mappings)
             - [Connecting vim to our language servers](#connecting-vim-to-our-language-servers)
@@ -587,7 +587,7 @@ I've googled these for you. You're welcome.
             * Paste in the appropriate code snippets into `init.lua` or `init.vim`
         * Then come back here if you want to suffer more through this tutorial to learn something
 
-## Some gory details for those with a relentless thirst for knowledge
+## Some gory details for those with a relentless quest for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
 * One caveat: I'm not an expert in Lua or configuing the language server
     * so take the technical discussion in this section with a bit of grain of salt 
