@@ -354,6 +354,7 @@ I've googled these for you. You're welcome.
             * FWIW, from what I've read, using neovim's built-in LSP client is the future of neovim
                 * Perhaps coc will just retool and eventually use the built-in client at some point?
                     * dunno 
+    * [check this document](https://github.com/neovim/nvim-lspconfig/wiki/Comparison-to-other-LSP-ecosystems-(CoC,-vim-lsp,-etc.)) for a more technical comparison of nvim-lspconfig and coc
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting a language server set up with Perl and neovim
