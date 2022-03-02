@@ -41,6 +41,7 @@
             - [Set up completion, completion mappings, and snippets](#set-up-completion-completion-mappings-and-snippets)
 - [RTFM](#rtfm)
     - [neovim docs](#neovim-docs)
+    - [Github docs](#github-docs)
     - [Perl language server docs](#perl-language-server-docs)
 
 # TLDR;
@@ -789,6 +790,9 @@ I've googled these for you. You're welcome.
 ## neovim docs
 * `:h lsp`
 * `:h lspconfig`
+
+## Github docs
+* [lspconfig wiki](https://github.com/neovim/nvim-lspconfig/wiki)
 
 ## Perl language server docs
 * [Perl::LanguageServer](https://metacpan.org/pod/Perl::LanguageServer) 
