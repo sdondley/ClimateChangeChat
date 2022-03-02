@@ -94,6 +94,8 @@
 * I have a hunch prose is dead 
     * 20th century media killed poetry 
     * prose killed by the internet 
+    * I have an increasing impatience with wordy shit
+        * Perhaps others feel the same 
 
 # Why is the design so plain?
 * I'm more concerned with content and functionality than design
