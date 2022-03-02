@@ -347,7 +347,7 @@ I've googled these for you. You're welcome.
 * What about using coc plugins instead?
     * I haven't used coc up until last week when I started using it in conjunction with a language server
         * Not really qualified to weigh in on the matter, sorry
-            * FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim
+            * FWIW, from what I've read, using neovim's built-in language server client is the future of neovim
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting a language server set up with Perl and neovim
