@@ -447,14 +447,14 @@ I've googled these for you. You're welcome.
         * a client can attach itself to multiple servers
         * a server can service multiple clients but the clients have be use different ports (AFAICT)
 * you need to install the language server
-    * we will cover how to do this later 
+    * we will cover how to do this latef 
     * language server can be used by neovim or another other piece of software that knows how
     * there's generally two or three for each programming language
         * there are more for more popular languages 
         * why is there often more than server for each language?
             * I have no idea 
                 * geeks are sometimes territorial?
-        * How do I know which one to use?
+        * How do I know which one to use
             * It depends on what you need it to do
                 * Not all language servers have the same feature set 
                     * read the langauge server's documentation 

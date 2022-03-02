@@ -41,7 +41,7 @@
             * Because I want to call attention to my project
 
 # Goals
-* Have a creative outlet where I'm free of the chains and impositions of corporate social media platforms
+* Have a creative outlet free of limitations and impositions of corporate social media platforms
 * make it exceptionally update and maintain
     * will be less likely to abandon a project that is less of a pain to update 
 * share ideas and notes with other easily and quickly
@@ -56,7 +56,7 @@
                 * processes the markdow file and converts to HTML
                 * commits the markdown and HTML file to a git repo
                 * pushes changes out to the remote repo
-    * I can quickly whip out text and publish it to web with litle effort
+    * I can quickly whip out text and publish it to web with little effort
     * git will give me an entire history of every change published to the site
         * nothing will be lost to the historians who stumble upon my great work :) 
 * content is pulled in every minute to web server running a cron
