@@ -355,6 +355,12 @@ I've googled these for you. You're welcome.
                 * Perhaps coc will just retool and eventually use the built-in client at some point?
                     * dunno 
     * [check this document](https://github.com/neovim/nvim-lspconfig/wiki/Comparison-to-other-LSP-ecosystems-(CoC,-vim-lsp,-etc.)) for a more technical comparison of nvim-lspconfig and coc
+    * I think I've read that it's more laggy than using the built-in client
+* What about coq?
+    * Another neovim plugin but that has very fast fuzzy completion
+    * Works with nvim-lspconfig, apparently
+        * On my list of things to experiment more with 
+    * neovim authors appear to have potty mouths
 * Why Perl?
     * like English, it's my native language 
     * I had difficultly getting a language server set up with Perl and neovim
