@@ -702,7 +702,7 @@ I've googled these for you. You're welcome.
     * `settings`:
         * This is the most important part of the lua code
         * Consult language server documentation for what goes here
-        * Settings above work with PLS, not P::LS 
+        * Settings above work with PLS, not P::LS
             * enables perlcritic 
                 * nags you with warnings about how your code style sucks 
             * enables syntax checking 
@@ -710,6 +710,8 @@ I've googled these for you. You're welcome.
                     * huge time saver 
                     * my biggest motiviation for using an LSP 
                         * I make a shit ton of dumb mistakes 
+            * consult each language server's documentation for setting confugrations
+                * should have a section for nvim-lspconfig 
         * `--single_file_support`
             * I only have a vague idea what this does
             * won't speculate 
