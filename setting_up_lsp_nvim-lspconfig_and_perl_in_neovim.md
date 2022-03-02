@@ -313,7 +313,7 @@ I've googled these for you. You're welcome.
                     * Learn to type before learning to code
                     * Learn to code "by hand" before using an IDE
                     * Use an IDE after you learn to program manually
-* So why use the "LSP?"
+* So why use a language server
     * Takes away some of the tedious work of typing and looking shit up 
     * It's kind of magical and fun to use 
     * Allows you to turn neovim into a somewhat kludgy, poor man's IDE
