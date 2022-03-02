@@ -345,6 +345,9 @@ I've googled these for you. You're welcome.
         * But not quite as conveniently and not quite as fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools and plugins
 * What about using coc plugins instead?
+    * WTF is coc? 
+        * It's a suite of plugins that allow you to easily connect to language servers 
+            * Created before neovim had a built-in LSP client
     * I haven't used coc up until last week when I started using it in conjunction with a language server
         * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, using neovim's built-in language server client is the future of neovim
