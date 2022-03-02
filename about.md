@@ -90,6 +90,7 @@
 * It's inherent to the design of the vimwiki plugin
 * It's much faster to write this way
     * No agonizing over how eloquent I'm being and how well ideas flow 
+    * much fucking faster to edit/revise
 * Ideas can be conveyed very succinctly
 * I have a hunch prose is dead 
     * 20th century media killed poetry 
