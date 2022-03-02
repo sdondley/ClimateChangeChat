@@ -334,7 +334,7 @@ I've googled these for you. You're welcome.
         * Documentation lookup
             * Forgot what arguments a function takes? 
             * Forgot what a function does?
-            * Need a quick reminder of how classes work in language A? 
+            * Need a quick refresher on how classes work? 
             * Forgot how a variable is declared?
             * A langauge server helps you find the answers you are looking for
         * Code formatting 
