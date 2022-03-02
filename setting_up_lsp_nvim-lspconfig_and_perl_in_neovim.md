@@ -109,6 +109,8 @@
 
 ## Advanced set up 
 * If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow the steps below
+* This configuration is ripped almost straight from lspconfig docs
+    * You can use a different set of plugins and mappings you can use as you get more skilled 
 
 ### Step 1: Do steps 1 and 2 in the basic setup
 * Already did the basic set up?
