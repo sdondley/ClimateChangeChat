@@ -238,7 +238,7 @@
             <div id="content">
               <h1>
 <a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
-<p><strong>PREFACE</strong>: I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling and experimenting to get somethings of a clue. But it turns out to be surprisingly easy to set up a Perl language server with neovim. This tutorial is the tutorial I wish I existed when I started and will spare you some confustion and frustration. Good luck!</p>
+<p><strong>PREFACE</strong>: I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling and experimenting to get somethings of a clue. But it turns out to be surprisingly easy to set up a Perl language server with neovim. This tutorial is the tutorial I wish I existed when I started and should spare you some confustion and frustration. Good luck!</p>
 <p><strong>CAUTION:</strong> This tutorial is sprinkled with expletives and some uninformed opinions just to spice things up a little. If you&#39;re humorless or don&#39;t appreciate my sense of humor, go <a href="#rtfm">RTFM</a> instead.</p>
 
 
@@ -437,7 +437,7 @@ L3MON4D3/LuaSnip
 <a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration" id="step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Cut and paste a giant lua code snippet into your neovim configuration</h3>
 <ul>
 <li>
-<strong>MUY IMPORTANTE</strong>
+<p><strong>MUY IMPORTANTE</strong></p>
 <ul>
 <li>The lua code works for the <code>PLS</code> language server (not the Perl::LangaugeServer)
 <ul>
@@ -447,8 +447,11 @@ L3MON4D3/LuaSnip
 <li>And make sure you remove the one-line of lspconfig code from the basic setup above</li>
 </ul>
 </li>
-<li>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</li>
-<li>If you use <code>init.vim</code> for your configuration file:
+<li>
+<p>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</p>
+</li>
+<li>
+<p>If you use <code>init.vim</code> for your configuration file:</p>
 <ul>
 <li>Open <code>init.neovim</code>
 </li>
@@ -468,7 +471,8 @@ L3MON4D3/LuaSnip
 </li>
 </ul>
 </li>
-<li>You might not have any clue what this code does
+<li>
+<p>You might not have any clue what this code does</p>
 <ul>
 <li>This is the TLDR; section so not covered here
 <ul>
@@ -479,8 +483,6 @@ L3MON4D3/LuaSnip
 <ul>
 <li>just focus on getting it working for now</li>
 <li>I&#39;ll hopefully answer at least some of them down lower on the page</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -530,12 +532,12 @@ for _, lsp in pairs(servers) do
     } 
   },
     single_file_support = true,
-	on_attach = on_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
-	flags = {
-		-- This will be the default in neovim 0.7+
-		debounce_text_changes = 150,
-	}
+    flags = {
+        -- This will be the default in neovim 0.7+
+        debounce_text_changes = 150,
+    }
   }
 end
 
@@ -585,6 +587,8 @@ cmp.setup {
   },
 }
 </code></pre>
+</li>
+</ul>
 <h2>
 <a aria-hidden="true" class="anchor" href="#thats-it-youre-done" id="thats-it-youre-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>That&#39;s it. You&#39;re done!</h2>
 <ul>
@@ -1749,7 +1753,7 @@ cmp.setup {
 <li><a href="#perl-language-server-docs">Perl language server docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  6:42 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 2, 2022  6:44 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
