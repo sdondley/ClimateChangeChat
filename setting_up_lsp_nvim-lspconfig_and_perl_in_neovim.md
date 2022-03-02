@@ -358,7 +358,8 @@ I've googled these for you. You're welcome.
     * I think I've read that it's more laggy than using the built-in client
 * What about [coq](https://github.com/ms-jpq/coq_nvim), the "fast as FUCK" completion plugin?
     * Another neovim plugin but that advertises itself as having very fast fuzzy completion
-    * Apparently works with neovim's built-in LSP client nvim-lspconfig, apparently
+    * Apparently works with neovim's built-in LSP client nvim-lspconfig
+        * I tried it only briefly 
         * On my list of things to experiment more with 
     * neovim plugin authors appear to have potty mouths
 * Why Perl?
