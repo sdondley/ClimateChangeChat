@@ -350,7 +350,7 @@ I've googled these for you. You're welcome.
         * It's a suite of plugins that allow you to easily connect to different language servers 
             * Created before neovim had a built-in LSP client
     * I hadn't used coc up until last week when I experimented with it
-        * Not really qualified to weigh in on the matter, sorry
+        * I'm not qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, using neovim's built-in LSP client is the future of neovim
                 * Perhaps coc will just retool and eventually use the built-in client at some point?
                     * dunno 
