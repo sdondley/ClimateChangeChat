@@ -348,7 +348,7 @@ I've googled these for you. You're welcome.
     * WTF is coc? 
         * It's a suite of plugins that allow you to easily connect to language servers 
             * Created before neovim had a built-in LSP client
-    * I haven't used coc up until last week when I started using it in conjunction with a language server
+    * I hadn't used coc up until last week when I experimented with it
         * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, using neovim's built-in LSP client is the future of neovim
                 * Perhaps coc will just retool and eventually use the built-in client at some point?
