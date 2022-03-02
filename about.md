@@ -95,6 +95,8 @@
     * 20th century media killed poetry 
     * prose killed by the internet 
     * I have an increasing impatience with wordy shit
+        * just get me to the meat of the matter 
+            * I'll fill in the emotional details with my own imagination 
         * Perhaps others feel the same 
 
 # Why is the design so plain?
