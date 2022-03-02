@@ -78,7 +78,7 @@
 ### Step 3: Throw one line of lua code into neovim's init file
 * neovim has complicated vim (even more) by offering two different scripting languages for writing neovim's configuration files
 * If you don't know which language your're using to configure neovim with, it's safe to say you're using vimscript 
-* Now decide which langauge server you want to use
+* Decide which langauge server you want to use
     * I recommend PLS 
 * Add the appropriate lua code into your vim configuration
     * for vimscript 
