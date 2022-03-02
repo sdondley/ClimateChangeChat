@@ -489,7 +489,7 @@ I've googled these for you. You're welcome.
 * In addition to nvim-lspconfig you will probably want to use other plugins
     * to try to achieve a "true IDE" experience 
         * plugins for code completion, for example
-    * you don't have to use a plugin
+    * you don't have to use other plugins
         * you can use omnifunc with nvim-lspconfig for completion instead
             * but not as nice 
             * btw, using `<c-x><c-whatever>` is probably its worst design decision in vim
