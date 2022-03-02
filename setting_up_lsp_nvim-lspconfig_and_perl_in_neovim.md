@@ -1,7 +1,7 @@
 # Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
 **PREFACE**: I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling and experimenting to get something of a clue. But it turns out to be surprisingly easy to set up a Perl language server with neovim. This tutorial is the tutorial I wish I existed when I started and should spare you some confusion/frustration. Good luck! 
 
-**DISCLAIMER**: This tutorial isn't meant to be exhaustive or the be all and end all authority of using Perl language servers with neovim and I don't claim to be an expert on the matter. It's meant to get you up to speed faster and save you some frustration. When in doubt, [RTFM](#rtfm). If you find any bad mistakes or bad information in this tutorial, email me at s@dondley.com and I'll update this post.
+**DISCLAIMER**: This tutorial isn't meant to be exhaustive or the be all and end all authority of using Perl language servers with neovim and I'm not an expert on the matter. It's meant to get you up to speed faster and save you some frustration. When in doubt, [RTFM](#rtfm). If you find any bad mistakes or bad information in this tutorial, email me at s@dondley.com or [do a pull request to suggest a change to this page](https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md)
 
 **CAUTION:** This tutorial is sprinkled with expletives and some uninformed opinions just to spice things up a little. If you're humorless or don't appreciate my sense of humor, go [RTFM](#rtfm) instead.
 
