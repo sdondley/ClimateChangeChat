@@ -97,7 +97,6 @@
     * I have an increasing impatience reading wordy shit
         * just get me to the meat of the matter, especially on reality-based topics
             * I'll fill in the emotional details with my own imagination 
-        * Perhaps others feel the same 
 
 # Why is the design so plain?
 * I'm more concerned with content and functionality than design
