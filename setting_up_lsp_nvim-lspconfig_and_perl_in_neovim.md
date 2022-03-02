@@ -580,7 +580,6 @@ I've googled these for you. You're welcome.
             * Ensure you get all the plugins installed 
             * Paste in the appropriate code snippets into `init.lua` or `init.vim`
         * Then come back here if you want to suffer more through this tutorial to learn something
-            * Continue on in next section below 
 
 ## Some gory details for those who thirst for knowledge
 * This section goes into more detail on what the code snippet you pasted above does
