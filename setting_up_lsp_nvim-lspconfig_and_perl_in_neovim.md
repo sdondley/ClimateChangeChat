@@ -535,7 +535,7 @@ I've googled these for you. You're welcome.
         * both are easily installed from cpan repo 
         * both are free to use
         * they have nearly the same name
-        * both developers apparently code use vscode, not neovim
+        * both developers apparently code with vscode, not neovim
         * but both can work with neovim (maybe, see below) 
         * both have kind of weak documentation for setting up with neovim
             * at least they when I started writing this
