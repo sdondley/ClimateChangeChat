@@ -42,7 +42,7 @@
 - [RTFM](#rtfm)
     - [neovim docs](#neovim-docs)
     - [Github docs](#github-docs)
-    - [Perl language server docs](#perl-language-server-docs)
+    - [Perl language server cpan docs](#perl-language-server-cpan-docs)
 
 # TLDR;
 * This TLDR; section assumes:
@@ -791,8 +791,10 @@ I've googled these for you. You're welcome.
 
 ## Github docs
 * [lspconfig wiki](https://github.com/neovim/nvim-lspconfig/wiki)
+* [Perl::LangaugeServer]()https://github.com/richterger/Perl-LanguageServer
+* [PLS]()https://github.com/FractalBoy/perl-language-server
 
-## Perl language server docs
+## Perl language server cpan docs
 * [Perl::LanguageServer](https://metacpan.org/pod/Perl::LanguageServer) 
 * [Perl-Language-Server (PLS)](https://metacpan.org/pod/PLS)
 
