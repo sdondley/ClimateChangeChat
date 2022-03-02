@@ -344,7 +344,7 @@ I've googled these for you. You're welcome.
     * Yes, most of it 
         * But not quite as conveniently and not quite as fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools and plugins
-* What about using coc plugins instead?
+* What about using [coc plugins](https://github.com/neoclide/coc.nvim) instead?
     * WTF is coc? 
         * It's a suite of plugins that allow you to easily connect to language servers 
             * Created before neovim had a built-in LSP client
