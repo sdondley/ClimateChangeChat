@@ -129,7 +129,7 @@
     * And make sure you remove the one-line of lspconfig code from the basic setup above
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
-    * Open `init.neovim`
+    * Open `init.vim`
     * Add `lua require('lsp_config')` to the file
     * Now, in the root of you your neovim config directory:
         * create a `lua` directory if it doesn't already exist 
