@@ -711,7 +711,9 @@ I've googled these for you. You're welcome.
                     * my biggest motiviation for using an LSP 
                         * I make a shit ton of dumb mistakes 
             * consult each language server's documentation for setting confugrations
-                * should have a section for nvim-lspconfig 
+                * should have a special section for nvim-lspconfig 
+                * nvim-lspconfig also has a [compendium of settings](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) for different language servers 
+                    * be careful, they might be dated 
         * `--single_file_support`
             * I only have a vague idea what this does
             * won't speculate 
