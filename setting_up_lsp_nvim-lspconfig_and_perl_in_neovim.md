@@ -76,7 +76,7 @@
 * Step 2 is done
 
 ### Step 3: Throw one line of lua code into neovim's init file
-* neovim has complicated vim (even more) by offering two different scripts for writing neovim's configuration 
+* neovim has complicated vim (even more) by offering two different scripting languages for writing neovim's configuration files
     * old way: with vimscript 
     * new way: with lua 
 * WTF is lua, you say?
