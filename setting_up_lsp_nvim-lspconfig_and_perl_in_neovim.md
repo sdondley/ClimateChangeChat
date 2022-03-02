@@ -42,7 +42,7 @@
 
 # TLDR;
 * This TLDR; section assumes:
-    * you know what an language server is and what it might be good for
+    * you know what a language server is and what it might be good for
     * you know what the nvim-lspconfig plugin is and what it's for
     * you can install a perl module from cpan
     * you can install a neovim plugin 
@@ -337,7 +337,7 @@ I've googled these for you. You're welcome.
             * Forgot what a function does?
             * Need a quick reminder of how classes work in language A? 
             * Forgot how a variable is declared?
-            * An langauge server helps you find the answers you are looking for
+            * A langauge server helps you find the answers you are looking for
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
         * There's more a language server can do, but these are the big ones
@@ -346,12 +346,12 @@ I've googled these for you. You're welcome.
         * But not quite as conveniently and not quite as fast 
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools
 * What about using coc plugins instead?
-    * I haven't used coc up until last week when I started using it in conjunction with an language server
+    * I haven't used coc up until last week when I started using it in conjunction with a language server
         * Not really qualified to weigh in on the matter, sorry
             * FWIW, from what I've read, the nvim-lspconfig seems to be the future of neovim
 * Why Perl?
     * like English, it's my native language 
-    * I had difficultly getting an language server set up with Perl and neovim
+    * I had difficultly getting a language server set up with Perl and neovim
         * Not a huge amount of documentation for perl language servers
             * Stuff I did find was wrong or incomplete
                 * Some of it has since been updated 
@@ -405,7 +405,7 @@ I've googled these for you. You're welcome.
 * Know some vimscript
     * well enough, but very slow to code it 
     * no idea how to go about architecting a sophisticated plugin with it 
-* Never used an languages server until last week
+* Never used a languages server until last week
     * I know just about zilch about how they work
         * beyond knowing they follow a traditional "client/server" paradigm 
 * Never used a proper IDE except for dabbling a little with XCode 
