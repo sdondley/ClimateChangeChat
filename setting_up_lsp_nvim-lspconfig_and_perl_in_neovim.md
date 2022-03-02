@@ -125,7 +125,7 @@
 
 ### Step 3: Cut and paste a giant lua code snippet into your neovim configuration
 * **MUY IMPORTANTE**
-    * The lua code below is for the `PLS` language server (not the Perl::LangaugeServer)
+    * The lua code works for the `PLS` language server (not the Perl::LangaugeServer)
         * Ensure you have downloaded this langauge server from CPAN before proceeding 
     * And make sure you remove the lspconfig code from the basic setup above
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
