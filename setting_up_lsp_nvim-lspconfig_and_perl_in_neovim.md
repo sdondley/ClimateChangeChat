@@ -604,7 +604,7 @@ I've googled these for you. You're welcome.
 * Got nvim-lspconfig installed? Good! Now:
     * Go back to the top of the this page
         * Follow the rest of the instructions in the [TLDR;](#tldr;) section
-            * Ensure you get all the plugins installed 
+            * Ensure you get all the plugins installed (for when you do the advanced setup)
             * Paste in the appropriate code snippets into `init.lua` or `init.vim`
         * Then come back here if you want to suffer more through this tutorial to learn something
 
