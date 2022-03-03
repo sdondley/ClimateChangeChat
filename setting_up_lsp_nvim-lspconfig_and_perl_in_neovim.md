@@ -598,7 +598,7 @@ I've googled these for you. You're welcome.
             end,
         })
         ```
-    * Note the 4 other plugins listed here, in addition ot `nvim-lspconfig`
+    * Note the 4 other plugins listed here, in addition to `nvim-lspconfig`
         * These plugins are not strictly needed
             * add bells and whistles like better auto completion and snippets 
 * Got nvim-lspconfig installed? Good! Now:
