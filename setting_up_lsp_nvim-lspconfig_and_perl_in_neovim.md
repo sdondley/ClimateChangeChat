@@ -343,6 +343,7 @@ I've googled these for you. You're welcome.
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
             * perl language servers provide a convenient frontend to perltidy to accomplish this
         * There's more a language server can do, but these are the big ones
+            * for perl language servers, you got perlcritic ready to nage you at any moment 
 * Can't I already do this with neovim without a language server?
     * Yes, most of it 
         * But not quite as conveniently and not quite as fast 
