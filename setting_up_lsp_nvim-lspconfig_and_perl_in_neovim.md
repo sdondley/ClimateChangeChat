@@ -371,7 +371,7 @@ I've googled these for you. You're welcome.
         * Not a huge amount of documentation for perl language servers
             * Stuff I did find was wrong or incomplete
                 * Some of it has since been updated 
-                    * thanks to my tireless efforts :) 
+                    * thanks, in part, to my tireless efforts :) 
             * The two language servers for Perl are not written by people who use neovim 
                 * they use Perl language servers with "VSCode" 
         * I wanted others to avoid my initial confusion 
