@@ -378,6 +378,8 @@ I've googled these for you. You're welcome.
                     * you can thank MicroSoft for something, at least 
                         * but fuck Gates and Ballmer 
                             * always and forever 
+                            * thought kudos to Gates for being a good philanthroper 
+                                * **almost** erases his sins
         * I wanted others to avoid my initial confusion 
             * wrote this 
     * Perl community has the best people
