@@ -451,7 +451,7 @@ I've googled these for you. You're welcome.
         * macs are fine
         * using a virtual linux box is better 
             * but I'm not looking for another box to manage 
-                * learning one OS really well is enough work for me
+                * learning one OS fairly well is enough work for me
  
 # The more technical stuff
 
