@@ -374,6 +374,7 @@ I've googled these for you. You're welcome.
                     * thanks, in part, to my tireless efforts :) 
             * The two language servers for Perl are not written by people who use neovim 
                 * they use Perl language servers with "VSCode" 
+                * they work mostly by happenstance because it's an open protocol
         * I wanted others to avoid my initial confusion 
             * wrote this 
     * Perl community has the best people
