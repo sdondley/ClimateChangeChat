@@ -609,7 +609,7 @@ I've googled these for you. You're welcome.
         * Then come back here if you want to suffer more through this tutorial to learn something
 
 ## Some gory details for those with a relentless quest for knowledge
-* This section goes into more detail on what the code snippet you pasted above does
+* This section goes into some detail on what the code snippet you pasted above does
 * One caveat: I'm not an expert in Lua or configuing the language server
     * so take the technical discussion in this section with a bit of grain of salt 
 
