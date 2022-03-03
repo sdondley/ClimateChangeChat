@@ -332,7 +332,7 @@ I've googled these for you. You're welcome.
                 * You don't have to type in the full name of the identifier, just choose it from the menu 
                 * Choosing from menu might often be a little slower for shorter names, but:
                     * Prevents spelling mistakes, which might end up costing time
-                    * muscle memory will eventually kick in and reduct this downside dramatically 
+                    * muscle memory will eventually kick in and reduce this downside dramatically 
         * Documentation lookup
             * Forgot what arguments a function takes? 
             * Forgot what a function does?
