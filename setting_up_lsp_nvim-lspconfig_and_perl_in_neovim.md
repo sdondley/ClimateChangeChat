@@ -466,6 +466,7 @@ I've googled these for you. You're welcome.
         * a server can service multiple clients but the clients have be use different ports (AFAICT)
 * you need to install the language server on your box
     * we will cover how to do this later 
+        * spoiler: one `cpanm` command does the trick 
     * language server can be used by neovim or another other piece of software that knows how
     * there's generally two or three for each programming language
         * there are more for more popular languages 
