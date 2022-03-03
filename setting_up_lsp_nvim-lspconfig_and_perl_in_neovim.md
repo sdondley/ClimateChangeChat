@@ -341,6 +341,7 @@ I've googled these for you. You're welcome.
             * A langauge server helps you find the answers you are looking for
         * Code formatting 
             * Avoid spending hours aligning equal signs, indenting just so and eliminating blank lines to make your code look pretty and more readable 
+            * perl language servers provide a convenient frontend to perltidy to accomplish this
         * There's more a language server can do, but these are the big ones
 * Can't I already do this with neovim without a language server?
     * Yes, most of it 
