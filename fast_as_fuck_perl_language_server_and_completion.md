@@ -254,7 +254,7 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
     * much faster than the completion plugin used in my first tutorial
 * integrates in with neovim's built-in lsp 
 * Provides snippet support
-    * no separate plugin needed 
+    * no separate plugin needed for snippets like in previous tutorial
 * does completion on a lot more than just perl
     * can have multiple "sources" of completion 
         * words in open buffers 
