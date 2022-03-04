@@ -237,10 +237,11 @@
         <div id="page">
             <div id="content">
               <h1>
-<a aria-hidden="true" class="anchor" href="#perl-language-servers-part-deux-fast-as-fuck-completion-and-the-new-perl-navigator-language-server" id="perl-language-servers-part-deux-fast-as-fuck-completion-and-the-new-perl-navigator-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl Language Servers Part Deux: Fast as FUCK completion and the <strong>NEW</strong> Perl Navigator Language Server</h1>
+<a aria-hidden="true" class="anchor" href="#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server" id="perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl Language Servers Part Deux: Fast as FUCK completion with the <strong>NEW</strong> Perl Navigator Language Server</h1>
 <p><strong>PREFACE</strong>: Earlier this week, I wrote a <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">long, rambling tutorial</a> about how to set up a perl language server with neovim. This is a follow-up tutorial that focuses on getting you startd with the brand new, heretofore unknown language server, Page Navigator, along with coq, a neovim plugin that promotes itself as the &quot;fast as FUCK&quot; completion engine.</p>
 <p><strong>PARENTAL GUIDANCE:</strong> This documents contains f-bombs and makes insenstive comments about software and software choices. If you find this off-putting, go <a href="#rtfms">RTFM</a> instead.</p>
 <p><strong>FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?</strong> Fork this site and <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md">submit a pull request</a>.</p>
+<p>You should read the <a href="https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">previous tutorial</a> tutorial about perl langauge servers if you haven&#39;t already.</p>
 
 
 <h1>
@@ -248,7 +249,7 @@
 <ul>
 <li>This TLDR; section assumes:
 <ul>
-<li>you read at last part of my <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">previous tutorial</a> about perl language servers</li>
+<li>you read at least part of my <a href="https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">previous tutorial</a> about perl language servers</li>
 <li>if not, I recommend spending a few minutes to familiarize yourself with it to get some context
 <ul>
 <li>Yeah, I know it&#39;s too long and will make your eyes bleed
@@ -283,7 +284,7 @@
 <a aria-hidden="true" class="anchor" href="#step-1-install-the-perl-navigator-language-servers" id="step-1-install-the-perl-navigator-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the Perl Navigator language server(s)</h3>
 <ul>
 <li>Perl Navigator is not available on cpan</li>
-<li>The software you&#39;ll need in advance to install
+<li>The software you need to install Page Navigator
 <ul>
 <li>npm
 <ul>
@@ -384,7 +385,12 @@ tsc
 <a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-lua-code-into-your-neovim-initvim-or-initlua" id="step-3-cut-and-paste-lua-code-into-your-neovim-initvim-or-initlua"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: cut and paste lua code into your neovim init.vim or init.lua</h3>
 <ul>
 <li>
-<strong>IMPORTANT:</strong> if you still have code left over from my first tutorial, shit can all of it</li>
+<strong>IMPORTANT:</strong> if you still have code left over from my first tutorial, delete it and replace it with the code below
+<ul>
+<li>The mappings are mostly the same</li>
+<li>very different setting needed for Page Navigator and COQ</li>
+</ul>
+</li>
 <li>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</li>
 <li>If you use <code>init.vim</code> for your configuration file:
 <ul>
@@ -502,12 +508,19 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <li>Fire up neovim</li>
 <li>Run <code>:LspInfo</code>
 <ul>
-<li>You should see: &quot;Configured servers list: perlpls&quot; (or &quot;perlls&quot;) at the bottom of a popup box
+<li>You should see: &quot;Configured servers list: perlnavigator&quot; at the bottom of a popup box
 <ul>
 <li>You don&#39;t?</li>
 <li>Double check everthing and if you think it&#39;s right, send a nastygram to <a href="mailto:s@dondley.com">s@dondley.com</a> to tell me my tutorial sucks</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>
+<strong>IMPORTANT:</strong> for this particular configuration neovim will not attach to the langauge server unless you are in a git repo
+<ul>
+<li>so you will not get any langauge server functionality outside of a git repo</li>
+<li>See below for more details</li>
 </ul>
 </li>
 </ul>
@@ -641,7 +654,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <h1>
 <a aria-hidden="true" class="anchor" href="#using-pn-and-coq-to-create-an-ide-like-experience-in-neovim" id="using-pn-and-coq-to-create-an-ide-like-experience-in-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using PN and COQ to create an IDE-like experience in neovim</h1>
 <ul>
-<li>My <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">first perl language server tutorial</a> did not go into the actual usage of the tools</li>
+<li>My <a href="https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">first tutorial</a> did not go into the actual usage of the tools</li>
 <li>So let&#39;s get a small taste of that here</li>
 <li>Assumes you have PN and COQ up and running after doing the <a href="#tldr;">TLDR;</a>
 </li>
@@ -789,7 +802,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
                 <div>
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#perl-language-servers-part-deux-fast-as-fuck-completion-and-the-new-perl-navigator-language-server">Perl Language Servers Part Deux: Fast as FUCK completion and the <strong>NEW</strong> Perl Navigator Language Server</a></li>
+<li><a href="#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server">Perl Language Servers Part Deux: Fast as FUCK completion with the <strong>NEW</strong> Perl Navigator Language Server</a></li>
 <li>
 <a href="#tldr">TLDR;</a>
 <ul>
@@ -840,7 +853,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <li><a href="#github-docs">Github docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  8:49 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  9:03 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>

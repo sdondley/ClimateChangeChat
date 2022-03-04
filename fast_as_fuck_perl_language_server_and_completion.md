@@ -1,13 +1,15 @@
-# Perl Language Servers Part Deux: Fast as FUCK completion and the **NEW** Perl Navigator Language Server
+# Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server
 **PREFACE**: Earlier this week, I wrote a [long, rambling tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This is a follow-up tutorial that focuses on getting you startd with the brand new, heretofore unknown language server, Page Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insenstive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
 
 **FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
 
+You should read the [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) tutorial about perl langauge servers if you haven't already.
+
 # On This Page
 
-- [Perl Language Servers Part Deux: Fast as FUCK completion and the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-and-the-new-perl-navigator-language-server)
+- [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server)
 - [TLDR;](#tldr)
     - [Getting the Perl Navigator language server working with COQ](#getting-the-perl-navigator-language-server-working-with-coq)
         - [Step 1: Install the Perl Navigator language server(s)](#step-1-install-the-perl-navigator-language-servers)
@@ -33,7 +35,7 @@
 
 # TLDR;
 * This TLDR; section assumes:
-    * you read at last part of my [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about perl language servers
+    * you read at least part of my [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) about perl language servers
     * if not, I recommend spending a few minutes to familiarize yourself with it to get some context
         * Yeah, I know it's too long and will make your eyes bleed 
             * the price of progress is steep 
@@ -47,7 +49,7 @@
 
 ### Step 1: Install the Perl Navigator language server(s)
 * Perl Navigator is not available on cpan
-* The software you'll need in advance to install
+* The software you need to install Page Navigator
     * npm 
         * the node.js package manager 
         * No, I don't know a thing about it except it's used manage node js packages 
@@ -93,7 +95,9 @@
 * Woot! Step 2 is done
  
 ### Step 3: cut and paste lua code into your neovim init.vim or init.lua
-* **IMPORTANT:** if you still have code left over from my first tutorial, shit can all of it
+* **IMPORTANT:** if you still have code left over from my first tutorial, delete it and replace it with the code below
+    * The mappings are mostly the same
+    * very different setting needed for Page Navigator and COQ 
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
     * Open `init.vim`
@@ -189,9 +193,12 @@
 * The moment of truth:
     * Fire up neovim 
     * Run `:LspInfo` 
-        * You should see: "Configured servers list: perlpls" (or "perlls") at the bottom of a popup box
+        * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
             * You don't?
             * Double check everthing and if you think it's right, send a nastygram to s@dondley.com to tell me my tutorial sucks
+    * **IMPORTANT:** for this particular configuration neovim will not attach to the langauge server unless you are in a git repo
+        * so you will not get any langauge server functionality outside of a git repo
+        * See below for more details
 
 # WTF
 * ...is [COQ]()?
@@ -255,7 +262,7 @@
 * I'm not an expert, but I think this plugin is pretty great
  
 # Using PN and COQ to create an IDE-like experience in neovim
-* My [first perl language server tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
+* My [first tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) did not go into the actual usage of the tools
 * So let's get a small taste of that here
 * Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr;)
 
