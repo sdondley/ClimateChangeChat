@@ -270,6 +270,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * nice! 
     * it doesn't need an exact match to help you find suggestions
     * great for identifiers you don't quite remember the name of
+    * great for hwen you make tpyos
 * See [COQ's github readme](https://github.com/ms-jpq/coq_nvim) for documentation and many more details
     * this isn't COQ tutorial 
 * I'm not an expert, but I think this plugin is pretty great
