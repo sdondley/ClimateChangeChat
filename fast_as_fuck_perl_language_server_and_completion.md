@@ -274,7 +274,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 # Using PN and COQ to get an IDE-like experience with neovim
 * My [first tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
 * So let's get a small taste of that here
-* Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr;)
+* Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr)
 
 ## Setup
 * the root directory is expected to be a git repo
