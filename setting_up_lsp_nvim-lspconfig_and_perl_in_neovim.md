@@ -381,7 +381,7 @@ I've googled these for you. You're welcome.
                     * you can thank MicroSoft for something, at least 
                         * but fuck Gates and Ballmer 
                             * always and forever 
-                            * thought kudos to Gates for being a good philanthroper 
+                            * though kudos to Gates for striving to be a good philanthroper 
                                 * **almost** erases his sins
         * I wanted others to avoid my initial confusion 
             * wrote this 
