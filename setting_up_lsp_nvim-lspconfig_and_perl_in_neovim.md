@@ -615,7 +615,7 @@ I've googled these for you. You're welcome.
 
 ### Analzying the giant lua code snippet
 * as mentioned, all you really need is this one single line to connect to the perl language server: 
-        * `require'lspconfig.perlpls'.setup{}` 
+    * `require'lspconfig.perlpls'.setup{}` 
 * The bulk of the lua code is mostly dedicated to adding mappings for lspconfig
 
 #### Setting up mappings
