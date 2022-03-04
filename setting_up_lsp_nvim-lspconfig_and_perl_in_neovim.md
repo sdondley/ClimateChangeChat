@@ -677,10 +677,10 @@ I've googled these for you. You're welcome.
     * I really don't know what exactly this does, TBH
     * Looks like we are telling neovim to use our plugin for completion
 * Next we connect to the lspconfig
-* We assign our lspconfig plugin to a variable
-    ```
-    local lspconfig = require('lspconfig');
-    ```
+    * We assign our lspconfig plugin to a variable
+        ```
+        local lspconfig = require('lspconfig');
+        ```
 * Now we add the list of language servers we want to use to the `servers` variable:
     ```
     local servers = { 'perlpls' }  -- this will connect to the Perl Language Server (PLS)
