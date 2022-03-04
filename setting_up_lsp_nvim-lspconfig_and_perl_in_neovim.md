@@ -350,7 +350,7 @@ I've googled these for you. You're welcome.
         * Bundles an extra layer of abstraction to provide a bunch of different features so you don't have to do so much manual configuration and set up of other tools and plugins
 * Isn't all the blinking of menus and messages distracting?
     * definitely, at first
-    * eventually, your brain's autopilot function will learn to tune out the distractions figure out what to pay attention to
+    * eventually, your brain's autopilot function will learn to tune out the distractions and figure out what to pay attention to
 * What about using [coc plugins](https://github.com/neoclide/coc.nvim) instead?
     * WTF is coc? 
         * It's a suite of plugins that allow you to easily connect to different language servers 
