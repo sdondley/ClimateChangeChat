@@ -199,7 +199,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * Run `:LspInfo` 
     * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
         * You don't?
-        * Double check everthing and if you think it's right, send a nastygram to s@dondley.com to tell me my tutorial sucks
+        * Double check everthing
+            * if you think it's right, send a nastygram to s@dondley.com to tell me why my tutorial sucks
 * **IMPORTANT:** for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
     * so you will not get any langauge server functionality outside of a git repo
     * [See below](#using PN and COQ to get an IDE-like experience with neovim) for more details
