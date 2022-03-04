@@ -212,8 +212,9 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
     * out just a few weeks
 * Author: "b_scan" 
     * Like the other two perl LSes, written by coder who uses vscode, not neovim 
+    * Thanks b_scan! Good work!
 * [Read what the author says about it](https://www.reddit.com/r/perl/comments/suamcf/introducing_the_perl_navigator_a_language_server/)
-    * main motivation is to get something that works on Windows easily
+    * main motivation is to get something that is more portable
 
 ### How does PN compare with the other language servers?
 * Takes a little more lua code to get working with neovim than other language servers
