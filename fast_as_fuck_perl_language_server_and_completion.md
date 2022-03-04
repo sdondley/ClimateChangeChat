@@ -316,7 +316,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * bam! all your code is nice and pretty 
 
 ### use completion
-* type in `my $blah = 7`;
+* type in `my $blah = 7;`
 * on the next line, type in `$b`
 * menu will pop up
 * do `<c-n>` until `blah` is highligted 
