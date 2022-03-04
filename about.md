@@ -52,7 +52,7 @@
     * all new content is publshed with custom vim maps
         * Example:
             * Typing `<leader>www` does the following:
-                * saves the markdown file I'm workig on
+                * saves the markdown file I'm working on
                 * processes the markdow file and converts to HTML
                 * commits the markdown and HTML file to a git repo
                 * pushes changes out to the remote repo
