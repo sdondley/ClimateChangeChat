@@ -23,7 +23,7 @@
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Why a language server?](#why-a-language-server)
-    - [Is setting up a language server hard to set up in neovim?](#is-setting-up-a-language-server-hard-to-set-up-in-neovim)
+    - [Is setting up a language server with the neovim hard?](#is-setting-up-a-language-server-with-the-neovim-hard)
     - [Why does the Perl community seem to be behind the curve on adopting languages servers?](#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers)
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
@@ -388,7 +388,7 @@ I've googled these for you. You're welcome.
     * Perl community has the best people
         * IMO, of course 
 
-## Is setting up a language server hard to set up in neovim?
+## Is setting up a language server with the neovim hard?
 * really depends on the language server
     * for perl, it's super, super easy 
 * also depends on your skill level 
