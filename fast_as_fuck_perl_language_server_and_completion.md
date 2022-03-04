@@ -195,7 +195,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * Fire up neovim 
     * make sure you see no errors
     * should see weird emoticons from COQ in the status bar
-        * configuration starts it up automatically for you 
+        * configuration starts up COQ automatically for you 
 * Run `:LspInfo` 
     * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
         * You don't?
