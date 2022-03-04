@@ -46,7 +46,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * COQ? Perl Navigator?
     * Believe me now, ask questions later
         * this is the TLDR; version 
-            * Will cover it later 
+        * Will be covered later 
 
 ### Step 1: Install the Perl Navigator language server(s)
 * Perl Navigator is not available on cpan
