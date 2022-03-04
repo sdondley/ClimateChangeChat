@@ -5,7 +5,7 @@
 
 **FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
 
-You should read or at least skim the [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) tutorial about perl langauge servers if you haven't already.
+You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) tutorial about perl langauge servers if you haven't already.
 
 # On This Page
 
@@ -36,7 +36,7 @@ You should read or at least skim the [previous tutorial](https://climatechangech
 
 # TLDR;
 * This TLDR; section assumes:
-    * you read at least part of my [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) about perl language servers
+    * you read at least part of my [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about perl language servers
     * if not, I recommend spending a few minutes to familiarize yourself with it to get some context
         * Yeah, I know it's too long and will make your eyes bleed 
             * the price of progress is steep 
@@ -268,7 +268,7 @@ You should read or at least skim the [previous tutorial](https://climatechangech
 * I'm not an expert, but I think this plugin is pretty great
  
 # Using PN and COQ to create an IDE-like experience in neovim
-* My [first tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) did not go into the actual usage of the tools
+* My [first tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
 * So let's get a small taste of that here
 * Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr;)
 
