@@ -111,3 +111,4 @@
 * Better menu navigation and interlinking between pages
 * Mobile friendly table of contents
 * Slightly more interesting design
+* Get a GD spel checker integrated with vim in a way that isn't annoying
