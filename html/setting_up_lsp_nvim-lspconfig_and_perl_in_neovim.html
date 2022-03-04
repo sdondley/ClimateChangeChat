@@ -1505,6 +1505,11 @@ capabilities = require(&#39;cmp_nvim_lsp&#39;).update_capabilities(capabilities)
 <li>Note that we can add more than one language server here. Just add the name of it to the comma separated list
 <ul>
 <li>consult the language server documenation for the name</li>
+<li>each buffer should just use one language server
+<ul>
+<li>though it&#39;s possible to connect to multiple ones at the same time</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Now we are ready to connect to the server(s) by looping over the <code>servers</code> list:
@@ -1803,7 +1808,7 @@ cmp.setup {
 <li><a href="#perl-language-server-cpan-docs">Perl language server cpan docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 3, 2022  7:02 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 3, 2022  7:03 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>

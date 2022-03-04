@@ -688,6 +688,8 @@ I've googled these for you. You're welcome.
     ```
 * Note that we can add more than one language server here. Just add the name of it to the comma separated list
     * consult the language server documenation for the name
+    * each buffer should just use one language server 
+        * though it's possible to connect to multiple ones at the same time 
 * Now we are ready to connect to the server(s) by looping over the `servers` list:
     ```
     -- Use a loop to conveniently call 'setup' on multiple servers and
