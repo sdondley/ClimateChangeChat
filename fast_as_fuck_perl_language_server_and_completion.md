@@ -196,7 +196,7 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
         * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
             * You don't?
             * Double check everthing and if you think it's right, send a nastygram to s@dondley.com to tell me my tutorial sucks
-    * **IMPORTANT:** for this particular configuration neovim will not attach to the langauge server unless you are in a git repo
+    * **IMPORTANT:** for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
         * so you will not get any langauge server functionality outside of a git repo
         * See below for more details
 
