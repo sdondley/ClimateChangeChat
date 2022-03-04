@@ -325,7 +325,7 @@ I've googled these for you. You're welcome.
             * tells you in real time if your code has an obvious mistake 
             * but cannot tell you if your code behaves the way you want it to 
                 * use tests for that 
-                    * IDE can hlep you manage and run your tests, not a language server 
+                    * IDE can help you manage and run your tests, not a language server 
         * Auto completion 
             * Type in the first few characters of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write 
                 * You don't have to type in the full name of the identifier, just choose it from the menu 
