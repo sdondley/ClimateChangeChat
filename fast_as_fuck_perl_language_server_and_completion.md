@@ -245,7 +245,6 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * perlcritic 
     * perltidy 
     * syntax checking 
-    * snippet support (with COQ)
 * More details on some of the these features are below
 * I'm sure there's more it can do that I haven't figured out how to use yet
 
@@ -254,7 +253,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * Actually two 
         * `ms-jpq/coq_nvim`
         * `ms-jpq/coq.artifacts`
-            * no idea what this one does or why it's needed
+            * used for snippets
+            * not required 
 * The self proclaimed "fast as FUCK" completion engine 
 * I can confirm it is very fast as fuck
     * much faster than the completion plugin used in my first tutorial
