@@ -275,6 +275,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * See [COQ's github readme](https://github.com/ms-jpq/coq_nvim) for documentation and many more details
     * this isn't a COQ tutorial 
 * I'm not an expert, but I think this plugin is pretty great
+    * will be what I use 
  
 # Using PN and COQ to get an IDE-like experience with neovim
 * My [first tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
