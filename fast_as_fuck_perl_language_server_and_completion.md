@@ -14,7 +14,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     - [Getting the Perl Navigator language server working with COQ](#getting-the-perl-navigator-language-server-working-with-coq)
         - [Step 1: Install the Perl Navigator language server(s)](#step-1-install-the-perl-navigator-language-servers)
         - [Step 2: Install the needed neovim plugins](#step-2-install-the-needed-neovim-plugins)
-        - [Step 3: cut and paste lua code into your neovim init.vim or init.lua](#step-3-cut-and-paste-lua-code-into-your-neovim-initvim-or-initlua)
+        - [Step 3: cut and paste lua code into init.vim or init.lua](#step-3-cut-and-paste-lua-code-into-initvim-or-initlua)
         - [Step 4: change the paths in the lua snippet to reflect your machine](#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine)
         - [The Moment of Truth](#the-moment-of-truth)
 - [WTF](#wtf)
@@ -95,7 +95,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * just make sure you install from the branches mentioned above 
 * Woot! Step 2 is done
  
-### Step 3: cut and paste lua code into your neovim init.vim or init.lua
+### Step 3: cut and paste lua code into init.vim or init.lua
 * **IMPORTANT:** if you still have code left over from my first tutorial, delete it and replace it with the code below
     * The mappings are mostly the same
     * very different setup needed for Perl Navigator and COQ 
