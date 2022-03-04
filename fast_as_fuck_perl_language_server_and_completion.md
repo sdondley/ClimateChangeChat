@@ -3,7 +3,7 @@
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insensitive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
 
-**FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
+**FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site's repo and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
 
 You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) tutorial about perl langauge servers if you haven't already.
 
