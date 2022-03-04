@@ -292,6 +292,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * throw some code in there that's not formatted and has obvious mistakes 
     * you should see perlcritic and the syntax checker throw errors at you
     * fix the code to make the errors disappear
+* The mappings used below come from the lua code snippet
+    * Change them if they are not to your liking 
 
 ### use perltidy
 * tldr: `<space>f` triggers formatting
