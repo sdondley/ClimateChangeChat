@@ -1,5 +1,5 @@
 # Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server
-**PREFACE**: Earlier this week, I wrote an [ungodly, long tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This more modest follow-up tutorial that focuses on getting you started with the brand new, heretofore unknown language server, Perl Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
+**PREFACE**: Earlier this week, I wrote an [ungodly, long tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This more modest follow-up tutorial focuses on getting you started with the brand new, heretofore unknown language server, Perl Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insensitive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
 
