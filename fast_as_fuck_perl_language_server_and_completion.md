@@ -273,7 +273,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * great for identifiers you don't quite remember the name of
     * also great for hwen you make typso
 * See [COQ's github readme](https://github.com/ms-jpq/coq_nvim) for documentation and many more details
-    * this isn't COQ tutorial 
+    * this isn't a COQ tutorial 
 * I'm not an expert, but I think this plugin is pretty great
  
 # Using PN and COQ to get an IDE-like experience with neovim
