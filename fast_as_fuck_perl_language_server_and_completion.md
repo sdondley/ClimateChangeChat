@@ -310,6 +310,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * on the next line, type in `$b`
 * menu will pop up
 * do `<c-n>` until `blah` is highligted 
+    * scrolls down the menu 
+    * `<c-p>` scrolls up
 * hit `<space>` to enter variable name into buffer with a space after it
     * any key will trigger completion, does not have to be `<space>` 
         
