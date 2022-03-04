@@ -240,14 +240,14 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * no perl keywords 
 
 ### What can it do?
-* So far, I've gotten the following features working using the recipe above:     
-    * completion 
+* So far, I can confirm the following features work using the recipe above:     
+    * completion (using COQ and nvim-cmp)
     * perlcritic 
     * perltidy 
     * syntax checking 
-    * snippet support
-* More details on some of the these features follow
-* I'm sure there's more it can do that I haven't figured out yet
+    * snippet support (with COQ)
+* More details on some of the these features are below
+* I'm sure there's more it can do that I haven't figured out how to use yet
 
 ## COQ
 * It's a neovim plugin
