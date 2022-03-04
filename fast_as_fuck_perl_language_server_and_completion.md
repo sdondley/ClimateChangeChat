@@ -330,10 +330,10 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * I'll leave it to you to play around with the other mappings
     * see lua code 
         * not all of the mappings may work
-            * still learning this stuff myself 
-                * maybe when I'm an expert, I'll write another tutorial 
-                    * though I could not think of a more tedious topic to write and read about 
-                        * so don't hold your breath
+    * still learning this stuff myself 
+        * maybe when I'm an expert, I'll write another tutorial 
+            * though I could not think of a more tedious topic to write and read about 
+                * so don't hold your breath
 
 # RTFMs
 * get answers for things I didn't bother to RTFM for
