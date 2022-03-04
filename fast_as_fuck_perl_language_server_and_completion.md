@@ -105,7 +105,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * Add `lua require('coq_page_nav_config')` to the file
     * Now, in the root of you your neovim config directory:
         * create a `lua` directory if it doesn't already exist 
-            * In this directory, create a file called `coq_page_nave_config.lua`
+            * In this directory, create a file called `coq_page_nav_config.lua`
                 * drop the code below into it
         ```
         -- configure coq to our liking
