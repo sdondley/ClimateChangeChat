@@ -98,7 +98,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 ### Step 3: cut and paste lua code into your neovim init.vim or init.lua
 * **IMPORTANT:** if you still have code left over from my first tutorial, delete it and replace it with the code below
     * The mappings are mostly the same
-    * very different setting needed for Perl Navigator and COQ 
+    * very different setup needed for Perl Navigator and COQ 
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
     * Open `init.vim`
