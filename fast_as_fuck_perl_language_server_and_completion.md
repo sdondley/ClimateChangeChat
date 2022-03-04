@@ -214,7 +214,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 ## Perl Navigator (PN)
 * a third perl language server
     * spanking new
-    * out just a few weeks
+    * out just two weeks
+    * in very active development 
 * Author: "b_scan" 
     * Like the other two perl LSes, written by coder who uses vscode, not neovim 
     * Thanks b_scan! Good work!
