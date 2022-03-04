@@ -23,7 +23,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         - [How does PN compare with the other language servers?](#how-does-pn-compare-with-the-other-language-servers)
         - [What can it do?](#what-can-it-do)
     - [COQ](#coq)
-- [Using PN and COQ for the IDE experience with neovim](#using-pn-and-coq-for-the-ide-experience-with-neovim)
+- [Using PN and COQ to get an IDE-like experience with neovim](#using-pn-and-coq-to-get-an-ide-like-experience-with-neovim)
     - [Setup](#setup)
     - [OK, let's go](#ok-lets-go)
         - [use perltidy](#use-perltidy)
@@ -267,7 +267,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * See [COQ's github readme](https://github.com/ms-jpq/coq_nvim) for documentation and many more details
 * I'm not an expert, but I think this plugin is pretty great
  
-# Using PN and COQ for the IDE experience with neovim
+# Using PN and COQ to get an IDE-like experience with neovim
 * My [first tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
 * So let's get a small taste of that here
 * Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr;)
