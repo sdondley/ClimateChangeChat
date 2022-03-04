@@ -12,7 +12,7 @@
 - [Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
 - [TLDR;](#tldr)
     - [Basic setup: Get a Perl language server up and running with neovim](#basic-setup-get-a-perl-language-server-up-and-running-with-neovim)
-        - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
+        - [Step 1: Install the language server](#step-1-install-the-language-server)
         - [Step 2: Install the nvim-lspconfig plugin with git and install into neovim](#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim)
         - [Step 3: Throw one line of lua code into neovim's init file](#step-3-throw-one-line-of-lua-code-into-neovims-init-file)
         - [Step 4](#step-4)
@@ -60,7 +60,7 @@
 * Good for just making sure you can get something working before trying more sophisticated configs
     * Good idea to do this first then do advanced set up below
 
-### Step 1: Install the language server(s)
+### Step 1: Install the language server
 * There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
     * From the command line, install one or both: 
         * `cpanm PLS` 
