@@ -460,7 +460,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 if not configs.perlnavigator then
   configs.perlnavigator = {
    default_config = {
-     cmd = { &quot;/usr/local/bin/node&quot;, &quot;/your/path/to/git_repo/PerlNavigator/server/out/server.js&quot;, &quot;--stdio&quot; },
+     cmd = { &quot;/usr/local/bin/node&quot;, &quot;/your/path/to/PerlNavigator/server/out/server.js&quot;, &quot;--stdio&quot; },
      root_dir = function(fname)
        return lspconfig.util.find_git_ancestor(fname)
      end;
@@ -861,7 +861,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <li><a href="#github-docs">Github docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  9:44 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  9:47 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>

@@ -159,7 +159,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         if not configs.perlnavigator then
           configs.perlnavigator = {
            default_config = {
-             cmd = { "/usr/local/bin/node", "/your/path/to/git_repo/PerlNavigator/server/out/server.js", "--stdio" },
+             cmd = { "/usr/local/bin/node", "/your/path/to/PerlNavigator/server/out/server.js", "--stdio" },
              root_dir = function(fname)
                return lspconfig.util.find_git_ancestor(fname)
              end;
