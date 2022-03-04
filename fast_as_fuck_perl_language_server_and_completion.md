@@ -67,7 +67,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
             * that's not to dissuade you 
             * install it 
                 * you guessed it: google it if you don't know how 
-* Now type in these commands like a good code monkey:
+* Now type (or copy and paste) in these commands like a good code monkey:
     * ripped straight from the ["Perl Navigator" documentation](https://github.com/bscan/PerlNavigator)
         ```
         git clone https://github.com/bscan/PerlNavigator
