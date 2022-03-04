@@ -264,6 +264,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * words in open buffers 
         * tmux commands 
         * etc. 
+* does "fuzzy" completion
+    * nice! 
 * See [COQ's github readme](https://github.com/ms-jpq/coq_nvim) for documentation and many more details
 * I'm not an expert, but I think this plugin is pretty great
  
