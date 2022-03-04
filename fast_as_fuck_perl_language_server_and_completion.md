@@ -230,8 +230,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * but cannot be installed with `cpanm` 
         * takes a few more commands and tools to install
 * More compatible with older versions of Perl, according to author
-* Is it fast?
-    * I didn't do any speed tests, but it does feel a little snappier than the other two    
+* Is it faster?
+    * I didn't do any speed tests, but it does feel a little snappier than the other two
 * completion suggestions are much more limited than other two language servers 
     * for now
         * language server author is working on it 
