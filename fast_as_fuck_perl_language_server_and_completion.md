@@ -16,6 +16,7 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
         - [Step 2: Install the needed neovim plugins](#step-2-install-the-needed-neovim-plugins)
         - [Step 3: cut and paste lua code into your neovim init.vim or init.lua](#step-3-cut-and-paste-lua-code-into-your-neovim-initvim-or-initlua)
         - [Step 4: change the paths in the lua snippet to reflect your machine](#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine)
+        - [The Moment of Truth](#the-moment-of-truth)
 - [WTF](#wtf)
 - [The Big Picture Stuff](#the-big-picture-stuff)
     - [Perl Navigator (PN)](#perl-navigator-pn)
@@ -106,82 +107,82 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
         * create a `lua` directory if it doesn't already exist 
             * In this directory, create a file called `coq_page_nave_config.lua`
                 * drop the code below into it
-    ```
-    -- configure coq to our liking
-    vim.cmd[[
-        let g:coq_settings = { 'auto_start': v:true } ]]
-        let g:coq_settings.keymap = { 'jump_to_mark': '<space>j' } -- default map is <c-h> for coq
-                                                                   -- changed by me to avoid conflict
-    ]]
-    
-    local lspconfig = require'lspconfig'
-    local configs = require 'lspconfig.configs'
-    local opts = { noremap=true, silent=true }
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-    vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+        ```
+        -- configure coq to our liking
+        vim.cmd[[
+            let g:coq_settings = { 'auto_start': v:true } ]]
+            let g:coq_settings.keymap = { 'jump_to_mark': '<space>j' } -- default map is <c-h> for coq
+                                                                       -- changed by me to avoid conflict
+        ]]
+        
+        local lspconfig = require'lspconfig'
+        local configs = require 'lspconfig.configs'
+        local opts = { noremap=true, silent=true }
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+        vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
-    local opts = { noremap=true, silent=true }
-    vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-    vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-    vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-    vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-     
-    -- Use an on_attach function to only map the following keys
-    -- after the language server attaches to the current buffer
-    local on_attach = function(client, bufnr)
-      -- Enable completion triggered by <c-x><c-o>
-      vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-     
-      -- Mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<c-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-    end
+        local opts = { noremap=true, silent=true }
+        vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+        vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+        vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+        vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+         
+        -- Use an on_attach function to only map the following keys
+        -- after the language server attaches to the current buffer
+        local on_attach = function(client, bufnr)
+          -- Enable completion triggered by <c-x><c-o>
+          vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+         
+          -- Mappings.
+          -- See `:help vim.lsp.*` for documentation on any of the below functions
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<c-\\>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+        end
 
-    -- the important stuff
-        -- set up and configure Perl Navigator
-        -- configure built-in client to use coq plugin for completion/snippets
-    local coq = require "coq"
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
+        -- the important stuff
+            -- set up and configure Perl Navigator
+            -- configure built-in client to use coq plugin for completion/snippets
+        local coq = require "coq"
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-    if not configs.perlnavigator then
-      configs.perlnavigator = {
-       default_config = {
-         cmd = { "/usr/local/bin/node", "/your/path/to/git_repo/PerlNavigator/server/out/server.js", "--stdio" },
-         root_dir = function(fname)
-           return lspconfig.util.find_git_ancestor(fname)
-         end;
-         on_attach = on_attach,
-         flags = {
-             debounce_text_changes = 150
-         },
+        if not configs.perlnavigator then
+          configs.perlnavigator = {
+           default_config = {
+             cmd = { "/usr/local/bin/node", "/your/path/to/git_repo/PerlNavigator/server/out/server.js", "--stdio" },
+             root_dir = function(fname)
+               return lspconfig.util.find_git_ancestor(fname)
+             end;
+             on_attach = on_attach,
+             flags = {
+                 debounce_text_changes = 150
+             },
 
-         --single_file_support = true,
-         capabilities = capabilities,
-         filetypes = { 'perl' };
-         settings = { perlnavigator = {
-             perlPath = '/your/path/to/bin/perl',
-             perlcriticProfile = '/your/path/to/.perlcritic',
-             perltidyProfile = '/your/path/to/.perltidyrc' },
-         };
+             --single_file_support = true,
+             capabilities = capabilities,
+             filetypes = { 'perl' };
+             settings = { perlnavigator = {
+                 perlPath = '/your/path/to/bin/perl',
+                 perlcriticProfile = '/your/path/to/.perlcritic',
+                 perltidyProfile = '/your/path/to/.perltidyrc' },
+             };
 
-       };
-      }
-    end
+           };
+          }
+        end
 
-    lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
-    ```
+        lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
+        ```
 * Step 3 done. Booya!
 
 ### Step 4: change the paths in the lua snippet to reflect your machine
@@ -190,15 +191,18 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
     * Change these paths so that the paths are correct for your machine
 * Step 4 done. What a boss you are!
 
-* The moment of truth:
-    * Fire up neovim 
-    * Run `:LspInfo` 
-        * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
-            * You don't?
-            * Double check everthing and if you think it's right, send a nastygram to s@dondley.com to tell me my tutorial sucks
-    * **IMPORTANT:** for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
-        * so you will not get any langauge server functionality outside of a git repo
-        * See below for more details
+### The Moment of Truth
+* Fire up neovim 
+    * make sure you see no errors
+    * should see weird emoticons from COQ in the status bar
+        * configuration starts it up automatically for you 
+* Run `:LspInfo` 
+    * You should see: "Configured servers list: perlnavigator" at the bottom of a popup box
+        * You don't?
+        * Double check everthing and if you think it's right, send a nastygram to s@dondley.com to tell me my tutorial sucks
+* **IMPORTANT:** for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
+    * so you will not get any langauge server functionality outside of a git repo
+    * [See below](#Using PN and COQ to create an IDE-like experience in neovim) for more details
 
 # WTF
 * ...is [COQ]()?

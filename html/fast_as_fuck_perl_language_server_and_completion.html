@@ -409,8 +409,6 @@ tsc
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <pre><code>-- configure coq to our liking
 vim.cmd[[
     let g:coq_settings = { &#39;auto_start&#39;: v:true } ]]
@@ -487,25 +485,34 @@ end
 lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 </code></pre>
 </li>
+</ul>
+</li>
 <li>Step 3 done. Booya!</li>
 </ul>
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine" id="step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 4: change the paths in the lua snippet to reflect your machine</h3>
 <ul>
-<li>
-<p>Look for the lines in the lua code that contain <code>/your/path/to</code></p>
+<li>Look for the lines in the lua code that contain <code>/your/path/to</code>
 <ul>
 <li>There are 4 different places</li>
 <li>Change these paths so that the paths are correct for your machine</li>
 </ul>
 </li>
-<li>
-<p>Step 4 done. What a boss you are!</p>
-</li>
-<li>
-<p>The moment of truth:</p>
+<li>Step 4 done. What a boss you are!</li>
+</ul>
+<h3>
+<a aria-hidden="true" class="anchor" href="#the-moment-of-truth" id="the-moment-of-truth"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Moment of Truth</h3>
 <ul>
-<li>Fire up neovim</li>
+<li>Fire up neovim
+<ul>
+<li>make sure you see no errors</li>
+<li>should see weird emoticons from COQ in the status bar
+<ul>
+<li>configuration starts it up automatically for you</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Run <code>:LspInfo</code>
 <ul>
 <li>You should see: &quot;Configured servers list: perlnavigator&quot; at the bottom of a popup box
@@ -520,9 +527,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <strong>IMPORTANT:</strong> for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
 <ul>
 <li>so you will not get any langauge server functionality outside of a git repo</li>
-<li>See below for more details</li>
-</ul>
-</li>
+<li>[See below](#Using PN and COQ to create an IDE-like experience in neovim) for more details</li>
 </ul>
 </li>
 </ul>
@@ -815,6 +820,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <li><a href="#step-2-install-the-needed-neovim-plugins">Step 2: Install the needed neovim plugins</a></li>
 <li><a href="#step-3-cut-and-paste-lua-code-into-your-neovim-initvim-or-initlua">Step 3: cut and paste lua code into your neovim init.vim or init.lua</a></li>
 <li><a href="#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine">Step 4: change the paths in the lua snippet to reflect your machine</a></li>
+<li><a href="#the-moment-of-truth">The Moment of Truth</a></li>
 </ul>
 </li>
 </ul>
@@ -855,7 +861,7 @@ lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
 <li><a href="#github-docs">Github docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  9:13 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022  9:16 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
             </div>
         </div>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
