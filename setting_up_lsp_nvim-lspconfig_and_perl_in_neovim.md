@@ -102,7 +102,7 @@
     * Yup, you're done  
 * "I can't tell if it's working."
     * Then it probably isn't 
-    * But you should see: "Configured servers list: perlpls" (or perlls) at the bottom of a popup box
+    * But you should see: "Configured servers list: perlpls" (or "perlls") at the bottom of a popup box
 * "It's not working, you idiot!" 
     * go back and check for typos
     * or let me know if you think I fucked up somewhere
