@@ -80,7 +80,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * Bam! Step 1 is done
 
 ### Step 2: Install the needed neovim plugins
-* Install the lspconfg-nvim plugin
+* Install the lspconfig-nvim plugin
     * Covered in the first tutorial 
 * Install coq plugins    
     * Provides completion and snippet features for you 
