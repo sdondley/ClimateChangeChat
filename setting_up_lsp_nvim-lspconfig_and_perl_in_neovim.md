@@ -453,8 +453,7 @@ I've googled these for you. You're welcome.
     * if you're gonna do open source, use `*nix`
         * macs are fine
         * using a virtual linux box is better 
-            * but I'm not looking for another box to manage 
-                * learning one OS fairly well is enough work for me
+            * but I'm not looking for another box to administer 
  
 # The more technical stuff
 
