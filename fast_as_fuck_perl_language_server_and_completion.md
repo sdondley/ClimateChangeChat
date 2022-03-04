@@ -250,7 +250,7 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
         * `ms-jpq/coq.artifacts`
             * no idea what this one does or why it's needed
 * The self proclaimed "fast as FUCK" completion engine 
-* I can confirm it is fast as fuck
+* I can confirm it is very fast as fuck
     * much faster than the completion plugin used in my first tutorial
 * integrates in with neovim's built-in lsp 
 * Provides snippet support
