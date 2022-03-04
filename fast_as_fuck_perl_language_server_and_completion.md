@@ -1,5 +1,5 @@
 # Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server
-**PREFACE**: Earlier this week, I wrote an [ungodly, long tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This is a follow-up tutorial that focuses on getting you started with the brand new, heretofore unknown language server, Page Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
+**PREFACE**: Earlier this week, I wrote an [ungodly, long tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This is a follow-up tutorial that focuses on getting you started with the brand new, heretofore unknown language server, Perl Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insensitive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
 
@@ -50,7 +50,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 
 ### Step 1: Install the Perl Navigator language server(s)
 * Perl Navigator is not available on cpan
-* The software you need to install Page Navigator
+* The software you need to install Perl Navigator
     * npm 
         * the node.js package manager 
         * No, I don't know a thing about it except it's used manage node js packages 
@@ -98,7 +98,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 ### Step 3: cut and paste lua code into your neovim init.vim or init.lua
 * **IMPORTANT:** if you still have code left over from my first tutorial, delete it and replace it with the code below
     * The mappings are mostly the same
-    * very different setting needed for Page Navigator and COQ 
+    * very different setting needed for Perl Navigator and COQ 
 * If you use `init.lua` for your neovim confguration file, you can drop the code below directly into it
 * If you use `init.vim` for your configuration file:
     * Open `init.vim`
