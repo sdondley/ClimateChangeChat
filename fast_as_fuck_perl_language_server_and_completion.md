@@ -319,7 +319,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * download someone's perltidy configuration and copy and paste it into perltidy config file 
 * in normal mode in neovim do `<space>f`
     * bam! all your code in the file nice and pretty 
-* PN supposedly also supports formatting with ranges (visual mode) 
+* PN supposedly also supports formatting with ranges (i.e. applying foratting to text selected in visual mode) 
     * see [this for details](https://github.com/neovim/nvim-lspconfig/wiki/User-contributed-tips) to get it working
     * I did not try it to see if it works with neovim 
 
