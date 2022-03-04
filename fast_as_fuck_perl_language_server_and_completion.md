@@ -245,7 +245,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * syntax checking 
     * snippet support
 * More details on some of the these features follow
-* I'm sure there's more it can do that I haven' figured out yet
+* I'm sure there's more it can do that I haven't figured out yet
 
 ## COQ
 * It's a neovim plugin
