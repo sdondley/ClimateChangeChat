@@ -42,7 +42,7 @@
 
 # Goals
 * Have a creative outlet free of limitations and impositions of corporate social media platforms
-* make it exceptionally update and maintain
+* make it exceptionally easy to update and maintain
     * will be less likely to abandon a project that is less of a pain to update 
 * share ideas and notes with other easily and quickly
 * keep track of shit
