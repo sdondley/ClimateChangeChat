@@ -3,7 +3,7 @@
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insenstive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
 
-https://www.reddit.com/r/perl/comments/suamcf/introducing_the_perl_navigator_a_language_server/
+**FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
 
 # On This Page
 
