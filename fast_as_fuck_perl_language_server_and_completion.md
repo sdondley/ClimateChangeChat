@@ -305,7 +305,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * you should see perlcritic and the syntax checker throw errors at you
         * make sure you have a perlcritic config file 
             * if you don't know about perlcritic or how to set it up, google it 
-                * similar to setting up perltidy config file (see [next section](#use perltidy)) 
+                * similar to setting up perltidy config file (see [next section](#use-perltidy)) 
     * fix the code to make the errors disappear
 * The mappings used below come from the lua code snippet
     * Change them if they are not to your liking 
