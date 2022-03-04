@@ -686,7 +686,7 @@ I've googled these for you. You're welcome.
     local servers = { 'perlpls' }  -- this will connect to the Perl Language Server (PLS)
     --local servers = { 'perlls' } -- uncomment this line to use the Perl::LanguageServer language server instead
     ```
-* Note that we can add more than one languager server here. Just add the name of it to the comma separated list
+* Note that we can add more than one language server here. Just add the name of it to the comma separated list
     * consult the language server documenation for the name
 * Now we are ready to connect to the server(s) by looping over the `servers` list:
     ```
