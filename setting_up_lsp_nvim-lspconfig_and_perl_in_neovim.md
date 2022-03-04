@@ -5,6 +5,8 @@
 
 **CAUTION:** I've sprinkled this post with expletives and uninformed opinions just to spice things up a little. If you're humorless or find me unfunny, go [RTFM](#rtfm) instead.
 
+**UPDATE:** There is now a [second tutorial](fast_as_fuck_perl_language_server_and_completion.md) for a third Perl language server, Perl Navigator, with the COQ plugin.
+
 # On This Page
 
 - [Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
@@ -571,6 +573,7 @@ I've googled these for you. You're welcome.
 * Called ["PerlNavigator"](https://github.com/bscan/PerlNavigator)
 * Does not yet work with neovim
 * Developer "bscan" [is looking for help](https://www.reddit.com/r/perl/comments/t4inwe/comment/hz0dg4j/?utm_source=share&utm_medium=web2x&context=3) getting it working with neovim
+* See [my second perl langauge server tutorial to use it](fast_as_fuck_perl_language_server_and_completion.md)
 
 
 ## OK, the stuff you really need to know to get some real work done
