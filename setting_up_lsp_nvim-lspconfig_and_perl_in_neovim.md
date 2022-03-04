@@ -422,7 +422,7 @@ I've googled these for you. You're welcome.
     * for daily computing 
     * used windows (and PC-DOS) from early 90s until 2008
 * GNU/Linux user since early 2000s 
-    * Most familiar with Debian 
+    * Most familiar with Debian disto
 * Vim user since early 2000s 
     * when I started using Linux 
     * still far from an expert 
