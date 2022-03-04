@@ -676,8 +676,8 @@ I've googled these for you. You're welcome.
     ```
     * I really don't know what exactly this does, TBH
     * Looks like we are telling neovim to use our plugin for completion
-* Now we connect to the lspconfig
-* First we assign our lspconfig plugin to a variable
+* Next we connect to the lspconfig
+* We assign our lspconfig plugin to a variable
     ```
     local lspconfig = require('lspconfig');
     ```
