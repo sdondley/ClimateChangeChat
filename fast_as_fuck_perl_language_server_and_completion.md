@@ -37,9 +37,9 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 # TLDR;
 * This TLDR; section assumes:
     * you read at least part of my [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about perl language servers
-    * if not, I recommend spending a few minutes to familiarize yourself with it to get some context
-        * Yeah, I know it's too long and will make your eyes bleed 
-            * the price of progress is steep 
+        * if not, I recommend spending a few minutes to familiarize yourself with it to get some context
+            * Yeah, I know it's too long and will make your eyes bleed 
+                * the price of progress is steep 
     * you know your way around a command line and the basics of installing software and neovim plugins on your machine
  
 ## Getting the Perl Navigator language server working with COQ
