@@ -400,7 +400,7 @@ I've googled these for you. You're welcome.
         * still a learning curve 
         * it requires some trial and error 
 * Hopefully this web page helps at least a little
-* As neovim matures, will probably get easier
+* As neovim's lsp matures, will probably get easier
 
 ## Why does the Perl community seem to be behind the curve on adopting languages servers?
 * Good question! (if I do say so myself)
