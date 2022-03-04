@@ -327,8 +327,9 @@ I've googled these for you. You're welcome.
                 * use tests for that 
                     * IDE can help you manage and run your tests, not a language server 
         * Auto completion 
-            * Type in the first few characters of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write 
+            * Type in the first character or two of an identifier (a variable, function, class, etc.) and a little menu will pop up to prompt you with some guesses as to what you might want to write 
                 * You don't have to type in the full name of the identifier, just choose it from the menu 
+                * The more letters you type, the fewer choices that appear are on the menu
                 * Choosing from menu might often be a little slower for shorter names, but:
                     * Prevents spelling mistakes, which might end up costing time
                     * muscle memory will eventually kick in and reduce this downside dramatically 
