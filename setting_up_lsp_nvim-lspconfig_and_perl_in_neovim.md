@@ -370,7 +370,7 @@ I've googled these for you. You're welcome.
     * neovim plugin authors appear to have potty mouths
 * Why Perl?
     * like English, it's my native language 
-    * I had difficultly getting a language server set up with Perl and neovim
+    * I had difficully getting a language server set up with Perl and neovim
         * Not a huge amount of documentation for perl language servers
             * Stuff I did find was wrong or incomplete
                 * Some of it has since been updated 
