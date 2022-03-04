@@ -241,6 +241,7 @@ You should read the [previous tutorial](https://climatechangechat.com/setting_up
     * syntax checking 
     * snippet support
 * More details on some of the these features follow
+* I'm sure there's more it can do that I haven' figured out yet
 
 ## COQ
 * It's a neovim plugin
