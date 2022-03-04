@@ -222,7 +222,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 
 ### How does PN compare with the other language servers?
 * Takes a little more lua code to get working with neovim than other language servers
-    * developer is actively working on providing better integration with lspconfig
+    * developer is actively working on providing better integration with lspconfig out of the box
 * Does Windows better
     * if you're one of *those* people 
     * but will work on any machine 
