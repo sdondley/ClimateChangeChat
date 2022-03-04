@@ -5,7 +5,7 @@
 
 **FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?** Fork this site and [submit a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md).
 
-You should read the [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) tutorial about perl langauge servers if you haven't already.
+You should read or skim the [previous tutorial](https://climatechangechat.com/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html) tutorial about perl langauge servers if you haven't already.
 
 # On This Page
 
