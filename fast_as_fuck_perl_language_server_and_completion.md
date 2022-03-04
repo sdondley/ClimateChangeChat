@@ -328,6 +328,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * not all of the mappings may work
             * still learning this stuff myself 
                 * maybe when I'm an expert, I'll write another tutorial 
+                    * though I could not think of a more tedious topic to write about 
 
 # RTFMs
 * get answers for things I didn't bother to RTFM for
