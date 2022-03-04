@@ -11,7 +11,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 
 - [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server)
 - [TLDR;](#tldr)
-    - [Getting the Perl Navigator language server working with COQ](#getting-the-perl-navigator-language-server-working-with-coq)
+    - [Setting up Perl Navigator with COQ](#setting-up-perl-navigator-with-coq)
         - [Step 1: Install the Perl Navigator language server(s)](#step-1-install-the-perl-navigator-language-servers)
         - [Step 2: Install the needed neovim plugins](#step-2-install-the-needed-neovim-plugins)
         - [Step 3: cut and paste lua code into init.vim or init.lua](#step-3-cut-and-paste-lua-code-into-initvim-or-initlua)
@@ -42,7 +42,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
                 * the price of progress is steep 
     * you know your way around a command line and the basics of installing software and neovim plugins on your machine
  
-## Getting the Perl Navigator language server working with COQ
+## Setting up Perl Navigator with COQ
 * COQ? Perl Navigator?
     * Believe me now, ask questions later
         * this is the TLDR; version 
