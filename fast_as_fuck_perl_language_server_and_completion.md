@@ -297,6 +297,9 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * do `:set ft=perl` if you don't 
 * throw some code in there that's not formatted and has obvious mistakes 
     * you should see perlcritic and the syntax checker throw errors at you
+        * make sure you have a perlcritic config file 
+            * if you don't know about perlcritic or how to set it up, google it 
+                * similar to configuring perltidy config file (see below) 
     * fix the code to make the errors disappear
 * The mappings used below come from the lua code snippet
     * Change them if they are not to your liking 
@@ -307,7 +310,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 * make sure you got a perltidy config file set up
     * must be located at the path you provided in the lua code above
     * if you've never used perltidy before, google it
-        * download someone's perltidy code and copy and paste it into perltidy config file 
+        * download someone's perltidy configuration and copy and paste it into perltidy config file 
 * in normal mode in neovim do `<space>f`
     * bam! all your code is nice and pretty 
 
