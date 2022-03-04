@@ -122,7 +122,6 @@
     hrsh7th/nvim-cmp
     hrsh7th/cmp-nvim-lsp
     saadparwaiz1/cmp_luasnip
-    hrsh7th/cmp-nvim-lsp
     L3MON4D3/LuaSnip
 
 ### Step 3: Cut and paste a giant lua code snippet into your neovim configuration
