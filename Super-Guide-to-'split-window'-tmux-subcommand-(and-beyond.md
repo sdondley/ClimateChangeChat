@@ -49,7 +49,6 @@
     - [Next steps in your tmux adventures](#next-steps-in-your-tmux-adventures)
 - [RTFM!](#rtfm)
 
-
 ## Guide overview
 
 tmux, like other great software, is deceptive. On the one hand, it's fairly easy

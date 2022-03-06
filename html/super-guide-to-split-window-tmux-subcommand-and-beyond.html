@@ -219,11 +219,9 @@
 }
       </style>
 
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Libre Franklin">
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source Code Pro">
-        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
 
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
         <script src="./js/highlightjs-line-numbers.js"></script>
@@ -243,11 +241,1151 @@
         </div>
         <div id="page">
             <div id="content">
-              <h1>
-<a id="super-guide-to-the-split-window-tmux-subcommand-and-beyond" class="anchor" href="#super-guide-to-the-split-window-tmux-subcommand-and-beyond" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Super Guide to the <code>split-window</code> tmux Subcommand (and Beyond)</h1>
-<h1>
-<a id="on-this-page" class="anchor" href="#on-this-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h1>
-<ul>
+              <div><h1>
+<a aria-hidden="true" class="anchor" href="#super-guide-to-the-split-window-tmux-subcommand-and-beyond" id="super-guide-to-the-split-window-tmux-subcommand-and-beyond"><span aria-hidden="true" class="octicon octicon-link"></span></a>Super Guide to the <code>split-window</code> tmux Subcommand (and Beyond)</h1></div>
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#guide-overview" id="guide-overview"><span aria-hidden="true" class="octicon octicon-link"></span></a>Guide overview</h2><p>tmux, like other great software, is deceptive. On the one hand, it&#39;s fairly easy
+to get set up and start using right away. On the other hand, it&#39;s difficult to
+take advantage of tmux&#39;s adanced power features without spending some quality alone
+time with the manual. But the problem with manuals
+is that they aren&#39;t geared toward beginners. They are geared toward
+helping seasoned developers and computer enthusiasts quickly obtain the
+information they need so they can get back to real work. As a result, man pages
+assume a certain level of a competence and experience and don&#39;t spend a lot of
+time laying a conceptual framework for their software. And so while we agree
+that &quot;RTFM&quot; (read the frickin&#39; manual) is good advice, it&#39;s not the best advice
+if the manual is written at a level that&#39;s inaccessible to you. So this guide
+provides a gentler approach to learning the subtler, unwritten intricacies of
+tmux that can&#39;t be easily gleaned by typing <code>man tmux</code> into the terminal. It
+assumes the user is new to tmux and even fairly new to the world of command
+line-based computing.</p><p>The only requirement for using this guide assumes is that you have tmux
+installed and have figured out how to launch a tmux session from the shell with
+<strong><code>tmux new -s &lt;session_name&gt;</code></strong> and that you have at least a day or two&#39;s worth
+of experience getting around a command line. Though this guide will be
+accessible to new users, many fairly experienced users can benefit from it, too.
+The guide might start with an excessive amount of hand holding, but it
+eventually goes into fairly good detail on many tmux features and configuration
+options. So unless you have spent many hours reading the tmux manual, don&#39;t be
+surprised if you pick up quite a few tips and tricks even if you&#39;ve been using
+tmux for years but never took the time to truly <em><strong>grok</strong></em> it.</p><p>So this guide&#39;s goals are two-fold: 1) help newbies get over the hump of
+confusion that often accompanies new software by giving them enough experience
+and a comfort level with tmux so that RTFM becomes possible and 2) give less
+experienced users and even some intermediate users a deeper understanding and
+appreciation for how to take advantage of tmux&#39;s many available customizations
+and features.</p><p>The <code>split-window</code> command was chosen for a &quot;Super Guide&quot; because it is,
+arguably, the first command a beginning tmux user should be very familiar with.
+Working with many applications simultaneously is the core feature of tmux and
+the <code>split-window</code> command is the gateway command for taking advantage of it.
+Using this command well requires the knowledge of many other configuration
+settings and subcommands so by taking the time to explore this one command in
+great detail, you will be much closer to being able to bend tmux to your will.</p></div>
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#important-note-on-turning-off-existing-tmux-customizations" id="important-note-on-turning-off-existing-tmux-customizations"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important note on turning off existing tmux customizations</h3><p>This guide assumes you are starting with a &quot;clean&quot; install of tmux and that
+there is no <code>.tmux.conf</code> configuration file customizing your tmux set up or
+adding plugins. To ensure the examples in this guide work and to minimize your
+confusion, we strongly encourage you to rename your <code>~/.tmux.conf</code> file and
+store it safely somewhere on your hard drive. You can restore it when you finish
+with the guide.</p><p>It&#39;s possible, though unlikely, there is a global tmux configuration file on
+your system that is customizing your tmux experience. Consult your operating
+system&#39;s documentation or friendly system administrator to ensure there isn&#39;t.
+If there is and you can&#39;t get rid of it, consider setting up a virtual machine
+or docker image you can call your own.</p></div>
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#what-does-the-split-window-subcommand-do-for-you" id="what-does-the-split-window-subcommand-do-for-you"><span aria-hidden="true" class="octicon octicon-link"></span></a>What does the <code>split-window</code> subcommand do for you?</h2><p>We&#39;ll begin our guide with a big picture overview of what the <code>split-window</code>
+subcommand does.</p><p>When a new tmux session or window is created in tmux, only one application can
+be seen inside of the visible window that tmux opens. <code>split-window</code> splits this
+window up into rectangular-shaped subunits, called <strong>panes,</strong> as in a window
+pane. If there is more than one pane in a tmux window, they are visually
+delineated from one another with a thin, single pixel-wide border. Each pane can
+have a different height and width so a tmux window with many panes can start to
+resemble <a href="http://www.glass-by-design.com/images7/flw_abstract_stained_glass_1x.jpg">a window designed by the famous 20th century architect Frank
+Lloyd Wright</a> more than the neat, symmetrical arrangement found on a French door.</p><p>Panes have one of two states: &quot;active&quot; and &quot;inactive.&quot; Active panes will have a
+brighter border color than the &quot;inactive&quot; ones. There can be only one active
+pane in a tmux session at a time, and that is the pane you are presently working
+in and that tmux will direct your keystrokes to. Inside each pane is a program,
+or <strong>process,</strong> if we are going to be more technically accurate. It could be a
+vim editing session, a shell prompt or any kind of application that can run in a
+terminal. You can have the same program running different processes in separate
+panes. For example, you might have five panes open, each with a different vim
+process running inside.</p><p>The advantage of being able to run multiple processes at the same time in
+different sections of your computer monitor is clear. The idea is not new and
+has been around for decades. If you have an operating system with a gui, you
+don&#39;t need tmux to pull this off. You could open a terminal window for each
+process you want to run and arrange them on your monitor the way you like.  Or
+if the machine you want to run these processes on doesn&#39;t have a gui, you can
+ssh into them from a computer that does and achieve the same effect.</p><p>However, tmux is much more than a text-based gui. It has many great efficiency
+advantages it can offer over a modern gui environment by collecting all the
+processes together under a single tmux server that can talk to the
+pseudo-terminals containing the processes within each pane. And so if you take
+the time to become proficient with tmux, you will be duly rewarded.</p><p>The first step in that journey is to learn the <code>split-window</code> command well
+because it is the key to unlocking the most important feature of tmux. The
+<code>split-window</code> subcommand creates more panes so you can have more
+applications visible at once. Of course, you only have so much screen real
+estate and so there is a practical limitation for how many panes you can have
+open in a single window. Working around that limitation is a topic for
+another time. Our focus is on how to master this one single command to get
+you off to a good start toward achieving mastery with tmux.</p><p>Before getting started, we should point out that one potentially confusing aspect
+of the <code>split-window</code> command is its name is slightly misleading. If you split a
+rock in half, you expect to get two rocks, right? But <code>split-window</code> doesn&#39;t
+split a window into two windows. Instead, it splits the <strong>current active pane</strong>
+of the current window into <strong>two panes.</strong> So it might be helpful to think of the
+<code>split-window</code> command as the &quot;split pane&quot; command instead.</p></div>
+
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#executing-the-split-window-subcommand" id="executing-the-split-window-subcommand"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing the <code>split-window</code> subcommand</h2><p>From the shell command line, you can issue hundreds or even thousands of
+different commands. If you have tmux installed, <code>tmux</code> is one of those commands.
+The <code>tmux</code> command itself has many commands nested within it. And so each of the
+commands inside of tmux is properly referred to as a &quot;subcommand&quot; of the <code>tmux</code>
+command.</p><p>There are a few different ways to execute the subcommands. You can access them
+with a couple of keystrokes inside a tmux window using what tmux calls <strong>key
+bindings.</strong> You can also type the subcommands in directly to the tmux command
+line.  You can also place the subcommand inside a tmux configuration file.
+Finally, you can run them from a shell command line or script. Each of these
+ways is discussed next.</p><p><strong>Note:</strong> This guide assumes you have not customized your key bindings. If you
+haven&#39;t already done so, make sure you have removed all tmux customizations as
+recommended in the &quot;Important note on turning off tmux customizations&quot; in the
+overview to this guide above.</p></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#using-key-binding-to-execute-the-split-window-subcommand" id="using-key-binding-to-execute-the-split-window-subcommand"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using key binding to execute the <code>split-window</code> subcommand</h3><p>There are two different types of tmux splits: vertical and horizontal. Each of
+these two splits has a <strong>key binding</strong> dedicated to it that can be executed
+by you. To execute the key binding for the <strong>vertical split,</strong> which splits the
+current pane of the current window into a top and bottom pane, you type in the
+following keys from inside an active terminal window running a tmux session:</p><p><strong><code>C-b &quot;</code></strong></p><p>For those new to tmux, this means &quot;hold down the <code>control</code> key while you tap the
+<code>b</code> key, then release the control key, then hit the <code>&quot;</code> key (<code>shift-&#39;</code>).&quot; So
+<code>C-b</code> is read as &quot;Control-b.&quot; The <code>&quot;</code> character is the double quotation mark.</p><p>After typing these keys, you will see a thin line appear across the middle of
+your window (if you&#39;re not seeing this behavior, seriously consider rereading
+the &quot;Important note on turning off tmux customizations&quot; in the intro to this
+guide above; this is your final warning).  Everything above the line is the
+original pane and everything below the line is the new pane. Although a
+horizontal line appears across your screen, tmux considers this to be a
+&quot;vertical&quot; split because the new pane is aligned vertically with the old pane.
+This often confuses seasoned vim users where a &quot;horizontal&quot; split looks like
+tmux&#39;s vertical split. You&#39;ll frequently see tmux&#39;s vertical split referred to
+as horizontal splits in poorly researched blog posts across the web.</p><p>At any rate, The <code>C-b &quot;</code> keystroke combination is one of the many default key
+bindings that tmux provides for you out of the box. Key bindings are similar to
+&quot;hot keys&quot; or &quot;shortcut keys&quot; you may be familiar with in other applications
+(e.g., control-s for &quot;save document&quot;). Key bindings are great for issuing
+frequently used commands very quickly. In tmux, key bindings are a bit more
+flexible and powerful than typical hot keys. We will learn more about them in
+more detail later in the guide.</p><p>For now, you should know that in the key binding above, tmux refers to the
+<strong><code>C-b</code></strong> keystroke combination as the <strong>prefix key.</strong> When you hit <code>C-b</code>, tmux
+hijacks your keyboard input from all the other applications and waits patiently
+for you to enter the next key to see what tmux command you want to perform. In
+this way, specific tmux commands are <strong>bound</strong> to certain keys and keystroke
+combinations, hence the phrase &quot;key binding.&quot; The key combination bound to our
+split command in this case is <code>C-b &quot;</code>. tmux refers to the key after the prefix
+key as the <strong>key command</strong>. In this case the key command is the <code>&quot;</code> character
+which, by default, is associated with the <code>split-window</code> command.</p><p>The prefix key prevents they key commands from activating while you work on the
+applications running inside the panes. For example, if you want to type the <code>&quot;</code>
+character into a text document, it would be annoying if tmux started splitting
+panes on you. The <code>C-b</code> prefix is a magic keystroke that wakes tmux up and gets
+it ready to listen for your next keystroke. <code>C-b</code> tells tmux, &quot;Listen up!  I
+want to give you a command,&quot; much like the talking speakers on your kitchen
+counter.  You wouldn&#39;t like it if those devices piped up during dinner
+conversation with your friends and family. That&#39;s why you&#39;re required to
+&quot;prefix&quot; your commands with some attention-grabbing statement like &quot;Hey
+Siri!&quot;  or &quot;Alexa.&quot; tmux works the same way. It&#39;s there listening for the
+special prefix command but it shuts up and stays out of the way until it gets
+it.</p><p>Key bindings can be customized to your liking. You will learn how to do this
+later. For now, the only other useful thing to know about key bindings is that
+if you hit <code>C-b</code> and and then want to back out of giving a key command, you can
+hit <strong><code>Esc</code></strong> (the escape key). This will get tmux back out of the way
+so you can continue interacting with the application you have open in
+your active pane.</p><p>A different key binding is used to perform a <strong>horizontal split.</strong> In tmux,
+horizontal splits place the new pane on the right side of the current active
+pane. The key binding for a horizontal split is:</p><p><strong><code>C-b %</code></strong></p><p>Though the key bindings can be a bit confusing to use a first, you will quickly
+adapt to them and use them reflexively without even thinking.</p><p>To help you remember the default key bindings for splitting, think of the
+punctuation marks used in these two bindings as visually resembling the types of
+splits they perform. The double quotation mark used for vertical splits are
+vertical lines that you can imagine as connecting a top and bottom pane. The
+percent sign has a circle on the left and right split with a line between them,
+which looks kind of like a horizontal split. Many people still find this
+confusing and one of the first custom key binding changes they make is to the
+default key bindings for splitting panes. Again, we will show you how to do that
+later in the guide.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#executing-split-window-from-the-tmux-command-prompt" id="executing-split-window-from-the-tmux-command-prompt"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing <code>split-window</code> from the tmux command prompt</h3><p>The two default key bindings for splitting windows only do very basic splits.
+It&#39;s possible to modify the existing key bindings and add new key bindings to do
+fancier kinds of splits which we&#39;ll show you how to do later in the guide. But
+if you don&#39;t have a key binding that does exactly what you need, then you will
+need to type the <code>split-window</code> command in manually. To run the default command,
+we type in the following keystrokes:</p><p><strong><code>C-b :split-window</code></strong></p><p>Let&#39;s break this down in detail. Here we see the prefix key again, <code>C-b</code>,
+followed by a colon, followed by the actual command, <code>split-window</code>. The command
+above does not supply any options or a shell command that may be passed to the
+<code>split-window</code> subcommand. We will cover that later.</p><p>For now, the really important part to understand is the special role the colon
+plays in the command above. Typing in the <code>:</code> character after our prefix, <code>C-b</code>,
+is a key binding that places us into tmux&#39;s command line mode. When we enter
+command line mode, the tmux command prompt appears and our cursor is placed
+inside of it. Now we can start typing the <code>split-window</code> command and tell tmux
+exactly how we want our split to be executed using options and arguments we
+might supply. <code>C-b :</code> essentially tells tmux &quot;Hey, I want to type in a command,
+so give me the command prompt.&quot; Like with <code>C-b</code>, you can back out of the command
+prompt by hitting the <code>Esc</code> key.</p><p>We should point out that the tmux command line is not the same as a shell
+command line. tmux expects to see tmux subcommands here, not shell commands. If
+you do need to run a shell command from within tmux, you can use the
+appropriately named <code>run-shell</code> command which is not covered in this guide.</p></div>
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#creating-splits-from-a-tmux-configuration-file" id="creating-splits-from-a-tmux-configuration-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating splits from a tmux configuration file</h3><p>The <code>split-window</code> command, along with other subcommands, can also be placed
+inside of a tmux configuration file. These configuration files can run every
+time you start tmux. You can also run them manually while inside tmux. You can
+use configuration files to help you automate your window splits and get them set
+up just the way you like when a new tmux session is launched. All this will be
+covered later in the guide.</p></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#executing-split-window-from-a-shell" id="executing-split-window-from-a-shell"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing <code>split-window</code> from a shell</h3><p>The <code>split-window</code> can also be directly run right from a shell command line:</p><p><strong><code>tmux split-window</code></strong></p><p>Note that this way of executing <code>split-window</code> is the same as executing it from
+tmux&#39;s command prompt except we precede the subcommand with the <code>tmux</code> shell
+command. Our shell has no knowledge of what <code>split-window</code> is, so we have to
+type <code>tmux</code> first so it knows to pass the subcommand along to tmux which will
+know how to respond. The other difference is that there is no need to type
+a colon, of course, because we aren&#39;t trying to get to the tmux command prompt,
+we are passing the subcommand directly to tmux via the shell. If we do put a
+colon there, tmux will think the colon is part of an unreognized command and
+throw an error.</p><p>Running the <code>split-window</code> subcommand works even if it is executed from outside
+of a tmux session. That&#39;s because the command ultimately gets passed to the tmux
+server running on our machine which processes it and takes the appropriate
+action. As a result, we can run tmux commands from inside shell scripts and
+functions, and perform all kinds advanced automation tricks that can make
+working with tmux a real joy. Unfortunately, this is not a guide on shell
+scripting and that will be left to the reader to explore.</p><p>Now that we know all the different ways to execute the split command, let&#39;s take
+a closer look at what it actually does and then later, how we can change its
+default behavior.</p></div>
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#the-split-window-default-operation" id="the-split-window-default-operation"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>split-window</code> default operation</h2><p>It&#39;s time to explore what <code>split-window</code> does out of the box, without passing it
+any options. Start a new tmux session with <strong><code>tmux new -s split</code></strong> and then
+issue this simple <code>split-window</code> command:</p><p><strong><code>C-b :split-window</code></strong></p><p>This default command does quite a bit of work. It:</p><ul>
+<li>Splits the currently active pane and opens a new pane</li>
+<li>Places the new pane below the existing active pane (a vertical split).</li>
+<li>Sizes the new pane to be exactly half the height of the current pane</li>
+<li>Launches the default shell in the new pane</li>
+<li>Deactivates the old pane and makes the new pane active. As a result, your
+cursor is now at the command line prompt of the shell the opens up inside the
+new pane.</li>
+</ul><p>As already mentioned, you can use the <code>C-b &quot;</code> key binding to do this same
+action. Go ahead and practice issuing this key binding enough times so that the
+action becomes instinctual. If you start running out of space in your window,
+practice using the <strong><code>C-b :kill-pane -a</code></strong> command to close all the open panes
+except the active one. Or, if you want to kill just the pane you are currently
+in, do <strong><code>C-b x</code></strong> and answer &quot;y&quot; when asked if you are sure you want to kill
+the pane.</p><p>As you create new panes, you&#39;ll notice each pane you created gets progressively
+smaller.  The first new pane you create is half the size of the window. The
+second pane created is half the size of the first pane. The third pane is half
+the size of the second, and so on, until we run out of room and can&#39;t create any
+more panes.  Don&#39;t worry about resizing the panes or moving between panes. We
+will cover all that later.</p><p>The next several sections of this guide will show you how to override tmux&#39;s
+default settings by using the <code>split-window</code> <strong>options</strong> to get it to respond
+with in more precise and desired behaviors.</p></div>
+
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#basic-split-window-options" id="basic-split-window-options"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic <code>split-window</code> options</h2></div>
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#horizontal-splits" id="horizontal-splits"><span aria-hidden="true" class="octicon octicon-link"></span></a>Horizontal splits</h3><p>When you get bored creating vertical splits and are ready to inject some
+excitement into your life, create a horizontal split with the following command:</p><p><strong><code>C-b :split-window -h</code></strong></p><p>This is the same command as the vertical split except we&#39;ve added an <code>h</code>,
+preceded with a <code>-</code>, after the subcommand. The dash tells <code>split-window</code> that we
+are about to give it one or more options. In this case, the single &quot;h&quot; option we
+pass to our command stands for &quot;horizontal.&quot; So when we apply this option,
+instead of the new pane showing up below the existing pane, it will show up to
+the right of the existing pane. In other words, the <code>h</code> option overrode our
+default vertical split with a horizontal split.</p><p>As we saw, this simple split can be performed with the <code>C-b %</code> key binding. Go
+ahead and practice a little with this key binding.</p><p>We will learn more <code>split-window</code> options in a bit. First we will take a short
+detour and talk about how to save a few keystrokes issuing the <code>split window</code>
+command in tmux.</p></div>
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#faster-commands-with-the-splitw-alias-and-tab-completion" id="faster-commands-with-the-splitw-alias-and-tab-completion"><span aria-hidden="true" class="octicon octicon-link"></span></a>Faster commands with the <code>splitw</code> alias and tab completion</h2><p>Typing sucks. It&#39;s painfully slow even if you&#39;re a fast typist. It would be much
+better if we could just think a thought and have the computer magically execute
+it. That day isn&#39;t coming any time soon so the next best thing is to make more
+efficient use of our keystrokes to make issuing commands much faster.</p></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#saving-strokes-with-the-split-window-alias" id="saving-strokes-with-the-split-window-alias"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saving strokes with the <code>split-window</code> alias</h3><p>One way to do that is by using aliases. tmux provides an alias for
+<code>split-window</code> called <code>splitw</code>. So instead of 12 keystrokes with <code>split-window</code>,
+you only have to type in 6 keystrokes with <code>splitw</code>. It doesn&#39;t sound like much
+but it adds up over time. And when you want to get something done fast, typing
+in all those keys gets very annoying very fast.</p><p>From this point forward in the guide, we will use <code>splitw</code> instead of
+<code>split-window</code>. So instead of <strong><code>C-b :split-window</code></strong> you will see <strong><code>C-b :splitw</code></strong>.</p></div>
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#tab-completion-for-supercharging-your-productivity" id="tab-completion-for-supercharging-your-productivity"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tab completion for supercharging your productivity</h3><p>Aliases are nice but tab completion is even better. Hopefully, tab completion is
+already set up on your machine. You can find out by issuing the following
+keystrokes in tmux:</p><p><strong><code>C-b :sp&lt;TAB&gt;</code></strong></p><p>This is the prefix, followed by the colon, followed by <code>sp</code>, followed by the
+&quot;Tab&quot; key. The tab key tells tmux to try to finish typing in the rest of the
+command for us. We only have to type in just enough of the command so the
+completion feature can figure out the full command we wish to issue. Otherwise,
+it will complete as much of the command it can until we supply it with more
+letters in the command and hit <code>TAB</code> again.</p><p>In this case, <code>sp</code> is enough for our completion feature to determine we want to
+use the full <code>split-window</code> command because no other commands begin with &quot;sp&quot;.
+If you have tab completion on, you will see &quot;sp&quot; expand into <code>split-window</code>. So
+now we have gone form 12 keystrokes to just three. Very nice.</p><p>Setting up command completion is not covered by this guide. You should consult
+with your local computer expert or search engine or man page for guidance.</p></div>
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#more-basic-splitw-options" id="more-basic-splitw-options"><span aria-hidden="true" class="octicon octicon-link"></span></a>More basic <code>splitw</code> options</h2><p>OK, now that we are super efficient with our keystrokes, let&#39;s cover some more
+options.</p></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#controlling-the-size-of-the-new-pane-with-the--l-and--p-size-options" id="controlling-the-size-of-the-new-pane-with-the--l-and--p-size-options"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the size of the new pane with the <code>-l</code> and <code>-p</code> size options</h3><p>By default, <code>splitw</code> opens a new pane that is half the height or width of the
+pane that is split. tmux gives us two options to override this default
+behavior. This saves us the effort of having to resize the new pane to our
+liking after we create it.</p></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#the--l-option" id="the--l-option"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>-l</code> option</h4><p>With vertical splits, we can control how many lines high our new pane is with
+the <code>-l</code> option. The &quot;l&quot; stands for &quot;lines.&quot;  Here is the option
+in action:</p><p><strong><code>C-b :splitw -l 20</code></strong></p><p>The &quot;20&quot; is the size argument that is passed to our <code>-l</code> option. This creates
+our default vertical split with a new pane that is 20 lines high. Note that if
+you choose a number larger than the number of lines in the current pane, the
+current pane will be reduce to just one line and the new pane will take up the
+rest.</p><p>With a horizontal split, the <code>-l</code> option controls how many columns (or &quot;cells&quot;,
+as the official man pages refers to them) wide our new pane will be. So if we
+want a horizontal split that is 20 columns wide, we do:</p><p><strong><code>C-b :splitw -hl 20</code></strong></p><p>Notice how we combined the <code>-h</code> option with the <code>-l</code> option using a single dash.
+This should not be new to you if you have any experience issuing commands on the
+command line. A reminder, however, that the <code>-l</code> option has to come last because
+we are passing it an argument.  Alternatively, we could separate out the options
+like so:</p><p><strong><code>C-b :splitw -l 20 -h</code></strong></p><p>This way, we don&#39;t have to care what order the options are in since each option
+gets its own leading dash.</p></div>
+
+
+
+
+
+
+
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#the--p-option" id="the--p-option"><span aria-hidden="true" class="octicon octicon-link"></span></a>the <code>-p</code> option</h4><p>Sometimes it&#39;s more useful to give a percentage of how how or wide the new pane
+should be relative to the current pane. We can use the <code>-p</code> option in this case.
+The &quot;p,&quot; as you already guessed, is for &quot;percent.&quot; So, for example, if we have
+pane that is 50 lines high and we issue this command:</p><p><strong><code>C-b :splitw -p 10</code></strong></p><p>Our new pane will be 5 lines high, or 10% of our original pane. The old pane
+will take up 45 lines, or the remaining 90%. Simple enough. Just like the <code>-l</code>
+option, the <code>-p</code> option can be used to tell tmux how wide to make the new pane
+if we are creating a horizontal split.</p></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#controlling-the-placement-order-of-a-new-pane-with-the--b-option" id="controlling-the-placement-order-of-a-new-pane-with-the--b-option"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the placement order of a new pane with the <code>-b</code> option</h3><p>For vertical splits, the default operation places our new pane below the current
+pane. For horizontal splits, the new pane is placed to the right of the current
+pane. If we would like to force the new pane to show up above or to the left of
+the current pane, we can use the <code>-b</code> option, for &quot;before,&quot; like so:</p><p><strong><code>C-b :splitw -b</code></strong></p><p>This creates our default vertical split, however, it will show up on top of our
+current pane. To have our new pane show up to the left of our current pane, we
+do:</p><p><strong><code>C-b :splitw -hb</code></strong></p><p>Easy peasy.</p></div>
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#creating-a-new-pane-on-the-left-right-top-or-bottom-of-a-window-with--f--b-and--h-options" id="creating-a-new-pane-on-the-left-right-top-or-bottom-of-a-window-with--f--b-and--h-options"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating a new pane on the left, right, top, or bottom of a window with <code>-f</code>, <code>-b</code>, and <code>-h</code> options</h3><p>By default, <code>splitw</code> splits the current pane. This may not give us the control
+we want. For example, let&#39;s say we have two panes open, one on the left and one
+on the right. If we vertically split the pane on the right, that will give us
+one large pane on the left and two smaller panes on the right. But what if we
+want a pane that stretches across the bottom of both panes? This is where the
+<code>-f</code> option, for &quot;full,&quot; comes to the rescue. With it, you can create a pane
+that is either the full width or full height of the entire window. Coupled with
+the <code>-b</code> option, you can place the pane to the left, right, top or bottom of all
+existing panes.</p><p><strong><code>C-b :splitw -f</code></strong></p><p>Places a full width pane on the bottom of our window with a vertical split.</p><p><strong><code>C-b :splitw -bf</code></strong></p><p>Places a full length pane at the top of our window with a vertical split.</p><p><strong><code>C-b :splitw -fh</code></strong></p><p>Places a full length pane on the right side of our window with a horizontal
+split.</p><p><strong><code>C-b :splitw -bfh</code></strong></p><p>Places a full length pane on the left side of our window with a horizontal
+split.</p></div>
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#changing-which-pane-is-split-with-the--t-option" id="changing-which-pane-is-split-with-the--t-option"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing which pane is split with the <code>-t</code> option</h3><p>By default, the current pane gets split by tmux. But what if we don&#39;t want to
+split the current pane and want to split a different one instead? Well, you
+could switch to the other pane and issue the <code>splitw</code> command there. But there
+is a better way, and that&#39;s with the <code>-t</code> option. Here, &quot;t&quot; stands for &quot;target
+pane&quot;, the pane we want to split.</p><p>Like our <code>-l</code> and <code>-p</code> options, the <code>-t</code> option takes an argument. The argument
+is an integer representing the pane number we want want to split. This integer
+is the called the pane&#39;s <strong>index</strong>. Here&#39;s how it&#39;s used:</p><p><strong><code>C-b :splitw -t 2</code></strong></p><p>This command splits pane #2 vertically. Pane numbering starts with zero so this
+is actually the third pane. But how do we know which index number a pane is? The
+pane in the top left is always pane 0 and the pane in the bottom right is always
+the last pane. But if we have a lot of panes open, it may not be so obvious what
+number a pane has. To solve this problem, tmux has a nifty key binding that
+briefly flashes the pane numbers in each pane:</p><p><strong><code>C-b q</code></strong></p><p>Each number is large and colored so it stands out in the pane. For very small
+panes, you might have to look closely because the index number will be small and
+hard to to spot. The active pane is given a different color than the inactive
+panes.</p></div>
+
+
+
+
+
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#overriding-how-panes-are-numbered-with-the-set-window-option-command" id="overriding-how-panes-are-numbered-with-the-set-window-option-command"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overriding how panes are numbered with the <code>set-window-option</code> command</h4><p>Normal humans don&#39;t start counting from &quot;zero,&quot; they start at &quot;one.&quot; This is
+something we learned since long before Kindergarten. So you can&#39;t be blamed if
+you don&#39;t like having the pane indexes beginning with zero. tmux, being a
+flexible application that aims to please, lets you change this behavior to your
+liking. To make this change, we need to introduce a new command, the
+<code>set-window-option</code>. Like <code>split-window</code>, the <code>set-window-option</code> has an alias:
+<code>setw</code>. The command looks like this:</p><p><strong><code>C-b :setw option value</code></strong></p><p>Using this command, we set the value of the option we supply to the value of the
+argument we give. There are dozens of options built into tmux that we can
+change. One of those options is called <code>pane-base-index</code> which tells tmux which
+number to start numbering panes from. So, to tell tmux to start ordering panes
+beginning with the number &quot;1&quot;, we do:</p><p><strong><code>C-b :setw pane-base-index 1</code></strong></p><p>Now the first pane index number is &quot;1&quot; instead of &quot;0&quot;. The second pane is now
+&quot;2&quot;, and so forth. We can verify this happened by typing in the <strong><code>C-b q</code></strong> key
+binding and we&#39;ll see the first pane in the top left now flashes a &quot;1&quot;.  We are
+not limited to using &quot;1&quot; for the index argument. If we wanted our first pane to
+start with the number &quot;50&quot;, we could do that (though we can&#39;t think of a good
+reason why you would).</p><p>By default, the <code>setw</code> command only affects the current window we are in. If we
+want to change our pane numbering for all current windows that are open and any
+new windows we might open in the future, we need to explicitly tell <code>setw</code> that
+with the <code>-g</code> option:</p><p><strong><code>C-b :setw -g pane-base-index </code></strong></p><p>Here, the &quot;g&quot; stands for &quot;global.&quot; This terminology makes perfect sense if you
+are programmer, but might be a bit strange if you are not. If you think of
+&quot;global&quot; as a synonym for &quot;everywhere,&quot; then you will be on the right track.</p><p>Note that this global option setting is not remembered by tmux. So if you shut
+tmux down and restart it, any <code>setw</code> option we set will be lost. We will show
+you how to make changes to the window option settings more permanent later.</p></div>
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#changing-the-working-directory-our-pane-opens-in-with--c" id="changing-the-working-directory-our-pane-opens-in-with--c"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing the working directory our pane opens in with <code>-c</code>
+</h3><p>By default, the directory the shell in the new pane is opened to, called the
+&quot;working directory,&quot; is set to the same directory tmux was launched from. You
+can override this default by using the <code>-c</code> option, for &quot;change directory,&quot; to
+tell tmux which directory you&#39;d prefer it to use for the new pane:</p><p><strong><code>C-b :splitw -c &#39;/home/johnnybgood/projects&#39;</code></strong></p><p>It&#39;s always a good idea to surround your path argument to <code>-c</code> in quotes in case
+it has an spaces or other funny characters that might confuse tmux.</p></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#changing-the-active-pane-when-a-new-pane-is-created-with--d" id="changing-the-active-pane-when-a-new-pane-is-created-with--d"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing the active pane when a new pane is created with <code>-d</code>
+</h3><p>By default, tmux assumes you will want to do something in a new pane that is
+opened. Therefore, it makes the new pane active so you can start typing into it
+right away. But this may not always be desirable. We might just want to open a
+pane to display something and continue working in our current pane. In that
+case, we throw the <code>-d</code> option at <code>splitw</code>:</p><p><strong><code>C-b :splitw -d</code></strong></p><p>Now tmux will return us to our current pane after the new pane is created. The
+&quot;d&quot; stands for &quot;detach&quot; or &quot;deactivate,&quot; if you prefer.</p><p>OK! This covers all the basic options for the <code>splitw</code> command. Actually, there is
+one more basic option: <code>-v</code>, which does a vertical split. But since <code>-v</code> is
+already the default, there is no reason to use it.</p><p>There are a couple of advanced options available with <code>splitw</code>, the <code>-P</code> and the
+<code>-F</code> options. These options are useful for doing advanced automation of tmux.
+But to try to keep this guide at a somewhat reasonable length and stay focused
+on the basics, they are not covered by this guide.</p><p>So now that we&#39;ve covered all the basic options, it&#39;s time to turn our attention to
+passing a shell command to the <code>splitw</code> subcommand.</p></div>
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#passing-shell-commands-to-splitw" id="passing-shell-commands-to-splitw"><span aria-hidden="true" class="octicon octicon-link"></span></a>Passing shell commands to <code>splitw</code>
+</h2><p>Options are cool and give us fine-tuned control over how panes are split, but
+the real power of <code>splitw</code> is realized when we pass shell commands to it.
+Learning this simple aspect of <code>splitw</code> is the first step to unlocking all kinds
+of great ways to automate tmux, saving you a lot of tedious keystroke entry.</p></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#a-simple-but-very-fleeting-example" id="a-simple-but-very-fleeting-example"><span aria-hidden="true" class="octicon octicon-link"></span></a>A simple, but very fleeting example</h3><p>In a new tmux session or window, run this command:</p><p><strong><code>C-b :splitw ls</code></strong></p><p>If you didn&#39;t see any thing, then you must have blinked or you have an extremely
+fast computer. Run the command a few more times to see if you can see something
+happen. <strong>TIP:</strong> you can do <code>C-b :&lt;UP ARROW&gt;</code> to pull up the last command
+from the tmux command line history to save you some typing.</p><p>So what happened here?</p><p>In the command above we passed the <code>ls</code> shell command to the <code>splitw</code> command.
+tmux then ran the command in a new pane. When the command finished executing,
+tmux killed the pane for us. This is the default behavior of tmux. So why, you
+may ask, do the other panes stay open and not close immediately? It&#39;s because
+they have a running process in them, an interactive shell that never stops
+running until we command it.</p><p>To prove this to yourself, create a new split with <code>C-b &quot;</code>. After the new pane
+opens, type <code>exit</code> at the shell prompt. The pane vanishes! That&#39;s because we
+exited the default shell command that tmux launched. Since the shell was what
+kept the pane alive, the pane remained alive until the point we killed the shell
+by leaving it.</p><p>Unlike a shell process, the <code>ls</code> command doesn&#39;t hang around waiting for us to
+tell it what to do. It does its job and bails. When <code>ls</code> finished printing out
+its list of files to the pane it exited and tmux dutifully killed the pane.</p></div>
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#keeping-panes-open" id="keeping-panes-open"><span aria-hidden="true" class="octicon octicon-link"></span></a>Keeping panes open</h3><p>Alright, so now let&#39;s make our ls command useful for those of us who can&#39;t read
+quite so fast:</p><p><strong><code>C-b :splitw &#39;ls | less&#39;</code></strong></p><p>Here we run the <code>ls</code> command except this time we &quot;pipe&quot; its output into the
+<code>less</code> program using the <code>|</code> operator supplied by our shell. As a result, less
+will be opened with the output of <code>ls</code> command displayed. Notice that the shell
+command is surrounded in single quotes. This is important because our shell
+command will not work properly without them because of the pipe operation. By
+surrounding it with quotes, <code>splitw</code> passes everything between the quotes as one
+large argument to the default shell command. So if we are using the bash shell,
+here is the command tmux actually runs:</p><p><strong><code>/bin/bash -c &#39;ls | less&#39;</code></strong></p><p>which then parses everything the way we expect it to. For simpler commands, we
+will usually leave out the quotes because it makes it easier to write commands
+that might contain other quotes. Without quotes, the command is run directly by
+tmux without sending it to the shell command. If you have done any shell
+scripting, you know that handling and escaping quotes in shell commands can be
+very tricky business.</p><p>After we run this command, we see the pane remains open. That&#39;s because the
+less program does not quit until we tell it to. When we quit less with the <code>q</code>
+key, tmux will detect that the less process ended and kills the pane. Nice!</p><p>Most of the shell commands you give will spawn a new process that doesn&#39;t die so you
+won&#39;t need to worry about the pane disappearing immediately. For example, if you
+are opening a document with vim, you can simply do:</p><p><strong><code>C-b :splitw vim my_document.txt</code></strong></p><p>In this case, vim will open up in the new pane with the document open. Once you
+quit vim, however, the pane will close.</p></div>
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#respawning-panes" id="respawning-panes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Respawning panes</h3><p>Although this guide is specifically focused on the <code>splitw</code> command, we want to
+cover a subcommand that can be considered a close cousin of <code>splitw</code> called
+<code>respawn-pane</code> or <code>respawnp</code> for short. This subcommand can work hand-in-hand
+with <code>splitw</code>&#39;s ability to send shell commands to a newly opened pane. It&#39;s
+easiest to explain <code>respawnp</code> with a simple demonstration.</p><p>Start with a fresh, paneless window and open a new pane with the contents of
+<code>ls</code> again:</p><p><strong><code>C-b :splitw &#39;ls | less&#39;</code></strong></p><p>You should now have two panes and the new pane with the less command being the active
+one. To switch back to the original pane, do:</p><p><strong><code>C-b ;</code></strong></p><p>which is the key binding for jumping back to the last active pane. Now we wish
+to update the contents of our new pane with something else. So we do:</p><p><strong><code>C-b :respawnp -k -t ! &#39;ls .. | less&#39;</code></strong></p><p>This command definitely needs a little explaining. It starts out with our usual
+key binding to get us to the command line and then we see the subcommand,
+<code>respawnp</code>. Next we see two options, <code>-k</code>, and then a <code>-t</code>, which has an
+argument supplied to it, <code>!</code>. Lastly, we pass in the shell command.</p><p>The <code>-k</code> options tells our subcommand to kill the existing command running in a
+pane. So in other words, we kill the first <code>ls | less</code> command which effectively
+kills less and therefore the entire pane off. However, the <code>respawnp</code> command
+will resurrect the pane with the output of the shell command we supply to it. In
+this case, we output the listing of the directory above the current directory
+(this is what the <code>..</code> means). So, tmux effectively removes the listing of the
+current directory for us and replaces it with a listing of the directory one
+level up.</p><p>So what&#39;s the <code>-t !</code> business? This is how we tell <code>respawnp</code> which pane we want
+to kill off and respawn. You probably recall the <code>-t</code> option means &quot;target
+pane.&quot; We normally supply this option with an integer argument that represents
+the index number of the pane we are going to kill. However, instead of a number
+we have an exclamation point. The exclamation point is what&#39;s called a
+<strong>token</strong>. In the context of the <code>respawnp</code> command, it represents the last
+active pane. Note that we could have just as easily replaced the token with the
+actual index number of the pane. But the token conveniently saves us from having
+to do that. There are many other tokens available and we&#39;ll see one ore two more
+later in the guide.</p></div>
+
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#attack-of-the-zombie-panes" id="attack-of-the-zombie-panes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attack of the zombie panes</h3><p>Now we are going to leave the beaten path a little more and explore some thicker
+underbrush of tmux.</p><p>As we have seen, tmux kills off panes once the process running inside them
+exits. We can, however, change this behavior and keep these dead panes hanging
+around. This requires us to mess with a tmux option called <code>remain-on-exit</code>.
+Like the name indicates, it causes a pane to remain even after the process in it
+exits. We turn this option on by giving it an <code>on</code> value like so:</p><p><strong><code>C-b setw remain-on-exit on</code></strong></p><p>Now let&#39;s quit the less process and see what happens. Make the pane running
+less the active pane if it isn&#39;t already by doing <code>C-b ;</code>. Type in <code>q</code> to
+quit less. You will now see the pane didn&#39;t close! Instead, the pane hangs
+around, taking up space even though it has nothing to display. tmux displays a
+little message for us, declaring the pane to be &quot;dead,&quot; along with some other
+bits of information we don&#39;t need to be concerned with.</p><p>But, it&#39;s not totally dead. We can use <code>respawnp</code> to breathe life back into the
+zombie pane. Let&#39;s do that. Be sure to make the first pane active with <code>C-b ;</code>
+and then run:</p><p><strong><code>C-b :respawnp -t ! &#39;ls | less&#39;</code></strong></p><p>The dead pane will now be active again with a new process. Notice we didn&#39;t need
+the <code>-k</code> option in this case because the dead pane didn&#39;t have any command
+running that needed to be killed.</p></div>
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#using-splitw-options-with-a-shell-command" id="using-splitw-options-with-a-shell-command"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using <code>splitw</code> options with a shell command</h3><p>Let&#39;s say we want to open our <code>ls</code> output in a new pane but would like to return
+to the originating pane after it opens. Here&#39;s how we do it:</p><p><strong><code>C-b :splitw -d &#39;ls | less&#39;</code></strong></p><p>Notice that we placed the <code>-d</code> option (you&#39;ll recall stands for &quot;detach&quot;)
+immediately after the subcommand and before the shell command. Otherwise, the
+command will not behave the way we expect. tmux can be very particular about the
+order of the arguments to its subcommands.</p><p>OK, let&#39;s set the <code>remain-on-exit</code> window option back to its default and move
+on:</p><p><strong><code>C-b setw remain-on-exit off</code></strong></p></div>
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#using-the-bind-key-subcommand-to-perform-advanced-splits" id="using-the-bind-key-subcommand-to-perform-advanced-splits"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the <code>bind-key</code> subcommand to perform advanced splits</h2><p>Now that you know most of basic features of the <code>splitw</code> subcommand and some
+related subcommands, we&#39;ll look at some more advanced type of splits using key
+bindings. As we saw, tmux offers only two default key bindings for splits, one
+for a vertical split and one for a horizontal split. We are going to improve on
+this by learning how to use the <code>bind-key</code> subcommand, or <code>bind</code> for short.</p><p>But before we get there, we have to lay a little more groundwork and get up to
+speed on the inner workings of key bindings if we want to get the most out of
+them. As we mentioned earlier, there is a lot more to tmux&#39;s key bindings than
+what you get with your average hot key.</p></div>
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#introducing-key-tables" id="introducing-key-tables"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introducing key tables</h3><p>The first concept we need to introduce are <strong>key tables</strong>. A key table is
+nothing more than a listing of key commands. A key command, as you may recall,
+is the key followed by the prefix key, <code>C-b</code>. Each of the key commands in a key
+table are bound to a specific tmux subcommand.</p><p>So far, all the key bindings we&#39;ve used required us to type in the default
+prefix key, <code>C-b</code>, before hitting our key command. What we didn&#39;t
+mention before is that <code>C-b</code> tells tmux which key table to use. Each table has a
+name. In the case of <code>C-b</code>, the key table name is, appropriately, &quot;prefix.&quot; The
+table contains a list of all the key commands that can be run after hitting the
+<code>C-b</code> prefix key. Let&#39;s make this more clear by introducing a new command,
+<code>list-keys</code> (aliased to <code>lsk</code>), to list all the key command listed in the prefix
+key table:</p><p><strong><code>C-b :lsk -T prefix</code></strong></p><p>Now we see a long list of all the key commands that belong to the prefix key
+table. The <code>-T</code> option, for &quot;table,&quot; tells <code>lsk</code> to show us key commands only
+for the tables we request. If we leave the <code>-T</code> option off, <code>lsk</code>shows us all
+the key commands from all the different key tables.</p><p>Look closely toward the top of the list, a few rows down. You should see a
+familiar face:</p><p><strong><code>bind-key    -T prefix &quot;       split-window</code></strong></p><p>And there is, our key binding for the default split. Then a few rows below that,
+you&#39;ll see:</p><p><strong><code>bind-key    -T prefix %       split-window -h</code></strong></p><p>This, of course, it he key binding for a horizontal split.</p><p>Looking at these two rows more closely, we see each of them is a full <code>bind-key</code>
+subcommand. First you see the <code>bind-key</code> subcommand followed by the <code>-T</code> option
+followed by the name of the table the key command belongs to, followed by the
+key command and then finally, the actual command that is run when key command is
+pressed. This is convenient if we ever want to share these key bindings
+somewhere else. We can just copy and paste the command directly.</p><p>For the very first command at the top of the key table, we see:</p><p><strong><code>bind-key    -T prefix C-b     send-prefix</code></strong></p><p>You would be tempted to think that this is how tmux knows that <code>C-b</code> uses the
+prefix table. But you would be incorrect. Remember that this is a command key
+that runs only <strong>after</strong> we hit <code>C-b</code> the first time. So the <code>C-b</code> we see in
+command above only applies if we hit <code>C-b</code> a second time, at which point it
+runs the <code>send-prefix</code> command. You can prove this to yourself by removing this
+key binding with the <code>unbind-key</code> (alias: <code>unbind</code>) command:</p><p><strong><code>C-b :unbind -T prefix C-b</code></strong></p><p>This removes the <code>C-b</code> key command from the prefix table. Technically, we didn&#39;t
+have to bother to tell <code>unbind</code> which key table to remove the key command from.
+That&#39;s because if no <code>-T</code> option is supplied, it assumes we want to remove it
+from the prefix key table. For all other key tables, we must specify the table.</p><p>OK, so what do you think will happen now when we run <code>C-b %</code>? Will it work? Try
+it and you&#39;ll see that it does, in fact, still work and will create a horizontal
+split. But now try hitting <code>C-b C-b</code> (two times) and then <code>%</code>. Now a literal <code>%</code>
+character is generated! The first time we hit <code>C-b</code> we entered the prefix key
+table as usual. But because we obliterated the <code>C-b</code> key command from the prefix
+table, tmux no longer ran the <code>send-prefix</code> command when we hit <code>C-b</code>. Instead
+it did nothing. After doing literally nothing, exactly what we told it to do
+while switched to the prefix table. After doing nothing as instructed, it
+interpreted the next <code>%</code> as a literal percent sign.</p><p>If you&#39;re paying attention, the next question you&#39;ll ask is, so what <em>does</em> tell
+tmux that <code>C-b</code> should load the prefix key table? To answer that question
+yourself, you can run this command (<strong>IMPORTANT:</strong> before running this command, hit
+the <code>q</code> key first if you are still looking at the key table listing or you will
+not see anything output):</p><p><strong><code>C-b :show -g prefix</code></strong></p><p>This outputs: <code>prefix C-b</code> to the pane. Here we introduce yet another subcommand,
+<code>show-options</code>, or <code>show</code> for short. We are asking it to show us the value
+of the global option called &quot;prefix.&quot; We can see that this value is set to <code>C-b</code>
+and this is how tmux knows to load the prefix key table when we type that in. Go
+ahead an close out the current pane by hitting <code>q</code>.</p><p>Phew, we&#39;ve covered a lot of ground here. And you thought you were just going to
+learn about the <code>splitw</code> command. Ha! But don&#39;t relax just yet, the fun is just
+about to get started.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#creating-a-custom-key-table" id="creating-a-custom-key-table"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating a custom key table</h3><p>Alright, it&#39;s time to get to work and start building our very own key table that
+we will use to store more useful split commands. The first step is to decide on
+a name. We&#39;ll call it &quot;split&quot; because we are going to use it mostly for running
+split commands. Now let&#39;s go ahead and create a key binding in
+our &quot;split&quot; key table with the <code>bind</code> subcommand:</p><p><strong><code>C-b :bind -T split &#39;&quot;&#39; splitw -d</code></strong></p><p>Notice we have to place the double quotes inside of a set of single quotes or
+you will confuse poor tmux. By default, tmux expects the <code>&quot;</code> character to be
+paired with another <code>&quot;</code> character and gives special meaning to all the
+characters in between them (this is why <code>&quot;</code> is known as a &quot;delimiter&quot;). To make
+sure tmux undertands what we want, we have to &quot;delimit the delimiter&quot; with
+single quotes.</p><p>OK, while we&#39;re at it, let&#39;s create a second key binding:</p><p><strong><code>C-b :bind -T split % splitw -hd</code></strong></p><p>Now let&#39;s make sure we typed everything in properly and list the command we just
+added to the split key table:</p><p><strong><code>C-b :lsk -T split</code></strong></p><p>This should output:</p><p><strong><code>bind-key -T split &quot; split-window -d</code></strong></p><p><strong><code>bind-key -T split % split-window -hd</code></strong></p><p>Beautiful! There is just one thing more to do. We need to tell tmux which key
+command should load the custom &quot;split&quot; key table so we can actually access the
+key commands we just set up.</p><p>What should we use? We&#39;re already using <code>C-b</code> for the prefix table so that&#39;s
+out. Whatever we decide, we need to very careful with our selection. We don&#39;t
+want to use a key that is useful to any of our apps we might run inside
+tmux or those apps will no longer be able to no longer respond to it because
+tmux hijackis it. Overrding another application&#39;s functionaity would be like
+Alexa cutting the power to your HomePod and then giving you a weather report
+whenever you asked Siri to to play music. One possible workaround to the problem
+is to find a way to reprogram your HomePod to play music with a completely
+different command. This would be the equivalent of changing the hot key in your
+application. We&#39;ll leave these hard decisions up to you when they arise.</p><p>Anyway, we will choose <code>C-\</code> because it is unlikely that another app uses it.
+Here&#39;s subcommand to run to activate the &quot;split&quot; key table when we hit <code>C-\</code>,
+the <code>switch-client</code> (<code>switchc</code>) subcommand:</p><p><strong><code>C-b :bind -T root C-\ switch-client -T split</code></strong></p><p>So what&#39;s going on here? We can see we are binding <code>C-\</code> to the <code>switch-client</code>
+command which we pass the &quot;split&quot; table to. But what is the <code>-T root</code> stuff?</p><p>The <code>-T</code>, as we have already seen, is the option for naming a key table. And
+&quot;root&quot; is just the name of the table we are adding our new key command to.</p><p>Like the &quot;prefix&quot; table, the &quot;root&quot; table is a special table built into tmux.
+The significant thing about key commands in root is that they don&#39;t require us
+to type a key combination before they can be activated. It&#39;s a lot like being
+able to issue a subcommand to our favorite digital assistant without first
+saying &quot;Hey Siri,&quot; &quot;Alexa,&quot; or &quot;Ok Google.&quot; So we have to be very careful about
+what goes in the root table. We don&#39;t want to put common, everyday keystrokes in
+there because we don&#39;t want tmux piping up all the time when we are trying to
+get work done in our applications. Therefore, placing key commands in the root
+key table should be done sparingly and reserved only for key combinations that
+activate tables or for key combinations that are extremely useful. For example,
+many tmux users map the pane navigation keys to C-h, C-j, C-k and C-l and place
+them in the root key table to let them move between panes much more quickly.</p><p>At any rate, go ahead and take a peek at the root key table with:</p><p><strong><code>C-b :lsk -T root</code></strong></p><p>As you might surmise from this list, the root table is used by tmux to interact
+with mouse commands. You should also see the new <code>C-\</code> key command we just
+minted.</p><p>The mouse commands we see don&#39;t actually do anything because we haven&#39;t
+activated the special <code>mouse</code> option tmux supplies (tmux assumes you are hard
+core and don&#39;t need no stinkin&#39; mouse). If you&#39;re not averse to indulging in a
+little mouse activity from time to time, you can get tmux to respond to your
+mouse by turning on the <code>mouse</code> option:</p><p><strong>C-b :set -g mouse on</strong></p><p>With this option turned on, tmux panes should now be able to respond to scrolls,
+clicks, and drags on the pane border so you can quickly resize them. You can see
+we are setting this command with the global option with <code>-g</code> which essentially
+means we are changing this everywhere (it&#39;s a bit more complicated than that but
+that is a topic of another guide). Another note of interest is that instead of
+using <code>setw</code>, we use <code>set</code> to indicate that we are changing a session option not
+a window option. We will leave it up to you investigate the different kinds of
+options and what they mean on your own as they aren&#39;t directly related to the
+<code>splitw</code> command. But you should at least be aware that there are different
+kinds of options.</p><p>Alright, let&#39;s get back to the business at hand and see if our new key binding
+works:</p><p><strong><code>C-\ %</code></strong></p><p>Did it do what you expected? It should have generated a new pane except instead
+of making the new pane activate, it keeps our original pane active because we
+applied the <code>-d</code> switch to our split command. Awesome!</p><p>We&#39;ll remind you again that all the options and settings and key bindings we add
+and change from the tmux prompt will be lost if we restart tmux. Later, we&#39;ll
+show you how to make these settings more permanent. For now, we are going to
+continue adding new key bindings to give you a taste for what else is possible
+with our newfound abilities.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#more-useful-examples-of-key-binding-splits" id="more-useful-examples-of-key-binding-splits"><span aria-hidden="true" class="octicon octicon-link"></span></a>More useful examples of key-binding splits</h3><p>So we&#39;ve created some key bindings to see how we can use them to add additional
+options to the <code>splitw</code> command. Now let&#39;s show some more creative and useful
+<code>splitw</code> subcommands that use shell commands to help you see some of the real
+power of using tmux.</p><p>First, let&#39;s say you are learning tmux and you want to be able to quickly pop open
+its man page. Add this key binding:</p><p><strong><code>C-b :bind -T split t splitw -f man tmux</code></strong></p><p><code>C-\ t</code> will now open up the tmux manual in a full width pane along the bottom of your
+screen. Now let&#39;s add an option to quickly close it:</p><p><strong><code>C-b :bind -T split q kill-pane -t {bottom}</code></strong></p><p>Now we have a way to quit the bottom pane. Great! The <code>{bottom}</code> in this command
+is another token that means, obviously, the &quot;bottom&quot; pane. As long as we don&#39;t
+open another full length pane along the bottom, this will always close our man
+page pane.</p><p>What if you want to open up a different man page? You could create a new key
+binding for each frequently used man page, but that would be tedious and use up
+a lot of precious command keys (but we&#39;ll show you a way around that, soon).
+Instead, it&#39;s probably better to be able to enter the name of an arbitrary man
+page. This can be accommodated with the <code>command-prompt</code> subcommand:</p><p><strong><code>C-b :bind -T split m command-prompt -p &#39;man page name:&#39; &quot;splitw -f man &#39;%%&#39;&quot;</code></strong></p><p>Now try <code>C-\ m</code> and you&#39;ll see a prompt, &quot;man page name:&quot;. Type in the name of
+the man page and a new pane will pop open with any man page you desire. Super
+cool! Be aware, however, if you make a typo in your man page name and the man
+page doesn&#39;t exist, man will immediately exit with an error, the pane will die,
+and you&#39;ll be left wondering why your man page isn&#39;t showing up.</p><p>We aren&#39;t going to break down the above command for you. Instead, we are going
+to do you a bigger favor and show you a neat trick for quickly looking it up
+yourself in the tmux man page. Add this monster command:</p><p><strong><code>C-b :bind -T split s command-prompt -p &#39;man page name:&#39;,&#39;search term:&#39; &quot;splitw -f man &#39;%%&#39;; send-keys / %2 Enter&quot;</code></strong></p><p>Now do <code>C-\ s</code> to execute this command. At the first prompt, type in <code>tmux</code>. At
+the second prompt, type in <code>command-prompt</code>. When the man page opens now, the
+man page will move down to the first mention of &quot;command-prompt&quot; for you. Super
+duper!</p><p>We do want to point out a couple of significant points from that last command.
+First, look closely at the command sent to the <code>command-prompt</code> subcommand and
+you&#39;ll see there are actually two different subcommands in there separated by a
+semicolon: <code>splitw -f man &#39;%%&#39;</code> and <code>send-keys / %2 Enter</code>. The first command is our
+familiar <code>splitw</code> command.</p><p>The second subcommand is <code>send-keys</code> or just <code>send</code>. &quot;What&#39;s that?&quot; you
+say. Well, you don&#39;t have to ask us anymore, now you can find out for yourself
+with <code>C-\ m</code>! We will say that if you are interested in automating your
+applications, <code>send</code> is definitey a subcommand you will want to master. Like
+<code>splitw</code>, learning the ins and outs of <code>send</code> will unlock a lot of power for
+you. We highly recommend spending some time practicing with it.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#getting-you-ready-to-stand-on-your-own" id="getting-you-ready-to-stand-on-your-own"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting you ready to stand on your own</h4><p>As we start telling you to go RTFM, now would be a good opportunity to talk
+about how to actually RTFM. But there are lots of great tutorials on this topic
+already. If you are new to man pages, or you still find them intimidating, we&#39;d
+like just suggest a video which we think is an excellent introduction to them:
+<a href="https://youtu.be/jyo0TwmON4A">https://youtu.be/jyo0TwmON4A</a>. It&#39;s slightly on the long side (is that such a bad
+thing?), so consider bumping the speed setting up to 1.5 or even higher if you
+want.</p><p>Once you are done with that video, spend at least 10 to 15 minutes browsing
+through the tmux man page. You don&#39;t have to understand all of it, but you
+should at least get familiar with how it&#39;s laid out and what the major sections
+of the page are. This will help you find things much more quickly when you need
+them. The more familiar you get with the tmux manual and how to read it, the more
+pleasant learning tmux will be for you.</p><p>One tip for getting around the tmux man page quickly is to search by a
+subcommand aliases to help find what you need more more quickly.</p></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#chaining-key-tables" id="chaining-key-tables"><span aria-hidden="true" class="octicon octicon-link"></span></a>&quot;Chaining&quot; key tables</h3><p>Before we leave the topic of key bindings, we wanted to show you a fairly
+advanced trick you can use to organize and access hundreds of custom key
+bindings very quickly. We call this method &quot;chaining.&quot; It&#39;ll be easier show you
+first and then explain it.</p><p>We start by creating a key command, &quot;t&quot;, to split a new pane across the top of
+our window. We will place this subcommand into a new key table called
+&quot;split_f&quot;:</p><p><strong><code>C-b :bind -T split_f t splitw -fb</code></strong></p><p>To reach this key command, we are going to link a key command from our &quot;split&quot;
+key table to our new &quot;split_f&quot; key table using the familiar <code>switch-client</code>
+command:</p><p><strong><code>C-b :bind -T split f switch-client -T split_f</code></strong></p><p>Study these commands closely before reading on to see if you can figure out how
+this work.</p><p>You get it? Here&#39;s how it works. First you hit <code>C-\</code> to activate the &quot;split&quot;
+key table.  Inside that table, is the &quot;f&quot; key, which activates the &quot;split_f&quot;
+key table for us where the new &quot;t&quot; key command we created lives.</p><p>We can add additional split to the new &quot;split_f&quot; table to make it more useful:</p><p><strong><code>C-b :bind -T split_f l splitw -hfb</code></strong></p><p>A left split.</p><p><strong><code>C-b :bind -T split_f r splitw -hf</code></strong></p><p>A right split.</p><p><strong><code>C-b :bind -T split_f r splitw -f</code></strong></p><p>A bottom split.</p><p>Now, to create a left split, we can do:</p><p><strong>C-\ fb</strong></p><p>That&#39;s just 4 keystrokes. Very nifty. So now you can find all of your full
+split with <code>C-\ f</code> and then choose the location of the split with the next key
+command. There&#39;s nothing stopping your from creating a key command in the
+&quot;split_f&quot; table to yet another key table reserved for even more fine-grained
+types of splits. You can also set up a new key command in the &quot;split&quot; key table
+that links to an entirely different key table called &quot;split_d&quot;, for example.
+Of course, there are only so many key bindings you&#39;ll be able to remember. But
+if you organize them well and plan your key bindings carefully, you can have
+hundreds of very powerful tmux commands at your disposal with just a few
+keystrokes. Wowzers!</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#moving-beyond-the-tmux-command-prompt" id="moving-beyond-the-tmux-command-prompt"><span aria-hidden="true" class="octicon octicon-link"></span></a>Moving beyond the tmux command prompt</h2><p>So you&#39;ve seen some of the pretty cool things you can do with key bindings and
+the command prompt. tmux doesn&#39;t stop there, though. Using tmux configuration
+files and shell scripts, you can achieve extreme levels of automation if you are
+willing to put in a little work up front. Your future self will definitely thank
+you if you do.</p><p>Everything you just learned about how to run tmux from the tmux command prompt
+will serve you well when applying them to tmux configuration files and scripts.
+You&#39;ll be using pretty much all the same commands you just learned but you&#39;ll be
+storing them inside a file instead of inside of tmux&#39;s memory. This is a good
+thing. You wouldn&#39;t want to have to retype a few dozen key bindings and options
+into the tmux command line every time you started a new tmux server.</p><p>OK, let&#39;s get started by showing you the basics of a tmux configuration file.</p></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#introducing-the-tmuxconf-file" id="introducing-the-tmuxconf-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introducing the <code>~/.tmux.conf</code> file</h3><p>Applications usually have a way for you to configure them to your liking. tmux
+is no different. The main tmux configuration is found in your home directory in
+a file called <code>.tmux.conf</code>. Like many configuration files, it has a dot in front
+of it so it won&#39;t visually clutter up your directory listing. There can be dozens
+of them. Hiding them also provides a very thin layer of security to protect
+them from getting accidentally deleted or moved with a badly constructed
+wildcard command.</p><p>To create the file, you will need to use your favorite text editing program. So
+fire it up and start editing a new, blank document in your home directory called
+<code>.tmux.conf</code>.</p><p>The tmux configuration file is exactly like a shell script. It&#39;s nothing more
+than a simple list of commands with some basic logic sprinkled throughout so it
+can make basic decisions based on the environment it finds itself in. We are not
+going to cover how to place anything more advanced than the most basic commands,
+however.</p><p>The only major difference between a tmux configuration file and a shell
+configuration script is that one is full of tmux subcommands and the other is
+full of shell commands. This makes sense because a tmux configuration file is
+meant to be read by tmux while a while a shell script is meant to be executed by
+your shell.</p></div>
+
+
+
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#adding-commands-to-the-tmux-configuration-file" id="adding-commands-to-the-tmux-configuration-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding commands to the tmux configuration file</h4><p>Adding commands is simple and works a lot like a shell script. You add one
+command per line. If you put more than one command on a line, the commands have
+to be separated with a semicolon. You can intersperse comments in the file with
+the <code>#</code> character, just like with a shell script, to help you remember what some
+of the more complex commands do when you look at it weeks, months, or years
+later. Go ahead and copy and paste the following few lines the file and save it:</p><p><strong><code>new -s my_sess</code></strong> # create new session</p><p><strong><code>neww -n shell</code></strong> # create new window</p><p><strong><code>set -g mouse on</code></strong></p><p><strong><code>splitw -hd</code></strong></p><p><strong><code>splitw -hd</code></strong></p><p><strong><code>bind -T split &#39;&quot;&#39; splitw -d</code></strong></p><p><strong><code>bind -T split % splitw -hd</code></strong></p><p><strong><code>bind -T root C-\ switch-client -T split</code></strong></p><p><strong><code>bind -T split t splitw -f man tmux</code></strong></p><p><strong><code>bind -T split q kill-pane -t {bottom}</code></strong></p><p><strong><code>bind -T split m command-prompt -p &#39;man page name:&#39; &quot;splitw -f man &#39;%%&#39;&quot;</code></strong></p><p><strong><code>bind -T split s command-prompt -p &#39;man page name:&#39;,&#39;search term:&#39; &quot;splitw -f man &#39;%%&#39;; send-keys / %2 Enter&quot;</code></strong></p><p><strong><code>bind -T split_f t splitw -fb</code></strong></p><p><strong><code>bind -T split f switch-client -T split_f</code></strong></p><p><strong><code>bind -T split_f l splitw -hfb</code></strong></p><p><strong><code>bind -T split_f r splitw -hf</code></strong></p><p><strong><code>bind -T split_f r splitw -f</code></strong></p><p>As the comments indicate, the first two commands establish a new tmux session
+and open a new window with the names we provide. We&#39;ll leave it to you to check
+out the man page to learn more details about those commands. The rest of the
+commands are all familiar to you: we enable mouse support, then create two
+new panes, and then add in many of the key binding we covered earlier in the
+guide.</p><p>Let&#39;s see this in action. Find a free command prompt and kill your tmux server
+with this command:</p><p><strong><code>tmux kill-server</code></strong></p><p>Yes, there is a lot of killing and dying with tmux, isn&#39;t there?</p><p>Make sure the configuration file you created is saved to the right location and
+fire up a new tmux server:</p><p><strong><code>tmux attach</code></strong></p><p>It&#39;s important to add the <code>attach</code> subcommand here, otherwise tmux will start up
+with two different sessions instead of just the one we created. You should now
+be looking at three panes side-by-side with the first pane active. Go ahead and
+try a few key binding to confirm they all work.</p><p>If so, congrats! You are an official graduate of the Tmux Scripting Academy.</p><p>There is, of course, much more you can do with a configuration script than add
+some key bindings and splits. You can change colors, the tmux status bar, load
+plugins, and change the many other aspects of tmux. But that is well beyond what
+the purpose of this guide does, which is to show you just enough to be able to
+use the configuration file with the <code>splitw</code> command. You will need to explore
+the many other highly advanced configuration options and tmux commands on your
+own.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#updating-and-reloading-the-configuration-script" id="updating-and-reloading-the-configuration-script"><span aria-hidden="true" class="octicon octicon-link"></span></a>Updating and reloading the configuration script</h4><p>Our last topic covers how to update and reload the configuration script. This is easy:</p><ol>
+<li>Make the desire changes to the configuration file with the new subcommands</li>
+<li>Source the file with the <code>source-file</code> or <code>source</code> subcommand to make the
+changes take effect:</li>
+</ol><p><strong><code>source ~/.tmux.conf</code></strong></p><p>Just like with the shell source command, the tmux source command reads the
+configuration script you tell it to and executes the commands inside of it.</p><p>If you&#39;re a new user to tmux, you&#39;ll probably be making a lot of changes to the
+configuration file so consider creating a key binding to this command. Take a
+look at your prefix table with <code>lsk</code> and see if there are any key bindings you
+hardly use. Unless you really love the tmux clock, the <code>C-b t</code> binding for
+displaying the time in the window is probably a good candidate for replacement.
+Even if you&#39;re in full screen mode without the computer clock visible, who
+doesn&#39;t have a watch or a phone or a clock in the room to glance at? To nuke it,
+just replace it with the new key binding in the configuration file:</p><p><strong><code>bind t source ~/.tmux.conf</code></strong></p><p>There is no need to <code>unbind</code> the default key command first. You will, of course,
+have to resource the configuration file from the command line before the new key
+binding takes effect.</p></div>
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#supercharging-tmux-automation-with-shell-scripting" id="supercharging-tmux-automation-with-shell-scripting"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supercharging tmux automation with shell scripting</h3><p>Now that you know how to automate running tmux subcommands, you can take things
+to the next level and automate the automation of the tmux subcommands and
+perhaps bring on the technological singularity.</p><p>We kid, of course.</p><p>But shell scripting does have far more advanced features than tmux subcommands
+and opens up new possibilties that would be difficult or impossible to pull off
+with just a plain tmux configuration file. And you aren&#39;t limited to using a
+shell script either. You can use just about any programming language you wish to
+automate tmux. But why do work that&#39;s already been done? There are many very
+cool tmux session managers available for you to download that you may find very
+useful.</p><p>Alas, this is well beyond learning about our relatively low-level <code>splitw</code>
+command. And it is now time to bid adieu. We hope we have helped you take
+you first big step toward mastering tmux.</p></div>
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#one-more-thing-navigating-panes" id="one-more-thing-navigating-panes"><span aria-hidden="true" class="octicon octicon-link"></span></a>One More Thing: Navigating panes</h2><p>Alright, alright. We&#39;re throwing in a little bonus material for you: some
+suggestions for making it easier to navigate tmux panes.</p><p>The easiest way tmux provides to move between split panes that&#39;s built into tmux
+is:</p><p><strong><code>C-b o</code></strong></p><p>This moves us to the pane with the next index number of the pane we are in
+in. The first and last panes are connected together so when we get to the last
+pane, <code>C-b o</code> returns us to the first in the window.</p><p><code>C-b o</code> is great if we have only two panes open and fine for three, but it&#39;s not
+so great if we have four or more panes open. If we are in the first pane and
+want to get to the last pane, we have to perform 3 keystrokes for each pane in
+between. This is tedious and annoying.</p><p>We can improve upon this a little with four other key bindings that tmux
+provides:</p><p><strong><code>C-b Up</code></strong></p><p><strong><code>C-b Down</code></strong></p><p><strong><code>C-b Left</code></strong></p><p><strong><code>C-b Right</code></strong></p><p>The directions you see there should be replaced by the arrow keys on your
+keyboard. So to move down to the next pane in the window, you do <code>C-b Down</code> and
+you can keep issuing more pane movement commands until you get to your desired
+pane. Because the first and last panes are linked together, you can jump
+between the first pane and the last pane quickly by issuing a <code>C-b Left</code> or
+<code>C-b Up</code>. Similarly, if you are in the last pane and want to jump back to
+the first, you can do <code>C-b Right</code> or <code>C-b Down</code>.</p><p>Note that these command keys are &quot;repeat&quot; command keys. That means we don&#39;t have
+to do <code>C-b Right</code>, <code>C-b Right</code>, <code>C-b Right</code> three times to move three panes to
+the right. Instead, we can do: <code>C-b Right Right Right</code>, which is convenient. See
+the tmux documentation for the <code>bind</code> subcommand for more details.</p><p>Still, three keystrokes to move between a pane is a bit of a pain (har har), and
+the arrow keys can still be very tedious to use if we have a lot of panes open
+especially since the arrow keys require us to move our entire hand which slows
+our typing down considerably.</p><p>tmux does supply a subcommand to jump straight to another pane with the
+<code>select-pane</code> subcommand. It&#39;s alias is <code>selectp</code>. In its simplest incantation,
+you do:</p><p><strong><code>C-b :selectp -t pane_index_number</code></strong></p><p>So, to jump to pane #4, you do <code>C-b :selectp -t 4</code>. But this is impractical and
+impossibly slow. Even if we use tab completion effectively, that&#39;s 13 or 14
+keystrokes just to move to a pane! So <code>selectp</code> is hardly a good solution. It
+is, however, a very useful command for scripting tmux and for creating custom
+key bindings, which we will now cover.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#setting-up-key-binding-for-more-convenient-pane-navigation" id="setting-up-key-binding-for-more-convenient-pane-navigation"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up key binding for more convenient pane navigation</h3><p>So, out of the box, tmux doesn&#39;t give provide great options for moving between
+panes.  Let&#39;s see how we can improve the situation. There are a couple of things
+we can do.</p><p>One common practice is to add the following key bindings to the root key table:</p><p><strong><code>bind    -T root    C-h              selectp -L</code></strong></p><p><strong><code>bind    -T root    C-j              selectp -D</code></strong></p><p><strong><code>bind    -T root    C-k              selectp -U</code></strong></p><p><strong><code>bind    -T root    C-l              selectp -R</code></strong></p><p>Since we&#39;re adding this key command to the root key table, there is no need to
+type in the prefix key. What&#39;s equally great about this solution is
+your right hand never has to move off the home row and so this is very fast. The
+downside to this is that it may interfere with the shortcut keys in your
+applications. But having such a convenient way to navigate panes might be worth
+it for you.</p><p>Another possibility is to set up key bindings that will jump to a pane&#39;s index
+number in a new prefix table.</p><p><strong><code>bind  -T your_key_table  0 selectp -t 0</code></strong></p><p><strong><code>bind  -T your_key_table  1 selectp -t 1</code></strong></p><p><strong><code>bind  -T your_key_table  2 selectp -t 2</code></strong></p><p><strong><code>bind  -T your_key_table  3 selectp -t 3</code></strong></p><p><strong><code>bind  -T your_key_table  4 selectp -t 4</code></strong></p><p><strong><code>bind  -T your_key_table  5 selectp -t 5</code></strong></p><p><strong><code>bind  -T your_key_table  6 selectp -t 6</code></strong></p><p><strong><code>bind  -T your_key_table  7 selectp -t 7</code></strong></p><p><strong><code>bind  -T your_key_table  8 selectp -t 8</code></strong></p><p><strong><code>bind  -T your_key_table  9 selectp -t 9</code></strong></p><p>This can be faster than the previous solution especially if you are jumping
+across several panes. Though you will still need a key command to activate your
+custom key table before you can access the key commands listed above. We&#39;ll
+leave setting up that key command as an exercise for you.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#next-steps-in-your-tmux-adventures" id="next-steps-in-your-tmux-adventures"><span aria-hidden="true" class="octicon octicon-link"></span></a>Next steps in your tmux adventures</h2><p>You should now know just enough to bootstrap your way to learning more about
+tmux and what it can do. Of course, you also want to use it to get real work
+done. Unless you aspire to be a professional tmux trainer, learning tmux should
+not be your full time job.</p><p>So our best advice is to go ahead an start using tmux. Use it all the time.
+Program your terminal to automatically attach to a tmux session when you open
+it. But be sure to keep things simple at first. Get comfortable working with
+just one window with multiple panes. When that starts to feel too limiting,
+start learning how to create new windows. When you get comfortable working with
+many windows in a single session, begin learn about running multiple tmux
+sessions. When you&#39;re starting to feel like a real pro, see if there are any
+advantages to running multiple tmux servers.</p><p>There will be things that will frustrate you or confuse you about tmux and
+things that will feel very restrictive and limiting at first. You will be
+tempted to turn to plugins to &quot;fix&quot; tmux&#39;s perceived limitations. We don&#39;t want
+to discourage you from installing plugins, but we encourage you to be very
+selective. Carefully research what each plugin does and how it does it because
+the plugins may just add to your confusion and provide capabilities you aren&#39;t
+ready to take advantage of. They will also hide which features are native to
+tmux and which ones are provided by the plugins. So as much as possible, keep
+your use of plugins limited until you gain a lot more confidence with tmux. Look
+closely at the subcommands the plugin adds to your configuration file. A good
+rule of thumb is that if you can&#39;t figure out what the plugin&#39;s subcommands do,
+don&#39;t add them to your configuration.</p><p>Finally, we covered only one subcommand in depth today and a few options. There
+are hundreds, if not thousands of different subcommands and settings for you to
+explore.  Treat tmux like a musical instrument and try to set aside 15 or 20
+minutes each day praciting and experimenting with new commands and options.</p><p>A great place to find other important subcommands to study is right there in
+your prefix table. Take some time see which subcommands tmux is using for the
+default key bindings. Try each of them out and see what happens. Figure out
+which key bindings are useful to you. Get rid of the ones you&#39;ll rarely need and
+replace them with your own. Then create your own key table and start adding your
+own custom key bindings. Be sure to add the good ones to your configuration
+file. There&#39;s no better way to learn tmux quickly than by experimenting with it.</p><p>When you experiment, be sure to run them in a &quot;clean&quot; tmux environment without
+any configuration file (or at least a very limited one) so you can be sure it is
+working as the developers intended. Feel free to take notes and cheatsheets to
+help you remember all that you learn. If you follow this advice diligently, you
+will be a master tmuxer in no time.</p><p>Oh yeah, and one more thing...</p></div>
+
+
+
+
+
+
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#rtfm" id="rtfm"><span aria-hidden="true" class="octicon octicon-link"></span></a>RTFM!</h1></div>
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
 <li>
 <a href="#super-guide-to-the-split-window-tmux-subcommand-and-beyond">Super Guide to the <code>split-window</code> tmux Subcommand (and Beyond)</a>
 <ul>
@@ -324,7 +1462,7 @@
 <li><a href="#getting-you-ready-to-stand-on-your-own">Getting you ready to stand on your own</a></li>
 </ul>
 </li>
-<li><a href="#chaining-key-tables">"Chaining" key tables</a></li>
+<li><a href="#chaining-key-tables">&quot;Chaining&quot; key tables</a></li>
 </ul>
 </li>
 <li>
@@ -350,1147 +1488,7 @@
 </ul>
 </li>
 <li><a href="#rtfm">RTFM!</a></li>
-</ul>
-<h2>
-<a id="guide-overview" class="anchor" href="#guide-overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Guide overview</h2>
-<p>tmux, like other great software, is deceptive. On the one hand, it's fairly easy
-to get set up and start using right away. On the other hand, it's difficult to
-take advantage of tmux's adanced power features without spending some quality alone
-time with the manual. But the problem with manuals
-is that they aren't geared toward beginners. They are geared toward
-helping seasoned developers and computer enthusiasts quickly obtain the
-information they need so they can get back to real work. As a result, man pages
-assume a certain level of a competence and experience and don't spend a lot of
-time laying a conceptual framework for their software. And so while we agree
-that "RTFM" (read the frickin' manual) is good advice, it's not the best advice
-if the manual is written at a level that's inaccessible to you. So this guide
-provides a gentler approach to learning the subtler, unwritten intricacies of
-tmux that can't be easily gleaned by typing <code>man tmux</code> into the terminal. It
-assumes the user is new to tmux and even fairly new to the world of command
-line-based computing.</p>
-<p>The only requirement for using this guide assumes is that you have tmux
-installed and have figured out how to launch a tmux session from the shell with
-<strong><code>tmux new -s &lt;session_name&gt;</code></strong> and that you have at least a day or two's worth
-of experience getting around a command line. Though this guide will be
-accessible to new users, many fairly experienced users can benefit from it, too.
-The guide might start with an excessive amount of hand holding, but it
-eventually goes into fairly good detail on many tmux features and configuration
-options. So unless you have spent many hours reading the tmux manual, don't be
-surprised if you pick up quite a few tips and tricks even if you've been using
-tmux for years but never took the time to truly <em><strong>grok</strong></em> it.</p>
-<p>So this guide's goals are two-fold: 1) help newbies get over the hump of
-confusion that often accompanies new software by giving them enough experience
-and a comfort level with tmux so that RTFM becomes possible and 2) give less
-experienced users and even some intermediate users a deeper understanding and
-appreciation for how to take advantage of tmux's many available customizations
-and features.</p>
-<p>The <code>split-window</code> command was chosen for a "Super Guide" because it is,
-arguably, the first command a beginning tmux user should be very familiar with.
-Working with many applications simultaneously is the core feature of tmux and
-the <code>split-window</code> command is the gateway command for taking advantage of it.
-Using this command well requires the knowledge of many other configuration
-settings and subcommands so by taking the time to explore this one command in
-great detail, you will be much closer to being able to bend tmux to your will.</p>
-<h3>
-<a id="important-note-on-turning-off-existing-tmux-customizations" class="anchor" href="#important-note-on-turning-off-existing-tmux-customizations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important note on turning off existing tmux customizations</h3>
-<p>This guide assumes you are starting with a "clean" install of tmux and that
-there is no <code>.tmux.conf</code> configuration file customizing your tmux set up or
-adding plugins. To ensure the examples in this guide work and to minimize your
-confusion, we strongly encourage you to rename your <code>~/.tmux.conf</code> file and
-store it safely somewhere on your hard drive. You can restore it when you finish
-with the guide.</p>
-<p>It's possible, though unlikely, there is a global tmux configuration file on
-your system that is customizing your tmux experience. Consult your operating
-system's documentation or friendly system administrator to ensure there isn't.
-If there is and you can't get rid of it, consider setting up a virtual machine
-or docker image you can call your own.</p>
-<h2>
-<a id="what-does-the-split-window-subcommand-do-for-you" class="anchor" href="#what-does-the-split-window-subcommand-do-for-you" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What does the <code>split-window</code> subcommand do for you?</h2>
-<p>We'll begin our guide with a big picture overview of what the <code>split-window</code>
-subcommand does.</p>
-<p>When a new tmux session or window is created in tmux, only one application can
-be seen inside of the visible window that tmux opens. <code>split-window</code> splits this
-window up into rectangular-shaped subunits, called <strong>panes,</strong> as in a window
-pane. If there is more than one pane in a tmux window, they are visually
-delineated from one another with a thin, single pixel-wide border. Each pane can
-have a different height and width so a tmux window with many panes can start to
-resemble <a href="http://www.glass-by-design.com/images7/flw_abstract_stained_glass_1x.jpg">a window designed by the famous 20th century architect Frank
-Lloyd Wright</a> more than the neat, symmetrical arrangement found on a French door.</p>
-<p>Panes have one of two states: "active" and "inactive." Active panes will have a
-brighter border color than the "inactive" ones. There can be only one active
-pane in a tmux session at a time, and that is the pane you are presently working
-in and that tmux will direct your keystrokes to. Inside each pane is a program,
-or <strong>process,</strong> if we are going to be more technically accurate. It could be a
-vim editing session, a shell prompt or any kind of application that can run in a
-terminal. You can have the same program running different processes in separate
-panes. For example, you might have five panes open, each with a different vim
-process running inside.</p>
-<p>The advantage of being able to run multiple processes at the same time in
-different sections of your computer monitor is clear. The idea is not new and
-has been around for decades. If you have an operating system with a gui, you
-don't need tmux to pull this off. You could open a terminal window for each
-process you want to run and arrange them on your monitor the way you like.  Or
-if the machine you want to run these processes on doesn't have a gui, you can
-ssh into them from a computer that does and achieve the same effect.</p>
-<p>However, tmux is much more than a text-based gui. It has many great efficiency
-advantages it can offer over a modern gui environment by collecting all the
-processes together under a single tmux server that can talk to the
-pseudo-terminals containing the processes within each pane. And so if you take
-the time to become proficient with tmux, you will be duly rewarded.</p>
-<p>The first step in that journey is to learn the <code>split-window</code> command well
-because it is the key to unlocking the most important feature of tmux. The
-<code>split-window</code> subcommand creates more panes so you can have more
-applications visible at once. Of course, you only have so much screen real
-estate and so there is a practical limitation for how many panes you can have
-open in a single window. Working around that limitation is a topic for
-another time. Our focus is on how to master this one single command to get
-you off to a good start toward achieving mastery with tmux.</p>
-<p>Before getting started, we should point out that one potentially confusing aspect
-of the <code>split-window</code> command is its name is slightly misleading. If you split a
-rock in half, you expect to get two rocks, right? But <code>split-window</code> doesn't
-split a window into two windows. Instead, it splits the <strong>current active pane</strong>
-of the current window into <strong>two panes.</strong> So it might be helpful to think of the
-<code>split-window</code> command as the "split pane" command instead.</p>
-<h2>
-<a id="executing-the-split-window-subcommand" class="anchor" href="#executing-the-split-window-subcommand" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing the <code>split-window</code> subcommand</h2>
-<p>From the shell command line, you can issue hundreds or even thousands of
-different commands. If you have tmux installed, <code>tmux</code> is one of those commands.
-The <code>tmux</code> command itself has many commands nested within it. And so each of the
-commands inside of tmux is properly referred to as a "subcommand" of the <code>tmux</code>
-command.</p>
-<p>There are a few different ways to execute the subcommands. You can access them
-with a couple of keystrokes inside a tmux window using what tmux calls <strong>key
-bindings.</strong> You can also type the subcommands in directly to the tmux command
-line.  You can also place the subcommand inside a tmux configuration file.
-Finally, you can run them from a shell command line or script. Each of these
-ways is discussed next.</p>
-<p><strong>Note:</strong> This guide assumes you have not customized your key bindings. If you
-haven't already done so, make sure you have removed all tmux customizations as
-recommended in the "Important note on turning off tmux customizations" in the
-overview to this guide above.</p>
-<h3>
-<a id="using-key-binding-to-execute-the-split-window-subcommand" class="anchor" href="#using-key-binding-to-execute-the-split-window-subcommand" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using key binding to execute the <code>split-window</code> subcommand</h3>
-<p>There are two different types of tmux splits: vertical and horizontal. Each of
-these two splits has a <strong>key binding</strong> dedicated to it that can be executed
-by you. To execute the key binding for the <strong>vertical split,</strong> which splits the
-current pane of the current window into a top and bottom pane, you type in the
-following keys from inside an active terminal window running a tmux session:</p>
-<p><strong><code>C-b "</code></strong></p>
-<p>For those new to tmux, this means "hold down the <code>control</code> key while you tap the
-<code>b</code> key, then release the control key, then hit the <code>"</code> key (<code>shift-'</code>)." So
-<code>C-b</code> is read as "Control-b." The <code>"</code> character is the double quotation mark.</p>
-<p>After typing these keys, you will see a thin line appear across the middle of
-your window (if you're not seeing this behavior, seriously consider rereading
-the "Important note on turning off tmux customizations" in the intro to this
-guide above; this is your final warning).  Everything above the line is the
-original pane and everything below the line is the new pane. Although a
-horizontal line appears across your screen, tmux considers this to be a
-"vertical" split because the new pane is aligned vertically with the old pane.
-This often confuses seasoned vim users where a "horizontal" split looks like
-tmux's vertical split. You'll frequently see tmux's vertical split referred to
-as horizontal splits in poorly researched blog posts across the web.</p>
-<p>At any rate, The <code>C-b "</code> keystroke combination is one of the many default key
-bindings that tmux provides for you out of the box. Key bindings are similar to
-"hot keys" or "shortcut keys" you may be familiar with in other applications
-(e.g., control-s for "save document"). Key bindings are great for issuing
-frequently used commands very quickly. In tmux, key bindings are a bit more
-flexible and powerful than typical hot keys. We will learn more about them in
-more detail later in the guide.</p>
-<p>For now, you should know that in the key binding above, tmux refers to the
-<strong><code>C-b</code></strong> keystroke combination as the <strong>prefix key.</strong> When you hit <code>C-b</code>, tmux
-hijacks your keyboard input from all the other applications and waits patiently
-for you to enter the next key to see what tmux command you want to perform. In
-this way, specific tmux commands are <strong>bound</strong> to certain keys and keystroke
-combinations, hence the phrase "key binding." The key combination bound to our
-split command in this case is <code>C-b "</code>. tmux refers to the key after the prefix
-key as the <strong>key command</strong>. In this case the key command is the <code>"</code> character
-which, by default, is associated with the <code>split-window</code> command.</p>
-<p>The prefix key prevents they key commands from activating while you work on the
-applications running inside the panes. For example, if you want to type the <code>"</code>
-character into a text document, it would be annoying if tmux started splitting
-panes on you. The <code>C-b</code> prefix is a magic keystroke that wakes tmux up and gets
-it ready to listen for your next keystroke. <code>C-b</code> tells tmux, "Listen up!  I
-want to give you a command," much like the talking speakers on your kitchen
-counter.  You wouldn't like it if those devices piped up during dinner
-conversation with your friends and family. That's why you're required to
-"prefix" your commands with some attention-grabbing statement like "Hey
-Siri!"  or "Alexa." tmux works the same way. It's there listening for the
-special prefix command but it shuts up and stays out of the way until it gets
-it.</p>
-<p>Key bindings can be customized to your liking. You will learn how to do this
-later. For now, the only other useful thing to know about key bindings is that
-if you hit <code>C-b</code> and and then want to back out of giving a key command, you can
-hit <strong><code>Esc</code></strong> (the escape key). This will get tmux back out of the way
-so you can continue interacting with the application you have open in
-your active pane.</p>
-<p>A different key binding is used to perform a <strong>horizontal split.</strong> In tmux,
-horizontal splits place the new pane on the right side of the current active
-pane. The key binding for a horizontal split is:</p>
-<p><strong><code>C-b %</code></strong></p>
-<p>Though the key bindings can be a bit confusing to use a first, you will quickly
-adapt to them and use them reflexively without even thinking.</p>
-<p>To help you remember the default key bindings for splitting, think of the
-punctuation marks used in these two bindings as visually resembling the types of
-splits they perform. The double quotation mark used for vertical splits are
-vertical lines that you can imagine as connecting a top and bottom pane. The
-percent sign has a circle on the left and right split with a line between them,
-which looks kind of like a horizontal split. Many people still find this
-confusing and one of the first custom key binding changes they make is to the
-default key bindings for splitting panes. Again, we will show you how to do that
-later in the guide.</p>
-<h3>
-<a id="executing-split-window-from-the-tmux-command-prompt" class="anchor" href="#executing-split-window-from-the-tmux-command-prompt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing <code>split-window</code> from the tmux command prompt</h3>
-<p>The two default key bindings for splitting windows only do very basic splits.
-It's possible to modify the existing key bindings and add new key bindings to do
-fancier kinds of splits which we'll show you how to do later in the guide. But
-if you don't have a key binding that does exactly what you need, then you will
-need to type the <code>split-window</code> command in manually. To run the default command,
-we type in the following keystrokes:</p>
-<p><strong><code>C-b :split-window</code></strong></p>
-<p>Let's break this down in detail. Here we see the prefix key again, <code>C-b</code>,
-followed by a colon, followed by the actual command, <code>split-window</code>. The command
-above does not supply any options or a shell command that may be passed to the
-<code>split-window</code> subcommand. We will cover that later.</p>
-<p>For now, the really important part to understand is the special role the colon
-plays in the command above. Typing in the <code>:</code> character after our prefix, <code>C-b</code>,
-is a key binding that places us into tmux's command line mode. When we enter
-command line mode, the tmux command prompt appears and our cursor is placed
-inside of it. Now we can start typing the <code>split-window</code> command and tell tmux
-exactly how we want our split to be executed using options and arguments we
-might supply. <code>C-b :</code> essentially tells tmux "Hey, I want to type in a command,
-so give me the command prompt." Like with <code>C-b</code>, you can back out of the command
-prompt by hitting the <code>Esc</code> key.</p>
-<p>We should point out that the tmux command line is not the same as a shell
-command line. tmux expects to see tmux subcommands here, not shell commands. If
-you do need to run a shell command from within tmux, you can use the
-appropriately named <code>run-shell</code> command which is not covered in this guide.</p>
-<h3>
-<a id="creating-splits-from-a-tmux-configuration-file" class="anchor" href="#creating-splits-from-a-tmux-configuration-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating splits from a tmux configuration file</h3>
-<p>The <code>split-window</code> command, along with other subcommands, can also be placed
-inside of a tmux configuration file. These configuration files can run every
-time you start tmux. You can also run them manually while inside tmux. You can
-use configuration files to help you automate your window splits and get them set
-up just the way you like when a new tmux session is launched. All this will be
-covered later in the guide.</p>
-<h3>
-<a id="executing-split-window-from-a-shell" class="anchor" href="#executing-split-window-from-a-shell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing <code>split-window</code> from a shell</h3>
-<p>The <code>split-window</code> can also be directly run right from a shell command line:</p>
-<p><strong><code>tmux split-window</code></strong></p>
-<p>Note that this way of executing <code>split-window</code> is the same as executing it from
-tmux's command prompt except we precede the subcommand with the <code>tmux</code> shell
-command. Our shell has no knowledge of what <code>split-window</code> is, so we have to
-type <code>tmux</code> first so it knows to pass the subcommand along to tmux which will
-know how to respond. The other difference is that there is no need to type
-a colon, of course, because we aren't trying to get to the tmux command prompt,
-we are passing the subcommand directly to tmux via the shell. If we do put a
-colon there, tmux will think the colon is part of an unreognized command and
-throw an error.</p>
-<p>Running the <code>split-window</code> subcommand works even if it is executed from outside
-of a tmux session. That's because the command ultimately gets passed to the tmux
-server running on our machine which processes it and takes the appropriate
-action. As a result, we can run tmux commands from inside shell scripts and
-functions, and perform all kinds advanced automation tricks that can make
-working with tmux a real joy. Unfortunately, this is not a guide on shell
-scripting and that will be left to the reader to explore.</p>
-<p>Now that we know all the different ways to execute the split command, let's take
-a closer look at what it actually does and then later, how we can change its
-default behavior.</p>
-<h2>
-<a id="the-split-window-default-operation" class="anchor" href="#the-split-window-default-operation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>split-window</code> default operation</h2>
-<p>It's time to explore what <code>split-window</code> does out of the box, without passing it
-any options. Start a new tmux session with <strong><code>tmux new -s split</code></strong> and then
-issue this simple <code>split-window</code> command:</p>
-<p><strong><code>C-b :split-window</code></strong></p>
-<p>This default command does quite a bit of work. It:</p>
-<ul>
-<li>Splits the currently active pane and opens a new pane</li>
-<li>Places the new pane below the existing active pane (a vertical split).</li>
-<li>Sizes the new pane to be exactly half the height of the current pane</li>
-<li>Launches the default shell in the new pane</li>
-<li>Deactivates the old pane and makes the new pane active. As a result, your
-cursor is now at the command line prompt of the shell the opens up inside the
-new pane.</li>
-</ul>
-<p>As already mentioned, you can use the <code>C-b "</code> key binding to do this same
-action. Go ahead and practice issuing this key binding enough times so that the
-action becomes instinctual. If you start running out of space in your window,
-practice using the <strong><code>C-b :kill-pane -a</code></strong> command to close all the open panes
-except the active one. Or, if you want to kill just the pane you are currently
-in, do <strong><code>C-b x</code></strong> and answer "y" when asked if you are sure you want to kill
-the pane.</p>
-<p>As you create new panes, you'll notice each pane you created gets progressively
-smaller.  The first new pane you create is half the size of the window. The
-second pane created is half the size of the first pane. The third pane is half
-the size of the second, and so on, until we run out of room and can't create any
-more panes.  Don't worry about resizing the panes or moving between panes. We
-will cover all that later.</p>
-<p>The next several sections of this guide will show you how to override tmux's
-default settings by using the <code>split-window</code> <strong>options</strong> to get it to respond
-with in more precise and desired behaviors.</p>
-<h2>
-<a id="basic-split-window-options" class="anchor" href="#basic-split-window-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic <code>split-window</code> options</h2>
-<h3>
-<a id="horizontal-splits" class="anchor" href="#horizontal-splits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Horizontal splits</h3>
-<p>When you get bored creating vertical splits and are ready to inject some
-excitement into your life, create a horizontal split with the following command:</p>
-<p><strong><code>C-b :split-window -h</code></strong></p>
-<p>This is the same command as the vertical split except we've added an <code>h</code>,
-preceded with a <code>-</code>, after the subcommand. The dash tells <code>split-window</code> that we
-are about to give it one or more options. In this case, the single "h" option we
-pass to our command stands for "horizontal." So when we apply this option,
-instead of the new pane showing up below the existing pane, it will show up to
-the right of the existing pane. In other words, the <code>h</code> option overrode our
-default vertical split with a horizontal split.</p>
-<p>As we saw, this simple split can be performed with the <code>C-b %</code> key binding. Go
-ahead and practice a little with this key binding.</p>
-<p>We will learn more <code>split-window</code> options in a bit. First we will take a short
-detour and talk about how to save a few keystrokes issuing the <code>split window</code>
-command in tmux.</p>
-<h2>
-<a id="faster-commands-with-the-splitw-alias-and-tab-completion" class="anchor" href="#faster-commands-with-the-splitw-alias-and-tab-completion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Faster commands with the <code>splitw</code> alias and tab completion</h2>
-<p>Typing sucks. It's painfully slow even if you're a fast typist. It would be much
-better if we could just think a thought and have the computer magically execute
-it. That day isn't coming any time soon so the next best thing is to make more
-efficient use of our keystrokes to make issuing commands much faster.</p>
-<h3>
-<a id="saving-strokes-with-the-split-window-alias" class="anchor" href="#saving-strokes-with-the-split-window-alias" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saving strokes with the <code>split-window</code> alias</h3>
-<p>One way to do that is by using aliases. tmux provides an alias for
-<code>split-window</code> called <code>splitw</code>. So instead of 12 keystrokes with <code>split-window</code>,
-you only have to type in 6 keystrokes with <code>splitw</code>. It doesn't sound like much
-but it adds up over time. And when you want to get something done fast, typing
-in all those keys gets very annoying very fast.</p>
-<p>From this point forward in the guide, we will use <code>splitw</code> instead of
-<code>split-window</code>. So instead of <strong><code>C-b :split-window</code></strong> you will see <strong><code>C-b :splitw</code></strong>.</p>
-<h3>
-<a id="tab-completion-for-supercharging-your-productivity" class="anchor" href="#tab-completion-for-supercharging-your-productivity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tab completion for supercharging your productivity</h3>
-<p>Aliases are nice but tab completion is even better. Hopefully, tab completion is
-already set up on your machine. You can find out by issuing the following
-keystrokes in tmux:</p>
-<p><strong><code>C-b :sp&lt;TAB&gt;</code></strong></p>
-<p>This is the prefix, followed by the colon, followed by <code>sp</code>, followed by the
-"Tab" key. The tab key tells tmux to try to finish typing in the rest of the
-command for us. We only have to type in just enough of the command so the
-completion feature can figure out the full command we wish to issue. Otherwise,
-it will complete as much of the command it can until we supply it with more
-letters in the command and hit <code>TAB</code> again.</p>
-<p>In this case, <code>sp</code> is enough for our completion feature to determine we want to
-use the full <code>split-window</code> command because no other commands begin with "sp".
-If you have tab completion on, you will see "sp" expand into <code>split-window</code>. So
-now we have gone form 12 keystrokes to just three. Very nice.</p>
-<p>Setting up command completion is not covered by this guide. You should consult
-with your local computer expert or search engine or man page for guidance.</p>
-<h2>
-<a id="more-basic-splitw-options" class="anchor" href="#more-basic-splitw-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More basic <code>splitw</code> options</h2>
-<p>OK, now that we are super efficient with our keystrokes, let's cover some more
-options.</p>
-<h3>
-<a id="controlling-the-size-of-the-new-pane-with-the--l-and--p-size-options" class="anchor" href="#controlling-the-size-of-the-new-pane-with-the--l-and--p-size-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the size of the new pane with the <code>-l</code> and <code>-p</code> size options</h3>
-<p>By default, <code>splitw</code> opens a new pane that is half the height or width of the
-pane that is split. tmux gives us two options to override this default
-behavior. This saves us the effort of having to resize the new pane to our
-liking after we create it.</p>
-<h4>
-<a id="the--l-option" class="anchor" href="#the--l-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>-l</code> option</h4>
-<p>With vertical splits, we can control how many lines high our new pane is with
-the <code>-l</code> option. The "l" stands for "lines."  Here is the option
-in action:</p>
-<p><strong><code>C-b :splitw -l 20</code></strong></p>
-<p>The "20" is the size argument that is passed to our <code>-l</code> option. This creates
-our default vertical split with a new pane that is 20 lines high. Note that if
-you choose a number larger than the number of lines in the current pane, the
-current pane will be reduce to just one line and the new pane will take up the
-rest.</p>
-<p>With a horizontal split, the <code>-l</code> option controls how many columns (or "cells",
-as the official man pages refers to them) wide our new pane will be. So if we
-want a horizontal split that is 20 columns wide, we do:</p>
-<p><strong><code>C-b :splitw -hl 20</code></strong></p>
-<p>Notice how we combined the <code>-h</code> option with the <code>-l</code> option using a single dash.
-This should not be new to you if you have any experience issuing commands on the
-command line. A reminder, however, that the <code>-l</code> option has to come last because
-we are passing it an argument.  Alternatively, we could separate out the options
-like so:</p>
-<p><strong><code>C-b :splitw -l 20 -h</code></strong></p>
-<p>This way, we don't have to care what order the options are in since each option
-gets its own leading dash.</p>
-<h4>
-<a id="the--p-option" class="anchor" href="#the--p-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>the <code>-p</code> option</h4>
-<p>Sometimes it's more useful to give a percentage of how how or wide the new pane
-should be relative to the current pane. We can use the <code>-p</code> option in this case.
-The "p," as you already guessed, is for "percent." So, for example, if we have
-pane that is 50 lines high and we issue this command:</p>
-<p><strong><code>C-b :splitw -p 10</code></strong></p>
-<p>Our new pane will be 5 lines high, or 10% of our original pane. The old pane
-will take up 45 lines, or the remaining 90%. Simple enough. Just like the <code>-l</code>
-option, the <code>-p</code> option can be used to tell tmux how wide to make the new pane
-if we are creating a horizontal split.</p>
-<h3>
-<a id="controlling-the-placement-order-of-a-new-pane-with-the--b-option" class="anchor" href="#controlling-the-placement-order-of-a-new-pane-with-the--b-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the placement order of a new pane with the <code>-b</code> option</h3>
-<p>For vertical splits, the default operation places our new pane below the current
-pane. For horizontal splits, the new pane is placed to the right of the current
-pane. If we would like to force the new pane to show up above or to the left of
-the current pane, we can use the <code>-b</code> option, for "before," like so:</p>
-<p><strong><code>C-b :splitw -b</code></strong></p>
-<p>This creates our default vertical split, however, it will show up on top of our
-current pane. To have our new pane show up to the left of our current pane, we
-do:</p>
-<p><strong><code>C-b :splitw -hb</code></strong></p>
-<p>Easy peasy.</p>
-<h3>
-<a id="creating-a-new-pane-on-the-left-right-top-or-bottom-of-a-window-with--f--b-and--h-options" class="anchor" href="#creating-a-new-pane-on-the-left-right-top-or-bottom-of-a-window-with--f--b-and--h-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating a new pane on the left, right, top, or bottom of a window with <code>-f</code>, <code>-b</code>, and <code>-h</code> options</h3>
-<p>By default, <code>splitw</code> splits the current pane. This may not give us the control
-we want. For example, let's say we have two panes open, one on the left and one
-on the right. If we vertically split the pane on the right, that will give us
-one large pane on the left and two smaller panes on the right. But what if we
-want a pane that stretches across the bottom of both panes? This is where the
-<code>-f</code> option, for "full," comes to the rescue. With it, you can create a pane
-that is either the full width or full height of the entire window. Coupled with
-the <code>-b</code> option, you can place the pane to the left, right, top or bottom of all
-existing panes.</p>
-<p><strong><code>C-b :splitw -f</code></strong></p>
-<p>Places a full width pane on the bottom of our window with a vertical split.</p>
-<p><strong><code>C-b :splitw -bf</code></strong></p>
-<p>Places a full length pane at the top of our window with a vertical split.</p>
-<p><strong><code>C-b :splitw -fh</code></strong></p>
-<p>Places a full length pane on the right side of our window with a horizontal
-split.</p>
-<p><strong><code>C-b :splitw -bfh</code></strong></p>
-<p>Places a full length pane on the left side of our window with a horizontal
-split.</p>
-<h3>
-<a id="changing-which-pane-is-split-with-the--t-option" class="anchor" href="#changing-which-pane-is-split-with-the--t-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing which pane is split with the <code>-t</code> option</h3>
-<p>By default, the current pane gets split by tmux. But what if we don't want to
-split the current pane and want to split a different one instead? Well, you
-could switch to the other pane and issue the <code>splitw</code> command there. But there
-is a better way, and that's with the <code>-t</code> option. Here, "t" stands for "target
-pane", the pane we want to split.</p>
-<p>Like our <code>-l</code> and <code>-p</code> options, the <code>-t</code> option takes an argument. The argument
-is an integer representing the pane number we want want to split. This integer
-is the called the pane's <strong>index</strong>. Here's how it's used:</p>
-<p><strong><code>C-b :splitw -t 2</code></strong></p>
-<p>This command splits pane #2 vertically. Pane numbering starts with zero so this
-is actually the third pane. But how do we know which index number a pane is? The
-pane in the top left is always pane 0 and the pane in the bottom right is always
-the last pane. But if we have a lot of panes open, it may not be so obvious what
-number a pane has. To solve this problem, tmux has a nifty key binding that
-briefly flashes the pane numbers in each pane:</p>
-<p><strong><code>C-b q</code></strong></p>
-<p>Each number is large and colored so it stands out in the pane. For very small
-panes, you might have to look closely because the index number will be small and
-hard to to spot. The active pane is given a different color than the inactive
-panes.</p>
-<h4>
-<a id="overriding-how-panes-are-numbered-with-the-set-window-option-command" class="anchor" href="#overriding-how-panes-are-numbered-with-the-set-window-option-command" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overriding how panes are numbered with the <code>set-window-option</code> command</h4>
-<p>Normal humans don't start counting from "zero," they start at "one." This is
-something we learned since long before Kindergarten. So you can't be blamed if
-you don't like having the pane indexes beginning with zero. tmux, being a
-flexible application that aims to please, lets you change this behavior to your
-liking. To make this change, we need to introduce a new command, the
-<code>set-window-option</code>. Like <code>split-window</code>, the <code>set-window-option</code> has an alias:
-<code>setw</code>. The command looks like this:</p>
-<p><strong><code>C-b :setw option value</code></strong></p>
-<p>Using this command, we set the value of the option we supply to the value of the
-argument we give. There are dozens of options built into tmux that we can
-change. One of those options is called <code>pane-base-index</code> which tells tmux which
-number to start numbering panes from. So, to tell tmux to start ordering panes
-beginning with the number "1", we do:</p>
-<p><strong><code>C-b :setw pane-base-index 1</code></strong></p>
-<p>Now the first pane index number is "1" instead of "0". The second pane is now
-"2", and so forth. We can verify this happened by typing in the <strong><code>C-b q</code></strong> key
-binding and we'll see the first pane in the top left now flashes a "1".  We are
-not limited to using "1" for the index argument. If we wanted our first pane to
-start with the number "50", we could do that (though we can't think of a good
-reason why you would).</p>
-<p>By default, the <code>setw</code> command only affects the current window we are in. If we
-want to change our pane numbering for all current windows that are open and any
-new windows we might open in the future, we need to explicitly tell <code>setw</code> that
-with the <code>-g</code> option:</p>
-<p><strong><code>C-b :setw -g pane-base-index </code></strong></p>
-<p>Here, the "g" stands for "global." This terminology makes perfect sense if you
-are programmer, but might be a bit strange if you are not. If you think of
-"global" as a synonym for "everywhere," then you will be on the right track.</p>
-<p>Note that this global option setting is not remembered by tmux. So if you shut
-tmux down and restart it, any <code>setw</code> option we set will be lost. We will show
-you how to make changes to the window option settings more permanent later.</p>
-<h3>
-<a id="changing-the-working-directory-our-pane-opens-in-with--c" class="anchor" href="#changing-the-working-directory-our-pane-opens-in-with--c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing the working directory our pane opens in with <code>-c</code>
-</h3>
-<p>By default, the directory the shell in the new pane is opened to, called the
-"working directory," is set to the same directory tmux was launched from. You
-can override this default by using the <code>-c</code> option, for "change directory," to
-tell tmux which directory you'd prefer it to use for the new pane:</p>
-<p><strong><code>C-b :splitw -c '/home/johnnybgood/projects'</code></strong></p>
-<p>It's always a good idea to surround your path argument to <code>-c</code> in quotes in case
-it has an spaces or other funny characters that might confuse tmux.</p>
-<h3>
-<a id="changing-the-active-pane-when-a-new-pane-is-created-with--d" class="anchor" href="#changing-the-active-pane-when-a-new-pane-is-created-with--d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing the active pane when a new pane is created with <code>-d</code>
-</h3>
-<p>By default, tmux assumes you will want to do something in a new pane that is
-opened. Therefore, it makes the new pane active so you can start typing into it
-right away. But this may not always be desirable. We might just want to open a
-pane to display something and continue working in our current pane. In that
-case, we throw the <code>-d</code> option at <code>splitw</code>:</p>
-<p><strong><code>C-b :splitw -d</code></strong></p>
-<p>Now tmux will return us to our current pane after the new pane is created. The
-"d" stands for "detach" or "deactivate," if you prefer.</p>
-<p>OK! This covers all the basic options for the <code>splitw</code> command. Actually, there is
-one more basic option: <code>-v</code>, which does a vertical split. But since <code>-v</code> is
-already the default, there is no reason to use it.</p>
-<p>There are a couple of advanced options available with <code>splitw</code>, the <code>-P</code> and the
-<code>-F</code> options. These options are useful for doing advanced automation of tmux.
-But to try to keep this guide at a somewhat reasonable length and stay focused
-on the basics, they are not covered by this guide.</p>
-<p>So now that we've covered all the basic options, it's time to turn our attention to
-passing a shell command to the <code>splitw</code> subcommand.</p>
-<h2>
-<a id="passing-shell-commands-to-splitw" class="anchor" href="#passing-shell-commands-to-splitw" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Passing shell commands to <code>splitw</code>
-</h2>
-<p>Options are cool and give us fine-tuned control over how panes are split, but
-the real power of <code>splitw</code> is realized when we pass shell commands to it.
-Learning this simple aspect of <code>splitw</code> is the first step to unlocking all kinds
-of great ways to automate tmux, saving you a lot of tedious keystroke entry.</p>
-<h3>
-<a id="a-simple-but-very-fleeting-example" class="anchor" href="#a-simple-but-very-fleeting-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A simple, but very fleeting example</h3>
-<p>In a new tmux session or window, run this command:</p>
-<p><strong><code>C-b :splitw ls</code></strong></p>
-<p>If you didn't see any thing, then you must have blinked or you have an extremely
-fast computer. Run the command a few more times to see if you can see something
-happen. <strong>TIP:</strong> you can do <code>C-b :&lt;UP ARROW&gt;</code> to pull up the last command
-from the tmux command line history to save you some typing.</p>
-<p>So what happened here?</p>
-<p>In the command above we passed the <code>ls</code> shell command to the <code>splitw</code> command.
-tmux then ran the command in a new pane. When the command finished executing,
-tmux killed the pane for us. This is the default behavior of tmux. So why, you
-may ask, do the other panes stay open and not close immediately? It's because
-they have a running process in them, an interactive shell that never stops
-running until we command it.</p>
-<p>To prove this to yourself, create a new split with <code>C-b "</code>. After the new pane
-opens, type <code>exit</code> at the shell prompt. The pane vanishes! That's because we
-exited the default shell command that tmux launched. Since the shell was what
-kept the pane alive, the pane remained alive until the point we killed the shell
-by leaving it.</p>
-<p>Unlike a shell process, the <code>ls</code> command doesn't hang around waiting for us to
-tell it what to do. It does its job and bails. When <code>ls</code> finished printing out
-its list of files to the pane it exited and tmux dutifully killed the pane.</p>
-<h3>
-<a id="keeping-panes-open" class="anchor" href="#keeping-panes-open" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Keeping panes open</h3>
-<p>Alright, so now let's make our ls command useful for those of us who can't read
-quite so fast:</p>
-<p><strong><code>C-b :splitw 'ls | less'</code></strong></p>
-<p>Here we run the <code>ls</code> command except this time we "pipe" its output into the
-<code>less</code> program using the <code>|</code> operator supplied by our shell. As a result, less
-will be opened with the output of <code>ls</code> command displayed. Notice that the shell
-command is surrounded in single quotes. This is important because our shell
-command will not work properly without them because of the pipe operation. By
-surrounding it with quotes, <code>splitw</code> passes everything between the quotes as one
-large argument to the default shell command. So if we are using the bash shell,
-here is the command tmux actually runs:</p>
-<p><strong><code>/bin/bash -c 'ls | less'</code></strong></p>
-<p>which then parses everything the way we expect it to. For simpler commands, we
-will usually leave out the quotes because it makes it easier to write commands
-that might contain other quotes. Without quotes, the command is run directly by
-tmux without sending it to the shell command. If you have done any shell
-scripting, you know that handling and escaping quotes in shell commands can be
-very tricky business.</p>
-<p>After we run this command, we see the pane remains open. That's because the
-less program does not quit until we tell it to. When we quit less with the <code>q</code>
-key, tmux will detect that the less process ended and kills the pane. Nice!</p>
-<p>Most of the shell commands you give will spawn a new process that doesn't die so you
-won't need to worry about the pane disappearing immediately. For example, if you
-are opening a document with vim, you can simply do:</p>
-<p><strong><code>C-b :splitw vim my_document.txt</code></strong></p>
-<p>In this case, vim will open up in the new pane with the document open. Once you
-quit vim, however, the pane will close.</p>
-<h3>
-<a id="respawning-panes" class="anchor" href="#respawning-panes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Respawning panes</h3>
-<p>Although this guide is specifically focused on the <code>splitw</code> command, we want to
-cover a subcommand that can be considered a close cousin of <code>splitw</code> called
-<code>respawn-pane</code> or <code>respawnp</code> for short. This subcommand can work hand-in-hand
-with <code>splitw</code>'s ability to send shell commands to a newly opened pane. It's
-easiest to explain <code>respawnp</code> with a simple demonstration.</p>
-<p>Start with a fresh, paneless window and open a new pane with the contents of
-<code>ls</code> again:</p>
-<p><strong><code>C-b :splitw 'ls | less'</code></strong></p>
-<p>You should now have two panes and the new pane with the less command being the active
-one. To switch back to the original pane, do:</p>
-<p><strong><code>C-b ;</code></strong></p>
-<p>which is the key binding for jumping back to the last active pane. Now we wish
-to update the contents of our new pane with something else. So we do:</p>
-<p><strong><code>C-b :respawnp -k -t ! 'ls .. | less'</code></strong></p>
-<p>This command definitely needs a little explaining. It starts out with our usual
-key binding to get us to the command line and then we see the subcommand,
-<code>respawnp</code>. Next we see two options, <code>-k</code>, and then a <code>-t</code>, which has an
-argument supplied to it, <code>!</code>. Lastly, we pass in the shell command.</p>
-<p>The <code>-k</code> options tells our subcommand to kill the existing command running in a
-pane. So in other words, we kill the first <code>ls | less</code> command which effectively
-kills less and therefore the entire pane off. However, the <code>respawnp</code> command
-will resurrect the pane with the output of the shell command we supply to it. In
-this case, we output the listing of the directory above the current directory
-(this is what the <code>..</code> means). So, tmux effectively removes the listing of the
-current directory for us and replaces it with a listing of the directory one
-level up.</p>
-<p>So what's the <code>-t !</code> business? This is how we tell <code>respawnp</code> which pane we want
-to kill off and respawn. You probably recall the <code>-t</code> option means "target
-pane." We normally supply this option with an integer argument that represents
-the index number of the pane we are going to kill. However, instead of a number
-we have an exclamation point. The exclamation point is what's called a
-<strong>token</strong>. In the context of the <code>respawnp</code> command, it represents the last
-active pane. Note that we could have just as easily replaced the token with the
-actual index number of the pane. But the token conveniently saves us from having
-to do that. There are many other tokens available and we'll see one ore two more
-later in the guide.</p>
-<h3>
-<a id="attack-of-the-zombie-panes" class="anchor" href="#attack-of-the-zombie-panes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attack of the zombie panes</h3>
-<p>Now we are going to leave the beaten path a little more and explore some thicker
-underbrush of tmux.</p>
-<p>As we have seen, tmux kills off panes once the process running inside them
-exits. We can, however, change this behavior and keep these dead panes hanging
-around. This requires us to mess with a tmux option called <code>remain-on-exit</code>.
-Like the name indicates, it causes a pane to remain even after the process in it
-exits. We turn this option on by giving it an <code>on</code> value like so:</p>
-<p><strong><code>C-b setw remain-on-exit on</code></strong></p>
-<p>Now let's quit the less process and see what happens. Make the pane running
-less the active pane if it isn't already by doing <code>C-b ;</code>. Type in <code>q</code> to
-quit less. You will now see the pane didn't close! Instead, the pane hangs
-around, taking up space even though it has nothing to display. tmux displays a
-little message for us, declaring the pane to be "dead," along with some other
-bits of information we don't need to be concerned with.</p>
-<p>But, it's not totally dead. We can use <code>respawnp</code> to breathe life back into the
-zombie pane. Let's do that. Be sure to make the first pane active with <code>C-b ;</code>
-and then run:</p>
-<p><strong><code>C-b :respawnp -t ! 'ls | less'</code></strong></p>
-<p>The dead pane will now be active again with a new process. Notice we didn't need
-the <code>-k</code> option in this case because the dead pane didn't have any command
-running that needed to be killed.</p>
-<h3>
-<a id="using-splitw-options-with-a-shell-command" class="anchor" href="#using-splitw-options-with-a-shell-command" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using <code>splitw</code> options with a shell command</h3>
-<p>Let's say we want to open our <code>ls</code> output in a new pane but would like to return
-to the originating pane after it opens. Here's how we do it:</p>
-<p><strong><code>C-b :splitw -d 'ls | less'</code></strong></p>
-<p>Notice that we placed the <code>-d</code> option (you'll recall stands for "detach")
-immediately after the subcommand and before the shell command. Otherwise, the
-command will not behave the way we expect. tmux can be very particular about the
-order of the arguments to its subcommands.</p>
-<p>OK, let's set the <code>remain-on-exit</code> window option back to its default and move
-on:</p>
-<p><strong><code>C-b setw remain-on-exit off</code></strong></p>
-<h2>
-<a id="using-the-bind-key-subcommand-to-perform-advanced-splits" class="anchor" href="#using-the-bind-key-subcommand-to-perform-advanced-splits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the <code>bind-key</code> subcommand to perform advanced splits</h2>
-<p>Now that you know most of basic features of the <code>splitw</code> subcommand and some
-related subcommands, we'll look at some more advanced type of splits using key
-bindings. As we saw, tmux offers only two default key bindings for splits, one
-for a vertical split and one for a horizontal split. We are going to improve on
-this by learning how to use the <code>bind-key</code> subcommand, or <code>bind</code> for short.</p>
-<p>But before we get there, we have to lay a little more groundwork and get up to
-speed on the inner workings of key bindings if we want to get the most out of
-them. As we mentioned earlier, there is a lot more to tmux's key bindings than
-what you get with your average hot key.</p>
-<h3>
-<a id="introducing-key-tables" class="anchor" href="#introducing-key-tables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introducing key tables</h3>
-<p>The first concept we need to introduce are <strong>key tables</strong>. A key table is
-nothing more than a listing of key commands. A key command, as you may recall,
-is the key followed by the prefix key, <code>C-b</code>. Each of the key commands in a key
-table are bound to a specific tmux subcommand.</p>
-<p>So far, all the key bindings we've used required us to type in the default
-prefix key, <code>C-b</code>, before hitting our key command. What we didn't
-mention before is that <code>C-b</code> tells tmux which key table to use. Each table has a
-name. In the case of <code>C-b</code>, the key table name is, appropriately, "prefix." The
-table contains a list of all the key commands that can be run after hitting the
-<code>C-b</code> prefix key. Let's make this more clear by introducing a new command,
-<code>list-keys</code> (aliased to <code>lsk</code>), to list all the key command listed in the prefix
-key table:</p>
-<p><strong><code>C-b :lsk -T prefix</code></strong></p>
-<p>Now we see a long list of all the key commands that belong to the prefix key
-table. The <code>-T</code> option, for "table," tells <code>lsk</code> to show us key commands only
-for the tables we request. If we leave the <code>-T</code> option off, <code>lsk</code>shows us all
-the key commands from all the different key tables.</p>
-<p>Look closely toward the top of the list, a few rows down. You should see a
-familiar face:</p>
-<p><strong><code>bind-key    -T prefix "       split-window</code></strong></p>
-<p>And there is, our key binding for the default split. Then a few rows below that,
-you'll see:</p>
-<p><strong><code>bind-key    -T prefix %       split-window -h</code></strong></p>
-<p>This, of course, it he key binding for a horizontal split.</p>
-<p>Looking at these two rows more closely, we see each of them is a full <code>bind-key</code>
-subcommand. First you see the <code>bind-key</code> subcommand followed by the <code>-T</code> option
-followed by the name of the table the key command belongs to, followed by the
-key command and then finally, the actual command that is run when key command is
-pressed. This is convenient if we ever want to share these key bindings
-somewhere else. We can just copy and paste the command directly.</p>
-<p>For the very first command at the top of the key table, we see:</p>
-<p><strong><code>bind-key    -T prefix C-b     send-prefix</code></strong></p>
-<p>You would be tempted to think that this is how tmux knows that <code>C-b</code> uses the
-prefix table. But you would be incorrect. Remember that this is a command key
-that runs only <strong>after</strong> we hit <code>C-b</code> the first time. So the <code>C-b</code> we see in
-command above only applies if we hit <code>C-b</code> a second time, at which point it
-runs the <code>send-prefix</code> command. You can prove this to yourself by removing this
-key binding with the <code>unbind-key</code> (alias: <code>unbind</code>) command:</p>
-<p><strong><code>C-b :unbind -T prefix C-b</code></strong></p>
-<p>This removes the <code>C-b</code> key command from the prefix table. Technically, we didn't
-have to bother to tell <code>unbind</code> which key table to remove the key command from.
-That's because if no <code>-T</code> option is supplied, it assumes we want to remove it
-from the prefix key table. For all other key tables, we must specify the table.</p>
-<p>OK, so what do you think will happen now when we run <code>C-b %</code>? Will it work? Try
-it and you'll see that it does, in fact, still work and will create a horizontal
-split. But now try hitting <code>C-b C-b</code> (two times) and then <code>%</code>. Now a literal <code>%</code>
-character is generated! The first time we hit <code>C-b</code> we entered the prefix key
-table as usual. But because we obliterated the <code>C-b</code> key command from the prefix
-table, tmux no longer ran the <code>send-prefix</code> command when we hit <code>C-b</code>. Instead
-it did nothing. After doing literally nothing, exactly what we told it to do
-while switched to the prefix table. After doing nothing as instructed, it
-interpreted the next <code>%</code> as a literal percent sign.</p>
-<p>If you're paying attention, the next question you'll ask is, so what <em>does</em> tell
-tmux that <code>C-b</code> should load the prefix key table? To answer that question
-yourself, you can run this command (<strong>IMPORTANT:</strong> before running this command, hit
-the <code>q</code> key first if you are still looking at the key table listing or you will
-not see anything output):</p>
-<p><strong><code>C-b :show -g prefix</code></strong></p>
-<p>This outputs: <code>prefix C-b</code> to the pane. Here we introduce yet another subcommand,
-<code>show-options</code>, or <code>show</code> for short. We are asking it to show us the value
-of the global option called "prefix." We can see that this value is set to <code>C-b</code>
-and this is how tmux knows to load the prefix key table when we type that in. Go
-ahead an close out the current pane by hitting <code>q</code>.</p>
-<p>Phew, we've covered a lot of ground here. And you thought you were just going to
-learn about the <code>splitw</code> command. Ha! But don't relax just yet, the fun is just
-about to get started.</p>
-<h3>
-<a id="creating-a-custom-key-table" class="anchor" href="#creating-a-custom-key-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating a custom key table</h3>
-<p>Alright, it's time to get to work and start building our very own key table that
-we will use to store more useful split commands. The first step is to decide on
-a name. We'll call it "split" because we are going to use it mostly for running
-split commands. Now let's go ahead and create a key binding in
-our "split" key table with the <code>bind</code> subcommand:</p>
-<p><strong><code>C-b :bind -T split '"' splitw -d</code></strong></p>
-<p>Notice we have to place the double quotes inside of a set of single quotes or
-you will confuse poor tmux. By default, tmux expects the <code>"</code> character to be
-paired with another <code>"</code> character and gives special meaning to all the
-characters in between them (this is why <code>"</code> is known as a "delimiter"). To make
-sure tmux undertands what we want, we have to "delimit the delimiter" with
-single quotes.</p>
-<p>OK, while we're at it, let's create a second key binding:</p>
-<p><strong><code>C-b :bind -T split % splitw -hd</code></strong></p>
-<p>Now let's make sure we typed everything in properly and list the command we just
-added to the split key table:</p>
-<p><strong><code>C-b :lsk -T split</code></strong></p>
-<p>This should output:</p>
-<p><strong><code>bind-key -T split " split-window -d</code></strong></p>
-<p><strong><code>bind-key -T split % split-window -hd</code></strong></p>
-<p>Beautiful! There is just one thing more to do. We need to tell tmux which key
-command should load the custom "split" key table so we can actually access the
-key commands we just set up.</p>
-<p>What should we use? We're already using <code>C-b</code> for the prefix table so that's
-out. Whatever we decide, we need to very careful with our selection. We don't
-want to use a key that is useful to any of our apps we might run inside
-tmux or those apps will no longer be able to no longer respond to it because
-tmux hijackis it. Overrding another application's functionaity would be like
-Alexa cutting the power to your HomePod and then giving you a weather report
-whenever you asked Siri to to play music. One possible workaround to the problem
-is to find a way to reprogram your HomePod to play music with a completely
-different command. This would be the equivalent of changing the hot key in your
-application. We'll leave these hard decisions up to you when they arise.</p>
-<p>Anyway, we will choose <code>C-\</code> because it is unlikely that another app uses it.
-Here's subcommand to run to activate the "split" key table when we hit <code>C-\</code>,
-the <code>switch-client</code> (<code>switchc</code>) subcommand:</p>
-<p><strong><code>C-b :bind -T root C-\ switch-client -T split</code></strong></p>
-<p>So what's going on here? We can see we are binding <code>C-\</code> to the <code>switch-client</code>
-command which we pass the "split" table to. But what is the <code>-T root</code> stuff?</p>
-<p>The <code>-T</code>, as we have already seen, is the option for naming a key table. And
-"root" is just the name of the table we are adding our new key command to.</p>
-<p>Like the "prefix" table, the "root" table is a special table built into tmux.
-The significant thing about key commands in root is that they don't require us
-to type a key combination before they can be activated. It's a lot like being
-able to issue a subcommand to our favorite digital assistant without first
-saying "Hey Siri," "Alexa," or "Ok Google." So we have to be very careful about
-what goes in the root table. We don't want to put common, everyday keystrokes in
-there because we don't want tmux piping up all the time when we are trying to
-get work done in our applications. Therefore, placing key commands in the root
-key table should be done sparingly and reserved only for key combinations that
-activate tables or for key combinations that are extremely useful. For example,
-many tmux users map the pane navigation keys to C-h, C-j, C-k and C-l and place
-them in the root key table to let them move between panes much more quickly.</p>
-<p>At any rate, go ahead and take a peek at the root key table with:</p>
-<p><strong><code>C-b :lsk -T root</code></strong></p>
-<p>As you might surmise from this list, the root table is used by tmux to interact
-with mouse commands. You should also see the new <code>C-\</code> key command we just
-minted.</p>
-<p>The mouse commands we see don't actually do anything because we haven't
-activated the special <code>mouse</code> option tmux supplies (tmux assumes you are hard
-core and don't need no stinkin' mouse). If you're not averse to indulging in a
-little mouse activity from time to time, you can get tmux to respond to your
-mouse by turning on the <code>mouse</code> option:</p>
-<p><strong>C-b :set -g mouse on</strong></p>
-<p>With this option turned on, tmux panes should now be able to respond to scrolls,
-clicks, and drags on the pane border so you can quickly resize them. You can see
-we are setting this command with the global option with <code>-g</code> which essentially
-means we are changing this everywhere (it's a bit more complicated than that but
-that is a topic of another guide). Another note of interest is that instead of
-using <code>setw</code>, we use <code>set</code> to indicate that we are changing a session option not
-a window option. We will leave it up to you investigate the different kinds of
-options and what they mean on your own as they aren't directly related to the
-<code>splitw</code> command. But you should at least be aware that there are different
-kinds of options.</p>
-<p>Alright, let's get back to the business at hand and see if our new key binding
-works:</p>
-<p><strong><code>C-\ %</code></strong></p>
-<p>Did it do what you expected? It should have generated a new pane except instead
-of making the new pane activate, it keeps our original pane active because we
-applied the <code>-d</code> switch to our split command. Awesome!</p>
-<p>We'll remind you again that all the options and settings and key bindings we add
-and change from the tmux prompt will be lost if we restart tmux. Later, we'll
-show you how to make these settings more permanent. For now, we are going to
-continue adding new key bindings to give you a taste for what else is possible
-with our newfound abilities.</p>
-<h3>
-<a id="more-useful-examples-of-key-binding-splits" class="anchor" href="#more-useful-examples-of-key-binding-splits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More useful examples of key-binding splits</h3>
-<p>So we've created some key bindings to see how we can use them to add additional
-options to the <code>splitw</code> command. Now let's show some more creative and useful
-<code>splitw</code> subcommands that use shell commands to help you see some of the real
-power of using tmux.</p>
-<p>First, let's say you are learning tmux and you want to be able to quickly pop open
-its man page. Add this key binding:</p>
-<p><strong><code>C-b :bind -T split t splitw -f man tmux</code></strong></p>
-<p><code>C-\ t</code> will now open up the tmux manual in a full width pane along the bottom of your
-screen. Now let's add an option to quickly close it:</p>
-<p><strong><code>C-b :bind -T split q kill-pane -t {bottom}</code></strong></p>
-<p>Now we have a way to quit the bottom pane. Great! The <code>{bottom}</code> in this command
-is another token that means, obviously, the "bottom" pane. As long as we don't
-open another full length pane along the bottom, this will always close our man
-page pane.</p>
-<p>What if you want to open up a different man page? You could create a new key
-binding for each frequently used man page, but that would be tedious and use up
-a lot of precious command keys (but we'll show you a way around that, soon).
-Instead, it's probably better to be able to enter the name of an arbitrary man
-page. This can be accommodated with the <code>command-prompt</code> subcommand:</p>
-<p><strong><code>C-b :bind -T split m command-prompt -p 'man page name:' "splitw -f man '%%'"</code></strong></p>
-<p>Now try <code>C-\ m</code> and you'll see a prompt, "man page name:". Type in the name of
-the man page and a new pane will pop open with any man page you desire. Super
-cool! Be aware, however, if you make a typo in your man page name and the man
-page doesn't exist, man will immediately exit with an error, the pane will die,
-and you'll be left wondering why your man page isn't showing up.</p>
-<p>We aren't going to break down the above command for you. Instead, we are going
-to do you a bigger favor and show you a neat trick for quickly looking it up
-yourself in the tmux man page. Add this monster command:</p>
-<p><strong><code>C-b :bind -T split s command-prompt -p 'man page name:','search term:' "splitw -f man '%%'; send-keys / %2 Enter"</code></strong></p>
-<p>Now do <code>C-\ s</code> to execute this command. At the first prompt, type in <code>tmux</code>. At
-the second prompt, type in <code>command-prompt</code>. When the man page opens now, the
-man page will move down to the first mention of "command-prompt" for you. Super
-duper!</p>
-<p>We do want to point out a couple of significant points from that last command.
-First, look closely at the command sent to the <code>command-prompt</code> subcommand and
-you'll see there are actually two different subcommands in there separated by a
-semicolon: <code>splitw -f man '%%'</code> and <code>send-keys / %2 Enter</code>. The first command is our
-familiar <code>splitw</code> command.</p>
-<p>The second subcommand is <code>send-keys</code> or just <code>send</code>. "What's that?" you
-say. Well, you don't have to ask us anymore, now you can find out for yourself
-with <code>C-\ m</code>! We will say that if you are interested in automating your
-applications, <code>send</code> is definitey a subcommand you will want to master. Like
-<code>splitw</code>, learning the ins and outs of <code>send</code> will unlock a lot of power for
-you. We highly recommend spending some time practicing with it.</p>
-<h4>
-<a id="getting-you-ready-to-stand-on-your-own" class="anchor" href="#getting-you-ready-to-stand-on-your-own" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting you ready to stand on your own</h4>
-<p>As we start telling you to go RTFM, now would be a good opportunity to talk
-about how to actually RTFM. But there are lots of great tutorials on this topic
-already. If you are new to man pages, or you still find them intimidating, we'd
-like just suggest a video which we think is an excellent introduction to them:
-<a href="https://youtu.be/jyo0TwmON4A">https://youtu.be/jyo0TwmON4A</a>. It's slightly on the long side (is that such a bad
-thing?), so consider bumping the speed setting up to 1.5 or even higher if you
-want.</p>
-<p>Once you are done with that video, spend at least 10 to 15 minutes browsing
-through the tmux man page. You don't have to understand all of it, but you
-should at least get familiar with how it's laid out and what the major sections
-of the page are. This will help you find things much more quickly when you need
-them. The more familiar you get with the tmux manual and how to read it, the more
-pleasant learning tmux will be for you.</p>
-<p>One tip for getting around the tmux man page quickly is to search by a
-subcommand aliases to help find what you need more more quickly.</p>
-<h3>
-<a id="chaining-key-tables" class="anchor" href="#chaining-key-tables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"Chaining" key tables</h3>
-<p>Before we leave the topic of key bindings, we wanted to show you a fairly
-advanced trick you can use to organize and access hundreds of custom key
-bindings very quickly. We call this method "chaining." It'll be easier show you
-first and then explain it.</p>
-<p>We start by creating a key command, "t", to split a new pane across the top of
-our window. We will place this subcommand into a new key table called
-"split_f":</p>
-<p><strong><code>C-b :bind -T split_f t splitw -fb</code></strong></p>
-<p>To reach this key command, we are going to link a key command from our "split"
-key table to our new "split_f" key table using the familiar <code>switch-client</code>
-command:</p>
-<p><strong><code>C-b :bind -T split f switch-client -T split_f</code></strong></p>
-<p>Study these commands closely before reading on to see if you can figure out how
-this work.</p>
-<p>You get it? Here's how it works. First you hit <code>C-\</code> to activate the "split"
-key table.  Inside that table, is the "f" key, which activates the "split_f"
-key table for us where the new "t" key command we created lives.</p>
-<p>We can add additional split to the new "split_f" table to make it more useful:</p>
-<p><strong><code>C-b :bind -T split_f l splitw -hfb</code></strong></p>
-<p>A left split.</p>
-<p><strong><code>C-b :bind -T split_f r splitw -hf</code></strong></p>
-<p>A right split.</p>
-<p><strong><code>C-b :bind -T split_f r splitw -f</code></strong></p>
-<p>A bottom split.</p>
-<p>Now, to create a left split, we can do:</p>
-<p><strong>C-\ fb</strong></p>
-<p>That's just 4 keystrokes. Very nifty. So now you can find all of your full
-split with <code>C-\ f</code> and then choose the location of the split with the next key
-command. There's nothing stopping your from creating a key command in the
-"split_f" table to yet another key table reserved for even more fine-grained
-types of splits. You can also set up a new key command in the "split" key table
-that links to an entirely different key table called "split_d", for example.
-Of course, there are only so many key bindings you'll be able to remember. But
-if you organize them well and plan your key bindings carefully, you can have
-hundreds of very powerful tmux commands at your disposal with just a few
-keystrokes. Wowzers!</p>
-<h2>
-<a id="moving-beyond-the-tmux-command-prompt" class="anchor" href="#moving-beyond-the-tmux-command-prompt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Moving beyond the tmux command prompt</h2>
-<p>So you've seen some of the pretty cool things you can do with key bindings and
-the command prompt. tmux doesn't stop there, though. Using tmux configuration
-files and shell scripts, you can achieve extreme levels of automation if you are
-willing to put in a little work up front. Your future self will definitely thank
-you if you do.</p>
-<p>Everything you just learned about how to run tmux from the tmux command prompt
-will serve you well when applying them to tmux configuration files and scripts.
-You'll be using pretty much all the same commands you just learned but you'll be
-storing them inside a file instead of inside of tmux's memory. This is a good
-thing. You wouldn't want to have to retype a few dozen key bindings and options
-into the tmux command line every time you started a new tmux server.</p>
-<p>OK, let's get started by showing you the basics of a tmux configuration file.</p>
-<h3>
-<a id="introducing-the-tmuxconf-file" class="anchor" href="#introducing-the-tmuxconf-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introducing the <code>~/.tmux.conf</code> file</h3>
-<p>Applications usually have a way for you to configure them to your liking. tmux
-is no different. The main tmux configuration is found in your home directory in
-a file called <code>.tmux.conf</code>. Like many configuration files, it has a dot in front
-of it so it won't visually clutter up your directory listing. There can be dozens
-of them. Hiding them also provides a very thin layer of security to protect
-them from getting accidentally deleted or moved with a badly constructed
-wildcard command.</p>
-<p>To create the file, you will need to use your favorite text editing program. So
-fire it up and start editing a new, blank document in your home directory called
-<code>.tmux.conf</code>.</p>
-<p>The tmux configuration file is exactly like a shell script. It's nothing more
-than a simple list of commands with some basic logic sprinkled throughout so it
-can make basic decisions based on the environment it finds itself in. We are not
-going to cover how to place anything more advanced than the most basic commands,
-however.</p>
-<p>The only major difference between a tmux configuration file and a shell
-configuration script is that one is full of tmux subcommands and the other is
-full of shell commands. This makes sense because a tmux configuration file is
-meant to be read by tmux while a while a shell script is meant to be executed by
-your shell.</p>
-<h4>
-<a id="adding-commands-to-the-tmux-configuration-file" class="anchor" href="#adding-commands-to-the-tmux-configuration-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding commands to the tmux configuration file</h4>
-<p>Adding commands is simple and works a lot like a shell script. You add one
-command per line. If you put more than one command on a line, the commands have
-to be separated with a semicolon. You can intersperse comments in the file with
-the <code>#</code> character, just like with a shell script, to help you remember what some
-of the more complex commands do when you look at it weeks, months, or years
-later. Go ahead and copy and paste the following few lines the file and save it:</p>
-<p><strong><code>new -s my_sess</code></strong> # create new session</p>
-<p><strong><code>neww -n shell</code></strong> # create new window</p>
-<p><strong><code>set -g mouse on</code></strong></p>
-<p><strong><code>splitw -hd</code></strong></p>
-<p><strong><code>splitw -hd</code></strong></p>
-<p><strong><code>bind -T split '"' splitw -d</code></strong></p>
-<p><strong><code>bind -T split % splitw -hd</code></strong></p>
-<p><strong><code>bind -T root C-\ switch-client -T split</code></strong></p>
-<p><strong><code>bind -T split t splitw -f man tmux</code></strong></p>
-<p><strong><code>bind -T split q kill-pane -t {bottom}</code></strong></p>
-<p><strong><code>bind -T split m command-prompt -p 'man page name:' "splitw -f man '%%'"</code></strong></p>
-<p><strong><code>bind -T split s command-prompt -p 'man page name:','search term:' "splitw -f man '%%'; send-keys / %2 Enter"</code></strong></p>
-<p><strong><code>bind -T split_f t splitw -fb</code></strong></p>
-<p><strong><code>bind -T split f switch-client -T split_f</code></strong></p>
-<p><strong><code>bind -T split_f l splitw -hfb</code></strong></p>
-<p><strong><code>bind -T split_f r splitw -hf</code></strong></p>
-<p><strong><code>bind -T split_f r splitw -f</code></strong></p>
-<p>As the comments indicate, the first two commands establish a new tmux session
-and open a new window with the names we provide. We'll leave it to you to check
-out the man page to learn more details about those commands. The rest of the
-commands are all familiar to you: we enable mouse support, then create two
-new panes, and then add in many of the key binding we covered earlier in the
-guide.</p>
-<p>Let's see this in action. Find a free command prompt and kill your tmux server
-with this command:</p>
-<p><strong><code>tmux kill-server</code></strong></p>
-<p>Yes, there is a lot of killing and dying with tmux, isn't there?</p>
-<p>Make sure the configuration file you created is saved to the right location and
-fire up a new tmux server:</p>
-<p><strong><code>tmux attach</code></strong></p>
-<p>It's important to add the <code>attach</code> subcommand here, otherwise tmux will start up
-with two different sessions instead of just the one we created. You should now
-be looking at three panes side-by-side with the first pane active. Go ahead and
-try a few key binding to confirm they all work.</p>
-<p>If so, congrats! You are an official graduate of the Tmux Scripting Academy.</p>
-<p>There is, of course, much more you can do with a configuration script than add
-some key bindings and splits. You can change colors, the tmux status bar, load
-plugins, and change the many other aspects of tmux. But that is well beyond what
-the purpose of this guide does, which is to show you just enough to be able to
-use the configuration file with the <code>splitw</code> command. You will need to explore
-the many other highly advanced configuration options and tmux commands on your
-own.</p>
-<h4>
-<a id="updating-and-reloading-the-configuration-script" class="anchor" href="#updating-and-reloading-the-configuration-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Updating and reloading the configuration script</h4>
-<p>Our last topic covers how to update and reload the configuration script. This is easy:</p>
-<ol>
-<li>Make the desire changes to the configuration file with the new subcommands</li>
-<li>Source the file with the <code>source-file</code> or <code>source</code> subcommand to make the
-changes take effect:</li>
-</ol>
-<p><strong><code>source ~/.tmux.conf</code></strong></p>
-<p>Just like with the shell source command, the tmux source command reads the
-configuration script you tell it to and executes the commands inside of it.</p>
-<p>If you're a new user to tmux, you'll probably be making a lot of changes to the
-configuration file so consider creating a key binding to this command. Take a
-look at your prefix table with <code>lsk</code> and see if there are any key bindings you
-hardly use. Unless you really love the tmux clock, the <code>C-b t</code> binding for
-displaying the time in the window is probably a good candidate for replacement.
-Even if you're in full screen mode without the computer clock visible, who
-doesn't have a watch or a phone or a clock in the room to glance at? To nuke it,
-just replace it with the new key binding in the configuration file:</p>
-<p><strong><code>bind t source ~/.tmux.conf</code></strong></p>
-<p>There is no need to <code>unbind</code> the default key command first. You will, of course,
-have to resource the configuration file from the command line before the new key
-binding takes effect.</p>
-<h3>
-<a id="supercharging-tmux-automation-with-shell-scripting" class="anchor" href="#supercharging-tmux-automation-with-shell-scripting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supercharging tmux automation with shell scripting</h3>
-<p>Now that you know how to automate running tmux subcommands, you can take things
-to the next level and automate the automation of the tmux subcommands and
-perhaps bring on the technological singularity.</p>
-<p>We kid, of course.</p>
-<p>But shell scripting does have far more advanced features than tmux subcommands
-and opens up new possibilties that would be difficult or impossible to pull off
-with just a plain tmux configuration file. And you aren't limited to using a
-shell script either. You can use just about any programming language you wish to
-automate tmux. But why do work that's already been done? There are many very
-cool tmux session managers available for you to download that you may find very
-useful.</p>
-<p>Alas, this is well beyond learning about our relatively low-level <code>splitw</code>
-command. And it is now time to bid adieu. We hope we have helped you take
-you first big step toward mastering tmux.</p>
-<h2>
-<a id="one-more-thing-navigating-panes" class="anchor" href="#one-more-thing-navigating-panes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>One More Thing: Navigating panes</h2>
-<p>Alright, alright. We're throwing in a little bonus material for you: some
-suggestions for making it easier to navigate tmux panes.</p>
-<p>The easiest way tmux provides to move between split panes that's built into tmux
-is:</p>
-<p><strong><code>C-b o</code></strong></p>
-<p>This moves us to the pane with the next index number of the pane we are in
-in. The first and last panes are connected together so when we get to the last
-pane, <code>C-b o</code> returns us to the first in the window.</p>
-<p><code>C-b o</code> is great if we have only two panes open and fine for three, but it's not
-so great if we have four or more panes open. If we are in the first pane and
-want to get to the last pane, we have to perform 3 keystrokes for each pane in
-between. This is tedious and annoying.</p>
-<p>We can improve upon this a little with four other key bindings that tmux
-provides:</p>
-<p><strong><code>C-b Up</code></strong></p>
-<p><strong><code>C-b Down</code></strong></p>
-<p><strong><code>C-b Left</code></strong></p>
-<p><strong><code>C-b Right</code></strong></p>
-<p>The directions you see there should be replaced by the arrow keys on your
-keyboard. So to move down to the next pane in the window, you do <code>C-b Down</code> and
-you can keep issuing more pane movement commands until you get to your desired
-pane. Because the first and last panes are linked together, you can jump
-between the first pane and the last pane quickly by issuing a <code>C-b Left</code> or
-<code>C-b Up</code>. Similarly, if you are in the last pane and want to jump back to
-the first, you can do <code>C-b Right</code> or <code>C-b Down</code>.</p>
-<p>Note that these command keys are "repeat" command keys. That means we don't have
-to do <code>C-b Right</code>, <code>C-b Right</code>, <code>C-b Right</code> three times to move three panes to
-the right. Instead, we can do: <code>C-b Right Right Right</code>, which is convenient. See
-the tmux documentation for the <code>bind</code> subcommand for more details.</p>
-<p>Still, three keystrokes to move between a pane is a bit of a pain (har har), and
-the arrow keys can still be very tedious to use if we have a lot of panes open
-especially since the arrow keys require us to move our entire hand which slows
-our typing down considerably.</p>
-<p>tmux does supply a subcommand to jump straight to another pane with the
-<code>select-pane</code> subcommand. It's alias is <code>selectp</code>. In its simplest incantation,
-you do:</p>
-<p><strong><code>C-b :selectp -t pane_index_number</code></strong></p>
-<p>So, to jump to pane #4, you do <code>C-b :selectp -t 4</code>. But this is impractical and
-impossibly slow. Even if we use tab completion effectively, that's 13 or 14
-keystrokes just to move to a pane! So <code>selectp</code> is hardly a good solution. It
-is, however, a very useful command for scripting tmux and for creating custom
-key bindings, which we will now cover.</p>
-<h3>
-<a id="setting-up-key-binding-for-more-convenient-pane-navigation" class="anchor" href="#setting-up-key-binding-for-more-convenient-pane-navigation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up key binding for more convenient pane navigation</h3>
-<p>So, out of the box, tmux doesn't give provide great options for moving between
-panes.  Let's see how we can improve the situation. There are a couple of things
-we can do.</p>
-<p>One common practice is to add the following key bindings to the root key table:</p>
-<p><strong><code>bind    -T root    C-h              selectp -L</code></strong></p>
-<p><strong><code>bind    -T root    C-j              selectp -D</code></strong></p>
-<p><strong><code>bind    -T root    C-k              selectp -U</code></strong></p>
-<p><strong><code>bind    -T root    C-l              selectp -R</code></strong></p>
-<p>Since we're adding this key command to the root key table, there is no need to
-type in the prefix key. What's equally great about this solution is
-your right hand never has to move off the home row and so this is very fast. The
-downside to this is that it may interfere with the shortcut keys in your
-applications. But having such a convenient way to navigate panes might be worth
-it for you.</p>
-<p>Another possibility is to set up key bindings that will jump to a pane's index
-number in a new prefix table.</p>
-<p><strong><code>bind  -T your_key_table  0 selectp -t 0</code></strong></p>
-<p><strong><code>bind  -T your_key_table  1 selectp -t 1</code></strong></p>
-<p><strong><code>bind  -T your_key_table  2 selectp -t 2</code></strong></p>
-<p><strong><code>bind  -T your_key_table  3 selectp -t 3</code></strong></p>
-<p><strong><code>bind  -T your_key_table  4 selectp -t 4</code></strong></p>
-<p><strong><code>bind  -T your_key_table  5 selectp -t 5</code></strong></p>
-<p><strong><code>bind  -T your_key_table  6 selectp -t 6</code></strong></p>
-<p><strong><code>bind  -T your_key_table  7 selectp -t 7</code></strong></p>
-<p><strong><code>bind  -T your_key_table  8 selectp -t 8</code></strong></p>
-<p><strong><code>bind  -T your_key_table  9 selectp -t 9</code></strong></p>
-<p>This can be faster than the previous solution especially if you are jumping
-across several panes. Though you will still need a key command to activate your
-custom key table before you can access the key commands listed above. We'll
-leave setting up that key command as an exercise for you.</p>
-<h2>
-<a id="next-steps-in-your-tmux-adventures" class="anchor" href="#next-steps-in-your-tmux-adventures" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Next steps in your tmux adventures</h2>
-<p>You should now know just enough to bootstrap your way to learning more about
-tmux and what it can do. Of course, you also want to use it to get real work
-done. Unless you aspire to be a professional tmux trainer, learning tmux should
-not be your full time job.</p>
-<p>So our best advice is to go ahead an start using tmux. Use it all the time.
-Program your terminal to automatically attach to a tmux session when you open
-it. But be sure to keep things simple at first. Get comfortable working with
-just one window with multiple panes. When that starts to feel too limiting,
-start learning how to create new windows. When you get comfortable working with
-many windows in a single session, begin learn about running multiple tmux
-sessions. When you're starting to feel like a real pro, see if there are any
-advantages to running multiple tmux servers.</p>
-<p>There will be things that will frustrate you or confuse you about tmux and
-things that will feel very restrictive and limiting at first. You will be
-tempted to turn to plugins to "fix" tmux's perceived limitations. We don't want
-to discourage you from installing plugins, but we encourage you to be very
-selective. Carefully research what each plugin does and how it does it because
-the plugins may just add to your confusion and provide capabilities you aren't
-ready to take advantage of. They will also hide which features are native to
-tmux and which ones are provided by the plugins. So as much as possible, keep
-your use of plugins limited until you gain a lot more confidence with tmux. Look
-closely at the subcommands the plugin adds to your configuration file. A good
-rule of thumb is that if you can't figure out what the plugin's subcommands do,
-don't add them to your configuration.</p>
-<p>Finally, we covered only one subcommand in depth today and a few options. There
-are hundreds, if not thousands of different subcommands and settings for you to
-explore.  Treat tmux like a musical instrument and try to set aside 15 or 20
-minutes each day praciting and experimenting with new commands and options.</p>
-<p>A great place to find other important subcommands to study is right there in
-your prefix table. Take some time see which subcommands tmux is using for the
-default key bindings. Try each of them out and see what happens. Figure out
-which key bindings are useful to you. Get rid of the ones you'll rarely need and
-replace them with your own. Then create your own key table and start adding your
-own custom key bindings. Be sure to add the good ones to your configuration
-file. There's no better way to learn tmux quickly than by experimenting with it.</p>
-<p>When you experiment, be sure to run them in a "clean" tmux environment without
-any configuration file (or at least a very limited one) so you can be sure it is
-working as the developers intended. Feel free to take notes and cheatsheets to
-help you remember all that you learn. If you follow this advice diligently, you
-will be a master tmuxer in no time.</p>
-<p>Oh yeah, and one more thing...</p>
-<h1>
-<a id="rtfm" class="anchor" href="#rtfm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RTFM!</h1>
-
-            </div>
-            <div id="toc">
-                <div class="scrollsync">
-                </div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 6, 2022  2:14 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 6, 2022</div>
             </div>
         </div>
         <script src="./js/scroll_sync.js"></script>
@@ -1499,4 +1497,4 @@ will be a master tmuxer in no time.</p>
           zenscroll.setup(200, 50);
           </script>
     </body>
-</html>
+
