@@ -59,7 +59,6 @@ methods.
 * started to feel dumb, dejected and defeated :)
 * finally gave in and posted code IRC to see if anyone could help me figure this out
     * posted my last best attempt to get it working:
-    
     ```
         #! /usr/bin/env raku
         use v6;
@@ -84,9 +83,7 @@ methods.
         say $vwf.s;
         say $vwf.blah;
     ```
-    
     * the code outputs:
-        
     ```
             hi
             test
@@ -94,7 +91,6 @@ methods.
             0
             (Any)
     ```
-    
     * I asked why was `say $vwf.blah` not returning any results?
     * went to bed, waited for Europeans to wake up
         * where are the American Raku developers, btw? 
