@@ -19,5 +19,5 @@
 * [Climate Change](Climate-Change)
 
 # Tech Tutorials
-* [Tech Tutorials](Tech-Toots)
+* [Tech Tutorials](tech-toots)
 

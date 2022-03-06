@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <title>
-            Decoding-the-gurus
+            Vimwiki-markdown
         </title>
       <!-- <style type="text/css">
         .highlight table td { padding: 5px; }
@@ -247,113 +247,131 @@
               <h1>
 <a id="on-this-page" class="anchor" href="#on-this-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h1>
 <ul>
-<li><a href="#decoding-the-gurus">Decoding the Gurus</a></li>
-<li><a href="#links">Links</a></li>
-<li><a href="#what-is-it">What is it?</a></li>
+<li><a href="#vimwiki-markdown-plugin">vimwiki-markdown plugin</a></li>
+<li><a href="#description">Description</a></li>
 <li>
-<a href="#hosts">Hosts</a>
+<a href="#integration-with-rouge">Integration with rouge</a>
 <ul>
 <li>
-<a href="#matt-browne">Matt Browne</a>
+<a href="#integration-with-rouge-creates-problems-for-me">integration with rouge creates problems for me</a>
 <ul>
-<li><a href="#links-2">Links</a></li>
-</ul>
-</li>
-<li>
-<a href="#chris-kavnaugh">Chris Kavnaugh</a>
-<ul>
-<li><a href="#links-3">Links</a></li>
+<li><a href="#vimwiki_markdown-documentation">vimwiki_markdown documentation</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h1>
+<a id="vimwiki-markdown-plugin" class="anchor" href="#vimwiki-markdown-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>vimwiki-markdown plugin</h1>
+<ul>
+<li><a href="https://github.com/patrickdavey/vimwiki_markdown">Github repo</a></li>
+</ul>
+<h1>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h1>
+<ul>
+<li>a ruby script</li>
+<li>to be used with with vimwiki plugin
+<ul>
+<li>if you don't use vimwiki, you have no need for this plugin</li>
+</ul>
+</li>
+<li>converts markdown text to html</li>
 <li>
-<a href="#what-do-they-talk-about">What do they talk about?</a>
-- <a href="#highlights-of-show">Highlights of Show</a>
+<del>uses <a href="pygments.html">Pygments</a> to do syntax highlighting of code embedded in the markdown document</del>
+<ul>
+<li>throw <code>%pygments</code> into the template</li>
+<li>actually, it doesn't use Pygments despite tag name
+<ul>
+<li>uses a ruby gem called <code>rouge</code>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h1>
-<a id="decoding-the-gurus" class="anchor" href="#decoding-the-gurus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Decoding the Gurus</h1>
-<h1>
-<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h1>
-<p><a href="https://decoding-the-gurus.captivate.fm">Podcast home page</a>
-<a href="https://www.reddit.com/r/DecodingTheGurus/">Reddit page</a>
-<a href="https://discord.gg/z3krx3CX">Unofficial Discord Server</a></p>
-<h1>
-<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it?</h1>
+<a id="integration-with-rouge" class="anchor" href="#integration-with-rouge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integration with rouge</h1>
 <ul>
-<li>It's primarily a podcast</li>
-<li>Started in late 2020</li>
+<li>simple to use</li>
+<li>use it with "fenced" markdown code to highlight code</li>
 </ul>
-<h1>
-<a id="hosts" class="anchor" href="#hosts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hosts</h1>
+<pre><code>my $code = 'is highlighted'
+my $there_are_problems_however = "overrides local css code";
+</code></pre>
 <ul>
-<li>Hosts are two researcher working in academia as professors</li>
+<li>used like this:</li>
+</ul>
+<p>```perl</p>
+<p># perl code goes here</p>
+<p>```</p>
+<ul>
+<li>simply put the name of the language immediately after the first line of backticks</li>
 </ul>
 <h2>
-<a id="matt-browne" class="anchor" href="#matt-browne" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Matt Browne</h2>
+<a id="integration-with-rouge-creates-problems-for-me" class="anchor" href="#integration-with-rouge-creates-problems-for-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>integration with rouge creates problems for me</h2>
 <ul>
-<li>psychologist
+<li>rouge embeds its css directly into the html page
 <ul>
-<li>currently specializing in research about gambling addictions and public policy</li>
+<li>the css I have for <code>&lt;pre&gt;&lt;code&gt;</code> tags gets overridden</li>
+<li>need to figure out a way to prevent it from overriding my code</li>
+<li>quick and dirty way?
+<ul>
+<li>add <code>!important</code> to my css?
+<ul>
+<li>yes, this worked</li>
+</ul>
+</li>
+<li>but default highlighting does not looks good with black background
+<ul>
+<li>black text is invisible</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>also conflicting with js for creating line numbers
+<ul>
+<li>ugh, this is a bigger headache than I thought</li>
+<li>looks like it gets rid of the <code>&lt;code&gt;</code> tag</li>
+<li>now have to dig around and figure out how to control the output of rouge</li>
+<li>maybe rouge can generate line numbers for me?
+<ul>
+<li>would have to match what my js generates for js
+<ul>
+<li>for consistency</li>
+<li>ugh, more headaches</li>
+<li>rouge doesn't seem to touch fenced code without a programming language name
+<ul>
+<li>ugh more headaches</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>maybe figure out if I can inject <code>&lt;code&gt;</code> tags with rouge?</li>
+</ul>
+</li>
+<li>maybe a good idea to turn pygmetize off and find a js plugin to do highlighting?
+<ul>
+<li>IIRC, vimwiki-markdown will throw errors if you remove <code>%pygments</code> tag from template
+<ul>
+<li>testing...
+<ul>
+<li>yeah, removing tag from template breaks the command</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h3>
-<a id="links-1" class="anchor" href="#links-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
+<a id="vimwiki_markdown-documentation" class="anchor" href="#vimwiki_markdown-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>vimwiki_markdown documentation</h3>
 <ul>
-<li><a href="https://twitter.com/arthurcdent">Twitter</a></li>
+<li>non-existent</li>
 </ul>
-<h2>
-<a id="chris-kavnaugh" class="anchor" href="#chris-kavnaugh" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chris Kavnaugh</h2>
-<ul>
-<li>cultural anthropologist
-<ul>
-<li>researches ritualistic practices</li>
-</ul>
-</li>
-</ul>
-<h3>
-<a id="links-2" class="anchor" href="#links-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
-<ul>
-<li><a href="https://twitter.com/C_Kavanagh">Twitter</a></li>
-</ul>
-<h1>
-<a id="what-do-they-talk-about" class="anchor" href="#what-do-they-talk-about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What do they talk about?</h1>
-<ul>
-<li>Analyze popular figures in media who have acquired large followings with their sweeping worldviews
-<ul>
-<li>hosts refer to them as gurus</li>
-<li>Mostly cover controversial individuals who promulgate psuedoscience and misinformation</li>
-<li>Will occasionally cover individuals who have positive impac5
-<ul>
-<li>Carl Sagan</li>
-</ul>
-</li>
-<li>Also sometimes interview experts on specific topics</li>
-</ul>
-</li>
-<li>Frequent targets
-<ul>
-<li>Sam Harris</li>
-<li>Bret Weinstein</li>
-<li>Jordan Peterson</li>
-<li>Joe Rogan</li>
-<li>Eric Weinstein</li>
-</ul>
-</li>
-<li>Help audience members identify fake experts and false arguments and generally improve their ability to think critically about information</li>
-</ul>
-<h3>
-<a id="highlights-of-show" class="anchor" href="#highlights-of-show" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Highlights of Show</h3>
-<ul>
-<li>interview with Sam Harris
-<ul>
-<li>Came on the rebut Chris and Matt</li>
-</ul>
-</li>
-</ul>
-<p>...more soon</p>
 
             </div>
             <div id="toc">

@@ -14,7 +14,8 @@ This is where I share tutorial and notes about tech stuff. Probably of little in
 
 # Toots
 ## tmux
-    * [Super Guide to 'split-window' tmux subcommand (and beyond)](Super-Guide-to-'split-window'-tmux-subcommand-(and-beyond)) 
+* [Super Guide to 'split-window' tmux subcommand (and beyond)](Super-Guide-to-'split-window'-tmux-subcommand-(and-beyond)) 
+
 ## neovim/vim
 
 ### Language servers
