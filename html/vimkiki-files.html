@@ -218,6 +218,9 @@
   background-color: #f8f8f8;
 }
       </style>
+
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet" type="text/css">
 
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
@@ -225,6 +228,8 @@
         <script>
           hljs.highlightAll();
           hljs.initLineNumbersOnLoad();
+
+
         </script>
     </head>
     <body>
@@ -236,25 +241,24 @@
         </div>
         <div id="page">
             <div id="content">
-              <h1>
-<a aria-hidden="true" class="anchor" href="#vimwikifiles-module" id="vimwikifiles-module"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vimwiki::Files Module</h1>
-<p>A module I&#39;m currently writing for analyzing a markdown file to help me process
+              <div><h1>
+<a aria-hidden="true" class="anchor" href="#vimwikifiles-module" id="vimwikifiles-module"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vimwiki::Files Module</h1><p>A module I&#39;m currently writing for analyzing a markdown file to help me process
 their conversion to HTML for output to this website. I want this module to be a
 subclass of <a href="https://docs.raku.org/type/IO::Path">IO::Path</a> so it inherits its
-methods.</p>
+methods.</p></div>
 
 
-<h2>
-<a aria-hidden="true" class="anchor" href="#subclassing-iopath" id="subclassing-iopath"><span aria-hidden="true" class="octicon octicon-link"></span></a>Subclassing IO::Path</h2>
-<h3>
-<a aria-hidden="true" class="anchor" href="#problem" id="problem"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem</h3>
-<ul>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#subclassing-iopath" id="subclassing-iopath"><span aria-hidden="true" class="octicon octicon-link"></span></a>Subclassing IO::Path</h2></div>
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#problem" id="problem"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem</h3><ul>
 <li>I ran into problems right away trying to subclass Raku&#39;s IO::Path module</li>
 <li>Looked for help from community</li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#help-from-stackoverflow" id="help-from-stackoverflow"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from Stackoverflow</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#help-from-stackoverflow" id="help-from-stackoverflow"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from Stackoverflow</h4><ul>
 <li>Posted question to stackoverflow about it
 <ul>
 <li><a href="https://stackoverflow.com/questions/70919945/how-to-make-a-class-that-inherits-the-same-methods-as-iopath/70920126#70920126">raku - How to make a class that inherits the same methods as IO::Path? - Stack Overflow: stackoverflow.com</a></li>
@@ -294,10 +298,10 @@ methods.</p>
 </li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#the-struggle-continues" id="the-struggle-continues"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Struggle Continues</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#the-struggle-continues" id="the-struggle-continues"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Struggle Continues</h4><ul>
 <li>I was still curious about how to subclass IO::Path
 <ul>
 <li>wanted to learn</li>
@@ -328,10 +332,10 @@ methods.</p>
 </li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#help-from-irc" id="help-from-irc"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from IRC</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#help-from-irc" id="help-from-irc"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help from IRC</h4><ul>
 <li>
 <p>started to feel dumb, dejected and defeated :)</p>
 </li>
@@ -381,10 +385,10 @@ methods.</p>
 </li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#upshot-iopath-may-not-be-subclassifiable" id="upshot-iopath-may-not-be-subclassifiable"><span aria-hidden="true" class="octicon octicon-link"></span></a>Upshot: IO::Path may not be subclassifiable</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#upshot-iopath-may-not-be-subclassifiable" id="upshot-iopath-may-not-be-subclassifiable"><span aria-hidden="true" class="octicon octicon-link"></span></a>Upshot: IO::Path may not be subclassifiable</h4><ul>
 <li>I wake up and check IRC
 <ul>
 <li>lizmat responded
@@ -406,13 +410,12 @@ methods.</p>
 </ul>
 </li>
 <li>I felt better and a lot less like a dummy</li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#solution-thanks-raiph" id="solution-thanks-raiph"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution! Thanks raiph</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#solution-thanks-raiph" id="solution-thanks-raiph"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution! Thanks raiph</h3><ul>
 <li>Finally got around to raiph&#39;s suggestion to delegate. This seems to work perfectly:</li>
-</ul>
-<pre><code>    unit class Vimwiki::File;
+</ul><pre><code>    unit class Vimwiki::File;
 
     has IO::Path $.path is required handles * where *.IO.e;
     has $.content;
@@ -425,8 +428,7 @@ methods.</p>
     submethod TWEAK() {
         $!content = $!path.slurp;
     }
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>Just not sure if I&#39;m using <code>TWEAK</code> right or not
 <ul>
 <li>I thought <code>TWEAK</code> took same arguments as new constructor
@@ -436,10 +438,12 @@ methods.</p>
 </li>
 </ul>
 </li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#what-did-we-learn" id="what-did-we-learn"><span aria-hidden="true" class="octicon octicon-link"></span></a>What did we learn?</h3>
-<ul>
+</ul></div>
+
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#what-did-we-learn" id="what-did-we-learn"><span aria-hidden="true" class="octicon octicon-link"></span></a>What did we learn?</h3><ul>
 <li>Raku is still a little rough around the edges
 <ul>
 <li>Probably somewhat expected
@@ -470,10 +474,10 @@ methods.</p>
 <li>Raku is an opportunity to build upon a great foundation and pick up skill building the language</li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#one-more-thing" id="one-more-thing"><span aria-hidden="true" class="octicon octicon-link"></span></a>One more thing</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#one-more-thing" id="one-more-thing"><span aria-hidden="true" class="octicon octicon-link"></span></a>One more thing</h2><ul>
 <li>
 <p>lizmat has suggested a way for subclassing a core module</p>
 <ul>
@@ -507,11 +511,12 @@ has $.content;</p>
 </li>
 </ul>
 </li>
-</ul>
+</ul></div>
+
 
             </div>
             <div id="toc">
-                <div>
+                <div class="scrollsync">
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
 <li>
@@ -536,9 +541,10 @@ has $.content;</p>
 <li><a href="#one-more-thing">One more thing</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 1, 2022 12:32 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 5, 2022 10:57 PM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
             </div>
         </div>
+        <script src="./js/scroll_sync.js"></script>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
         <script>
           zenscroll.setup(200, 50);

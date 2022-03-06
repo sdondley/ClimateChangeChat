@@ -241,19 +241,16 @@
         </div>
         <div id="page">
             <div id="content">
-		    <div>
-              <h1>
-<a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
-<p><strong>PREFACE:</strong> I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p>
-<p><strong>DISCLAIMER:</strong> This tutorial isn&#39;t meant to be exhaustive or the be all and end all authority of setting up language servers with neovim as I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you some frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page</p>
-<p><strong>CAUTION:</strong> I&#39;ve sprinkled this post with expletives and uninformed opinions just to spice things up a little. If you&#39;re humorless or find me unfunny, go <a href="#rtfm">RTFM</a> instead.</p>
-<p><strong>UPDATE:</strong> There is now a <a href="fast_as_fuck_perl_language_server_and_completion.html">second tutorial</a> for a third Perl language server, Perl Navigator, with the COQ plugin.</p>
+              <div><h1>
+<a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1><p><strong>PREFACE:</strong> I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p><p><strong>DISCLAIMER:</strong> This tutorial isn&#39;t meant to be exhaustive or the be all and end all authority of setting up language servers with neovim as I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you some frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page</p><p><strong>CAUTION:</strong> I&#39;ve sprinkled this post with expletives and uninformed opinions just to spice things up a little. If you&#39;re humorless or find me unfunny, go <a href="#rtfm">RTFM</a> instead.</p><p><strong>UPDATE:</strong> There is now a <a href="fast_as_fuck_perl_language_server_and_completion.html">second tutorial</a> for a third Perl language server, Perl Navigator, with the COQ plugin.</p></div>
 
-		    </div>
-<div>
-<h1>
-<a aria-hidden="true" class="anchor" href="#tldr" id="tldr"><span aria-hidden="true" class="octicon octicon-link"></span></a>TLDR;</h1>
-<ul>
+
+
+
+
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#tldr" id="tldr"><span aria-hidden="true" class="octicon octicon-link"></span></a>TLDR;</h1><ul>
 <li>This TLDR; section assumes:
 <ul>
 <li>you know what a language server is and what it might be good for</li>
@@ -267,24 +264,20 @@
 </li>
 </ul>
 </li>
-</ul>
-</div>
-<div>
-<h2>
-<a aria-hidden="true" class="anchor" href="#basic-setup-get-a-perl-language-server-up-and-running-with-neovim" id="basic-setup-get-a-perl-language-server-up-and-running-with-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic setup: Get a Perl language server up and running with neovim</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#basic-setup-get-a-perl-language-server-up-and-running-with-neovim" id="basic-setup-get-a-perl-language-server-up-and-running-with-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic setup: Get a Perl language server up and running with neovim</h2><ul>
 <li>No bells or whistles</li>
 <li>Good for just making sure you can get something working before trying more sophisticated configs
 <ul>
 <li>Good idea to do this first then do advanced set up below</li>
 </ul>
 </li>
-</ul>
-</div>
-<div>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-1-install-the-language-servers" id="step-1-install-the-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the language server(s)</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-1-install-the-language-servers" id="step-1-install-the-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the language server(s)</h3><ul>
 <li>There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
 <ul>
 <li>From the command line, install one or both:
@@ -312,11 +305,10 @@
 </ul>
 </li>
 <li>Step 1 is done</li>
-</ul>
-</div>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim" id="step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install the nvim-lspconfig plugin with git and install into neovim</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim" id="step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install the nvim-lspconfig plugin with git and install into neovim</h3><ul>
 <li>Use your favorite neovim package manager to install it
 <ul>
 <li>or the one you hate
@@ -332,10 +324,10 @@
 </ul>
 </li>
 <li>Step 2 is done</li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-3-throw-one-line-of-lua-code-into-neovims-init-file" id="step-3-throw-one-line-of-lua-code-into-neovims-init-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Throw one line of lua code into neovim&#39;s init file</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-3-throw-one-line-of-lua-code-into-neovims-init-file" id="step-3-throw-one-line-of-lua-code-into-neovims-init-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Throw one line of lua code into neovim&#39;s init file</h3><ul>
 <li>neovim has complicated vim (even more) by offering two different scripting languages for writing neovim&#39;s configuration files</li>
 <li>If you don&#39;t know which language your&#39;re using to configure neovim with, it&#39;s safe to say you&#39;re using vimscript</li>
 <li>Decide which langauge server you want to use
@@ -366,10 +358,10 @@
 </ul>
 </li>
 <li>Step 3 is done</li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-4" id="step-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 4</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-4" id="step-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 4</h3><ul>
 <li>There is no step 4. You&#39;re done.</li>
 <li>Fire up neovim</li>
 <li>Run <code>:LspInfo</code>
@@ -397,36 +389,36 @@
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#advanced-set-up" id="advanced-set-up"><span aria-hidden="true" class="octicon octicon-link"></span></a>Advanced set up</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#advanced-set-up" id="advanced-set-up"><span aria-hidden="true" class="octicon octicon-link"></span></a>Advanced set up</h2><ul>
 <li>If you want convenient mappings and cooler stuff like fancier code completion and snippets, follow the steps below</li>
 <li>This configuration is ripped almost straight from lspconfig docs
 <ul>
 <li>You can use a different set of plugins and mappings you can use as you get more skilled</li>
 </ul>
 </li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-1-do-steps-1-and-2-in-the-basic-setup" id="step-1-do-steps-1-and-2-in-the-basic-setup"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Do steps 1 and 2 in the basic setup</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-1-do-steps-1-and-2-in-the-basic-setup" id="step-1-do-steps-1-and-2-in-the-basic-setup"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Do steps 1 and 2 in the basic setup</h3><ul>
 <li>Already did the basic set up?
 <ul>
 <li><strong>Don&#39;t forget to remove the one-line snippet in step 3 above before proceeding</strong></li>
 </ul>
 </li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin" id="step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install these plugins into neovim (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</h3>
-<pre><code>hrsh7th/nvim-cmp
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin" id="step-2-install-these-plugins-into-neovim-in-addition-to-the-neovimnvim-lspconfig-plugin"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install these plugins into neovim (in addition to the <code>neovim/nvim-lspconfig</code> plugin):</h3><pre><code>hrsh7th/nvim-cmp
 hrsh7th/cmp-nvim-lsp
 saadparwaiz1/cmp_luasnip
 L3MON4D3/LuaSnip
-</code></pre>
-<h3>
-<a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration" id="step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Cut and paste a giant lua code snippet into your neovim configuration</h3>
-<ul>
+</code></pre></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration" id="step-3-cut-and-paste-a-giant-lua-code-snippet-into-your-neovim-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Cut and paste a giant lua code snippet into your neovim configuration</h3><ul>
 <li>
 <strong>MUY IMPORTANTE</strong>
 <ul>
@@ -575,10 +567,10 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#thats-it-youre-done" id="thats-it-youre-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>That&#39;s it. You&#39;re done!</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#thats-it-youre-done" id="thats-it-youre-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>That&#39;s it. You&#39;re done!</h2><ul>
 <li>Was that so hard?</li>
 <li>Check that it&#39;s working:
 <ul>
@@ -613,13 +605,13 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#looking-for-something-more-gratifying-for-your-thirsty-curious-soul" id="looking-for-something-more-gratifying-for-your-thirsty-curious-soul"><span aria-hidden="true" class="octicon octicon-link"></span></a>Looking for something more gratifying for your thirsty, curious soul?</h2>
-<p>Continue below...</p>
-<h1>
-<a aria-hidden="true" class="anchor" href="#wtf" id="wtf"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#looking-for-something-more-gratifying-for-your-thirsty-curious-soul" id="looking-for-something-more-gratifying-for-your-thirsty-curious-soul"><span aria-hidden="true" class="octicon octicon-link"></span></a>Looking for something more gratifying for your thirsty, curious soul?</h2><p>Continue below...</p></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#wtf" id="wtf"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1><ul>
 <li>...is a language server?
 <ul>
 <li>the &quot;LS&quot; part of an &quot;LSP&quot;, the &quot;Language Server Protocol&quot;
@@ -638,13 +630,13 @@ cmp.setup {
 <li>...is <a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a>?</li>
 <li>...is <a href="https://www.perl.org">Perl</a>?</li>
 <li>...is <a href="https://neovim.io">neovim</a>?</li>
-</ul>
-<p>I&#39;ve googled these for you. You&#39;re welcome.</p>
-<h1>
-<a aria-hidden="true" class="anchor" href="#the-big-picture-stuff" id="the-big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1>
-<h2>
-<a aria-hidden="true" class="anchor" href="#why-a-language-server" id="why-a-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why a language server?</h2>
-<ul>
+</ul><p>I&#39;ve googled these for you. You&#39;re welcome.</p></div>
+
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#the-big-picture-stuff" id="the-big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1></div>
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#why-a-language-server" id="why-a-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why a language server?</h2><ul>
 <li>To write code you use a text editor
 <ul>
 <li>Text editors require you to type
@@ -914,10 +906,10 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#is-setting-up-a-language-server-with-the-neovim-hard" id="is-setting-up-a-language-server-with-the-neovim-hard"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is setting up a language server with the neovim hard?</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#is-setting-up-a-language-server-with-the-neovim-hard" id="is-setting-up-a-language-server-with-the-neovim-hard"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is setting up a language server with the neovim hard?</h2><ul>
 <li>really depends on the language server
 <ul>
 <li>for perl, it&#39;s super, super easy</li>
@@ -945,10 +937,10 @@ cmp.setup {
 </li>
 <li>Hopefully this web page helps at least a little</li>
 <li>As neovim&#39;s lsp matures, will probably get easier</li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers" id="why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem to be behind the curve on adopting languages servers?</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers" id="why-does-the-perl-community-seem-to-be-behind-the-curve-on-adopting-languages-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does the Perl community seem to be behind the curve on adopting languages servers?</h2><ul>
 <li>Good question! (if I do say so myself)</li>
 <li>Is it really behind the curve?
 <ul>
@@ -970,10 +962,10 @@ cmp.setup {
 </ul>
 </li>
 <li>Maybe this tutorial will help things along in some small way</li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#my-relevant-background" id="my-relevant-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#my-relevant-background" id="my-relevant-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>My relevant background</h2><ul>
 <li>totally new to languages servers and nvim-lspconfig
 <ul>
 <li>until last week</li>
@@ -1019,17 +1011,17 @@ cmp.setup {
 </li>
 <li>Never used a proper IDE except for dabbling a little with XCode</li>
 <li>Never wrote a line of lua until last week</li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#assumptions-about-your-background" id="assumptions-about-your-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#assumptions-about-your-background" id="assumptions-about-your-background"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assumptions about your background</h2><ul>
 <li>Have been using vim for at least a few months</li>
 <li>Know at least the basics of how to configure neovim</li>
 <li>You know your way around perl and installing perl modules</li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#will-this-work-for-windows" id="will-this-work-for-windows"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#will-this-work-for-windows" id="will-this-work-for-windows"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will this work for Windows?</h2><ul>
 <li>No idea. Good luck. You&#39;re on your own.</li>
 <li>Fuck Windows
 <ul>
@@ -1060,12 +1052,12 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h1>
-<a aria-hidden="true" class="anchor" href="#the-more-technical-stuff" id="the-more-technical-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The more technical stuff</h1>
-<h2>
-<a aria-hidden="true" class="anchor" href="#smaller-picture-stuff" id="smaller-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Smaller picture stuff</h2>
-<ul>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#the-more-technical-stuff" id="the-more-technical-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The more technical stuff</h1></div>
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#smaller-picture-stuff" id="smaller-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Smaller picture stuff</h2><ul>
 <li>as mentioned above, my knowledge of language servers is basically zero
 <ul>
 <li>but from what I&#39;ve learned so far...
@@ -1232,12 +1224,12 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#the-stuff-in-between-probably-what-you-really-want-to-know" id="the-stuff-in-between-probably-what-you-really-want-to-know"><span aria-hidden="true" class="octicon octicon-link"></span></a>The stuff in between (probably what you really want to know)</h2>
-<h3>
-<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of" id="there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers that work with neovim (that I know of)</h3>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#the-stuff-in-between-probably-what-you-really-want-to-know" id="the-stuff-in-between-probably-what-you-really-want-to-know"><span aria-hidden="true" class="octicon octicon-link"></span></a>The stuff in between (probably what you really want to know)</h2></div>
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of" id="there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of"><span aria-hidden="true" class="octicon octicon-link"></span></a>There are two Perl language servers that work with neovim (that I know of)</h3><ul>
 <li>First of all, thanks to the software authors of these language servers
 <ul>
 <li>I greatly appreciate your work!</li>
@@ -1328,10 +1320,10 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#a-third-perl-langauge-server" id="a-third-perl-langauge-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>A third Perl langauge server?</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#a-third-perl-langauge-server" id="a-third-perl-langauge-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>A third Perl langauge server?</h4><ul>
 <li>There is another Perl language server project</li>
 <li>Came to my attention after writing this blog post</li>
 <li>Called <a href="https://github.com/bscan/PerlNavigator">&quot;PerlNavigator&quot;</a>
@@ -1340,10 +1332,10 @@ cmp.setup {
 <li>Developer &quot;bscan&quot; <a href="https://www.reddit.com/r/perl/comments/t4inwe/comment/hz0dg4j/?utm_source=share&amp;utm_medium=web2x&amp;context=3">is looking for help</a> getting it working with neovim</li>
 <li>See <a href="fast_as_fuck_perl_language_server_and_completion.html">my second perl langauge server tutorial to use it</a>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done" id="ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, the stuff you really need to know to get some real work done</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done" id="ok-the-stuff-you-really-need-to-know-to-get-some-real-work-done"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, the stuff you really need to know to get some real work done</h2><ul>
 <li>with all that out of the way, we can finally get some shit done</li>
 <li>First, we download both language servers so you can try them both out
 <ul>
@@ -1410,20 +1402,20 @@ cmp.setup {
 </li>
 </ul>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#some-gory-details-for-those-with-a-relentless-quest-for-knowledge" id="some-gory-details-for-those-with-a-relentless-quest-for-knowledge"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some gory details for those with a relentless quest for knowledge</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#some-gory-details-for-those-with-a-relentless-quest-for-knowledge" id="some-gory-details-for-those-with-a-relentless-quest-for-knowledge"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some gory details for those with a relentless quest for knowledge</h2><ul>
 <li>This section goes into some detail on what the code snippet you pasted above does</li>
 <li>One caveat: I&#39;m not an expert in Lua or configuing the language server
 <ul>
 <li>so take the technical discussion in this section with a bit of grain of salt</li>
 </ul>
 </li>
-</ul>
-<h3>
-<a aria-hidden="true" class="anchor" href="#analzying-the-giant-lua-code-snippet" id="analzying-the-giant-lua-code-snippet"><span aria-hidden="true" class="octicon octicon-link"></span></a>Analzying the giant lua code snippet</h3>
-<ul>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#analzying-the-giant-lua-code-snippet" id="analzying-the-giant-lua-code-snippet"><span aria-hidden="true" class="octicon octicon-link"></span></a>Analzying the giant lua code snippet</h3><ul>
 <li>as mentioned, all you really need is this one single line to connect to the perl language server:
 <ul>
 <li>
@@ -1431,10 +1423,10 @@ cmp.setup {
 </ul>
 </li>
 <li>The bulk of the lua code is mostly dedicated to adding mappings for lspconfig</li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#setting-up-mappings" id="setting-up-mappings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up mappings</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#setting-up-mappings" id="setting-up-mappings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up mappings</h4><ul>
 <li>Mappings make it easier to interact with the language server</li>
 <li>This code sets up some gobal key maps, common to all buffers and all langauge servers
 <pre><code>local opts = { noremap=true, silent=true }
@@ -1492,10 +1484,10 @@ end
 <li>Play with them and find out</li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#connecting-vim-to-our-language-servers" id="connecting-vim-to-our-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connecting vim to our language servers</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#connecting-vim-to-our-language-servers" id="connecting-vim-to-our-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connecting vim to our language servers</h4><ul>
 <li>Now we get to the meat of the matter</li>
 <li>First we set up the capabilities of the server
 <pre><code>local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -1652,10 +1644,10 @@ end
 </li>
 </ul>
 </li>
-</ul>
-<h4>
-<a aria-hidden="true" class="anchor" href="#set-up-completion-completion-mappings-and-snippets" id="set-up-completion-completion-mappings-and-snippets"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set up completion, completion mappings, and snippets</h4>
-<ul>
+</ul></div>
+
+<div><h4>
+<a aria-hidden="true" class="anchor" href="#set-up-completion-completion-mappings-and-snippets" id="set-up-completion-completion-mappings-and-snippets"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set up completion, completion mappings, and snippets</h4><ul>
 <li>I know very little about completions or snippets</li>
 <li>Not going to weigh in on this code
 <ul>
@@ -1713,22 +1705,22 @@ cmp.setup {
 }
 </code></pre>
 </li>
-</ul>
-<h1>
-<a aria-hidden="true" class="anchor" href="#rtfm" id="rtfm"><span aria-hidden="true" class="octicon octicon-link"></span></a>RTFM</h1>
-<ul>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#rtfm" id="rtfm"><span aria-hidden="true" class="octicon octicon-link"></span></a>RTFM</h1><ul>
 <li>eating vegetables sucks too but they&#39;re good for you</li>
 <li>get answers for things I didn&#39;t bother to RTFM for</li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#neovim-docs" id="neovim-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>neovim docs</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#neovim-docs" id="neovim-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>neovim docs</h2><ul>
 <li><code>:h lsp</code></li>
 <li><code>:h lspconfig</code></li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#github-docs" id="github-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>Github docs</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#github-docs" id="github-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>Github docs</h2><ul>
 <li><a href="https://github.com/neovim/nvim-lspconfig/wiki">lspconfig wiki</a></li>
 <li>
 <a href="">Perl::LangaugeServer</a><a href="https://github.com/richterger/Perl-LanguageServer">https://github.com/richterger/Perl-LanguageServer</a>
@@ -1736,13 +1728,14 @@ cmp.setup {
 <li>
 <a href="">PLS</a><a href="https://github.com/FractalBoy/perl-language-server">https://github.com/FractalBoy/perl-language-server</a>
 </li>
-</ul>
-<h2>
-<a aria-hidden="true" class="anchor" href="#perl-language-server-cpan-docs" id="perl-language-server-cpan-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl language server cpan docs</h2>
-<ul>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#perl-language-server-cpan-docs" id="perl-language-server-cpan-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl language server cpan docs</h2><ul>
 <li><a href="https://metacpan.org/pod/Perl::LanguageServer">Perl::LanguageServer</a></li>
 <li><a href="https://metacpan.org/pod/PLS">Perl-Language-Server (PLS)</a></li>
-</ul>
+</ul></div>
+
 
             </div>
             <div id="toc">
@@ -1825,7 +1818,7 @@ cmp.setup {
 <li><a href="#perl-language-server-cpan-docs">Perl language server cpan docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022 11:26 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 5, 2022 10:57 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/scroll_sync.js"></script>
