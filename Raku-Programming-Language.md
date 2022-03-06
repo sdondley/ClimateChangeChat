@@ -1,6 +1,6 @@
 # Raku Programming Language
 
-I haven't done much with Raku since about early Feb. It's not due to lack of interest, but lack of time.
+I haven't done much with Raku since about early February; not from lack of interest, but lack of time.
 
 # On This Page
 
