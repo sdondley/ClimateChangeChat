@@ -5,6 +5,7 @@
 - [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
 - [What the Hell is This?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
+- [Tech Tutorials](#tech-tutorials)
 
 # What the Hell is This?
 * It's a website
@@ -17,6 +18,6 @@
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
 
-#
-[Tech Tutorials](Tech-Toots)
+# Tech Tutorials
+* [Tech Tutorials](Tech-Toots)
 
