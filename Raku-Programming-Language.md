@@ -10,7 +10,7 @@
     - [Ongoing project](#ongoing-project)
     - [Tips and Tutorials](#tips-and-tutorials)
     - [My Raku questions on stackoverflow](#my-raku-questions-on-stackoverflow)
-    - [Contributions](#contributions)
+    - [My contributions to the cause](#my-contributions-to-the-cause)
         - [Module's I've Written](#modules-ive-written)
         - [Other contributions](#other-contributions)
             - [Documentation](#documentation)
@@ -66,7 +66,7 @@
 
 ## My Raku questions on stackoverflow
 * [Newest posts containing 'user:1641112' and Raku](https://stackoverflow.com/search?tab=newest&q=user%253a1641112%2520%255braku%255d)
-## Contributions
+## My contributions to the cause
 
 ### Module's I've Written
 * [Karabiner::CompModGenerctor](https://raku.land/zef:sdondley/Karabiner::CompModGenerator)
