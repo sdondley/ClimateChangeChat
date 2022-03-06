@@ -1,30 +1,42 @@
 html {  }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
-  margin: 1em 2em 2em 2em;
+  font-family: 'Libre Franklin', serif;
+  margin: 0em 2em 2em 2em;
   font-size: 120%;
-  line-height: 130%;
+  line-height: 160%;
+  background-color: #222;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height:100%;
   margin-top: 1.5em;
-  margin-bottom: 0.5em;
 }
 
-h1 {font-size: 2em; color: #000000;}
-h2 {font-size: 1.8em; color: #404040;}
-h3 {font-size: 1.6em; color: #707070;}
-h4 {font-size: 1.4em; color: #909090;}
-h5 {font-size: 1.2em; color: #989898;}
-h6 {font-size: 1em; color: #9c9c9c;}
 
-p, pre, blockquote, table, ul, ol, dl {
+:is(h1, h2, h3, h4, h5, h6)
+{
+ display: block; color: #ab4; border-radius: 20px; background-color: #101010; padding: 30px; margin-bottom: 0px;
+}
+
+h3 ~ pre {
+    margin-left: 75px;
+}
+
+h1 {font-size: 2em; padding: 30px; }
+h2 {font-size: 1.8em; padding: 25px}
+h3 {font-size: 1.6em; padding; 20px}
+h4 {font-size: 1.4em padding; 15px;}
+h5 {font-size: 1.2em padding; 10px;}
+h6 {font-size: 1em padding; 5px;}
+#toc h6 {font-size: 2.0em !important; padding: 10px !important;}
+
+p, blockquote, table, ul, ol, dl {
+  color: #4a7;
   margin-top: 1em;
-  margin-bottom: 1em;
   margin-left: 50px;
 }
+
 
 ul ul, ul ol, ol ol, ol ul {
   margin-top: 0.5em;
@@ -35,6 +47,11 @@ h2 { margin-left: 25px; }
 h3 { margin-left: 50px; }
 h4 { margin-left: 75px; }
 h5 { margin-left: 100px; }
+
+h2 ~ pre { margin-left: 50px; }
+h3 ~ pre { margin-left: 75px; }
+h4 ~ pre { margin-left: 100px; }
+h5 ~ pre { margin-left: 125px; }
 
 h1 ~ ul {
     margin-left: 45px;
@@ -52,14 +69,19 @@ h4 ~ ul {
     margin-left: 120px;
 }
 
+p strong {
+    color: #aaa;
+    padding-right: 10px;
+}
 
 
-h1:first-of-type { font-size: 3.0em; margin-top: 20px; margin-bottom: 5px; }
+
+#content  div:first-of-type > h1 { background-color: #121212; border-radius: 15px; color: #33a774; font-size: 3.0em; margin-top: 20px; margin-bottom: 30px; padding: 20px; display: block;}
 
 #update_label { display: inline-block; font-weight: bold; text-align: right; }
 #publish_label { display: inline-block; font-weight: bold; text-align: right; margin-right: 5px;}
-#toc div#update_date { margin-top: 3px; font-size: .85em; text-align: right; max-height: 25px;}
-#toc div#publish_date { margin-top: 0px; font-size: .85em; text-align:right; max-height: 25px}
+#toc div#update_date { margin-top: 3px; font-size: .85em; text-align: right; max-height: 25px; color: lightgreen;}
+#toc div#publish_date { margin-top: 0px; font-size: .85em; text-align:right; max-height: 25px; color: lightgreen;}
 
 li { margin: 0.3em auto; }
 
@@ -74,12 +96,11 @@ img { border: none; }
 
 pre {
   border-left: 2px solid #dcdcdc;
-  background-color: #f5f5f5;
+  background-color: black;
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-  font-size: 0.8em;
+  font-family: "Source Code Pro", monospace;
   border-radius: 30px;
   max-width: 100%;
   overflow: auto;
@@ -87,28 +108,46 @@ pre {
 }
 
 p > a {
-  color: white;
+  color: #0c0;
   text-decoration: none;
-  font-size: 0.7em;
-  padding: 3px 6px;
+  background-color: #333;
+  font-size: 0.9em;
+  padding: 2px 4px;
   border-radius: 3px;
-  background-color: #1e90ff;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 p > a:hover {
-  color: #dcdcdc;
-  background-color: #484848;
+  color: #444;
+  background-color: #0f0;
 }
 
 li > a {
-  color: #1e90ff;
-  font-weight: bold;
+  color: #ddd;
   text-decoration: none;
 }
 
-li > a:hover { color: #ff4500; }
+#toc li {
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+
+#content {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+#content li > a {
+  color: #0c0;
+  background-color: #333;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+li > a:hover { color: #0f0; }
 
 blockquote {
   color: #686868;
@@ -211,14 +250,13 @@ del {
 
 
 code {
-  font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  font-family: "Source Code Pro", monospace;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  padding: 5px;
   display: inline-block;
-  color: #52595d;
-  background-color: #f9f9f9;
+  padding: 0px 5px 0 5px;
+  color: #0c0;
   -webkit-user-select: all;
   user-select: all;
 }
@@ -231,41 +269,44 @@ pre code {
   padding: 5px;
   max-width: 100%;
   user-select: all;
-  background-color: #f5f5f5;
+  background-color: black;
 }
 
 #page {
     width: 100%;
-    display: inline-block;
+    background-color: #191919;
 }
 
 #menu {
-    display: inline-block;
     position: -webkit-sticky; position: sticky;
     top: 0px;
-    background-color: black;
+    background-color: #333;
     margin-left: 0px;
-    width: 100%;
-    padding: 10px 0px 10px 10px;
+    max-width: calc(100hw - 15px);
+    padding: 10px 0px 10px 25px;
+    z-index: 9999;
 }
 #menu ul { margin: 0px; }
 #menu li { padding-right: 20px; display: inline-block; margin: 0px; }
 
+.scrollsync h6 {
+    margin-top: 20px;
+}
 
 #toc {
     display: inline-block;
-    max-width: 350px;
+    max-width: 370px;
     position: -webkit-sticky;
     position: sticky;
-    margin-left: 25px;
-    top: 0px;
+    margin-left: 10px;
+    top: 70px;
     margin-top: 0px;
     vertical-align: top;
 }
 
 #toc div {
-    margin-top: 50px;
-    max-height: 700px;
+    margin-top: 10px;
+    max-height: calc(100vh - 150px);
     overflow: auto;
 }
 #toc { font-size: .8em; }
@@ -275,59 +316,94 @@ pre code {
     display: inline-block;
 }
 
+@media only screen and (min-width: 2001px) {
+    #content {
+      width: 1250px;
+    }
+    #toc {
+        max-width: 670px;
+    }
+}
 
-@media only screen and (max-width: 1656px) {
+@media only screen and (min-width: 1906px) and (max-width: 2000) {
+    #content {
+      width: 1250px;
+    }
+    #toc {
+        max-width: 520px;
+    }
+}
+
+@media only screen and (min-width: 1707px) and (max-width: 1905) {
+    #content {
+      width: 1200px;
+    }
+    #toc {
+        max-width: 470px;
+    }
+}
+
+
+@media only screen and (max-width: 1706px) {
     #content {
       width: 1100px;
     }
 }
-@media only screen and (max-width: 1556px) {
+@media only screen and (max-width: 1606px) {
     #content {
       width: 1000px;
     }
 }
 
-@media only screen and (max-width: 1456px) {
+@media only screen and (max-width: 1506px) {
     #content {
       width: 900px;
     }
 }
 
-@media only screen and (max-width: 1356px) {
+@media only screen and (max-width: 1406px) {
     #content {
       width: 800px;
     }
 }
 
-@media only screen and (max-width: 1256px) {
+@media only screen and (max-width: 1306px) {
     #content {
       width: 700px;
     }
 }
 
-@media only screen and (max-width: 1156px) {
+@media only screen and (max-width: 1206px) {
     #content {
       width: 600px;
     }
 }
 
-@media only screen and (max-width: 1056px) {
-    body{ font-size: 1.4em; }
+@media only screen and (max-width: 1106px) {
+    body{ font-size: 1.0em; }
     #toc {
-        margin-left: 10px;
-        width: 200px;
+        width: 275px;
     }
     #content {
       width: 600px;
     }
 }
 
-@media only screen and (max-width: 956px) {
+@media only screen and (max-width: 1006px) {
+    #toc {
+        width: 300px;
+    }
+    #content {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 906px) {
     #toc {
         display: none;
     }
     #content {
-        width: 100%;
+        width: 95%;
     }
 }
 .hljs-ln td {
@@ -367,4 +443,79 @@ pre code.hljs td div.hljs-ln-n {
 /* for block of code */
 .hljs-ln-code {
     padding-left: 10px;
+}
+
+
+#toc div.scrollsync li.active > a {
+    color: yellow;
+}
+
+#page ul {
+  list-style: none; /* Remove default bullets */
+}
+
+#toc a {
+    transition: all 500ms ease-in-out;
+}
+
+#toc li > a code {
+    color: #ddd;
+    transition: all 500ms ease-in-out;
+}
+
+#toc li.active > a code {
+    color: yellow;
+}
+
+
+
+#page ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ab6; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#menu a {
+    color: #ccc;
+}
+
+#menu a:hover {
+    color: #2b2;
+}
+
+#content :is(h1, h2, h3, h4, h5, h6) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    //height: var(--header-height);
+    //padding: 0 var(--default-padding);
+}
+
+
+:root {
+  --default-padding: 16px;
+  --header-height: 80px;
+}
+
+.sticky_sentinel {
+  position: absolute;
+  left: 0;
+  right: 0; /* needs dimensions */
+  visibility: hidden;
+}
+.sticky_sentinel--top {
+  /* Adjust the height and top values based on your on your sticky top position.
+  e.g. make the height bigger and adjust the top so observeHeaders()'s
+  IntersectionObserver fires as soon as the bottom of the sentinel crosses the
+  top of the intersection container. */
+  height: 0px;
+  top: 150px;
+}
+.sticky_sentinel--bottom {
+  /* Height should match the top of the header when it's at the bottom of the
+  intersection container. */
+  height: calc(var(--header-height)));
 }

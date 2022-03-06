@@ -218,6 +218,9 @@
   background-color: #f8f8f8;
 }
       </style>
+
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet" type="text/css">
 
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
@@ -225,6 +228,8 @@
         <script>
           hljs.highlightAll();
           hljs.initLineNumbersOnLoad();
+
+
         </script>
     </head>
     <body>
@@ -236,14 +241,16 @@
         </div>
         <div id="page">
             <div id="content">
+		    <div>
               <h1>
 <a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1>
-<p><strong>PREFACE</strong>: I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p>
-<p><strong>DISCLAIMER</strong>: This tutorial isn&#39;t meant to be exhaustive or the be all and end all authority of setting up language servers with neovim as I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you some frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page</p>
+<p><strong>PREFACE:</strong> I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p>
+<p><strong>DISCLAIMER:</strong> This tutorial isn&#39;t meant to be exhaustive or the be all and end all authority of setting up language servers with neovim as I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you some frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page</p>
 <p><strong>CAUTION:</strong> I&#39;ve sprinkled this post with expletives and uninformed opinions just to spice things up a little. If you&#39;re humorless or find me unfunny, go <a href="#rtfm">RTFM</a> instead.</p>
 <p><strong>UPDATE:</strong> There is now a <a href="fast_as_fuck_perl_language_server_and_completion.html">second tutorial</a> for a third Perl language server, Perl Navigator, with the COQ plugin.</p>
 
-
+		    </div>
+<div>
 <h1>
 <a aria-hidden="true" class="anchor" href="#tldr" id="tldr"><span aria-hidden="true" class="octicon octicon-link"></span></a>TLDR;</h1>
 <ul>
@@ -261,6 +268,8 @@
 </ul>
 </li>
 </ul>
+</div>
+<div>
 <h2>
 <a aria-hidden="true" class="anchor" href="#basic-setup-get-a-perl-language-server-up-and-running-with-neovim" id="basic-setup-get-a-perl-language-server-up-and-running-with-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic setup: Get a Perl language server up and running with neovim</h2>
 <ul>
@@ -271,6 +280,8 @@
 </ul>
 </li>
 </ul>
+</div>
+<div>
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-1-install-the-language-servers" id="step-1-install-the-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the language server(s)</h3>
 <ul>
@@ -302,6 +313,7 @@
 </li>
 <li>Step 1 is done</li>
 </ul>
+</div>
 <h3>
 <a aria-hidden="true" class="anchor" href="#step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim" id="step-2-install-the-nvim-lspconfig-plugin-with-git-and-install-into-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install the nvim-lspconfig plugin with git and install into neovim</h3>
 <ul>
@@ -1734,7 +1746,7 @@ cmp.setup {
 
             </div>
             <div id="toc">
-                <div>
+                <div class="scrollsync">
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
 <li><a href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</a></li>
@@ -1813,9 +1825,10 @@ cmp.setup {
 <li><a href="#perl-language-server-cpan-docs">Perl language server cpan docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022 10:33 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 4, 2022 11:26 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
+        <script src="./js/scroll_sync.js"></script>
         <script src="./js/zenscroll/zenscroll-min.js"></script>
         <script>
           zenscroll.setup(200, 50);

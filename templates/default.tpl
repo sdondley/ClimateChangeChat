@@ -4,6 +4,11 @@
             %title%
         </title>
         %pygments%
+
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Libre Franklin">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source Code Pro">
         <link rel="stylesheet" type="text/css" href="%root_path%css/style.css" />
 
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
@@ -11,6 +16,8 @@
         <script>
           hljs.highlightAll();
           hljs.initLineNumbersOnLoad();
+
+
         </script>
     </head>
     <body>
@@ -24,11 +31,12 @@
             <div id="content">
               %content%
             </div>
-            <div id="toc" >
-                <div>
+            <div id="toc">
+                <div class="scrollsync">
                 </div>
             </div>
         </div>
+        <script src="%root_path%js/scroll_sync.js"></script>
         <script src="%root_path%js/zenscroll/zenscroll-min.js"></script>
         <script>
           zenscroll.setup(200, 50);
