@@ -482,8 +482,8 @@ methods.</p></div>
 <li>No delegation required</li>
 </ul>
 </li>
-<li>End result that I&#39;m going to build upon:
-<pre><code>unit class Vimwiki::File is IO::Path;
+<li>End result that I&#39;m going to build upon:</li>
+</ul><pre><code>unit class Vimwiki::File is IO::Path;
     has $.content;
     
     method !SET-SELF() {
@@ -495,8 +495,7 @@ methods.</p></div>
         $path.IO.e ?? self.IO::Path::new($path)!SET-SELF() 
                   !! die &quot;$path is not a file&quot;;
     }
-</code></pre>
-</li>
+</code></pre><ul>
 <li>The TWEAK and BUILD methods are still ignored
 <ul>
 <li>the <code>SET-SELF</code> method takes care of that
@@ -507,6 +506,8 @@ methods.</p></div>
 </ul>
 </li>
 </ul></div>
+
+
 
 
             </div>
@@ -536,7 +537,7 @@ methods.</p></div>
 <li><a href="#one-more-thing">One more thing</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 6, 2022  1:43 AM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 6, 2022  1:44 AM</div><div id="publish_date"><span id="publish_label">First published: </span>January 31, 2022</div>
             </div>
         </div>
         <script src="./js/scroll_sync.js"></script>
