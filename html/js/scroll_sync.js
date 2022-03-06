@@ -35,7 +35,7 @@ function scroll_toc() {
 
                     var halfway = (toc_height / 2).toFixed();
                     var distance;
-                    if (liPos.top < 200 || liPos.top > toc_height - 100) {
+                    if (liPos.top < 300 || liPos.top > toc_height - 200) {
                         distance = parseInt(liPos.top) - parseInt(halfway);
                     } else {
                         return;

@@ -98,7 +98,7 @@ pre {
   border-left: 2px solid #dcdcdc;
   background-color: black;
   padding-left: 1em;
-  padding-top: 1em;
+  //padding-top: 1em;
   padding-bottom: 1em;
   font-family: "Source Code Pro", monospace;
   border-radius: 30px;
@@ -270,6 +270,7 @@ pre code {
   max-width: 100%;
   user-select: all;
   background-color: black;
+  font-size: .8em;
 }
 
 #page {
@@ -310,7 +311,8 @@ pre code {
     overflow: auto;
 }
 #toc { font-size: .8em; }
-#content { padding-bottom: 1200px;  height: 100%;
+#content { padding-bottom: 20vh;
+    height: 100%;
     width: 1200px;
     max-width: 1200px;
     display: inline-block;
@@ -391,10 +393,10 @@ pre code {
 
 @media only screen and (max-width: 1006px) {
     #toc {
-        width: 300px;
+        width: 250px;
     }
     #content {
-        width: 450px;
+        width: 500px;
     }
 }
 
@@ -413,6 +415,10 @@ pre code {
 
 table.hljs-ln {
     margin-left: 0px;
+}
+
+li code {
+    word-break: break-all;
 }
 
 pre code.hljs.language-bash .hljs-ln-n {
@@ -446,7 +452,9 @@ pre code.hljs td div.hljs-ln-n {
 }
 
 
+
 #toc div.scrollsync li.active > a {
+    font-size: 1.02em;
     color: yellow;
 }
 
@@ -455,12 +463,12 @@ pre code.hljs td div.hljs-ln-n {
 }
 
 #toc a {
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 #toc li > a code {
     color: #ddd;
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 #toc li.active > a code {
@@ -489,33 +497,9 @@ pre code.hljs td div.hljs-ln-n {
 #content :is(h1, h2, h3, h4, h5, h6) {
     position: -webkit-sticky;
     position: sticky;
-    top: 50px;
+    top: 40px;
     //height: var(--header-height);
     //padding: 0 var(--default-padding);
 }
 
 
-:root {
-  --default-padding: 16px;
-  --header-height: 80px;
-}
-
-.sticky_sentinel {
-  position: absolute;
-  left: 0;
-  right: 0; /* needs dimensions */
-  visibility: hidden;
-}
-.sticky_sentinel--top {
-  /* Adjust the height and top values based on your on your sticky top position.
-  e.g. make the height bigger and adjust the top so observeHeaders()'s
-  IntersectionObserver fires as soon as the bottom of the sentinel crosses the
-  top of the intersection container. */
-  height: 0px;
-  top: 150px;
-}
-.sticky_sentinel--bottom {
-  /* Height should match the top of the header when it's at the bottom of the
-  intersection container. */
-  height: calc(var(--header-height)));
-}
