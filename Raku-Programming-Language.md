@@ -1,5 +1,7 @@
 # Raku Programming Language
 
+I haven't done much with Raku since about early Feb. It's not due to lack of interest, but lack of time.
+
 # On This Page
 
 - [Raku Programming Language](#raku-programming-language)
