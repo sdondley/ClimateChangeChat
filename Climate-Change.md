@@ -5,6 +5,7 @@
 - [What I'm Trying to Do](#what-im-trying-to-do)
     - [Climate Change Chat for Realists](#climate-change-chat-for-realists)
         - [Guest list to date](#guest-list-to-date)
+- [Other Climate Change Projects](#other-climate-change-projects)
 
 # Climate Change
 
@@ -19,10 +20,6 @@
 * Scientists and communication specialists tell us the best way for ordinary people to help address climate change is to talk about it
     * This is why I started my "Climate Change Chat for Realists" project
         * [Climate Change Chat for Realists](https://www.youtube.com/channel/UCV8Zw3AmSS6F8kBgxW7Ql9A)
-* I'm also the guy behind the [Tony Heller Exposed blog](https://tonyhellerakastevengoddard.com)
-    * It's a parody site of a famous climate change denier
-    * Had a lot of fun with it 
-    * Don't maintain it anymore
 
 ## Climate Change Chat for Realists
 * What is it?
@@ -43,4 +40,9 @@
 * Dr. John Cook
 * Dr. Ken Rice
 
- 
+# Other Climate Change Projects 
+* I'm the guy behind the [Tony Heller Exposed blog](https://tonyhellerakastevengoddard.com)
+* It's a parody site of a famous climate change denier
+* Had a lot of fun with it 
+* Don't maintain it anymore
+
