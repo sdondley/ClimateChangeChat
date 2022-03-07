@@ -12,8 +12,7 @@
 I am the owner and founder of [Prometheus Labor
 Communications](http://prometheuslabor.com), a US Navy submarine veteran and
 former labor organizer for UFCW Local 1459 in Springfield, MA. I've had an
-early [interest in
-computers](https://steve.dondley.com/Tech-stuff/#computer-hardware) and
+early [interest in computers](my_computer_and_software_experiences.md) and
 programming since childhood and a fascination with mass communication which I
 developed during my post secondary education at Grossmont Community College in
 San Diego and UMass. I combined these passions and began developing websites
