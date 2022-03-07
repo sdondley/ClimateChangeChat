@@ -29,7 +29,7 @@ This is where I share tutorial and notes about tech stuff. Probably of little in
 * potential raw material for toots
     * [comma IDE](notes/comma_ide_notes.md)
     * [git](git)
-    * [neovim](note/neovim)
+    * [neovim](notes/neovim)
     * [raku IDE?](notes/Raku-IDE-notes.md)
     * [vimwiki-markdown](vimwiki-markdown)
  
