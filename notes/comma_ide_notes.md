@@ -11,7 +11,7 @@
 # About
 * based on IntelliJ IDE
 * presentation about building IDE for Raku with intellij
-    * https://www.youtube.com/watch?v=zDP9uUMYrvs
+    https://www.youtube.com/watch?v=zDP9uUMYrvs
 * is open source
 
 # hotkeys
