@@ -63,7 +63,7 @@
         * as long as there is electricity
         * and the apocalypse hasn't occurred
             * but no one will give a rats ass about my work at that point
-            * people barely give a rats ass about it now 
+                * people barely give a rats ass about it now 
 * content is pulled in every minute to web server running a cron
 
 ## vim
