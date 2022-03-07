@@ -113,5 +113,4 @@ I haven't done much with Raku since about early February; not from lack of inter
     * so far, I can't help too much 
 
 [Notes](notes/raku_programming_language_notes.md)
-[More](More)
 

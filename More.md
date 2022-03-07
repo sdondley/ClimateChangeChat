@@ -1,1 +1,0 @@
-# More Raku Programming Language
