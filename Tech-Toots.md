@@ -1,5 +1,3 @@
-# Tech Toots (Tutorials)
-
 # On This Page
 
 - [Tech Toots (Tutorials)](#tech-toots-tutorials)
@@ -9,6 +7,8 @@
         - [Language servers](#language-servers)
         - [plugins](#plugins)
 - [Notes and snippets](#notes-and-snippets)
+
+# Tech Toots (Tutorials)
 
 This is where I share tutorial and notes about tech stuff. Probably of little interest unless you dig computers.
 
