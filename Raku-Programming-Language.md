@@ -49,9 +49,18 @@ I haven't done much with Raku since about early February; not from lack of inter
     * written in Raku 
     * have not used it yet but want to play with it
 * IDE development in Raku?
-    * One exists 
-        * Called [Comma](https://commaide.com)
+    * One exists, called [Comma](https://commaide.com)
+        * Just tried it out for 2 minutes
+            * Initial impression is good 
+                * much faster than neovim
+            * first thing I did is install the [IdeaVim plug-in](https://plugins.jetbrains.com/plugin/164-ideavim/versions) that gives me vim commands inside the IDE
+        * downside
+            * probably no way to integrate with tmux 
+                * will have to set up a hotkey to activate it 
+                    * I'll use [Karabiner Elements](Karabiner-Elements) for that 
     * I'd prefer to develop in neovim
+        * syntax highlighting is atrociously slow
+            * I turn it off for any file larger than like 50 lines
         * unable to find a language server, however 
         * not sure how hard it is to build a language server
             * probably pretty tough
