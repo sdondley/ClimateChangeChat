@@ -7,6 +7,7 @@ I haven't done much with Raku since about early February; not from lack of inter
 - [Raku Programming Language](#raku-programming-language)
 - [What is Raku?](#what-is-raku)
 - [Why Raku?](#why-raku)
+- [Raku-related tech](#raku-related-tech)
 - [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
     - [Problems I've encounted](#problems-ive-encounted)
     - [Ongoing project](#ongoing-project)
@@ -41,6 +42,12 @@ I haven't done much with Raku since about early February; not from lack of inter
 * Has powerful, new features
     * Grammars 
 * It's just fun to play around with and see what I can do with it
+
+# Raku-related tech
+* [Cro](Cro)
+    * a framework for building websites 
+    * written in Raku 
+    * have not used it yet but want to play with it
 
 # My Adventures with Raku To Date
 * Began learning the language in late Dec. 2021
@@ -90,4 +97,5 @@ I haven't done much with Raku since about early February; not from lack of inter
 
 [Notes](Notes)
 [More](More)
+
 
