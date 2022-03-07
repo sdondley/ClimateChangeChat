@@ -48,6 +48,13 @@ I haven't done much with Raku since about early February; not from lack of inter
     * a framework for building websites 
     * written in Raku 
     * have not used it yet but want to play with it
+* IDE development in Raku?
+    * One exists 
+        * Called [Comma](https://commaide.com)
+    * I'd prefer to develop in neovim
+        * unable to find a language server, however 
+        * not sure how hard it is to build a language server
+            * probably pretty tough
 
 # My Adventures with Raku To Date
 * Began learning the language in late Dec. 2021
