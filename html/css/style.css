@@ -412,10 +412,37 @@ pre code {
     #menu li { padding-right: 10px; display: inline-block; margin: 0px; }
     #content {
         border-right: none;
+        padding-right 5px;
     }
     body {
         margin: 0px;
         font-size: 1.2em;
+    }
+
+    h2 { margin-left: 10px; }
+    h3 { margin-left: 20px; }
+    h4 { margin-left: 30px; }
+    h5 { margin-left: 40px; }
+
+    h2 ~ pre { margin-left: 20px; }
+    h3 ~ pre { margin-left: 30px; }
+    h4 ~ pre { margin-left: 40px; }
+    h5 ~ pre { margin-left: 50px; }
+
+    h1 ~ ul {
+        margin-left: 30px;
+    }
+
+    h2 ~ ul {
+        margin-left: 40px;
+    }
+
+    h3 ~ ul {
+        margin-left: 50px;
+    }
+
+    h4 ~ ul {
+        margin-left: 60px;
     }
 }
 .hljs-ln td {
