@@ -59,9 +59,9 @@ I haven't done much with Raku since about early February; not from lack of inter
                 * will have to set up a hotkey to activate it 
                     * I'll use [Karabiner Elements](Karabiner-Elements) for that 
     * I'd prefer to develop in neovim
+        * unable to find a language server, however 
         * syntax highlighting is atrociously slow
             * I turn it off for any file larger than like 50 lines
-        * unable to find a language server, however 
         * not sure how hard it is to build a language server
             * probably pretty tough
 
