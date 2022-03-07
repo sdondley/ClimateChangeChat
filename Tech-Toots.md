@@ -27,9 +27,9 @@ This is where I share tutorial and notes about tech stuff. Probably of little in
 # Notes and snippets
 * A random, incomplete collection of notes and short snippets
 * potential raw material for toots
+    * [comma IDE](notes/comma_ide_notes.md)
     * [git](git)
     * [neovim](neovim)
-    * [vimwiki-markdown](vimwiki-markdown)
-    * [comma IDE](notes/comma_ide_notes.md)
     * [raku IDE?](notes/Raku-IDE-notes.md)
+    * [vimwiki-markdown](vimwiki-markdown)
  
