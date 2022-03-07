@@ -113,7 +113,7 @@
     * simpler is better
 * I don't want it to be time-consuming
     * A design that looks like a magazine and is both functional and not annoying to update and maintain takes a huge amount of effort 
-* This will improve somewhat over time as I work on it 
+* Things will improve slowly over time as I work on it 
     * may add some graphics to spiff it up a little 
     * right now, I'm not sure I like the colors 
         * may play with it some more 
