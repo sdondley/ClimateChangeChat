@@ -40,6 +40,11 @@
 <li>a ruby script</li>
 <li>to be used with with vimwiki plugin
 <ul>
+<li>vimwiki does not support export of markdown syntax
+<ul>
+<li>3rd party plugin necessary</li>
+</ul>
+</li>
 <li>if you don&#39;t use vimwiki, you have no need for this plugin</li>
 </ul>
 </li>
@@ -134,11 +139,20 @@ my $there_are_problems_however = &quot;overrides local css code&quot;;
 </li>
 </ul>
 </li>
-</ul></div>
-
-<div><h3>
-<a aria-hidden="true" class="anchor" href="#vimwiki_markdown-documentation" id="vimwiki_markdown-documentation"><span aria-hidden="true" class="octicon octicon-link"></span></a>vimwiki_markdown documentation</h3><ul>
-<li>non-existent</li>
+<li>got in touch with author of vimwiki_markdown
+<ul>
+<li>he confirmed there is no easy way to turn off rouge</li>
+<li>I rolled my own solution
+<ul>
+<li>I just modify the html after it&#39;s published with my raku post processing script
+<ul>
+<li>removes the css from the dom entirely</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul></div>
 
 
@@ -152,15 +166,10 @@ my $there_are_problems_however = &quot;overrides local css code&quot;;
 <li>
 <a href="#integration-with-rouge">Integration with rouge</a>
 <ul>
-<li>
-<a href="#integration-with-rouge-creates-problems-for-me">integration with rouge creates problems for me</a>
-<ul>
-<li><a href="#vimwiki_markdown-documentation">vimwiki_markdown documentation</a></li>
+<li><a href="#integration-with-rouge-creates-problems-for-me">integration with rouge creates problems for me</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 7, 2022  1:59 AM</div><div id="publish_date"><span id="publish_label">First published: </span>January 28, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 7, 2022  2:04 AM</div><div id="publish_date"><span id="publish_label">First published: </span>January 28, 2022</div>
             </div>
         </div>
         <script src="./js/scroll_sync.js"></script>

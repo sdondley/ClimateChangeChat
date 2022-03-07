@@ -4,7 +4,6 @@
 - [Description](#description)
 - [Integration with rouge](#integration-with-rouge)
     - [integration with rouge creates problems for me](#integration-with-rouge-creates-problems-for-me)
-        - [vimwiki_markdown documentation](#vimwiki_markdown-documentation)
 
 # vimwiki-markdown plugin
 
@@ -13,6 +12,8 @@
 # Description
 * a ruby script 
 * to be used with with vimwiki plugin 
+    * vimwiki does not support export of markdown syntax
+        * 3rd party plugin necessary 
     * if you don't use vimwiki, you have no need for this plugin 
 * converts markdown text to html
 * ~~uses [Pygments](Pygments) to do syntax highlighting of code embedded in the markdown document~~
@@ -61,6 +62,9 @@ my $there_are_problems_however = "overrides local css code";
     * IIRC, vimwiki-markdown will throw errors if you remove `%pygments` tag from template 
         * testing... 
             * yeah, removing tag from template breaks the command
+* got in touch with author of vimwiki_markdown
+    * he confirmed there is no easy way to turn off rouge 
+    * I rolled my own solution 
+        * I just modify the html after it's published with my raku post processing script 
+            * removes the css from the dom entirely
 
-### vimwiki_markdown documentation
-* non-existent
