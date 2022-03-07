@@ -21,7 +21,7 @@
 
 
 # What is it?
-* It's primarily a podcast
+* It's primarily a [podcast](podcast)
 * Started in late 2020
 
 # Hosts

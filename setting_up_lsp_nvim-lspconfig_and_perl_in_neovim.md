@@ -1,9 +1,9 @@
 # Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
-**PREFACE:** I knew next to nothing about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some [head-banging](https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/) to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck! 
+**PREFACE:** I knew zilch about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some [head-banging](https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/) to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck! 
 
-**DISCLAIMER:** This tutorial isn't meant to be exhaustive or the be all and end all authority of setting up language servers with neovim as I'm not an expert on the topic. It's meant to get you up to speed faster and save you some frustration. When in doubt, [RTFM](#rtfm). If you find any bad mistakes or bad information in this tutorial, email me at s@dondley.com or [do a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) to suggest a change to this page
+**DISCLAIMER:** This tutorial isn't exhaustive or set out to be the authority on setting up language servers with neovim. I'm not an expert on the topic. It's meant to get you up to speed faster and save you frustration. When in doubt, [RTFM](#rtfm). If you find any bad mistakes or bad information in this tutorial, email me at s@dondley.com or [do a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) to suggest a change to this page.
 
-**CAUTION:** I've sprinkled this post with expletives and uninformed opinions just to spice things up a little. If you're humorless or find me unfunny, go [RTFM](#rtfm) instead.
+**CAUTION:** I sprinkled this post with expletives and uninformed opinions to spice it up a little. If you're humorless or find me unfunny, go [RTFM](#rtfm) instead.
 
 **UPDATE:** There is now a [second tutorial](fast_as_fuck_perl_language_server_and_completion.md) for a third Perl language server, Perl Navigator, with the COQ plugin.
 
@@ -61,7 +61,7 @@
     * Good idea to do this first then do advanced set up below
 
 ### Step 1: Install the language server(s)
-* There are 2 langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
+* There are two langauge servers to choose from, Perl Language Server (PLS) and Perl::LanguageServer
     * From the command line, install one or both: 
         * `cpanm PLS` 
             * I recommend this one 
@@ -811,7 +811,7 @@ I've googled these for you. You're welcome.
     }
     ```
 # RTFM
-* eating vegetables sucks too but they're good for you
+* not fun, but way better than eating veggies
 * get answers for things I didn't bother to RTFM for
 
 ## neovim docs
