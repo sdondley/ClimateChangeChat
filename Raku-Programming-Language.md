@@ -50,6 +50,7 @@ I haven't done much with Raku since about early February; not from lack of inter
     * have not used it yet but want to play with it
 * IDE development in Raku?
     * One exists, called [Comma](https://commaide.com)
+        * My [comma notes](notes/comma_ide_notes)
         * Just tried it out for 2 minutes
             * Initial impression is good 
                 * much faster than neovim
