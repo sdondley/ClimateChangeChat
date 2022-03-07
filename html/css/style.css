@@ -409,6 +409,10 @@ pre code {
     :is(h1, h2, h3, h4, h5, h6) {
         font-size: 1.4em !important;
     }
+    #menu li { padding-right: 10px; display: inline-block; margin: 0px; }
+    #content {
+        border-right: none;
+    }
 }
 .hljs-ln td {
     padding: 2px;
