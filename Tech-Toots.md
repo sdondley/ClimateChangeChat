@@ -30,4 +30,6 @@ This is where I share tutorial and notes about tech stuff. Probably of little in
     * [git](git)
     * [neovim](neovim)
     * [vimwiki-markdown](vimwiki-markdown)
+    * [comma IDE](notes/comma_ide_notes.md)
+    * [raku IDE?](notes/Raku-IDE-notes.md)
  
