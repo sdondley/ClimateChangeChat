@@ -6,7 +6,7 @@
 
 # neovim notes
 
-vim is something a not-so-modern software miracle. Something originally written
+vim is something a not-so-modern software miracle. Originally written
 in 1976 by Bill Joy, it still manages to a the text editor of choice
 for many developers, especially open source developers. It's an insanely
 flexible and configurable text editor. It would take a lifetime to truly master
