@@ -32,7 +32,7 @@
         * also uses vimwiki/markdown
         * uses jekyll framework
         * looks nice, but framework was too convoluted and confusing and a pain to keep upgraded 
-    * [More about me](Steve Dondley)
+    * [More about me](steve_dondley)
 
 # Website Name
 * Climate Change Chat for Realists
