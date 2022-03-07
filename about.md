@@ -94,7 +94,7 @@
 
 # Why is this site written mostly in outline form?
 * It's inherent to the design of the software I used to write it
-    * vimwiki
+    * called vimwiki
 * It's much faster to write this way
     * no agonizing over how eloquent I'm being and how well ideas flow 
     * much fucking faster to edit/revise

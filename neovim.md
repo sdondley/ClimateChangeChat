@@ -1,3 +1,9 @@
+# On This Page
+
+- [neovim notes](#neovim-notes)
+    - [Configuration](#configuration)
+        - [Configuring nvim from scratch](#configuring-nvim-from-scratch)
+
 # neovim notes
 
 vim is a modern software miracle. It's an insanely flexible and configurable text editor. It would take a lifetime to truly master it and populates the wet dreams of all true nerds. neovim has come along in recent years to give vim a run for it's money.
