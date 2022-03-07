@@ -4,7 +4,7 @@
 - [Plugins](#plugins)
 
 # Comma IDE Notes
-
+* based on IntelliJ IDE
 * presentation about building IDE for Raku with intellij
     * https://www.jetbrains.com/help/idea/spellchecking.html#configure-the-typo-inspection
 * Turn of annoying typo messages for string literals in code
