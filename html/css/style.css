@@ -75,7 +75,6 @@ p strong {
 }
 
 
-
 #content  div:first-of-type > h1 { background-color: #121212; border-radius: 15px; color: #33a774; font-size: 3.0em; margin-top: 20px; margin-bottom: 30px; padding: 20px; display: block;}
 
 #update_label { display: inline-block; font-weight: bold; text-align: right; }
