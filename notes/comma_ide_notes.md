@@ -1,19 +1,24 @@
+# Comma IDE Notes
+ 
 # On This Page
 
 - [Comma IDE Notes](#comma-ide-notes)
-- [hotkey](#hotkey)
+- [About](#about)
+- [hotkeys](#hotkeys)
 - [recipes](#recipes)
 - [Plugins](#plugins)
 
-# Comma IDE Notes
+# About
 * based on IntelliJ IDE
 * presentation about building IDE for Raku with intellij
     * https://www.jetbrains.com/help/idea/spellchecking.html#configure-the-typo-inspection
 * is open source
 
-# hotkey
-* cmd-backtick:
-    * open preferences
+# hotkeys
+| Key command | Description      |
+|-------------|------------------|
+| ⌘-+         | expand fold      |
+| ⌘-backtick  | open preferences |
 
 # recipes
 * Turn of annoying typo messages for string literals in code
