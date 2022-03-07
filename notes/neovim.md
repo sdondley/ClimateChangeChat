@@ -6,7 +6,12 @@
 
 # neovim notes
 
-vim is something a not-so-modern software miracle. Something originally built in the early 80s by Bill Joy, it still manages to a the text editor of choice for many developers, especially open source developers. It's an insanely flexible and configurable text editor. It would take a lifetime to truly master it and populates the wet dreams of all true nerds. neovim has come along in recent years to give vim a run for it's money.
+vim is something a not-so-modern software miracle. Something originally built
+in the early 80s by Bill Joy, it still manages to a the text editor of choice
+for many developers, especially open source developers. It's an insanely
+flexible and configurable text editor. It would take a lifetime to truly master
+it. neovim, a direct fork of vim, has come along in recent years to give vim a
+run for it's money and improve upon it.
 
 * What is neovim?
     * neo = "new" vim
