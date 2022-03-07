@@ -49,6 +49,7 @@ I haven't done much with Raku since about early February; not from lack of inter
     * written in Raku 
     * have not used it yet but want to play with it
 * IDE development in Raku?
+    * [Raku IDE notes](notes/Raku-IDE-notes)
     * One exists, called [Comma](https://commaide.com)
         * My [comma notes](notes/comma_ide_notes)
         * Just tried it out for 2 minutes
