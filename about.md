@@ -48,17 +48,22 @@
 * keep track of shit
 
 # The tech under the hood
-* all content is published to github to private repo
-    * all new content is publshed with custom vim maps
-        * Example:
-            * Typing `<leader>www` does the following:
-                * saves the markdown file I'm working on
-                * processes the markdow file and converts to HTML
-                * commits the markdown and HTML file to a git repo
-                * pushes changes out to the remote repo
-    * I can quickly whip out text and publish it to web with little effort
-    * git will give me an entire history of every change published to the site
-        * nothing will be lost to the historians who stumble upon my great work :) 
+* all content is published to github to a publicly available repo
+    * people can go to github and suggest edits 
+* all new content is publshed with custom vim maps
+    * Example:
+        * Typing `<leader>www` does the following:
+            * saves the markdown file I'm working on
+            * processes the markdow file and converts to HTML
+            * commits the markdown and HTML file to a git repo
+            * pushes changes out to the remote repo
+* I can quickly whip out text and publish it to web with little effort
+* git will give me an entire history of every change published to the site
+    * nothing will be lost to the historians who stumble upon my great work :) 
+        * as long as there is electricity
+        * and the apocalypse hasn't occurred
+            * but no one will give a rats ass about my work at that point
+            * people barely give a rats ass about it now 
 * content is pulled in every minute to web server running a cron
 
 ## vim
