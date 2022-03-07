@@ -112,7 +112,6 @@ I haven't done much with Raku since about early February; not from lack of inter
 * I try to help out in IRC if I can
     * so far, I can't help too much 
 
-[Notes](Notes)
+[Notes](notes/raku_programming_language_notes.md)
 [More](More)
-
 
