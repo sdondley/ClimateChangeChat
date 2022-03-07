@@ -45,5 +45,4 @@ Note: all notes below apply to default macOS. While the descriptions are accurat
     * config is in lua.init, not init.vim
     * in general, use `vim.opt` over `vim.o`
     * can use after/ftplugin/<filetype>.lua for lua code
-    * 
         

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Neovim
+        </title>
+       
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../tech-toots.html">Tech Toots</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#neovim-notes" id="neovim-notes"><span aria-hidden="true" class="octicon octicon-link"></span></a>neovim notes</h1><p>vim is a modern software miracle. It&#39;s an insanely flexible and configurable text editor. It would take a lifetime to truly master it and populates the wet dreams of all true nerds. neovim has come along in recent years to give vim a run for it&#39;s money.</p><ul>
+<li>What is neovim?
+<ul>
+<li>neo = &quot;new&quot; vim</li>
+<li>It&#39;s a fork of the vim text editor</li>
+<li>Popular with newer developers</li>
+<li>Big advantage over vim is many more people work on it
+<ul>
+<li>Faster development cycle</li>
+<li>Does more innovative stuff than vim
+<ul>
+<li>Examples:
+<ul>
+<li>Language server protocol implementation
+<ul>
+<li>useful for editing code like an IDE</li>
+</ul>
+</li>
+<li>Lua integration
+<ul>
+<li>claims to better to work with than vimscript</li>
+<li>vimscript can still be used with neovim</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Basically backward compatible with vim but with extra features</li>
+</ul>
+</li>
+</ul></div>
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#configuration" id="configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2><p>Note: all notes below apply to default macOS. While the descriptions are accurate, directory locations may be different on your machine.</p><ul>
+<li>two main directories
+<ul>
+<li>~/.local/share/nvim
+<ul>
+<li>for storing more tranisient data about vim files (which can be stored anywhere on the machine) on the local machine</li>
+</ul>
+</li>
+<li>~/.config/nvim/
+<ul>
+<li>this is where the user can configure vim to their liking</li>
+<li>Most time is spent here configuring vim to your heart&#39;s desire</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#configuring-nvim-from-scratch" id="configuring-nvim-from-scratch"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring nvim from scratch</h3><ul>
+<li>if you already have a neovim config:
+<ul>
+<li>good idea to create git repo of the nvim directory in .config
+<ul>
+<li>create new branch called &#39;clean&#39;</li>
+<li>delete all config files on the branch</li>
+<li>commit the branch</li>
+<li>switch back to old config until clean config is where you need it to be</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>convert old init.vim to lua
+<ul>
+<li>tutorial <a href="https://www.notonlycode.org/neovim-lua-config/">https://www.notonlycode.org/neovim-lua-config/</a>
+</li>
+<li>config is in lua.init, not init.vim</li>
+<li>in general, use <code>vim.opt</code> over <code>vim.o</code>
+</li>
+<li>can use after/ftplugin/<filetype>.lua for lua code</filetype>
+</li>
+</ul>
+</li>
+</ul></div>
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li>
+<a href="#neovim-notes">neovim notes</a>
+<ul>
+<li>
+<a href="#configuration">Configuration</a>
+<ul>
+<li><a href="#configuring-nvim-from-scratch">Configuring nvim from scratch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div id="publish_date"><span id="publish_label">First published: </span>March 7, 2022</div>
+            </div>
+        </div>
+        <script src="../js/scroll_sync.js"></script>
+        <script src="../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+
