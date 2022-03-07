@@ -413,6 +413,10 @@ pre code {
     #content {
         border-right: none;
     }
+    body {
+        margin: 0px;
+        font-size: 1.2em;
+    }
 }
 .hljs-ln td {
     padding: 2px;
