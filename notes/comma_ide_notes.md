@@ -11,7 +11,7 @@
 # About
 * based on IntelliJ IDE
 * presentation about building IDE for Raku with intellij
-    * https://www.jetbrains.com/help/idea/spellchecking.html#configure-the-typo-inspection
+    * https://www.youtube.com/watch?v=zDP9uUMYrvs
 * is open source
 
 # hotkeys
