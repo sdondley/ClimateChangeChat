@@ -14,6 +14,9 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
+* Stack overflow question on inline perl raku module
+    * I can be a real dummy sometimes 
+        *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
 * Anderson Cooper on Stephen Colbert
     * talks about coomplications of covering war and what he think Putin is afraid of 
         https://www.youtube.com/watch?v=9r_8jhtcUIo
