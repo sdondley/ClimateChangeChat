@@ -254,8 +254,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
 
 #### The Apple FanBoi Years
 I've kind of lost track of all the Apple products I've purchased over the past
-12 years. Here they are to the best of my recollection. I've easily spent
-roughly $30K on them which is probably a bit obsessive, I'll admit. We've all
+12 years. Here they are to the best of my recollection. I've spent roughly
+$35K on them which is probably a bit obsessive, I'll admit. We've all
 got our vices. Still cheaper than buying a new car every few years.
 
 * 2008
