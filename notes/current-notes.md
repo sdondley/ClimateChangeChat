@@ -17,6 +17,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * Galaxy Brain newsletter
     *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
     * about the spread of info during wartime on the net
+    * discusses what we know about following disinformation networks
 * Tried out HackMD
     * collaborate with others using git markup 
         * an idea I have long had 
