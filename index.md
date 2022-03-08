@@ -23,7 +23,7 @@
     * organized like a diary
 
 # Tech Tutorials
-* [Tech Toots](tech-toots)
+* [Tech Toots](tech-stuff)
 
 # Tech Snippets
 * [Tech Snips](snips/Tech-Snips)
