@@ -216,16 +216,27 @@ other experiences that inspired my or left some kind of permanent mark on my wet
             idea what I was doing.
         * Got bit by the free software bug
     * Taught myself [Perl](/Perl)
+    * Got my first gig a paid consultant
+        * landed a $10,000 contract to consult on some Perl software
+            * had only read maybe half of two Perl books 
 * 2004
     * Bought a couple of 1U servers and started hosting websites for clients
     * Housed them in a datacenter
     * All run Debian
     * Since that time, I bought several other servers as company grew
+    * Started learning Drupal, the CMS
+        * started learning PHP
+        * first use of mysql and database-driven websites
+        * built website for my growing list of clients with it 
+        * I had an intense interest in building online communities
+            * Intrigued by the idea of communicating collaboratively
 * 2008
     * switched to mac for my main computer machine 
         * got fed up with Windows crashes
         * also saw a lot of developer I knew were using macs
     * see below for my Apple product purchases
+* 2012
+    * ditched Drupal for WordPress
 * 2015/6?
     * Bought my kid an Oculus Rift for my son
         * he used it for a few hours 
