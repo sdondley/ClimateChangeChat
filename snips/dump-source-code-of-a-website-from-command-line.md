@@ -1,6 +1,6 @@
 # On This Page
 
-- [dump source code of a website from command line](#dump-source-code-of-a-website-from-command-line)
+- [dump source code of a website from command line](dump-source-code-of-a-website-from-command-line)
     - [Using Google Chrome](#using-google-chrome)
 
 # dump source code of a website from command line
