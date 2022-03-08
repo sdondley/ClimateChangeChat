@@ -126,8 +126,9 @@ other experiences that inspired my or left some kind of permanent mark on my wet
             * I still kind of maintain of obsessiveness about cataloguing things with a computer, though
                 * and I'm still not very diligent about it
                 * My great Aunt Phyllis also did this 
-                    * had a massive collection of index cards with notes for everything 
-                    * immacualte penmanship
+                    * seemed like she had massive collection of index cards with notes for everything 
+                    * all of her Victrola records were very precisely detailed
+                    * she immacualte penmanship
         * Conceived a graphical software maze game in 3-D.
             * Never finished it (and barely started it) but I'm sure it would have
                 been better than Doom
