@@ -230,6 +230,10 @@ other experiences that inspired my or left some kind of permanent mark on my wet
         * built website for my growing list of clients with it 
         * I had an intense interest in building online communities
             * Intrigued by the idea of communicating collaboratively
+* 2005
+    * Left my part-time job to turn my part-time hobby as a web developer into my company
+    * Originally named "Dondley Communications"
+    * renamed "Prometheus Labor Communications" after about 6 months
 * 2008
     * switched to mac for my main computer machine 
         * got fed up with Windows crashes
