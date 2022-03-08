@@ -28,6 +28,7 @@ Tutorials I've written.
 * [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](fast_as_fuck_perl_language_server_and_completion.md)
  
 # Tech Snips
+
 Useful snippets of code for little jobs.
 
 [Tech Snips](snips/Tech-Snips.md)
