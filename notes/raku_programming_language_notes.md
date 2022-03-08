@@ -1,25 +1,22 @@
+# On This Page
+
+- [Raku Programming Language Notes](#raku-programming-language-notes)
+- [Regexes](#regexes)
+
 # Raku Programming Language Notes
 
-* Notes go here
-* Nothing to see here yet
-    * just testing 
-
 # Regexes
+* regexes almost have to be relearned, coming from perl
+    * fortunately, compiler can be very helpful pointing out mistakes if you are coming from perl 
 * `#` (hash sign) must be commented out
 * matching beginning and end of lines
     * `^^` and `$$` 
+* capture marker: `<( )>`
+* Ranges:
+    * perl: `a-z`
+    * raku: `a..z`
 * character classes
     * <[oneofthesechars]>
     * is not *this* characters 
         * `<-[b]>`
 
-# Inline-Perl5 module
-* problems using
-    ```
-    use Lingua::En::Titlecase:from<Perl5>;
-    my $tc = Lingua::EN::Titlecase.new("CAN YOU FIX A TITLE?");
-    ```
-* throws error:
-    ```
-    Could not find symbol ''&Titlecase'' in ''GLOBAL::Lingua::EN''
-    ```
