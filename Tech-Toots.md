@@ -32,7 +32,7 @@ Tutorials I've written.
 
 ## Notes
 
-Because I don't have a photographic memory
+Because I sure as hell don't have a photographic memory
 
 * [comma IDE](notes/comma_ide_notes.md)
 * [git](git)
