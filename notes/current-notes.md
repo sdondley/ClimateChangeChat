@@ -32,6 +32,26 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                         * but I may 
                         * but wait, I have a used car I'm looking to sell
                             * how much could I get for that?
+    * other option is to get the one with the max chip
+        * much more reasonably priced at two grand (to start)
+        * with trade in, could get for just $300 after vet discount
+            * extremely tempting 
+        * still have to buy a monitor
+            * or coud just use the one crappy thunderbolt display
+                * not really an option 
+        * however, that monitor could be used for newer computers I buy
+            * so could end up saving me money 
+        * but would take a huge hit on storage space
+            * 4 TB hard drive is $1200! 
+                * that's insane 
+        * also still have the 2015 imac
+            * could maybe get 4 or 500 hundred for it 
+            * which means I would only have to spend about $1000 out of pocket
+                * but $2200 with the storage I need
+                * for a much faster computer 
+                * maybe slightly better screen 
+        * far fewer ports than I need
+            * would need to drop about $100 for adapters and such 
 * Galaxy Brain newsletter
     *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
     * about the spread of info during wartime on the net
