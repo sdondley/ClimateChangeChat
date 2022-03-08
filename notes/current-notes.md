@@ -19,6 +19,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * about the spread of info during wartime on the net
     * discusses what we know about following disinformation networks
     * quotes experts on dissemination of Russian propaganda and their operations
+    * upshot: it's too early to tell how prop war is going
 * Tried out HackMD
     * collaborate with others using git markup 
         * an idea I have long had 
