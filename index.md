@@ -17,7 +17,9 @@
 # Current projects and areas of current interest
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
-* [current notes](notes/current-notes)
+* [Current Notes](notes/current-notes)
+    * just random notes about things I'm learning about 
+    * organized like a diary
 
 # Tech Tutorials
 * [Tech Tutorials](tech-toots)
