@@ -218,7 +218,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
     * Taught myself [Perl](/Perl)
     * Got my first gig a paid consultant
         * landed a $10,000 contract to consult on some Perl software
-            * had only read maybe half of two Perl books 
+            * had only read maybe half of two Perl books at the time
 * 2004
     * Bought a couple of 1U servers and started hosting websites for clients
     * Housed them in a datacenter
