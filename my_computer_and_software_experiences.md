@@ -149,8 +149,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
     * My brother-in-law worked in the software industry and had some kind of
         printing device (I think it was some kind of portable teletype machine)
         connected to a modem. I could play games on it.
-    * Spent probably a few weeks of paper route money and got a digital Casio watch with a touch screen
-        * it scratched easily and the "zero" button stopped working at some poine
+    * Spent probably a couple of weeks of paper route money and got a digital Casio calculator watch with a touch screen
+        * it scratched easily and the "zero" button stopped working at some point
             * I think I got another one not long after and the same thing happened
         * It was either this one or something similar:
             * [CASIO - TC-600 - Calculator - Vintage Digital Watch - Digital-Watch.com: www.digital-watch.com](http://www.digital-watch.com/DWL/1work/casio-tc-600)
