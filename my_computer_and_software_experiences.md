@@ -161,6 +161,11 @@ other experiences that left a mark on my imagination.
     * Housed them in a datacenter
     * All run Debian
     * Since that time, I bought several other servers as company grew
+* 2020
+    * Finally made the move to the cloud with AWS 
+        * should have done it sooner 
+        * just not practical to run your own hardware 
+            * trips to the datacenter over an hour away suck
 
 #### The Apple FanBoi Years
 I've kind of lost track of all the Apple products I've purchased over the past
@@ -205,6 +210,7 @@ got our vices. Still cheaper than buying a new car every few years.
     * Apple Watch Series 2
     * iPhone X
     * iPad Pro 10.5"
+        * Apple pencil
 * 2018
     * HomePod
     * iPhone XS
@@ -218,6 +224,7 @@ got our vices. Still cheaper than buying a new car every few years.
     * Air Pods Pro
 * 2021
     * Apple Watch Series 7
+    * HomePod mini
     * MacBook Pro original M1
     * iPhone 13 Pro
     * Air Pods Max
