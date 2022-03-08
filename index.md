@@ -17,6 +17,7 @@
 # Current projects and areas of current interest
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
+* [current notes](notes/current-notes)
 
 # Tech Tutorials
 * [Tech Tutorials](tech-toots)
