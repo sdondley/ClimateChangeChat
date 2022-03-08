@@ -82,7 +82,7 @@ wristband that was supposed to look like alligator skin, it was good enough for
 me.
 
 Here's a rough timeline of some of the other hardware I've owned as well as
-other experiences that left a mark on my imagination.
+other experiences that inspired my or left some kind of permanent mark on my wetware.
 
 * 1977?
     * [Little Professor - Wikipedia](https://en.wikipedia.org/wiki/Little_Professor)
@@ -93,7 +93,8 @@ other experiences that left a mark on my imagination.
     * My first use of a computer attached to a network
         * Armory Street School, 5th or 6th grade
         * It was some kind of horizonal teletype machine with a keyboad connected
-            computer in downtown Springfield
+                computer in downtown Springfield
+            * was very excited to play with it occassionally
             * it could play simple games such as madlibs, tic-tac-toe, etc.
 * Early 80s
     * Various hand-held games
@@ -102,6 +103,8 @@ other experiences that left a mark on my imagination.
         * [Simon (game) - Wikipedia](https://en.wikipedia.org/wiki/Simon_%28game%29)
         * [Merlin (console) - Wikipedia](https://en.wikipedia.org/wiki/Merlin_%28console%29)
         * [Microvision - Wikipedia](https://en.wikipedia.org/wiki/Microvision)
+* 1982 to 1994
+    * spent unglodly amounts of my paper route money and spare time playing arcade games 
 * 1983
     * Got an [Apple IIe - Wikipedia](https://en.wikipedia.org/wiki/Apple_IIe)
         * It was purchased by my brother, 10 years older than me, while he was in
@@ -121,6 +124,12 @@ other experiences that left a mark on my imagination.
                 been better than Doom
     * Intellivision video game console
         * Video games basically killed my budding career in programming
+    * I took some special course in electronics offered by my junior high school
+        * there were only 3 of us enrolled
+        * learned a little bout digital electronics and boolean math
+        * project was to build an arcade video game from parts 
+            * I don't think we ever finished it
+        * helped spark my interests further in electronic hardware
 * 1984
     * My sister and brother-in-law had an original Macintosh computer
         * Didn't have much need for it but was absolutely fascinated by it and spent
@@ -128,27 +137,68 @@ other experiences that left a mark on my imagination.
     * My brother-in-law worked in the software industry and had some kind of
         printing device (I think it was some kind of portable teletype machine)
         connected to a modem. I could play games on it.
+* 1987/88
+    * Took a couple of electronic courses in high school 
+    * learned all the basics
+* 1988
+    * enlisted in US Navy
+    * my rate was electronics technician
+        * went through a considerably good and thorough US Navy trade school 
+            * called "Nuclear Field A School" 
+            * focused more on transistor circuits than what I learned in high school
+        * learned to troubleshoot electronic circuits
+            * mostly on navy equipment, mostly analog at the time
 * 1991
     * Bought my own first computer, an [IBM PS/1 - Wikipedia](https://en.wikipedia.org/wiki/IBM_PS/1)
         * Operating system was PC DOS
-        * Provided for my introduction to bulletin boards and Prodigy
+        * Provided for my introduction to bulletin boards and Prodigy online service
             * Early precursors to the World Wide Web which got popular a few years
                 later
+            * Prodigy was a walled-garden version of the Internet at the time
         * Tried learning C++ from a book but without success
             * OO concepts were way over my head at the time
-            * Had way more fun things to do while living in the Bay Area in my early
-                20s
-* Early to mid-90s
-    * Assembled a couple Windows-based computers from components
+            * Had way more fun things to do while living in the Bay Area in my early 20s
+* 1991/2?
+    * played a "virtual reality" game in Berkley, CA
+        * I think it was on University Ave. 
+        * required you to wear a helmet on your head
+        * had crude graphics but was amazing at the time
+    * met a guy online and then face-to-face who told me about the internet
+        * he was on it
+        * didn't seem to be of any interest for me
+            * populated by scientists and academics
+* 1992 to 1994
+    * Assembled a couple of Windows-based PCs from components
+* 1995
+    * used the internet for the first time at Grossmont Community College 
+        * doing research for an essay I was writing 
+        * was trying to get stats on smokers 
 * 1996 (maybe '97)
     * Nintendo 64
+        * I also had a Nintendo or super Nintendo console at one point 
+            * don't remember when or how I got it 
+            * maybe got it in '95 
 * 1997
     * Got a [Web TV - Wikipedia](https://en.wikipedia.org/wiki/MSN_TV) to surf the web
+    * My PCs got abandoned when I left San Diego and left the Navy 
 * 1998 - 2005
-    * Bought two or three IBM clone Window machines
+    * First time on the internet with a "real" browser
+        * Netscape Navigator 
+    * Bought three, or 4 IBM clone Window machines as my main computing device in this period
+        * Apple/macs were thought to be a joke at the time
         * Maybe the first was a Gateway? Not sure.
+        * May have also bought a generic one
         * The last one I bought was a Dell
         * Got consumed with the internet and building websites
+    * Got a broadband around 98 or early 99
+        * Started experimenting with HTML
+        * built my first site was on a free web services provided by ISP
+            * was a photo of the Campinile Bell Tower I took with an early model digital camera I owned at the time
+                * was basically just the photo in a box with a border and a caption
+    * Got my first paying customer to build a website for
+        * "Movie Memories" 
+            * They did wedding videos 
+            * I did a little videography work for them as a side hustle
 * 1999/2000
     * Set up a Linux box on an old, second-hand computer
         * Installed Debian, the "purists" Linux distribution
@@ -161,6 +211,15 @@ other experiences that left a mark on my imagination.
     * Housed them in a datacenter
     * All run Debian
     * Since that time, I bought several other servers as company grew
+* 2008
+    * switched to mac for my main computer machine 
+        * got fed up with Windows crashes
+        * also saw a lot of developer I knew were using macs
+    * see below for my Apple product purchases
+* 2015/6?
+    * Bought my kid an Oculus Rift for my son
+        * he used it for a few hours 
+        * I maybe used it for an hour
 * 2020
     * Finally made the move to the cloud with AWS 
         * should have done it sooner 
