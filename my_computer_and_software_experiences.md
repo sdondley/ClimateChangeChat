@@ -121,8 +121,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
         * Used it for gaming, as well
             * Had all the Zork games
         * Wrote a database program to try to catalog all the videos I saw on MTV.
-            * Didn't last long. After a couple dozen entries, I got tired of running
-                up the stairs after every video
+            * Didn't last long. After a couple dozen entries, I got tired of running up the stairs after every video to record it
             * I still kind of maintain of obsessiveness about cataloguing things with a computer, though
                 * and I'm still not very diligent about it
                 * My great Aunt Phyllis also did this 
