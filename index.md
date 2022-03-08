@@ -5,8 +5,7 @@
 - [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
 - [What the Hell is This?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
-- [Tech Tutorials](#tech-tutorials)
-- [Tech Snippets](#tech-snippets)
+- [Tech Stuff](#tech-stuff)
 
 # What the Hell is This?
 * It's a website
@@ -22,9 +21,7 @@
     * just random notes about things I'm learning/reading about 
     * organized like a diary
 
-# Tech Tutorials
-* [Tech Toots](tech-stuff)
+# Tech Stuff
+* [Tech Stuff](tech-stuff)
 
-# Tech Snippets
-* [Tech Snips](snips/Tech-Snips)
  
