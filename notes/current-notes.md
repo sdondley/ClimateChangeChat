@@ -23,6 +23,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
             * want it to look somethingmore like this
                 * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
     * editor kind of sucks
+        * has a vim mode, but no key repeat
         * it most respects, much easier to work with vim 
         * but can make it easier to add media
     * changes to documents are instant
