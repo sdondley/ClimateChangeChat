@@ -237,7 +237,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
 * 2008
     * switched to mac for my day-to-day computing
         * macbook pro
-        * got fed up with Windows crashes
+        * got fed up with Windows crashes and bugs
         * also saw a lot of developer I knew were using macs
     * see below for my Apple product purchases
 * 2012
