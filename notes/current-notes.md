@@ -8,7 +8,7 @@
 
 # Current Notes
 
-Diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the wiki.
+Diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website.
 
 ## 2022
 ### March
