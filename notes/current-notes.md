@@ -7,7 +7,7 @@
 
 # Current notes
 
-Random stuff I'm taking notes on
+Diary of rather random stuff I'm taking notes on
 
 ## 2022
 ### March
