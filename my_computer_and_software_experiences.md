@@ -235,7 +235,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
     * Originally named "Dondley Communications"
     * renamed "Prometheus Labor Communications" after about 6 months
 * 2008
-    * switched to mac for my main computer machine 
+    * switched to mac for my day-to-day computing
+        * macbook pro
         * got fed up with Windows crashes
         * also saw a lot of developer I knew were using macs
     * see below for my Apple product purchases
