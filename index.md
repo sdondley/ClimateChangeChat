@@ -19,7 +19,7 @@
 * [Raku Programming Language](Raku-Programming-Language)
 * [Climate Change](Climate-Change)
 * [Current Notes](notes/current-notes)
-    * just random notes about things I'm learning about 
+    * just random notes about things I'm learning/reading about 
     * organized like a diary
 
 # Tech Tutorials
