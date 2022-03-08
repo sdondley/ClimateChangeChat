@@ -49,6 +49,9 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
         * Will be covered later 
 
 ### Step 1: Install the Perl Navigator language server
+* **UPDATE:** Binaries are now available for the language server:
+    * https://github.com/bscan/PerlNavigator/releases/tag/v0.2.8
+    * If you don't have any luck with those, follow the procedure below
 * Perl Navigator is not available on cpan
 * The software you need to install Perl Navigator
     * npm 

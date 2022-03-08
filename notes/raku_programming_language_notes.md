@@ -13,7 +13,7 @@
     * is not *this* characters 
         * `<-[b]>`
 
-# inline per
+# Inline-Perl5 module
 * problems using
     ```
     use Lingua::En::Titlecase:from<Perl5>;
