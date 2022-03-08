@@ -25,7 +25,9 @@ Diary of rather random stuff I'm taking notes on
     * from 2008
     * seems like a bit of a doom an gloomer
         * but still named "joy" 
-    * we are in asymmetric warfare against individual bad actors with extraorindary amounts of power as a result of new tech
+    * civiliation is engaged in an asymmetric warfare against individual bad actors
+        * because they have extraorindary amounts of power as a result of new tech tools
+        * hard to stop bad actors
     * venture capitalist now
     * founded Sun microsystems
     * wrote vi text editor in 1976
