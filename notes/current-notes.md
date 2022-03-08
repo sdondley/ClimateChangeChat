@@ -14,7 +14,7 @@ Diary of rather random stuff I'm taking notes on
 ### March
 
 #### 8
-* Listed with half an ear to
+* Listed with half an ear to while coding
     https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
 
