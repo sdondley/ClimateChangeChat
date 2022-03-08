@@ -6,7 +6,7 @@
         - [neovim/vim](#neovimvim)
             - [Language servers](#language-servers)
 - [Tech Snips](#tech-snips)
-    - [Notes](#notes)
+- [Notes](#notes)
 
 # Tech Stuff
 
@@ -33,7 +33,7 @@ Useful snippets of code for little jobs.
 
 [Tech Snips](snips/Tech-Snips.md)
 
-## Notes
+# Notes
 
 Because I sure as hell don't have a photographic memory
 
