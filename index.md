@@ -15,7 +15,7 @@
  
 [Visit Climate Change Chat on YouTube](https://www.youtube.com/channel/UCV8Zw3AmSS6F8kBgxW7Ql9A/featured)
 # Current projects and areas of current interest
-* [Raku Programming Language](Raku-Programming-Language)
+* [Raku Programming Language](Raku-Pragramming-Language)
 * [Climate Change](Climate-Change)
 * [Current Notes](notes/current-notes)
     * just random notes about things I'm learning/reading about 
