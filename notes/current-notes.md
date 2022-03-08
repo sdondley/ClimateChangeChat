@@ -14,6 +14,8 @@ Diary of rather random stuff I'm taking notes on
 ### March
 
 #### 8th
+* Anderson Cooper on Stephen Colbert
+    https://www.youtube.com/watch?v=9r_8jhtcUIo
 * Listed with half an ear to while coding
     https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good

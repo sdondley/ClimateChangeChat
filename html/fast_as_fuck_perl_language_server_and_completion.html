@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Fast_as_fuck_perl_language_server_and_completion
+        </title>
+       
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="./js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./tech-stuff.html">Tech Stuff</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              <div><h1>
+<a aria-hidden="true" class="anchor" href="#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server" id="perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl Language Servers Part Deux: Fast as FUCK Completion with the <strong>NEW</strong> Perl Navigator Language Server</h1><p><strong>PREFACE:</strong> Earlier this week, I wrote an <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">ungodly, long tutorial</a> about how to set up a perl language server with neovim. This more modest follow-up tutorial focuses on getting you started with the brand new, heretofore unknown language server, Perl Navigator, along with coq, a neovim plugin that promotes itself as the &quot;fast as FUCK&quot; completion engine.</p><p><strong>PARENTAL GUIDANCE:</strong> This documents contains f-bombs and makes insensitive comments about software and software choices. If you find this off-putting, go <a href="#rtfms">RTFM</a> instead.</p><p><strong>FIND A MISTAKE OR HAVE SOMETHING HELPFUL TO ADD?</strong> Fork this site&#39;s repo and <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/fast_as_fuck_perl_language_server_and_completion.md">submit a pull request</a>.</p><p>You should read or at least skim the <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">previous tutorial</a> tutorial about perl langauge servers if you haven&#39;t already.</p></div>
+
+
+
+
+
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#tldr" id="tldr"><span aria-hidden="true" class="octicon octicon-link"></span></a>TL;DR</h1><ul>
+<li>This TL;DR section assumes:
+<ul>
+<li>you read at least part of my <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">previous tutorial</a> about perl language servers
+<ul>
+<li>if not, I recommend spending a few minutes to familiarize yourself with it to get some context
+<ul>
+<li>Yeah, I know it&#39;s too long and will make your eyes bleed
+<ul>
+<li>the price of progress is steep</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>you know your way around a command line and the basics of installing software and neovim plugins on your machine</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#setting-up-perl-navigator-with-coq" id="setting-up-perl-navigator-with-coq"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up Perl Navigator with COQ</h2><ul>
+<li>COQ? Perl Navigator?
+<ul>
+<li>Believe me now, ask questions later
+<ul>
+<li>this is the TD;DR version</li>
+<li>Will be covered later</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-1-install-the-perl-navigator-language-server" id="step-1-install-the-perl-navigator-language-server"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Install the Perl Navigator language server</h3><ul>
+<li>
+<strong>UPDATE:</strong> Binaries are now available for the language server:
+<ul>
+<li><a href="https://github.com/bscan/PerlNavigator/releases/tag/v0.2.8">https://github.com/bscan/PerlNavigator/releases/tag/v0.2.8</a></li>
+<li>If you don&#39;t have any luck with those, follow the procedure below</li>
+</ul>
+</li>
+<li>Perl Navigator is not available on cpan</li>
+<li>The software you need to install Perl Navigator
+<ul>
+<li>npm
+<ul>
+<li>the node.js package manager</li>
+<li>No, I don&#39;t know a thing about it except it&#39;s used manage node js packages</li>
+<li>install it
+<ul>
+<li>use your favorite package manager to install this package manager</li>
+<li>google it if you don&#39;t know how</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>typescript
+<ul>
+<li>I&#39;ve never seen a line of typescript in my life
+<ul>
+<li>just install it if you don&#39;t already have it</li>
+<li>no, I don&#39;t know how to install it on your machine unless you&#39;re on a mac using homebrew
+<ul>
+<li>google it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>git
+<ul>
+<li>if you don&#39;t have git installed yet, you probably need to learn more basic skills before you fuck around with a language server
+<ul>
+<li>that&#39;s not to dissuade you</li>
+<li>install it
+<ul>
+<li>you guessed it: google it if you don&#39;t know how</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Now type (or copy and paste) in these commands like a good code monkey:
+<ul>
+<li>ripped straight from the <a href="https://github.com/bscan/PerlNavigator">&quot;Perl Navigator&quot; documentation</a>
+<pre><code>git clone https://github.com/bscan/PerlNavigator
+cd PerlNavigator/
+npm install
+cd server/
+npm install
+tsc
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Bam! Step 1 is done</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-2-install-the-needed-neovim-plugins" id="step-2-install-the-needed-neovim-plugins"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Install the needed neovim plugins</h3><ul>
+<li>Install the lspconfig-nvim plugin
+<ul>
+<li>Covered in the first tutorial</li>
+</ul>
+</li>
+<li>Install coq plugins
+<ul>
+<li>Provides completion and snippet features for you</li>
+<li>There are two coq plugins you need from github:
+<ul>
+<li>
+<code>ms-jpq/coq_nvim</code>
+<ul>
+<li>download from branch &quot;coq&quot;</li>
+</ul>
+</li>
+<li>
+<code>ms-jpq/coq.artifacts</code>
+<ul>
+<li>download from branch &quot;artifacts&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Use a neovim/vim package manager to install them
+<ul>
+<li>or load them manually, makes no difference to me</li>
+<li>you guessed it, if you don&#39;t know how, google it</li>
+<li>just make sure you install from the branches mentioned above</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Woot! Step 2 is done</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-3-cut-and-paste-lua-code-into-initvim-or-initlua" id="step-3-cut-and-paste-lua-code-into-initvim-or-initlua"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: cut and paste lua code into init.vim or init.lua</h3><ul>
+<li>
+<strong>IMPORTANT:</strong> if you still have code left over from my first tutorial, delete it and replace it with the code below
+<ul>
+<li>The mappings are mostly the same</li>
+<li>very different setup needed for Perl Navigator and COQ</li>
+</ul>
+</li>
+<li>If you use <code>init.lua</code> for your neovim confguration file, you can drop the code below directly into it</li>
+<li>If you use <code>init.vim</code> for your configuration file:
+<ul>
+<li>Open <code>init.vim</code>
+</li>
+<li>Add <code>lua require(&#39;coq_page_nav_config&#39;)</code> to the file</li>
+<li>Now, in the root of you your neovim config directory:
+<ul>
+<li>create a <code>lua</code> directory if it doesn&#39;t already exist
+<ul>
+<li>In this directory, create a file called <code>coq_page_nav_config.lua</code>
+<ul>
+<li>drop the code below into it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>-- configure coq to our liking
+vim.cmd[[
+    let g:coq_settings = { &#39;auto_start&#39;: v:true } ]]
+    let g:coq_settings.keymap = { &#39;jump_to_mark&#39;: &#39;&lt;space&gt;j&#39; } -- default map is &lt;c-h&gt; for coq
+                                                               -- changed by me to avoid conflict
+]]
+
+local lspconfig = require&#39;lspconfig&#39;
+local configs = require &#39;lspconfig.configs&#39;
+local opts = { noremap=true, silent=true }
+vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.setloclist()&lt;CR&gt;&#39;, opts)
+
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;e&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.open_float()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;[d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_prev()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;]d&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.goto_next()&lt;CR&gt;&#39;, opts)
+vim.api.nvim_set_keymap(&#39;n&#39;, &#39;&lt;space&gt;q&#39;, &#39;&lt;cmd&gt;lua vim.diagnostic.setloclist()&lt;CR&gt;&#39;, opts)
+ 
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by &lt;c-x&gt;&lt;c-o&gt;
+  vim.api.nvim_buf_set_option(bufnr, &#39;omnifunc&#39;, &#39;v:lua.vim.lsp.omnifunc&#39;)
+ 
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gD&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.declaration()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gd&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.definition()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;K&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.hover()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gi&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.implementation()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;c-\&gt;&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.signature_help()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wa&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.add_workspace_folder()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.remove_workspace_folder()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;wl&#39;, &#39;&lt;cmd&gt;lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;D&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.type_definition()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;rn&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.rename()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;ca&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.code_action()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;gr&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.references()&lt;CR&gt;&#39;, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, &#39;n&#39;, &#39;&lt;space&gt;f&#39;, &#39;&lt;cmd&gt;lua vim.lsp.buf.formatting()&lt;CR&gt;&#39;, opts)
+end
+
+-- the important stuff
+    -- set up and configure Perl Navigator
+    -- configure built-in client to use coq plugin for completion/snippets
+local coq = require &quot;coq&quot;
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+if not configs.perlnavigator then
+  configs.perlnavigator = {
+   default_config = {
+     cmd = { &quot;/usr/local/bin/node&quot;, &quot;/your/path/to/PerlNavigator/server/out/server.js&quot;, &quot;--stdio&quot; },
+     root_dir = function(fname)
+       return lspconfig.util.find_git_ancestor(fname)
+     end;
+     on_attach = on_attach,
+     flags = {
+         debounce_text_changes = 150
+     },
+
+     --single_file_support = true,
+     capabilities = capabilities,
+     filetypes = { &#39;perl&#39; };
+     settings = { perlnavigator = {
+         perlPath = &#39;/your/path/to/bin/perl&#39;,
+         perlcriticProfile = &#39;/your/path/to/.perlcritic&#39;,
+         perltidyProfile = &#39;/your/path/to/.perltidyrc&#39; },
+     };
+
+   };
+  }
+end
+
+lspconfig.perlnavigator.setup{ (coq.lsp_ensure_capabilities()) }
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Step 3 done. Booya!</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine" id="step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 4: change the paths in the lua snippet to reflect your machine</h3><ul>
+<li>Look for the lines in the lua code that contain <code>/your/path/to</code>
+<ul>
+<li>There are 4 different places</li>
+<li>Change these paths so that the paths are correct for your machine</li>
+</ul>
+</li>
+<li>Step 4 done. What a boss you are!</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#the-moment-of-truth" id="the-moment-of-truth"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Moment of Truth</h3><ul>
+<li>Fire up neovim
+<ul>
+<li>make sure you see no errors</li>
+<li>should see weird emoticons from COQ in the status bar
+<ul>
+<li>configuration starts up COQ automatically for you</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Run <code>:LspInfo</code>
+<ul>
+<li>You should see: &quot;Configured servers list: perlnavigator&quot; at the bottom of a popup box
+<ul>
+<li>You don&#39;t?</li>
+<li>Double check everthing
+<ul>
+<li>if you think it&#39;s right, send a nastygram to <a href="mailto:s@dondley.com">s@dondley.com</a> to tell me why my tutorial sucks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>IMPORTANT:</strong> for this particular lua configuration, neovim will not attach to the langauge server unless you are in a git repo
+<ul>
+<li>so you will not get any langauge server functionality outside of a git repo</li>
+<li>
+<a href="#using-pn-and-coq-to-get-an-ide-like-experience-with-neovim">See below</a> for more details</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#wtf" id="wtf"><span aria-hidden="true" class="octicon octicon-link"></span></a>WTF</h1><ul>
+<li>...is <a href="">COQ</a>?</li>
+<li>...is <a href="https://github.com/bscan/PerlNavigator">Perl Navigator</a>?</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#the-big-picture-stuff" id="the-big-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Big Picture Stuff</h1></div>
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#perl-navigator-pn" id="perl-navigator-pn"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl Navigator (PN)</h2><ul>
+<li>a third perl language server
+<ul>
+<li>spanking new</li>
+<li>out just two weeks</li>
+<li>in very active development</li>
+</ul>
+</li>
+<li>Author: &quot;b_scan&quot;
+<ul>
+<li>Like the other two perl LSes, written by coder who uses vscode, not neovim</li>
+<li>Thanks b_scan! Good work!</li>
+</ul>
+</li>
+<li>
+<a href="https://www.reddit.com/r/perl/comments/suamcf/introducing_the_perl_navigator_a_language_server/">Read what the author says about it</a>
+<ul>
+<li>main motivation is to get something that is more portable</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#how-does-pn-compare-with-the-other-language-servers" id="how-does-pn-compare-with-the-other-language-servers"><span aria-hidden="true" class="octicon octicon-link"></span></a>How does PN compare with the other language servers?</h3><ul>
+<li>Takes a little more lua code to get working with neovim than other language servers
+<ul>
+<li>developer is actively working on providing better integration with lspconfig out of the box</li>
+</ul>
+</li>
+<li>Does Windows better
+<ul>
+<li>if you&#39;re one of <em>those</em> people</li>
+<li>but will work on any machine
+<ul>
+<li>but cannot be installed with <code>cpanm</code>
+</li>
+<li>takes a few more commands and tools to install</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>More compatible with older versions of Perl, according to author</li>
+<li>Is it faster?
+<ul>
+<li>I didn&#39;t do any speed tests, but it does feel a little snappier than the other two</li>
+</ul>
+</li>
+<li>completion suggestions are much more limited than other two language servers
+<ul>
+<li>for now
+<ul>
+<li>language server author is working on it</li>
+</ul>
+</li>
+<li>focuses only on identifiers in current file or loaded modules</li>
+<li>no perl keywords</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#what-can-it-do" id="what-can-it-do"><span aria-hidden="true" class="octicon octicon-link"></span></a>What can it do?</h3><ul>
+<li>So far, I can confirm the following features work using the recipe above:
+<ul>
+<li>completion (using COQ and nvim-cmp)</li>
+<li>perlcritic</li>
+<li>perltidy</li>
+<li>syntax checking</li>
+</ul>
+</li>
+<li>More details on some of the these features are below</li>
+<li>I&#39;m sure there&#39;s more it can do that I haven&#39;t figured out how to use yet</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#coq" id="coq"><span aria-hidden="true" class="octicon octicon-link"></span></a>COQ</h2><ul>
+<li>It&#39;s a neovim plugin
+<ul>
+<li>Actually two
+<ul>
+<li><code>ms-jpq/coq_nvim</code></li>
+<li>
+<code>ms-jpq/coq.artifacts</code>
+<ul>
+<li>used for snippets</li>
+<li>not required</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The self proclaimed &quot;fast as FUCK&quot; completion engine</li>
+<li>I can confirm it is very fast as fuck
+<ul>
+<li>much faster than the completion plugin used in my first tutorial</li>
+</ul>
+</li>
+<li>integrates in with neovim&#39;s built-in lsp</li>
+<li>Provides snippet support
+<ul>
+<li>no separate plugin needed for snippets like in previous tutorial</li>
+</ul>
+</li>
+<li>does completion on a lot more than just perl
+<ul>
+<li>can have multiple &quot;sources&quot; of completion
+<ul>
+<li>words in open buffers</li>
+<li>tmux commands</li>
+<li>etc.</li>
+<li>these sources can be turned on and off</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>does &quot;fuzzy&quot; completion
+<ul>
+<li>nice!</li>
+<li>it doesn&#39;t need an exact match to help you find suggestions</li>
+<li>great for identifiers you don&#39;t quite remember the name of</li>
+<li>also great for hwen you make typso</li>
+</ul>
+</li>
+<li>See <a href="https://github.com/ms-jpq/coq_nvim">COQ&#39;s github readme</a> for documentation and many more details
+<ul>
+<li>this isn&#39;t a COQ tutorial</li>
+</ul>
+</li>
+<li>I&#39;m not an expert, but I think this plugin is pretty great
+<ul>
+<li>will be what I use going forward
+<ul>
+<li>until Elon Musk can wire my brain to transfer my thoughts directly to the computer
+<ul>
+<li>coming soon in 2020!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#using-pn-and-coq-to-get-an-ide-like-experience-with-neovim" id="using-pn-and-coq-to-get-an-ide-like-experience-with-neovim"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using PN and COQ to get an IDE-like experience with neovim</h1><ul>
+<li>My <a href="setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.html">first tutorial</a> did not go into the actual usage of the tools</li>
+<li>So let&#39;s get a small taste of that here</li>
+<li>Assumes you have PN and COQ up and running after doing the <a href="#tldr">TD;DR</a>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#setup" id="setup"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2><ul>
+<li>the root directory is expected to be a git repo
+<ul>
+<li>as set in the lua code config above:
+<pre><code> root_dir = function(fname)
+   return lspconfig.util.find_git_ancestor(fname)
+ end;
+</code></pre>
+</li>
+<li>there is probably a way to change the <code>root_dir</code> to the current working directory
+<ul>
+<li>I&#39;ll leave that to you to figure out</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Upshot: <strong>you must init a new git repo or <code>cd</code> into an existing git repo before proceeding</strong>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#ok-lets-go" id="ok-lets-go"><span aria-hidden="true" class="octicon octicon-link"></span></a>OK, let&#39;s go</h2><ul>
+<li>Now that you are in a git repo, open up a new perl file
+<ul>
+<li>give the file a <code>.pl</code> extension</li>
+</ul>
+</li>
+<li>Make sure vim has <code>ftdetect</code> turned on
+<ul>
+<li>do <code>:set ft=perl</code> if you don&#39;t</li>
+</ul>
+</li>
+<li>throw some code in there that&#39;s not formatted and has obvious mistakes
+<ul>
+<li>you should see perlcritic and the syntax checker throw errors at you
+<ul>
+<li>make sure you have a perlcritic config file
+<ul>
+<li>if you don&#39;t know about perlcritic or how to set it up, google it
+<ul>
+<li>similar to setting up perltidy config file (see <a href="#use-perltidy">next section</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fix the code to make the errors disappear</li>
+</ul>
+</li>
+<li>The mappings used below come from the lua code snippet
+<ul>
+<li>Change them if they are not to your liking</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#use-perltidy" id="use-perltidy"><span aria-hidden="true" class="octicon octicon-link"></span></a>use perltidy</h3><ul>
+<li>tldr: <code>&lt;space&gt;f</code> triggers formatting
+<ul>
+<li>this map is configured in lua code above</li>
+</ul>
+</li>
+<li>make sure you got a perltidy config file set up
+<ul>
+<li>must be located at the path you provided in the lua code above</li>
+<li>if you&#39;ve never used perltidy before, google it
+<ul>
+<li>download someone&#39;s perltidy configuration and copy and paste it into perltidy config file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>in normal mode in neovim do <code>&lt;space&gt;f</code>
+<ul>
+<li>bam! all your code in the file nice and pretty</li>
+</ul>
+</li>
+<li>PN supposedly also supports formatting with ranges (i.e. applying foratting to text selected in visual mode)
+<ul>
+<li>see <a href="https://github.com/neovim/nvim-lspconfig/wiki/User-contributed-tips">this for details</a> to get it working</li>
+<li>I did not try it to see if it works with neovim</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#use-completion" id="use-completion"><span aria-hidden="true" class="octicon octicon-link"></span></a>use completion</h3><ul>
+<li>type in <code>my $blah = 7;</code>
+</li>
+<li>on the next line, type in <code>$b</code>
+</li>
+<li>menu will pop up</li>
+<li>do <code>&lt;c-n&gt;</code> until <code>blah</code> is highligted
+<ul>
+<li>scrolls down the menu</li>
+<li>
+<code>&lt;c-p&gt;</code> scrolls up</li>
+</ul>
+</li>
+<li>hit <code>&lt;space&gt;</code> to enter variable name into buffer with a space after it
+<ul>
+<li>any key will trigger completion, does not have to be <code>&lt;space&gt;</code>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h3>
+<a aria-hidden="true" class="anchor" href="#use-snippets" id="use-snippets"><span aria-hidden="true" class="octicon octicon-link"></span></a>use snippets</h3><ul>
+<li>type in <code>wh</code>
+</li>
+<li>select the <code>while</code> snippet from the menu</li>
+<li>hit enter</li>
+<li>input some stuff between the parens</li>
+<li>hit <code>&lt;space&gt;j</code>
+</li>
+<li>input the body of the while loop</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#what-else" id="what-else"><span aria-hidden="true" class="octicon octicon-link"></span></a>What else?</h2><ul>
+<li>That&#39;s it for now</li>
+<li>This is not an IDE power-user&#39;s guide
+<ul>
+<li>This is a &quot;let&#39;s get your started&quot; guide</li>
+</ul>
+</li>
+<li>I&#39;ll leave it to you to play around with the other mappings
+<ul>
+<li>see lua code
+<ul>
+<li>not all of the mappings may work</li>
+</ul>
+</li>
+<li>still learning this stuff myself
+<ul>
+<li>maybe when I&#39;m an expert, I&#39;ll write another tutorial
+<ul>
+<li>though I could not think of a more tedious topic to write and read about
+<ul>
+<li>so don&#39;t hold your breath</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#rtfms" id="rtfms"><span aria-hidden="true" class="octicon octicon-link"></span></a>RTFMs</h1><ul>
+<li>get answers for things I didn&#39;t bother to RTFM for</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#neovim-docs" id="neovim-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>neovim docs</h2><ul>
+<li><code>:h lsp</code></li>
+<li><code>:h lspconfig</code></li>
+<li><code>:COQhelp</code></li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#github-docs" id="github-docs"><span aria-hidden="true" class="octicon octicon-link"></span></a>Github docs</h2><ul>
+<li><a href="https://github.com/neovim/nvim-lspconfig/wiki">lspconfig wiki</a></li>
+<li><a href="https://github.com/bscan/PerlNavigator">Perl Navigator</a></li>
+</ul></div>
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li><a href="#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server">Perl Language Servers Part Deux: Fast as FUCK Completion with the <strong>NEW</strong> Perl Navigator Language Server</a></li>
+<li>
+<a href="#tldr">TL;DR</a>
+<ul>
+<li>
+<a href="#setting-up-perl-navigator-with-coq">Setting up Perl Navigator with COQ</a>
+<ul>
+<li><a href="#step-1-install-the-perl-navigator-language-server">Step 1: Install the Perl Navigator language server</a></li>
+<li><a href="#step-2-install-the-needed-neovim-plugins">Step 2: Install the needed neovim plugins</a></li>
+<li><a href="#step-3-cut-and-paste-lua-code-into-initvim-or-initlua">Step 3: cut and paste lua code into init.vim or init.lua</a></li>
+<li><a href="#step-4-change-the-paths-in-the-lua-snippet-to-reflect-your-machine">Step 4: change the paths in the lua snippet to reflect your machine</a></li>
+<li><a href="#the-moment-of-truth">The Moment of Truth</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#wtf">WTF</a></li>
+<li>
+<a href="#the-big-picture-stuff">The Big Picture Stuff</a>
+<ul>
+<li>
+<a href="#perl-navigator-pn">Perl Navigator (PN)</a>
+<ul>
+<li><a href="#how-does-pn-compare-with-the-other-language-servers">How does PN compare with the other language servers?</a></li>
+<li><a href="#what-can-it-do">What can it do?</a></li>
+</ul>
+</li>
+<li><a href="#coq">COQ</a></li>
+</ul>
+</li>
+<li>
+<a href="#using-pn-and-coq-to-get-an-ide-like-experience-with-neovim">Using PN and COQ to get an IDE-like experience with neovim</a>
+<ul>
+<li><a href="#setup">Setup</a></li>
+<li>
+<a href="#ok-lets-go">OK, let&#39;s go</a>
+<ul>
+<li><a href="#use-perltidy">use perltidy</a></li>
+<li><a href="#use-completion">use completion</a></li>
+<li><a href="#use-snippets">use snippets</a></li>
+</ul>
+</li>
+<li><a href="#what-else">What else?</a></li>
+</ul>
+</li>
+<li>
+<a href="#rtfms">RTFMs</a>
+<ul>
+<li><a href="#neovim-docs">neovim docs</a></li>
+<li><a href="#github-docs">Github docs</a></li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 8, 2022 12:55 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 4, 2022</div>
+            </div>
+        </div>
+        <script src="./js/scroll_sync.js"></script>
+        <script src="./js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+

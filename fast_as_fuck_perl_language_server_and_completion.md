@@ -10,7 +10,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 # On This Page
 
 - [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server)
-- [TLDR;](#tldr)
+- [TL;DR](#tldr)
     - [Setting up Perl Navigator with COQ](#setting-up-perl-navigator-with-coq)
         - [Step 1: Install the Perl Navigator language server](#step-1-install-the-perl-navigator-language-server)
         - [Step 2: Install the needed neovim plugins](#step-2-install-the-needed-neovim-plugins)
@@ -34,8 +34,8 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     - [neovim docs](#neovim-docs)
     - [Github docs](#github-docs)
 
-# TLDR;
-* This TLDR; section assumes:
+# TL;DR
+* This TL;DR section assumes:
     * you read at least part of my [previous tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about perl language servers
         * if not, I recommend spending a few minutes to familiarize yourself with it to get some context
             * Yeah, I know it's too long and will make your eyes bleed 
@@ -45,7 +45,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 ## Setting up Perl Navigator with COQ
 * COQ? Perl Navigator?
     * Believe me now, ask questions later
-        * this is the TLDR; version 
+        * this is the TD;DR version 
         * Will be covered later 
 
 ### Step 1: Install the Perl Navigator language server
@@ -285,7 +285,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 # Using PN and COQ to get an IDE-like experience with neovim
 * My [first tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) did not go into the actual usage of the tools
 * So let's get a small taste of that here
-* Assumes you have PN and COQ up and running after doing the [TLDR;](#tldr)
+* Assumes you have PN and COQ up and running after doing the [TD;DR](#tldr)
 
 ## Setup
 * the root directory is expected to be a git repo

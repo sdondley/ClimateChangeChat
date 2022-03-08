@@ -27,10 +27,10 @@ h3 ~ pre {
     margin-left: 75px;
 }
 
-h1 {font-size: 2.2em; padding: 30px; }
-h2 {font-size: 1.8em; padding: 20px}
-h3 {font-size: 1.4em; padding: 10px}
-h4 {font-size: 1.2em; padding: 15px;}
+h1 {font-size: 2.2em; padding: 30px; color: yellow;}
+h2 {font-size: 1.8em; padding: 20px; color: #d6d600; }
+h3 {font-size: 1.4em; padding: 10px; color: #b8b800;}
+h4 {font-size: 1.2em; padding: 15px; color: #ab4;}
 h5 {font-size: 1.0em; padding: 10px;}
 h6 {font-size: 1em padding; 5px;}
 #toc h6 {font-size: 2.0em !important; padding: 10px !important;}
