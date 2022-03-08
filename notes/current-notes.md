@@ -14,9 +14,25 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
+* Tried out HackMD
+    * collaborate with others using git markup 
+        * an idea I have long had 
+    * pretty impressive but confusing
+        * not easy to figure out how to create navigation between pages 
+            * got it working, but menu items are tiny 
+            * want it to look somethingmore like this
+                * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
+    * editor kind of sucks
+        * it most respects, much easier to work with vim 
+        * but can make it easier to add media
+    * changes to documents are instant
+    * you can allow anyone to make changes to docs
+        * unsure how you might revert vandalism 
+    * integrates with github
+        * can presumably get exported to a proper website from there 
 * Stack overflow question on inline perl raku module
-    * I can be a real dummy sometimes 
-        *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
+    * Yup, I can be a real dummy sometimes 
+    *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
 * Anderson Cooper on Stephen Colbert
     * talks about coomplications of covering war and what he think Putin is afraid of 
         https://www.youtube.com/watch?v=9r_8jhtcUIo
