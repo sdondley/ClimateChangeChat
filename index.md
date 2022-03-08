@@ -6,6 +6,7 @@
 - [What the Hell is This?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
 - [Tech Tutorials](#tech-tutorials)
+- [Tech Snippets](#tech-snippets)
 
 # What the Hell is This?
 * It's a website
@@ -22,5 +23,8 @@
     * organized like a diary
 
 # Tech Tutorials
-* [Tech Tutorials](tech-toots)
+* [Tech Toots](tech-toots)
 
+# Tech Snippets
+* [Tech Snips](snips/Tech-Snips)
+ 

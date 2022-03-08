@@ -31,5 +31,3 @@ Random stuff I'm taking notes on
             * https://www.kulr8.com/news/money/solidia-technologies-names-dr-padmaja-parakala-director-of-r-d/article_66fdcd34-88d5-5e48-a4d0-5959e2b9e0bf.html
     * more recent video about crispr genetic tech
         https://www.youtube.com/watch?v=lRJvtYttNNY
-
-

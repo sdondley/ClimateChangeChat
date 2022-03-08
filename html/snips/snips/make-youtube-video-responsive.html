@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Make-youtube-video-responsive
+        </title>
+       
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../tech-toots.html">Tech Toots</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#make-youtube-videos-responsive" id="make-youtube-videos-responsive"><span aria-hidden="true" class="octicon octicon-link"></span></a>Make Youtube videos responsive</h1><ul>
+<li>throw the embed code from youtube in a div tag with class of <code>ifram-container</code>
+</li>
+<li>Add this css to the styles:</li>
+</ul><pre><code>.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</code></pre></div>
+
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li><a href="#make-youtube-videos-responsive">Make Youtube videos responsive</a></li>
+</ul></div><div id="publish_date"><span id="publish_label">First published: </span>March 7, 2022</div>
+            </div>
+        </div>
+        <script src="../../js/scroll_sync.js"></script>
+        <script src="../../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+
