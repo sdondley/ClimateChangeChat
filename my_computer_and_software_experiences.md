@@ -120,9 +120,10 @@ other experiences that inspired my or left some kind of permanent mark on my wet
         * Learned Apple Basic with it using the book that came with it
         * Used it for gaming, as well
             * Had all the Zork games
-        * Wrote a database program to obsessively store all the videos I saw on MTV.
+        * Wrote a database program to try to catalog all the videos I saw on MTV.
             * Didn't last long. After a couple dozen entries, I got tired of running
                 up the stairs after every video
+            * I still kind of maintain of obsessiveness about cataloguing things with a computer, though
         * Conceived a graphical software maze game in 3-D.
             * Never finished it (and barely started it) but I'm sure it would have
                 been better than Doom
