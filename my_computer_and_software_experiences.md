@@ -112,7 +112,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
             * I'm not sure if he ever intended to use it for himself but he never did
                 so it essentially became mine.
             * It sits in my basement to this day
-                * Worked as of about 2015 when I last tried it out
+                * Worked as of about 2014 when I last tried it out
                 * one of the disks or memory unit was a little flaky, though
                     * somehow managed to work around the issue
         * Learned Apple Basic with it using the book that came with it
