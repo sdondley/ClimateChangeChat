@@ -115,6 +115,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
                 * Worked as of about 2014 when I last tried it out
                 * one of the disks or memory unit was a little flaky, though
                     * somehow managed to work around the issue
+                * doesn't go for much on eBay
+                    * maybe $100 if I'm lucky 
         * Learned Apple Basic with it using the book that came with it
         * Used it for gaming, as well
             * Had all the Zork games
