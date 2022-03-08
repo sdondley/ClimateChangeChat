@@ -1,15 +1,15 @@
-# About this website
+# About This Website
 
 # On This Page
 
-- [About this website](#about-this-website)
+- [About This Website](#about-this-website)
 - [Authored by](#authored-by)
 - [Website Name](#website-name)
 - [Goals](#goals)
-- [The tech under the hood](#the-tech-under-the-hood)
+- [The Tech under the Hood](#the-tech-under-the-hood)
     - [vim](#vim)
-- [Why is this site written mostly in outline form?](#why-is-this-site-written-mostly-in-outline-form)
-- [Why is the design so plain?](#why-is-the-design-so-plain)
+- [Why Is This Site Written Mostly in Outline Form?](#why-is-this-site-written-mostly-in-outline-form)
+- [Why Is the Design So Plain?](#why-is-the-design-so-plain)
 - [Coming Improvements](#coming-improvements)
 
 # Authored by
@@ -47,7 +47,7 @@
 * share ideas and notes with other easily and quickly
 * keep track of shit
 
-# The tech under the hood
+# The Tech under the Hood
 * all content is published to github to a publicly available repo
     * people can go to github and suggest edits 
 * all new content is publshed with custom vim maps
@@ -56,7 +56,7 @@
             * saves the markdown file I'm working on
             * processes the markdow file and converts to HTML
             * commits the markdown and HTML file to a git repo
-            * pushes changes out to the remote repo
+            * pushes all outstanding changes to all files out to the remote repo
 * I can quickly whip out text and publish it to web with little effort
 * git will give me an entire history of every change published to the site
     * nothing will be lost to the historians who stumble upon my great work :) 
@@ -92,7 +92,7 @@
         * a bridge between taskwarrior task software and vimwiki 
         * allows vimwiki to be the interface for managing tasks
 
-# Why is this site written mostly in outline form?
+# Why Is This Site Written Mostly in Outline Form?
 * It's inherent to the design of the software I used to write it
     * called vimwiki
 * It's much faster to write this way
@@ -107,7 +107,7 @@
         * just get me to the meat of the matter, especially on reality-based topics
             * I'll fill in the emotional details with my own imagination 
 
-# Why is the design so plain?
+# Why Is the Design So Plain?
 * It's not as plain as it used to be
     * Gave it a good facelift on 3/5/22 
 * I'm more concerned with content and functionality than design
