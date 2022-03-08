@@ -1,12 +1,17 @@
-### On This Page
+# On This Page
 
-- [My Computer and Software Experiences](#my-computer-history-and-interests)
+- [My Computer Hardware and Software Experiences](#my-computer-hardware-and-software-experiences)
     - [Free Software (Open Source)](#free-software-open-source)
     - [Programming languages](#programming-languages)
-    - [Tools I Use](#tools-i-use)
+    - [Software I am very or fairly familiar with](#software-i-am-very-or-fairly-familiar-with)
+    - [Tools I use a lot](#tools-i-use-a-lot)
         - [Software](#software)
-        - [Computer hardware](#computer-hardware)
-            - [Early years](#early-years)
+    - [Great Moments from My Computing History](#great-moments-from-my-computing-history)
+        - [Early years](#early-years)
+        - [Late 70s to mid 80s](#late-70s-to-mid-80s)
+        - [Mid 80s to mid 90s](#mid-80s-to-mid-90s)
+        - [Late 90s to mid 00s](#late-90s-to-mid-00s)
+        - [Late 00s to present](#late-00s-to-present)
             - [The Apple FanBoi Years](#the-apple-fanboi-years)
 
 # My Computer Hardware and Software Experiences
@@ -63,9 +68,9 @@ enjoy it immensely.
 * *nix
     * [macOS](/macOS)
 
-### Great moments from my computing history
+## Great Moments from My Computing History
 
-#### Early years
+### Early years
 Since I was a young boy, I've always been fascinated by all things digital. The
 first bit of technology to transfix me was owned by my cousin's husband,
 Jimmy Wagner. It was a watch and instead of hands it had glowing LED numbers. It
@@ -85,6 +90,8 @@ like alligator skin, it was good enough for me.
 
 Here's a rough timeline of some of the other hardware I've owned as well as
 other experiences that inspired my or left some kind of permanent mark on my wetware.
+
+### Late 70s to mid 80s
 
 * 1977?
     * [Little Professor - Wikipedia](https://en.wikipedia.org/wiki/Little_Professor)
@@ -154,6 +161,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
             * I think I got another one not long after and the same thing happened
         * It was either this one or something similar:
             * [CASIO - TC-600 - Calculator - Vintage Digital Watch - Digital-Watch.com: www.digital-watch.com](http://www.digital-watch.com/DWL/1work/casio-tc-600)
+             
+### Mid 80s to mid 90s
 * 1987/88
     * Took a couple of electronic courses in high school 
     * learned all the basics
@@ -198,6 +207,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
 * 1997
     * Got a [Web TV - Wikipedia](https://en.wikipedia.org/wiki/MSN_TV) to surf the web
     * My PCs got abandoned when I left San Diego and left the Navy 
+     
+### Late 90s to mid 00s
 * 1998 - 2005
     * First time on the internet with a "real" browser
         * Netscape Navigator 
@@ -222,7 +233,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
         * Holy hell did it take me hours to get the wifi driver set up. I had no
             idea what I was doing.
         * Got bit by the free software bug
-    * Taught myself [Perl](/Perl)
+    * Taught myself Perl
     * Got my first gig a paid consultant
         * landed a $10,000 contract to consult on some Perl software
             * had only read maybe half of two Perl books at the time
@@ -241,6 +252,8 @@ other experiences that inspired my or left some kind of permanent mark on my wet
     * Left my part-time job to turn my part-time hobby as a web developer into my company
     * Originally named "Dondley Communications"
     * renamed "Prometheus Labor Communications" after about 6 months
+     
+### Late 00s to present
 * 2008
     * switched to mac for my day-to-day computing
         * macbook pro
