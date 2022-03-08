@@ -5,7 +5,7 @@
 
 # Raku Programming Language Notes
 
-These are quick reference notes for myself so I don't have to keep looking up the same thing in the docs. Not meant to be pedagogical.
+These are quick reference notes for myself so I don't have to keep looking up the same thing in the docs months later after I forget them. Not meant to be pedagogical.
 
 # Regexes
 * regexes almost have to be relearned coming from perl
