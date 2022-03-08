@@ -20,27 +20,6 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * discusses what we know about following disinformation networks
     * quotes experts on dissemination of Russian propaganda and their operations
     * upshot: it's too early to tell how prop war is going
-* Tried out HackMD
-    * collaborate with others using git markup 
-        * an idea I have long had 
-    * pretty impressive but a bit confusing
-        * not easy to figure out how to create navigation between pages 
-            * got it working, but menu items are tiny 
-            * want it to look somethingmore like this
-                * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
-    * editor kind of sucks
-        * has a vim mode, but no key repeat
-        * it most respects, much easier to work with vim 
-        * but can make it easier to add media
-    * changes to documents are instant
-    * you can allow anyone to make changes to docs
-        * unsure how you might revert vandalism 
-    * integrates with github
-        * unclear why this was built into their offering
-            * do versioning? 
-                * if so, kind of kludgy as far as I can tell
-                    * doesn't seem to integrate in with live edits 
-        * can presumably get exported to a proper website from there 
 * Stack overflow question on inline perl raku module
     * Yup, I can be a real dummy sometimes 
     *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
@@ -81,3 +60,24 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * or could just be trying to enjoy the rest of his life
     * more recent video about crispr genetic tech
         https://www.youtube.com/watch?v=lRJvtYttNNY
+* Tried out HackMD
+    * collaborate with others using git markup 
+        * an idea I have long had 
+    * pretty impressive but a bit confusing
+        * not easy to figure out how to create navigation between pages 
+            * got it working, but menu items are tiny 
+            * want it to look somethingmore like this
+                * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
+    * editor kind of sucks
+        * has a vim mode, but no key repeat
+        * it most respects, much easier to work with vim 
+        * but can make it easier to add media
+    * changes to documents are instant
+    * you can allow anyone to make changes to docs
+        * unsure how you might revert vandalism 
+    * integrates with github
+        * unclear why this was built into their offering
+            * do versioning? 
+                * if so, kind of kludgy as far as I can tell
+                    * doesn't seem to integrate in with live edits 
+        * can presumably get exported to a proper website from there 
