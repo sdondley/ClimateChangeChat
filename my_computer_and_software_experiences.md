@@ -76,8 +76,10 @@ it.
 I begged my parents and relatives for a digital watch as a present but, of
 course, they weren't about to spend a couple hundred bucks on a watch for a
 little kid (I did get a cool Snoopy analog watch, though). I don't think it was
-until 1979 that I finally got a digital watch. My Grandmother bought it for me
-for Christmas. Although it had a liquid crystal display rather than an LED face
+until 1979 that I finally got a digital watch. I think it was my Grandmother bought it for me
+for Christmas though my memory is a little fuzzy and it may have been the Snoopy watch she got me.
+
+At any rate, although the digital watch had a liquid crystal display rather than an LED face
 and had an ugly, goofy, stiff brown plastic wristband that was supposed to look
 like alligator skin, it was good enough for me.
 
