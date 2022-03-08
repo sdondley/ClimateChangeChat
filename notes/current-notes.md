@@ -8,7 +8,7 @@
 
 # Current Notes
 
-Diary of rather random stuff I'm taking notes on
+Diary of rather random stuff I'm taking notes on to keep track of shit
 
 ## 2022
 ### March
