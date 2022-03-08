@@ -3,9 +3,9 @@
 # On This Page
 
 - [Climate Change Chat for Realists Home Page](#climate-change-chat-for-realists-home-page)
-- [What the Hell is This?](#what-the-hell-is-this)
+- [What the hell is this?](#what-the-hell-is-this)
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
-- [Tech Stuff](#tech-stuff)
+- [Tech stuff](#tech-stuff)
 
 # What the hell is this?
 * It's a website
