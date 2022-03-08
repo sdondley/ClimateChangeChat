@@ -1,9 +1,9 @@
 # On This Page
 
-- [Tech Snippets](#tech-snippets)
+- [Tech Snips](#tech-snips)
     - [Web development](#web-development)
 
-# Tech Snippets
+# Tech Snips
 
 ## Web development
 * [make youtube videos responsive](snips/make-youtube-video-responsive)
