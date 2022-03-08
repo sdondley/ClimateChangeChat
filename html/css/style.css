@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :is(h1, h2, h3, h4, h5, h6)
 {
- display: block; color: #ab4; border-radius: 20px; background-color: #101010; padding: 30px; margin-bottom: 0px;
+ display: block; color: #ab4; border-radius: 20px; background-color: #101010; margin-bottom: 0px;
 }
 
 h3 ~ pre {
@@ -24,10 +24,10 @@ h3 ~ pre {
 }
 
 h1 {font-size: 2em; padding: 30px; }
-h2 {font-size: 1.8em; padding: 25px}
-h3 {font-size: 1.6em; padding; 20px}
-h4 {font-size: 1.4em padding; 15px;}
-h5 {font-size: 1.2em padding; 10px;}
+h2 {font-size: 1.6em; padding: 20px}
+h3 {font-size: 1.4em; padding: 10px}
+h4 {font-size: 1.2em; padding: 15px;}
+h5 {font-size: 1.0em; padding: 10px;}
 h6 {font-size: 1em padding; 5px;}
 #toc h6 {font-size: 2.0em !important; padding: 10px !important;}
 
@@ -310,7 +310,7 @@ pre code {
     overflow: auto;
 }
 #toc { font-size: .8em; }
-#content { padding-bottom: 20vh;
+#content { padding-bottom: 80vh;
     height: 100%;
     width: 1200px;
     max-width: 1200px;
