@@ -378,6 +378,18 @@ pre code {
     #content {
       width: 600px;
     }
+    ul li iframe { margin-left: -80px; }
+    ul li ul li iframe { margin-left: -120px; }
+}
+
+@media only screen and (min-width: 906px) and (max-width: 1206px) {
+    ul li iframe { margin-left: -80px; }
+    ul li ul li iframe { margin-left: -120px; }
+}
+
+@media only screen and (min-width: 906px) and (max-width: 1006px) {
+    ul li iframe { margin-left: -130px; width: 520px; }
+    ul li ul li iframe { margin-left: -160px; width: 520px; }
 }
 
 @media only screen and (max-width: 1106px) {
@@ -389,6 +401,7 @@ pre code {
       width: 600px;
     }
 }
+
 
 @media only screen and (max-width: 1006px) {
     #toc {
