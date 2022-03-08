@@ -7,7 +7,7 @@
 - [Current projects and areas of current interest](#current-projects-and-areas-of-current-interest)
 - [Tech Stuff](#tech-stuff)
 
-# What the Hell is This?
+# What the hell is this?
 * It's a website
 * site is very new, not much to see here 
     * mostly experimenting with it right now
