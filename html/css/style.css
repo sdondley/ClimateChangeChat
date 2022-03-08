@@ -14,9 +14,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-:is(h1, h2, h3, h4, h5, h6)
-{
- display: block; color: #ab4; border-radius: 20px; background-color: #101010; margin-bottom: 0px;
+:is(h1, h2, h3, h4, h5, h6) {
+    display: block;
+    color: #ab4;
+    border-radius: 20px;
+    background-color: #101010;
+    margin-bottom: 0px;
+    z-index: 10;
 }
 
 h3 ~ pre {
@@ -392,6 +396,7 @@ pre code {
   width: 100%;
   padding-bottom: 56.25%; 
   height: 0;
+  margin-left: -4px;
 }
 .iframe-container iframe{
   position: absolute;
@@ -554,7 +559,7 @@ pre code.hljs td div.hljs-ln-n {
 #content :is(h1, h2, h3, h4, h5, h6) {
     position: -webkit-sticky;
     position: sticky;
-    top: 40px;
+    top: 50px;
     //height: var(--header-height);
     //padding: 0 var(--default-padding);
 }
