@@ -7,6 +7,8 @@
 
 # Tech Snips
 
+Useful snippets of code for little jobs
+
 ## Web development
 * [make youtube videos responsive](snips/make-youtube-video-responsive)
 
