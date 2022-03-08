@@ -92,9 +92,9 @@ other experiences that left a mark on my imagination.
 * 1980 or '81
     * My first use of a computer attached to a network
         * Armory Street School, 5th or 6th grade
-        * It was a teletype machine with a dot matrix printer connected to a
+        * It was some kind of horizonal teletype machine with a keyboad connected
             computer in downtown Springfield
-            * it could play simple games such as madlibs
+            * it could play simple games such as madlibs, tic-tac-toe, etc.
 * Early 80s
     * Various hand-held games
         * [Coleco Head to Head Football](https://www.handheldmuseum.com/Coleco/H2HFootball.htm)
