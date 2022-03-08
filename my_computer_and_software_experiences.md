@@ -118,6 +118,7 @@ other experiences that inspired my or left some kind of permanent mark on my wet
                 * doesn't go for much on eBay
                     * maybe $100 if I'm lucky 
         * Learned Apple Basic with it using the book that came with it
+            * I particularly enjoyed making little cartoon animations with it 
         * Used it for gaming, as well
             * Had all the Zork games
         * Wrote a database program to try to catalog all the videos I saw on MTV.
@@ -129,10 +130,10 @@ other experiences that inspired my or left some kind of permanent mark on my wet
                     * all of her Victrola records were very precisely detailed
                     * she immacualte penmanship
         * Conceived a graphical software maze game in 3-D.
-            * Never finished it (and barely started it) but I'm sure it would have
-                been better than Doom
+            * Never finished it (and barely started it) but I'm sure it would have been better than Doom if I kept at it
     * Intellivision video game console
         * Video games basically killed my budding career in programming
+            * sucked up a lot of free time 
     * I took some special course in electronics offered by my junior high school
         * there were only 3 of us enrolled
         * learned a little bout digital electronics and boolean math
