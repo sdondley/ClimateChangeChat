@@ -2,9 +2,9 @@
 
 - [Tech Stuff](#tech-stuff)
     - [Toots](#toots)
-    - [tmux](#tmux)
-    - [neovim/vim](#neovimvim)
-        - [Language servers](#language-servers)
+        - [tmux](#tmux)
+        - [neovim/vim](#neovimvim)
+            - [Language servers](#language-servers)
 - [Tech Snips](#tech-snips)
     - [Notes](#notes)
 
@@ -18,16 +18,18 @@ This page represents my futile attempt at returning the favor to all of those wh
 
 Tutorials I've written. 
 
-## tmux
+### tmux
 * [Super Guide to 'split-window' tmux subcommand (and beyond)](Super-Guide-to-'split-window'-tmux-subcommand-(and-beyond)) 
 
-## neovim/vim
+### neovim/vim
 
-### Language servers
+#### Language servers
 * [Setting up neovim with a Perl language server](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md)
 * [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](fast_as_fuck_perl_language_server_and_completion.md)
  
 # Tech Snips
+Useful snippets of code for little jobs.
+
 [Tech Snips](snips/Tech-Snips.md)
 
 ## Notes
