@@ -14,6 +14,24 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
+* apple new product line up
+    * make studio ultra looks tempting as hell
+        * lots of sticker shock, though
+            * 4k starting price with no monitor 
+                * thought I do get a 10% vet disounted 
+                * so 3600
+            * I **could** trade in my imac 2020 though...
+                * apple will only give me $1500 for it 
+                    * would bring cost down to 2100
+                    * if it were 2 grand I might be tempted 
+                * and i'd be stuck wih just one crappy thunderbolt monitor 
+                    * would have to spring for a new screen 
+                        * about 1450 for their cheapest display
+                        * total package would be close to 4 grand with taxes 
+                        * ugh, no 
+                        * but I may 
+                        * but wait, I have a used car I'm looking to sell
+                            * how much could I get for that?
 * Galaxy Brain newsletter
     *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
     * about the spread of info during wartime on the net
