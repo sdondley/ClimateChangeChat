@@ -63,7 +63,7 @@ enjoy it immensely.
 * *nix
     * [macOS](/macOS)
 
-### My computer hardware history
+### Great moments from my computing history
 
 #### Early years
 Since I was a young boy, I've always been fascinated by all things digital. The
