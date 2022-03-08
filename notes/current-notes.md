@@ -3,8 +3,8 @@
 - [Current notes](#current-notes)
     - [2022](#2022)
         - [March](#march)
-            - [8](#8)
-            - [7](#7)
+            - [8th](#8th)
+            - [7th](#7th)
 
 # Current notes
 
@@ -13,12 +13,12 @@ Diary of rather random stuff I'm taking notes on
 ## 2022
 ### March
 
-#### 8
+#### 8th
 * Listed with half an ear to while coding
     https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
 
-#### 7
+#### 7th
 
 * Watching bill joy ted x talk from 2008
         https://www.youtube.com/watch?v=LN2shXeJNz8
