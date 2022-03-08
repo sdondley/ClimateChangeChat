@@ -33,8 +33,9 @@ Diary of rather random stuff I'm taking notes on
         * climate change
 * What is Bill Joy up to now?
     * seems to have dropped off the map 
-    * looks like he's still with Kleiner Perkins
-        * working on carbon capture tech? 
-            * https://www.kulr8.com/news/money/solidia-technologies-names-dr-padmaja-parakala-director-of-r-d/article_66fdcd34-88d5-5e48-a4d0-5959e2b9e0bf.html
+    * looks like he's retired from venture capitalism
+    * good chance he's disillusioned 
+        * seems to have gone silent on things 
+        * or could just be trying to enjoy the rest of his life
     * more recent video about crispr genetic tech
         https://www.youtube.com/watch?v=lRJvtYttNNY
