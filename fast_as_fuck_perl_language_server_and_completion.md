@@ -1,4 +1,4 @@
-# Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server
+# Perl Language Servers Part Deux: Fast as FUCK Completion with the **NEW** Perl Navigator Language Server
 **PREFACE:** Earlier this week, I wrote an [ungodly, long tutorial](setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) about how to set up a perl language server with neovim. This more modest follow-up tutorial focuses on getting you started with the brand new, heretofore unknown language server, Perl Navigator, along with coq, a neovim plugin that promotes itself as the "fast as FUCK" completion engine.
 
 **PARENTAL GUIDANCE:** This documents contains f-bombs and makes insensitive comments about software and software choices. If you find this off-putting, go [RTFM](#rtfms) instead.
@@ -9,7 +9,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
 
 # On This Page
 
-- [Perl Language Servers Part Deux: Fast as FUCK completion with the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server)
+- [Perl Language Servers Part Deux: Fast as FUCK Completion with the **NEW** Perl Navigator Language Server](#perl-language-servers-part-deux-fast-as-fuck-completion-with-the-new-perl-navigator-language-server)
 - [TL;DR](#tldr)
     - [Setting up Perl Navigator with COQ](#setting-up-perl-navigator-with-coq)
         - [Step 1: Install the Perl Navigator language server](#step-1-install-the-perl-navigator-language-server)
@@ -63,7 +63,7 @@ You should read or at least skim the [previous tutorial](setting_up_lsp_nvim-lsp
     * typescript
         * I've never seen a line of typescript in my life 
             * just install it if you don't already have it
-            * no, I don't know how to install it on your machine unless you're on a mac using homebrew
+            * no, I don't know how to install it on your machine unless you're on a mac with homebrew
                 * google it 
     * git
         * if you don't have git installed yet, you probably need to learn more basic skills before you fuck around with a language server
