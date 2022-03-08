@@ -374,7 +374,7 @@ pre code {
     }
 }
 
-@media only screen and (max-width: 1206px) {
+@media only screen and and (min-width: 906px) and (max-width: 1206px) {
     #content {
       width: 600px;
     }
