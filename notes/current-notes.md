@@ -23,7 +23,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * Tried out HackMD
     * collaborate with others using git markup 
         * an idea I have long had 
-    * pretty impressive but confusing
+    * pretty impressive but a bit confusing
         * not easy to figure out how to create navigation between pages 
             * got it working, but menu items are tiny 
             * want it to look somethingmore like this
@@ -36,6 +36,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * you can allow anyone to make changes to docs
         * unsure how you might revert vandalism 
     * integrates with github
+        * unclear why this was built into their offering
+            * do versioning? 
+                * if so, kind of kludgy as far as I can tell
+                    * doesn't seem to integrate in with live edits 
         * can presumably get exported to a proper website from there 
 * Stack overflow question on inline perl raku module
     * Yup, I can be a real dummy sometimes 
