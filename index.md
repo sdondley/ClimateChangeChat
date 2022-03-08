@@ -21,7 +21,7 @@
     * just random notes about things I'm learning/reading about 
     * organized like a diary
 
-# Tech Stuff
-* [Tech Stuff](tech-stuff)
+# Tech stuff
+* [Tech stuff](tech-stuff)
 
  
