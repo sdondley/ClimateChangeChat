@@ -19,6 +19,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * ssh into primary
             * attach to an existing tmux session
             * don't have to worry about managing config files
+            * commands issued on client machine get played out on primary machine
     * frees up a lot of real estate
     * use f13/f14 hotkeys to toggle betwen machines
     * there is a slight bit of lag on client machine
