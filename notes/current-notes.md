@@ -14,6 +14,11 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
+* [Internet Backbone Giant Lumen Shuns .RU – Krebs on Security: krebsonsecurity.com](https://krebsonsecurity.com/2022/03/internet-backbone-giant-lumen-shuns-ru/)
+* 2014 iMac software installs
+    * homebrew 
+    * perlbrew
+        * 5.34.0 installed 
 * resurrected old 2014 imac workhorse today
     * using it as a second machine/slash 3rd monitor 
     * I now have 3 monitors again
