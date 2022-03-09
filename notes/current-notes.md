@@ -15,6 +15,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 9th
+* power to chernobyl plant cut off
+    * only 48 hours of fuel 
+    * Ukrainian official claims there is grave risk of radiation leak 
+    * IAEA, a UN body of atomic scientists, says there is no reason for alarm
 * debug of responsive issue with this website
     * the site slides a little from left to right while scrolling up and down
         * a litle annoying 
