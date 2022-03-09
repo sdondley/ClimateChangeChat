@@ -15,6 +15,15 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 9th
+* debug of responsive issue with this website
+    * the site slides a little from left to right while scrolling 
+    * possible solution: 
+    ```
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    ```
 * switched over to Barrier
     * open source version of Synergy 
     * they are the same piece of software
