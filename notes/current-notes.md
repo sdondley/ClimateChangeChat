@@ -17,6 +17,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * resurrected old 2014 imac workhorse today
     * using it as a second machine 
     * I now have 3 monitors again
+        * 2 5K monitors and an old thunderbolt display
+        * you can never have enough screen real estate
     * it's actually pretty snappy
     * using software that acts as a "virtual" KVM switch
     * called "Synergy"
