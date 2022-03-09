@@ -14,7 +14,16 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
-* [Internet Backbone Giant Lumen Shuns .RU – Krebs on Security: krebsonsecurity.com](https://krebsonsecurity.com/2022/03/internet-backbone-giant-lumen-shuns-ru/)
+* best way to interact with second machine
+    * so far, use it for notes
+        * ssh into primary
+            * attach to an existing tmux session
+            * don't have to worry about managing config files
+    * frees up a lot of real estate
+    * use f13/f14 hotkeys to toggle betwen machines
+    * there is a slight bit of lag on client machine
+    * best not to use mouse on client machine
+        * also a little laggy 
 * 2014 iMac software installs
     * homebrew 
     * perlbrew
