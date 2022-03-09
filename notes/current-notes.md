@@ -29,6 +29,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * bit of a reach but:
             * just a single key press
             * can easily feel way to the correct key
+            * swiching between two different apps now just takes one keystroke
+            * nice side benefit
     * my main programming machine is now right in front of me instead of off to the side
     * there is a slight bit of lag on client machine
     * best not to use mouse on client machine
