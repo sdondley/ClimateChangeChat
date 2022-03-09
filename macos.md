@@ -1,3 +1,10 @@
+# On This Page
+
+- [macOS Notes](#macos-notes)
+- [Generate Ssh Key](#generate-ssh-key)
+- [Set up Ssh Agent](#set-up-ssh-agent)
+    - [Steps](#steps)
+
 # macOS Notes
 
 # Generate Ssh Key
@@ -6,10 +13,10 @@
 ssh-keygen -t rsa
 ```
 
-# Set up Ssh Agent
+# Set up SSH Agent
 * steps below lifted from this great tutorial
     * [Proper use of SSH client in Mac OS X - GetPageSpeed: www.getpagespeed.com](https://www.getpagespeed.com/work/proper-use-of-ssh-client-in-mac-os-x)
-## Summary
+## Steps
 * `ssh-keygen -t rsa  -C "s@dondley.com (iMac-2014)"`
 * accept defaul dir
 * add a passphrase (for real)
