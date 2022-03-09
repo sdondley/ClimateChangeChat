@@ -39,6 +39,7 @@ Because I sure as hell don't have a photographic memory
 
 * [comma IDE](notes/comma_ide_notes.md)
 * [git](git)
+* [macos](macos)
 * [neovim](notes/neovim)
 * [raku IDE?](notes/Raku-IDE-notes.md)
 * [vimwiki-markdown](vimwiki-markdown)
