@@ -17,7 +17,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * resurrected old 2014 imac workhorse today
     * using it as a second machine/slash 3rd monitor 
     * I now have 3 monitors again
-        * I now have 33,523,200 pixels at my command. Way bigger than Putin's army.
+        * I now have 33,523,200 pixels at my command
+            * way bigger than Putin's army
         * 2 5K monitors and an old thunderbolt display
         * you can never have enough screen real estate
     * it's actually pretty snappy
