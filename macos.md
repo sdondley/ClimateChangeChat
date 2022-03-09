@@ -9,4 +9,16 @@ ssh-keygen -t rsa
 # Set up Ssh Agent
 * great tutorial
     * [Proper use of SSH client in Mac OS X - GetPageSpeed: www.getpagespeed.com](https://www.getpagespeed.com/work/proper-use-of-ssh-client-in-mac-os-x)
-
+## Summary
+* `ssh-keygen -t rsa  -C "s@dondley.com (iMac-2014)"`
+* accept defaul dir
+* add a passphrase (for real)
+* copy to clipboard
+    * `cat ~/.ssh/id_rsa.pub | pbcopy` 
+        * add to `authorized_keys` on remote machine 
+* add ~/.ssh/config file
+    UseKeychain yes
+    AddKeysToAgent yes 
+* `ssh-add -K`
+    * type in passphrase (only time you ever need to do it)
+ 

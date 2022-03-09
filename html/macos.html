@@ -264,6 +264,32 @@
 </ul>
 </li>
 </ul>
+<h2>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h2>
+<ul>
+<li><code>ssh-keygen -t rsa  -C "s@dondley.com (iMac-2014)"</code></li>
+<li>accept defaul dir</li>
+<li>add a passphrase (for real)</li>
+<li>copy to clipboard
+<ul>
+<li>
+<code>cat ~/.ssh/id_rsa.pub | pbcopy</code>
+<ul>
+<li>add to <code>authorized_keys</code> on remote machine</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>add ~/.ssh/config file
+UseKeychain yes
+AddKeysToAgent yes</li>
+<li>
+<code>ssh-add -K</code>
+<ul>
+<li>type in passphrase (only time you ever need to do it)</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <div id="toc">
