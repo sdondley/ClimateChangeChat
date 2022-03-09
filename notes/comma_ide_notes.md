@@ -18,6 +18,7 @@
 | Key command | Description      |
 |-------------|------------------|
 | ⌘-+         | expand fold      |
+| ⌘--         | close fold       |
 | ⌘-backtick  | open preferences |
 
 # recipes

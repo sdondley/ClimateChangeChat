@@ -15,6 +15,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 8th
 * best way to interact with second machine
+    * things seems to be faster when primary machine is not on wifi 
+    * connected directly to router
+    * may break handoff though?
+        * nope, still works 
     * so far, use it for notes
         * ssh into primary
             * attach to an existing tmux session
