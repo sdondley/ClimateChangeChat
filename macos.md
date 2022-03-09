@@ -2,7 +2,7 @@
 
 - [macOS Notes](#macos-notes)
 - [Generate Ssh Key](#generate-ssh-key)
-- [Set up Ssh Agent](#set-up-ssh-agent)
+- [Setup SSH Agent](#setup-ssh-agent)
     - [Steps](#steps)
 
 # macOS Notes
@@ -13,7 +13,7 @@
 ssh-keygen -t rsa
 ```
 
-# Set up SSH Agent
+# Setup SSH Agent
 * steps below lifted from this great tutorial
     * [Proper use of SSH client in Mac OS X - GetPageSpeed: www.getpagespeed.com](https://www.getpagespeed.com/work/proper-use-of-ssh-client-in-mac-os-x)
 ## Steps
