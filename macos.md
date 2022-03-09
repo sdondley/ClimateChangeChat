@@ -7,7 +7,7 @@ ssh-keygen -t rsa
 ```
 
 # Set up Ssh Agent
-* great tutorial
+* steps below lifted from this great tutorial
     * [Proper use of SSH client in Mac OS X - GetPageSpeed: www.getpagespeed.com](https://www.getpagespeed.com/work/proper-use-of-ssh-client-in-mac-os-x)
 ## Summary
 * `ssh-keygen -t rsa  -C "s@dondley.com (iMac-2014)"`
