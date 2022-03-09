@@ -15,18 +15,18 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 8th
 * resurrected old 2014 imac workhorse today
-    * using it as a second machine 
+    * using it as a second machine/slash 3rd monitor 
     * I now have 3 monitors again
         * 2 5K monitors and an old thunderbolt display
         * you can never have enough screen real estate
     * it's actually pretty snappy
-    * using software that acts as a "virtual" KVM switch
-    * called "Synergy"
-        *  [Synergy - Share one mouse & keyboard across computers: symless.com](https://symless.com/synergy)
-    * works pretty well
+    * connected the computers using software that acts as a "virtual" KVM switch
+        * called "Synergy"
+            *  [Synergy - Share one mouse & keyboard across computers: symless.com](https://symless.com/synergy)
+        * works pretty well
         * sometimes there mouse is a bit laggy on second machine 
-    * just move mouse cursor over the 2nd machine and the kvm automatically kicks in
-    * you can use hotkeys to switch between machines as well
+        * just move mouse cursor over the 2nd machine and the kvm automatically kicks in
+        * you can use hotkeys to switch between machines as well
     * this should open up more possibilities for me
     * maybe even better than having the 2nd machine in "target" mode
         * had target mode set up with old 2010 iMac 
