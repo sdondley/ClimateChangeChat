@@ -19,6 +19,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * only 48 hours of fuel left on backup generators
     * Ukrainian official claims there is grave risk of radiation leak 
     * IAEA, a UN body of atomic scientists, says there is no reason for alarm
+    * Ukrainian utility company says there is a danger
 * debug of responsive issue with this website
     * the site slides a little from left to right while scrolling up and down
         * a litle annoying 
