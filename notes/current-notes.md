@@ -22,6 +22,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
             * commands issued on client machine get played out on primary machine
     * frees up a lot of real estate
     * use f13/f14 hotkeys to toggle betwen machines
+        * bit of a reach but:
+            * just a single key press
+            * can easily feel way to the correct key
+    * my main programming machine is now right in front of me instead of off to the side
     * there is a slight bit of lag on client machine
     * best not to use mouse on client machine
         * also a little laggy 
