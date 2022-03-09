@@ -16,7 +16,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 9th
 * debug of responsive issue with this website
-    * the site slides a little from left to right while scrolling 
+    * the site slides a little from left to right while scrolling up and down
+        * a litle annoying 
     * possible solution: 
         ```
             html, body {
