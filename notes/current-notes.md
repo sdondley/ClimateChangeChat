@@ -3,6 +3,7 @@
 - [Current Notes](#current-notes)
     - [2022](#2022)
         - [March](#march)
+            - [9th](#9th)
             - [8th](#8th)
             - [7th](#7th)
 
@@ -12,6 +13,16 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 ## 2022
 ### March
+
+#### 9th
+* switched over to Barrier
+    * open source version of Synergy 
+    * they are the same piece of software
+    * both pretty buggy and not user friendly
+    * but Barrier is free
+    * will ask for a refund for synergy
+* debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier
+    * [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
 
 #### 8th
 * best way to interact with second machine
@@ -39,6 +50,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * homebrew 
     * perlbrew
         * 5.34.0 installed 
+    * karabiner-elements
 * resurrected old 2014 imac workhorse today
     * using it as a second machine/slash 3rd monitor 
     * I now have 3 monitors again
