@@ -37,6 +37,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
             * or for note taking
                 * share the files via icloud 
                     * or synology drive
+    * upgrading old imac to latest versino of big sur
+        * nearly 6 GB large
+        * download speed is very slow
+            * perhaps heavily throttled by apple? 
 * apple new product line up
     * make studio ultra looks tempting as hell
         * lots of sticker shock, though
