@@ -14,6 +14,27 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 8th
+* resurrected old 2014 imac workhorse today
+    * using it as a second machine 
+    * I now have 3 monitors again
+    * it's actually pretty snappy
+    * using software that acts as a "virtual" KVM switch
+    * called "Synergy"
+        *  [Synergy - Share one mouse & keyboard across computers: symless.com](https://symless.com/synergy)
+    * works pretty well
+        * sometimes there mouse is a bit laggy on second machine 
+    * just move mouse cursor over the 2nd machine and the kvm automatically kicks in
+    * you can use hotkeys to switch between machines as well
+    * this should open up more possibilities for me
+    * maybe even better than having the 2nd machine in "target" mode
+        * had target mode set up with old 2010 iMac 
+            * target mode not compatible with "newer" macs like my 2014 iMac
+        * but now I can use this third machine for running tasks I wouldn't want bogging down my main machine
+            * maybe smoke tests for perl
+            * or for safari, a memory hog, on the old machine
+            * or for note taking
+                * share the files via icloud 
+                    * or synology drive
 * apple new product line up
     * make studio ultra looks tempting as hell
         * lots of sticker shock, though
@@ -24,6 +45,12 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 * apple will only give me $1500 for it 
                     * would bring cost down to 2100
                     * if it were 2 grand I might be tempted 
+                    * disappointing
+                        * the computer has lost almost 2/3rds of its value in just 18 months 
+                            * that's nuts 
+                    * going for well over $2500  on ebay
+                        * knock off maybe about $300 in fees 
+                            * net $2200 
                 * and i'd be stuck wih just one crappy thunderbolt monitor 
                     * would have to spring for a new screen 
                         * about 1450 for their cheapest display
@@ -44,14 +71,27 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * but would take a huge hit on storage space
             * 4 TB hard drive is $1200! 
                 * that's insane 
+        * $400 extra for memory upgrade to 64GB
+            * what I have now but need much less for m1 chips 
+            * likely not needed
         * also still have the 2015 imac
             * could maybe get 4 or 500 hundred for it 
             * which means I would only have to spend about $1000 out of pocket
-                * but $2200 with the storage I need
+                * $2200 with 4tb of storage
+                    * probably not needed 
                 * for a much faster computer 
                 * maybe slightly better screen 
+                * selling old imac would offset that down to about $1800
+        * I could probably scale it back to a 1TB drive and get away with it
+            * would save me $1000
         * far fewer ports than I need
             * would need to drop about $100 for adapters and such 
+        * other options is to live with just the thunderbolt display for a while
+        * so (2399 + 1800) - 10% discount - 1500 trade-in = 2699
+        * OK, after a lot of hemming an hawing, I'm not going to do this
+    * going to wait another year or two 
+        * will be faster macs by then 
+        * what I have is perfectly fine
 * Galaxy Brain newsletter
     *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
     * about the spread of info during wartime on the net
