@@ -16,7 +16,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 9th
 * power to chernobyl plant cut off
-    * only 48 hours of fuel 
+    * only 48 hours of fuel left on backup generators
     * Ukrainian official claims there is grave risk of radiation leak 
     * IAEA, a UN body of atomic scientists, says there is no reason for alarm
 * debug of responsive issue with this website
