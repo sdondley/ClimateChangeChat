@@ -41,6 +41,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * nearly 6 GB large
         * download speed is very slow
             * perhaps heavily throttled by apple? 
+    * and now I get to enjoy installing and configuring software for hours
 * apple new product line up
     * make studio ultra looks tempting as hell
         * lots of sticker shock, though
