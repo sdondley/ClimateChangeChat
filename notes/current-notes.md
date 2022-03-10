@@ -19,7 +19,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * set up private part of climate change chat website for private notes
     * "private" directory set up as a git submodule
     * directory on server is password protected with apache auth_basic
-* investigating why mac crashes at high resolutions
+* investigating why old mac crashes at high resolutions
     *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
  
 #### 9th
