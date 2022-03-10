@@ -16,7 +16,6 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
-* test update
 * [Can We Trust Fossil Fuel Companies? Interview w/Shell CEO | The Problem With Jon Stewart | Apple TV+ - YouTube: www.youtube.com](https://www.youtube.com/watch?v=E_-9Uk3xnkU&t=200s)
 * [NEW Mac Studio & Apple Event Reactions! - YouTube: www.youtube.com](https://www.youtube.com/watch?v=CMm7UZKtGNk)
 * set up private part of climate change chat website for private notes
