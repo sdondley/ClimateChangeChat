@@ -1,6 +1,6 @@
 # On This Page
 
-- [Tech stuff](#tech-stuff)
+- [Tech Stuff](#tech-stuff)
 - [Toots](#toots)
     - [tmux](#tmux)
     - [neovim/vim](#neovimvim)
@@ -8,7 +8,7 @@
 - [Tech snips](#tech-snips)
 - [Notes](#notes)
 
-# Tech stuff
+# Tech Stuff
 
 Here you'll find a loosely organized compendium of tech tutorials, notes and code snippets. It's probably of little interest unless you dig computers and inhabit my problem space.
 

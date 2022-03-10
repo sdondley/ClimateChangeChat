@@ -1,8 +1,8 @@
 # On This Page
 
-- [Make Youtube videos responsive](#make-youtube-videos-responsive)
+- [Make Youtube Videos Responsive](#make-youtube-videos-responsive)
 
-# Make Youtube videos responsive
+# Make Youtube Videos Responsive
 
 * throw the embed code from youtube in a div tag with class of `iframe-container`
 * Add this css to the styles:
