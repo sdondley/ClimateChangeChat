@@ -9,7 +9,7 @@
 # Apache Notes
 
 # Basic Authentication
-* [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html
+* [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html)
 * best choice when used with ssl
 ## htpasswd command
 * used for managing user names and password
