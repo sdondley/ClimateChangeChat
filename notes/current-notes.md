@@ -3,6 +3,7 @@
 - [Current Notes](#current-notes)
     - [2022](#2022)
         - [March](#march)
+            - [10th](#10th)
             - [9th](#9th)
             - [8th](#8th)
             - [7th](#7th)
@@ -14,10 +15,24 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ## 2022
 ### March
 
+#### 10th
+* set up private part of climate change chat website for private notes
+    * "private" directory set up as a git submodule
+    * directory on server is password protected with apache auth_basic
+* investigating why mac crashes at high resolutions
+    *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
+ 
 #### 9th
-* battle a lot today with system crashes on imac 2014
-    * was having kernel panic every 15 min or so 
+* battled a lot today with system crashes on imac 2014
+    * having kernel panic every 15 min or so 
     * pram reset seems to have finally fixed the issue 
+        * nope, still happening 
+    * crashes not happening in safe mode
+        * screen res is lower in safe mode 
+            * maybe part of the problem 
+        * think I need a technician to look at this
+    * does not seem to crash at lower screen resolutions when not in safe mod
+        * indicates a problem with the gpu?
 * power to chernobyl plant cut off
     * only 48 hours of fuel left on backup generators
     * Ukrainian official claims there is grave risk of radiation leak 
