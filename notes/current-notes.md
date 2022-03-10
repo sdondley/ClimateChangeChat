@@ -15,6 +15,9 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 9th
+* battle a lot today with system crashes on imac 2014
+    * was having kernel panic every 15 min or so 
+    * pram reset seems to have finally fixed the issue 
 * power to chernobyl plant cut off
     * only 48 hours of fuel left on backup generators
     * Ukrainian official claims there is grave risk of radiation leak 
