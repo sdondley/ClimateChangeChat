@@ -28,4 +28,4 @@
     * has an [apache-auth] config
         * how to determine if it's turned on?
             * `fail2ban-client status` 
-                * will show up there 
+                * will show up there if it's on
