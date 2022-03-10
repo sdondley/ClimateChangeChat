@@ -28,5 +28,4 @@
     * add some kind arter file to the repo
         * using submodules does not appear to work otherwise 
     * `git submodule add <url> <local_dir>`
-    * 
 * [complete deletion of submodule](https://stackoverflow.com/a/1260982/1641112)

@@ -16,6 +16,12 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
+* finally got private pages working with submodule on ccc site
+    * had a lot of trouble with submodules 
+    * kept getting errors trying to set md_private_dir
+    * just removed it from server
+    * potential fix:
+        * [fatal: remote error: upload-pack: not our ref 8bc7d87e088fdcd53c47ebf5460acc004f6b4fc4 · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
 * [Can We Trust Fossil Fuel Companies? Interview w/Shell CEO | The Problem With Jon Stewart | Apple TV+ - YouTube: www.youtube.com](https://www.youtube.com/watch?v=E_-9Uk3xnkU&t=200s)
 * [NEW Mac Studio & Apple Event Reactions! - YouTube: www.youtube.com](https://www.youtube.com/watch?v=CMm7UZKtGNk)
 * set up private part of climate change chat website for private notes
