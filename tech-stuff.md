@@ -37,6 +37,7 @@ Useful snippets of code for little jobs.
 
 Because I sure as hell don't have a photographic memory
 
+* [apache](notes/apache)
 * [comma IDE](notes/comma_ide_notes.md)
 * [git](git)
 * [macos](macos)
