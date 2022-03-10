@@ -106,11 +106,9 @@
     * I notice my own increasing impatience reading wordy shit
         * just get me to the meat of the matter, especially on reality-based topics
             * I'll fill in the emotional details with my own imagination 
-            ~~~
-            People don't actually read newspapers. They step into them every morning like a hot bath.
-            ~~~
+      >  People don't actually read newspapers. They step into them every morning like a hot bath.
+            --- Marshall McLuhan
 
-Source: https://quotepark.com/quotes/1780915-marshall-mcluhan-people-dont-actually-read-newspapers-they-step-i/
 
 # Why Is the Design So Plain?
 * It's not as plain as it used to be
