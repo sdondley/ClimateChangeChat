@@ -1,6 +1,0 @@
-[submodule "html/private"]
-	path = html/private
-	url = git@github.com:sdondley/web_private_dir.git
-[submodule "private"]
-	path = private
-	url = git@github.com:sdondley/md_private_dir.git
