@@ -1,0 +1,3 @@
+[submodule "html/private"]
+	path = html/private
+	url = git@github.com:sdondley/web_private_dir.git
