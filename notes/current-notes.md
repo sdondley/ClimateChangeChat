@@ -24,7 +24,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
  
 #### 9th
-* battled a lot today with system crashes on imac 2014
+* battled a lot today wem crashes on imac 2014
     * having kernel panic every 15 min or so 
     * pram reset seems to have finally fixed the issue 
         * nope, still happening 

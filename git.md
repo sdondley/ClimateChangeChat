@@ -25,7 +25,7 @@
 * [Git - Submodules: git-scm.com](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 * create a new submodule from scratch
     * add repo to github 
-    * add some kind of starter file to the repo
+    * add some kind arter file to the repo
         * using submodules does not appear to work otherwise 
     * `git submodule add <url> <local_dir>`
     * 
