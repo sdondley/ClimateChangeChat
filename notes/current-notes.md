@@ -16,6 +16,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
+* this guy has a site pretty similar to mine:
+    * [Git errors and how to solve them - Technotes: technotes.adelerhof.eu](https://technotes.adelerhof.eu/git/git_errors/)
 * finally got private pages working with submodule on ccc site
     * had a lot of trouble with submodules 
     * kept getting errors trying to set md_private_dir
