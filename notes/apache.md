@@ -3,12 +3,13 @@
 - [Apache Notes](#apache-notes)
 - [Basic Authentication](#basic-authentication)
     - [htpasswd command](#htpasswd-command)
-    - [add to apache config file to password protect a directory](#add-to-apache-config-file-to-password-protect-a-directory)
+    - [apache config file](#apache-config-file)
     - [prevent brute force attacks](#prevent-brute-force-attacks)
 
 # Apache Notes
 
 # Basic Authentication
+* [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html
 * best choice when used with ssl
 ## htpasswd command
 * used for managing user names and password
@@ -16,7 +17,8 @@
         * `htpasswd -c PasswordFilename username`
     * Add or modify username2 in the password file Filename 
         * `htpasswd Filename username2`
-## add to apache config file to password protect a directory
+## apache config file
+* sample config for pw protecting a directory
     ```
     <Directory "/var/www/html/path/to/dir">
             AllowOverride AuthConfig
