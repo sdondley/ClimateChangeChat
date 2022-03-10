@@ -1,3 +1,5 @@
+# Apache Notes
+
 # On This Page
 
 - [Apache Notes](#apache-notes)
@@ -5,8 +7,6 @@
     - [htpasswd command](#htpasswd-command)
     - [apache config file](#apache-config-file)
     - [prevent brute force attacks](#prevent-brute-force-attacks)
-
-# Apache Notes
 
 # Basic Authentication
 * [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html)

@@ -1,9 +1,9 @@
+# Raku IDE notes
+
 # On This Page
 
 - [Raku IDE notes](#raku-ide-notes)
     - [notes from usr on discord about his try getting IDE working](#notes-from-usr-on-discord-about-his-try-getting-ide-working)
-
-# Raku IDE notes
 
 ## notes from usr on discord about his try getting IDE working
 

@@ -1,10 +1,10 @@
+# neovim notes
+
 # On This Page
 
 - [neovim notes](#neovim-notes)
     - [Configuration](#configuration)
         - [Configuring nvim from scratch](#configuring-nvim-from-scratch)
-
-# neovim notes
 
 vim is something a not-so-modern software miracle. Originally written
 in 1976 by Bill Joy, it still manages to a the text editor of choice

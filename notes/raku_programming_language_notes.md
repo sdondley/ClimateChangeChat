@@ -1,9 +1,9 @@
+# Raku Programming Language Notes
+
 # On This Page
 
 - [Raku Programming Language Notes](#raku-programming-language-notes)
 - [Regexes](#regexes)
-
-# Raku Programming Language Notes
 
 These are quick reference notes for myself so I don't have to keep looking up the same thing in the docs months later after I forget them. Not meant to be pedagogical.
 
