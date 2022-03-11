@@ -13,6 +13,7 @@
 * [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html)
 * best choice when used with ssl
 ## htpasswd command
+* [official docs](https://httpd.apache.org/docs/2.4/programs/htpasswd.html)
 * used for managing user names and password
     * create password file with new user
         * `htpasswd -c PasswordFilename username`
@@ -39,3 +40,7 @@
 
 ## Reset password?
 * is there any way for a user to reset their password if they don't have access to the command line?     
+* [PHP Apache2 Basic Auth Manager: github.com](https://github.com/rafaelgou/php-apache2-basic-auth-manager)
+    * looks promising
+    * but not password reset interface
+    * 
