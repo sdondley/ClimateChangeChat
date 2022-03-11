@@ -37,13 +37,5 @@ Useful snippets of code for little jobs.
 
 Because I sure as hell don't have a photographic memory
 
-* [apache](notes/apache)
-* [comma IDE](notes/comma_ide_notes.md)
-* [failban](notes/failban)
-* [git](git)
-* [macos](macos)
-* [neovim](notes/neovim)
-* [raku IDE?](notes/Raku-IDE-notes.md)
-* [vimwiki-markdown](vimwiki-markdown)
-
+[Tech notes](notes/tech/index)
 

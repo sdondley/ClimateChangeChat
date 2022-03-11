@@ -1,12 +1,18 @@
+# Tech Notes Index
+
+- [Cro](Cro)
+- [Karabiner-Elements](Karabiner-Elements)
+- [pygments](Pygments)
+- [Raku IDE](Raku-IDE-notes)
+- [Apache](apache)
+- [Comma IDE](comma_ide_notes)
+- [fail2ban](failban)
+- [Git](git)
+- [macOS](macos)
+- [neovim](neovim)
+- [Raku Programming Language](raku_programming_language_notes)
+- [vimwiki_markdown plugin](vimwiki-markdown)
+ 
 # On This Page
 
 - [Tech Notes Index](#tech-notes-index)
-
-# Tech Notes Index
-
-- [Apache Notes](apache)
-- [Comma IDE Notes](comma_ide_notes)
-- [fail2ban Notes](failban)
-- [neovim notes](neovim)
-- [Raku IDE notes](Raku-IDE-notes)
-- [Raku Programming Language Notes](raku_programming_language_notes)

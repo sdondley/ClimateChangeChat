@@ -1,3 +1,5 @@
+# Git
+
 # On This Page
 
 - [Git](#git)
@@ -5,8 +7,6 @@
 - [Branches](#branches)
 - [import file from current branch to](#import-file-from-current-branch-to)
 - [Submodules](#submodules)
-
-# Git
 
 # Reset to HEAD
 *  git reset `--hard` HEAD  

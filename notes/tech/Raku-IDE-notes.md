@@ -1,5 +1,4 @@
 # Raku IDE notes
-
 # On This Page
 
 - [Raku IDE notes](#raku-ide-notes)
@@ -20,4 +19,5 @@
 [5:06 PM] klebs: maybe it actually does work, i am not exactly sure
 
 [5:10 PM] klebs: after spending 4 or 5 days solely upgrading neovim for lsp, treesitter, lua, etc i just burned out on it (after getting it to be mostly awesome) and went back to my main line of development.  it does seem possible, and perhaps not that difficult depending on how easy it is to use the parsing capability already in raku.
+
 

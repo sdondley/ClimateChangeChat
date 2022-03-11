@@ -1,13 +1,3 @@
-# On This Page
-
-- [Current Notes](#current-notes)
-    - [2022](#2022)
-        - [March](#march)
-            - [10th](#10th)
-            - [9th](#9th)
-            - [8th](#8th)
-            - [7th](#7th)
-
 # Current Notes
 
 Diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website if they warrant it.
@@ -26,8 +16,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * just removed it from server
     * potential fix:
         * [fatal: remote error: upload-pack: not our ref 8bc7d87e088fdcd53c47ebf5460acc004f6b4fc4 · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
-* [Can We Trust Fossil Fuel Companies? Interview w/Shell CEO | The Problem With Jon Stewart | Apple TV+ - YouTube: www.youtube.com](https://www.youtube.com/watch?v=E_-9Uk3xnkU&t=200s)
-* [NEW Mac Studio & Apple Event Reactions! - YouTube: www.youtube.com](https://www.youtube.com/watch?v=CMm7UZKtGNk)
+* Jon Steward interview Shell CEO
+    https://www.youtube.com/watch?v=E_-9Uk3xnkU
+* Reaction to new mac Studio
+    https://www.youtube.com/watch?v=CMm7UZKtGNk
 * set up private part of climate change chat website for private notes
     * "private" directory set up as a git submodule
     * directory on server is password protected with apache auth_basic
@@ -251,3 +243,13 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 * if so, kind of kludgy as far as I can tell
                     * doesn't seem to integrate in with live edits 
         * can presumably get exported to a proper website from there 
+# On This Page
+
+- [Current Notes](#current-notes)
+    - [2022](#2022)
+        - [March](#march)
+            - [10th](#10th)
+            - [9th](#9th)
+            - [8th](#8th)
+            - [7th](#7th)
+

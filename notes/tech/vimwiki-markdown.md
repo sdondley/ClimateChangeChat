@@ -1,13 +1,13 @@
+# vimwiki_markdown plugin
+
+* [Github repo](https://github.com/patrickdavey/vimwiki_markdown)
+
 # On This Page
 
 - [vimwiki_markdown plugin](#vimwiki_markdown-plugin)
 - [Description](#description)
 - [Integration with rouge](#integration-with-rouge)
     - [integration with rouge creates problems for me](#integration-with-rouge-creates-problems-for-me)
-
-# vimwiki_markdown plugin
-
-* [Github repo](https://github.com/patrickdavey/vimwiki_markdown)
 
 # Description
 * a ruby script 
