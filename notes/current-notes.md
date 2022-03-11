@@ -91,7 +91,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * a litle annoying 
 * possible solution: 
     ```
-        html, body {
+    html, body {
         max-width: 100%;
         overflow-x: hidden;
     }
