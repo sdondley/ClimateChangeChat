@@ -6,6 +6,14 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
+* old/new imacs connected well through ethernet
+    * faster transfer speeds 
+    * can also be used to stream audio from 2020 to 2014
+        * using audio hijack (see below) 
+* 2014 imac software installs
+    * vlc, via homebrew
+    * audio hijack
+    * loopback 
 * moved tech notes to their own folder
     * Is there any good reason to separate snips from notes? 
         * I may just fold them into the notes. 
@@ -70,7 +78,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
 
 #### 8th
-* best way to interact with second machine
+* more notes on my new computing setup (imac 2020/2014 combo)
     * things seems to be faster when primary machine is not on wifi 
     * connected directly to router
     * may break handoff though?
