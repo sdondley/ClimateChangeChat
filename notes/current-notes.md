@@ -10,9 +10,10 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * showing up as raw html wrapped in a `<pre>` tag 
 * probably will require more modifications to raku post processor script
     * put youtube videos in a bulleted list
-    * look for iframe element in a bullet 
-    * add class to parent bullet
-    * modify css to remove bullets for li items in that class
+        * look for iframe element in a bullet 
+        * add class to parent bullet
+        * modify css to remove bullets for li items in that class
+    * the above did the trick
 ##### old/new imacs connected well through ethernet
 * having issues with disply of youtube videos with note headers
     * showing up as raw html in a `<pre>` tag 
@@ -251,7 +252,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * seems to have gone silent on things 
         * or could just be trying to enjoy the rest of his life
     * more recent video about crispr genetic tech
-        https://www.youtube.com/watch?v=lRJvtYttNNY
+    * https://www.youtube.com/watch?v=lRJvtYttNNY
 * Tried out HackMD
     * collaborate with others using git markup 
         * an idea I have long had 
