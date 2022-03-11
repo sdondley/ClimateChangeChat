@@ -1,14 +1,25 @@
-# Current Notes
+# My "Note Stream"
 
-Diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website if they warrant it.
+A streaming diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website if they warrant it. These notes are mostly for me but feel free to take a peek from time to time to see what I'm up to.
 
-## 2022
-### March
+# 2022
+## March
 
-#### 10th
-##### Listening music while I code my site tonight
+### 11th
+#### On the term "note stream"
+* I never heard the term before thinking of it tonight     
+* apparently it's a product from Microsoft
+    * looks kind of dumpy 
+    * [Get Note Stream - Microsoft Store: www.microsoft.com](https://www.microsoft.com/en-us/p/note-stream/9wzdncrdd17s?activetab=pivot:overviewtab)
+#### adding "Notes" to menu
+* good progress tonight on the site
+    * and for the last week 
+* feeling I can relax on this project a bit and work on something else
+#### Listening music while I code my site tonight
 * https://www.youtube.com/watch?v=o_HPLf3lmb4
-##### having issues with disply of youtube videos with note headers
+
+### 10th
+#### having issues with disply of youtube videos with note headers
 * showing up as raw html wrapped in a `<pre>` tag 
 * probably will require more modifications to raku post processor script
     * put youtube videos in a bulleted list
@@ -16,25 +27,25 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * add class to parent bullet
         * modify css to remove bullets for li items in that class
     * the above did the trick
-##### old/new imacs connected well through ethernet
+#### old/new imacs connected well through ethernet
 * having issues with disply of youtube videos with note headers
     * showing up as raw html in a `<pre>` tag 
     * probably will require more modifications to raku post processor script
 * faster transfer speeds 
 * can also be used to stream audio from 2020 to 2014
     * using audio hijack/loopback (see below) 
-##### 2014 imac software installs
+#### 2014 imac software installs
 * vlc, via homebrew
 * audio hijack
 * loopback 
-##### moved tech notes to their own folder
+#### moved tech notes to their own folder
 * Is there any good reason to separate snips from notes? 
     * I may just fold them into the notes. 
     * Even better by may to have them get copied out automatically from notes file and then separated out into separate files automatically.
-##### set up streaming between 2020 imac and 2014
+#### set up streaming between 2020 imac and 2014
 * using audio hijack/loopback 
 * I can now use dictation using a high-quality mic which gets streamed over via ethernet to the old iMac 
-##### this guy has a site pretty similar to mine:
+#### this guy has a site pretty similar to mine:
 * [Git errors and how to solve them - Technotes: technotes.adelerhof.eu](https://technotes.adelerhof.eu/git/git_errors/)
 * also done in markdown
 * less of a wiki, though
@@ -44,20 +55,20 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * just removed it from server
     * potential fix:
         * [fatal: remote error: upload-pack: not our ref 8bc7d87e088fdcd53c47ebf5460acc004f6b4fc4 · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
-##### Jon Steward interview Shell CEO
+#### Jon Steward interview Shell CEO
 * first interesting thing I've seen Jon do on his new show
     * I haven't watched the show at all 
 * https://www.youtube.com/watch?v=E_-9Uk3xnkU
-##### Reaction to new mac Studio
+#### Reaction to new mac Studio
 * https://www.youtube.com/watch?v=CMm7UZKtGNk
-##### set up private part of climate change chat website for private notes
+#### set up private part of climate change chat website for private notes
 * "private" directory set up as a git submodule
 * directory on server is password protected with apache auth_basic
-##### investigating why old mac crashes at high resolutions
+#### investigating why old mac crashes at high resolutions
 *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
  
-#### 9th
-##### battled a lot today wem crashes on imac 2014
+### 9th
+#### battled a lot today wem crashes on imac 2014
 * having kernel panic every 15 min or so 
 * pram reset seems to have finally fixed the issue 
     * nope, still happening 
@@ -68,13 +79,13 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * does not seem to crash at lower screen resolutions when not in safe mod
     * indicates a problem with the gpu?
 
-##### power to chernobyl plant cut off
+#### power to chernobyl plant cut off
 * only 48 hours of fuel left on backup generators
 * Ukrainian official claims there is grave risk of radiation leak 
 * IAEA, a UN body of atomic scientists, says there is no reason for alarm
 * Ukrainian utility company says there is a danger
 
-##### debug of responsive issue with this website
+#### debug of responsive issue with this website
 * the site slides a little from left to right while scrolling up and down
     * a litle annoying 
 * possible solution: 
@@ -85,17 +96,17 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     }
     ```
     * solution from: [how to prevent website sliding left and right Code Example: www.codegrepper.com](https://www.codegrepper.com/code-examples/whatever/how+to+prevent+website+sliding+left+and+right)
-##### switched over to Barrier
+#### switched over to Barrier
 * open source version of Synergy 
 * they are the same piece of software
 * both pretty buggy and not user friendly
 * but Barrier is free
 * will ask for a refund for synergy
  
-##### debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier
+#### debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier
 * [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
 
-#### 8th
+### 8th
 * more notes on my new computing setup (imac 2020/2014 combo)
     * things seems to be faster when primary machine is not on wifi 
     * connected directly to router
@@ -152,7 +163,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * download speed is very slow
             * perhaps heavily throttled by apple? 
     * and now I get to enjoy installing and configuring software for hours
-##### Mac Studio: To Buy or Not to Buy?
+#### Mac Studio: To Buy or Not to Buy?
 * make studio ultra looks tempting as hell
     * lots of sticker shock, though
         * 4k starting price with no monitor 
@@ -209,16 +220,16 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * going to wait another year or two 
     * will be faster macs by then 
     * what I have is perfectly fine
-##### Galaxy Brain newsletter
+#### Galaxy Brain newsletter
 *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
 * about the spread of info during wartime on the net
 * discusses what we know about following disinformation networks
 * quotes experts on dissemination of Russian propaganda and their operations
 * upshot: it's too early to tell how prop war is going
-##### Stack overflow question on inline perl raku module
+#### Stack overflow question on inline perl raku module
 * Yup, I can be a real dummy sometimes 
 *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
-##### Anderson Cooper on Stephen Colbert
+#### Anderson Cooper on Stephen Colbert
 * talks about coomplications of covering war and what he think Putin is afraid of 
     * https://www.youtube.com/watch?v=9r_8jhtcUIo
 * Upshots:
@@ -229,7 +240,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * Putin is scared of an 80 year old womand protesting
         * sign of weakness and fear 
 
-##### Computering expert talks about why crypto is bullshit
+#### Computering expert talks about why crypto is bullshit
 * Listened with half an ear to while coding
 * https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
@@ -237,8 +248,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * Babbage is the name of the podcast
             * started to listen to it but fell asleep 
 
-#### 7th
-##### Watching bill joy ted x talk from 2008
+### 7th
+#### Watching bill joy ted x talk from 2008
 * https://www.youtube.com/watch?v=LN2shXeJNz8
 * from 2008
 * seems like a bit of a doom an gloomer
@@ -252,7 +263,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * concerned about future
     * climate change
 
-##### What is Bill Joy up to now?
+#### What is Bill Joy up to now?
 * seems to have dropped off the map 
 * looks like he's retired from venture capitalism
 * good chance he's disillusioned 
@@ -261,7 +272,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * more recent video about crispr genetic tech
 * https://www.youtube.com/watch?v=lRJvtYttNNY
 
-##### Tried out HackMD
+#### Tried out HackMD
 * collaborate with others using git markup 
     * an idea I have long had 
 * pretty impressive but a bit confusing
@@ -285,34 +296,37 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 # On This Page
 
-- [Current Notes](#current-notes)
-    - [2022](#2022)
-        - [March](#march)
-            - [10th](#10th)
-                - [Listening music while I code my site tonight](#listening-music-while-i-code-my-site-tonight)
-                - [having issues with disply of youtube videos with note headers](#having-issues-with-disply-of-youtube-videos-with-note-headers)
-                - [old/new imacs connected well through ethernet](#oldnew-imacs-connected-well-through-ethernet)
-                - [2014 imac software installs](#2014-imac-software-installs)
-                - [moved tech notes to their own folder](#moved-tech-notes-to-their-own-folder)
-                - [set up streaming between 2020 imac and 2014](#set-up-streaming-between-2020-imac-and-2014)
-                - [this guy has a site pretty similar to mine:](#this-guy-has-a-site-pretty-similar-to-mine)
-                - [Jon Steward interview Shell CEO](#jon-steward-interview-shell-ceo)
-                - [Reaction to new mac Studio](#reaction-to-new-mac-studio)
-                - [set up private part of climate change chat website for private notes](#set-up-private-part-of-climate-change-chat-website-for-private-notes)
-                - [investigating why old mac crashes at high resolutions](#investigating-why-old-mac-crashes-at-high-resolutions)
-            - [9th](#9th)
-                - [battled a lot today wem crashes on imac 2014](#battled-a-lot-today-wem-crashes-on-imac-2014)
-                - [power to chernobyl plant cut off](#power-to-chernobyl-plant-cut-off)
-                - [debug of responsive issue with this website](#debug-of-responsive-issue-with-this-website)
-                - [switched over to Barrier](#switched-over-to-barrier)
-                - [debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier](#debugged-a-problem-where-i-was-losing-ctrl-jk-functionality-on-client-computer-with-barrier)
-            - [8th](#8th)
-                - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
-                - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
-                - [Stack overflow question on inline perl raku module](#stack-overflow-question-on-inline-perl-raku-module)
-                - [Anderson Cooper on Stephen Colbert](#anderson-cooper-on-stephen-colbert)
-                - [Computering expert talks about why crypto is bullshit](#computering-expert-talks-about-why-crypto-is-bullshit)
-            - [7th](#7th)
-                - [Watching bill joy ted x talk from 2008](#watching-bill-joy-ted-x-talk-from-2008)
-                - [What is Bill Joy up to now?](#what-is-bill-joy-up-to-now)
-                - [Tried out HackMD](#tried-out-hackmd)
+- [My "Note Stream"](#my-note-stream)
+- [2022](#2022)
+    - [March](#march)
+        - [11th](#11th)
+            - [On the term "note stream"](#on-the-term-note-stream)
+            - [adding "Notes" to menu](#adding-notes-to-menu)
+            - [Listening music while I code my site tonight](#listening-music-while-i-code-my-site-tonight)
+        - [10th](#10th)
+            - [having issues with disply of youtube videos with note headers](#having-issues-with-disply-of-youtube-videos-with-note-headers)
+            - [old/new imacs connected well through ethernet](#oldnew-imacs-connected-well-through-ethernet)
+            - [2014 imac software installs](#2014-imac-software-installs)
+            - [moved tech notes to their own folder](#moved-tech-notes-to-their-own-folder)
+            - [set up streaming between 2020 imac and 2014](#set-up-streaming-between-2020-imac-and-2014)
+            - [this guy has a site pretty similar to mine:](#this-guy-has-a-site-pretty-similar-to-mine)
+            - [Jon Steward interview Shell CEO](#jon-steward-interview-shell-ceo)
+            - [Reaction to new mac Studio](#reaction-to-new-mac-studio)
+            - [set up private part of climate change chat website for private notes](#set-up-private-part-of-climate-change-chat-website-for-private-notes)
+            - [investigating why old mac crashes at high resolutions](#investigating-why-old-mac-crashes-at-high-resolutions)
+        - [9th](#9th)
+            - [battled a lot today wem crashes on imac 2014](#battled-a-lot-today-wem-crashes-on-imac-2014)
+            - [power to chernobyl plant cut off](#power-to-chernobyl-plant-cut-off)
+            - [debug of responsive issue with this website](#debug-of-responsive-issue-with-this-website)
+            - [switched over to Barrier](#switched-over-to-barrier)
+            - [debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier](#debugged-a-problem-where-i-was-losing-ctrl-jk-functionality-on-client-computer-with-barrier)
+        - [8th](#8th)
+            - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
+            - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
+            - [Stack overflow question on inline perl raku module](#stack-overflow-question-on-inline-perl-raku-module)
+            - [Anderson Cooper on Stephen Colbert](#anderson-cooper-on-stephen-colbert)
+            - [Computering expert talks about why crypto is bullshit](#computering-expert-talks-about-why-crypto-is-bullshit)
+        - [7th](#7th)
+            - [Watching bill joy ted x talk from 2008](#watching-bill-joy-ted-x-talk-from-2008)
+            - [What is Bill Joy up to now?](#what-is-bill-joy-up-to-now)
+            - [Tried out HackMD](#tried-out-hackmd)

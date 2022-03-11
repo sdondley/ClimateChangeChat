@@ -26,6 +26,7 @@
             <ul>
                 <li><a href="%root_path%index.html">Home</a></li>
                 <li><a href="%root_path%about.html">About</a></li>
+                <li><a href="%root_path%notes/current-notes.html">Notes</a></li>
                 <li><a href="%root_path%tech-stuff.html">Tech Stuff</a></li>
             </ul>
         </div>
