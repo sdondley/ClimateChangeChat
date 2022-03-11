@@ -1,8 +1,8 @@
 # On This Page
 
-- [Get word count of current file in vim](#get-word-count-of-current-file-in-vim)
+- [Get Word Count of Current File in Vim](#get-word-count-of-current-file-in-vim)
 
-# Get word count of current file in vim
+# Get Word Count of Current File in Vim
 
 * These are crude
     * `g <c-g>`

@@ -2,13 +2,13 @@
 
 - [Decoding the Gurus](#decoding-the-gurus)
 - [Links](#links)
-- [What is it?](#what-is-it)
+- [What Is It?](#what-is-it)
 - [Hosts](#hosts)
     - [Matt Browne](#matt-browne)
         - [Links](#links-2)
     - [Chris Kavnaugh](#chris-kavnaugh)
         - [Links](#links-3)
-- [What do they talk about?](#what-do-they-talk-about)
+- [What Do They Talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
 
 # Decoding the Gurus
@@ -20,7 +20,7 @@
 [Unofficial Discord Server](https://discord.gg/z3krx3CX)
 
 
-# What is it?
+# What Is It?
 * It's primarily a [podcast](podcast)
 * Started in late 2020
 
@@ -41,7 +41,7 @@
 ### Links
 * [Twitter](https://twitter.com/C_Kavanagh)
 
-# What do they talk about?
+# What Do They Talk about?
 * Analyze popular figures in media who have acquired large followings with their sweeping worldviews
     * hosts refer to them as gurus 
     * Mostly cover controversial individuals who promulgate psuedoscience and misinformation 

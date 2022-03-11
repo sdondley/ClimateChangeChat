@@ -1,7 +1,7 @@
 # On This Page
 
 - [Climate Change](#climate-change)
-- [Why I'm Into Climate Change](#why-im-into-climate-change)
+- [Why I'm into Climate Change](#why-im-into-climate-change)
 - [What I'm Trying to Do](#what-im-trying-to-do)
     - [Climate Change Chat for Realists](#climate-change-chat-for-realists)
         - [Guest list to date](#guest-list-to-date)
@@ -9,7 +9,7 @@
 
 # Climate Change
 
-# Why I'm Into Climate Change
+# Why I'm into Climate Change
 * Easy. This is the most important issue facing all people and living things on the planet
     * Would be impossible for me to do nothing 
 * Why is climate change so important?

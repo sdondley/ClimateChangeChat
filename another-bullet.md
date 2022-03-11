@@ -1,3 +1,3 @@
-# some bullet page
+# Some Bullet Page
 
 yo

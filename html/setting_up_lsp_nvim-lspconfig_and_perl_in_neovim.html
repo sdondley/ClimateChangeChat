@@ -1,8 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>
-            Setting_up_lsp_nvim-lspconfig_and_perl_in_neovim
-        </title>
+        <title>Setting up a Language Server with Nvim-lspconfig and Perl in Neovim 0.6.1 in Well under 5 Minutes (If You're Lucky)</title>
        
 
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
@@ -24,13 +22,14 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
+                <li><a href="./notes/current-notes.html">Notes</a></li>
                 <li><a href="./tech-stuff.html">Tech Stuff</a></li>
             </ul>
         </div>
         <div id="page">
             <div id="content">
               <div><h1>
-<a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</h1><p><strong>PREFACE:</strong> I knew zilch about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p><p><strong>DISCLAIMER:</strong> This tutorial isn&#39;t exhaustive or set out to be the authority on setting up language servers with neovim. I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page.</p><p><strong>CAUTION:</strong> I sprinkled this post with expletives and uninformed opinions to spice it up a little. If you&#39;re humorless or find me unfunny, go <a href="#rtfm">RTFM</a> instead.</p><p><strong>UPDATE:</strong> There is now a <a href="fast_as_fuck_perl_language_server_and_completion.html">second tutorial</a> for a third Perl language server, Perl Navigator, with the COQ plugin.</p></div>
+<a aria-hidden="true" class="anchor" href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky" id="setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a Language Server with Nvim-lspconfig and Perl in Neovim 0.6.1 in Well under 5 Minutes (If You&#39;re Lucky)</h1><p><strong>PREFACE:</strong> I knew zilch about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some <a href="https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/">head-banging</a> to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck!</p><p><strong>DISCLAIMER:</strong> This tutorial isn&#39;t exhaustive or set out to be the authority on setting up language servers with neovim. I&#39;m not an expert on the topic. It&#39;s meant to get you up to speed faster and save you frustration. When in doubt, <a href="#rtfm">RTFM</a>. If you find any bad mistakes or bad information in this tutorial, email me at <a href="mailto:s@dondley.com">s@dondley.com</a> or <a href="https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md">do a pull request</a> to suggest a change to this page.</p><p><strong>CAUTION:</strong> I sprinkled this post with expletives and uninformed opinions to spice it up a little. If you&#39;re humorless or find me unfunny, go <a href="#rtfm">RTFM</a> instead.</p><p><strong>UPDATE:</strong> There is now a <a href="fast_as_fuck_perl_language_server_and_completion.html">second tutorial</a> for a third Perl language server, Perl Navigator, with the COQ plugin.</p></div>
 
 
 
@@ -843,7 +842,7 @@ cmp.setup {
 </ul></div>
 
 <div><h1>
-<a aria-hidden="true" class="anchor" href="#the-more-technical-stuff" id="the-more-technical-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The more technical stuff</h1></div>
+<a aria-hidden="true" class="anchor" href="#the-more-technical-stuff" id="the-more-technical-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>The More Technical Stuff</h1></div>
 <div><h2>
 <a aria-hidden="true" class="anchor" href="#smaller-picture-stuff" id="smaller-picture-stuff"><span aria-hidden="true" class="octicon octicon-link"></span></a>Smaller picture stuff</h2><ul>
 <li>as mentioned above, my knowledge of language servers is basically zero
@@ -1530,7 +1529,7 @@ cmp.setup {
                 <div class="scrollsync">
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you&#39;re lucky)</a></li>
+<li><a href="#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky">Setting up a Language Server with Nvim-lspconfig and Perl in Neovim 0.6.1 in Well under 5 Minutes (If You&#39;re Lucky)</a></li>
 <li>
 <a href="#tldr">TLDR;</a>
 <ul>
@@ -1568,7 +1567,7 @@ cmp.setup {
 </ul>
 </li>
 <li>
-<a href="#the-more-technical-stuff">The more technical stuff</a>
+<a href="#the-more-technical-stuff">The More Technical Stuff</a>
 <ul>
 <li><a href="#smaller-picture-stuff">Smaller picture stuff</a></li>
 <li>
@@ -1606,7 +1605,7 @@ cmp.setup {
 <li><a href="#perl-language-server-cpan-docs">Perl language server cpan docs</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 7, 2022  1:37 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 11, 2022  1:27 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 1, 2022</div>
             </div>
         </div>
         <script src="./js/scroll_sync.js"></script>

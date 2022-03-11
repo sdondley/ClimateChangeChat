@@ -1,6 +1,6 @@
 # On This Page
 
-- [Who is Steve Dondley?](#who-is-steve-dondley)
+- [Who Is Steve Dondley?](#who-is-steve-dondley)
 - [My Recommendations](#my-recommendations)
     - [Movies](#movies)
     - [TV](#tv)
@@ -8,7 +8,7 @@
     - [Podcasts](#podcasts)
     - [Gurus I Like](#gurus-i-like)
 
-# Who is Steve Dondley?
+# Who Is Steve Dondley?
 I am the owner and founder of [Prometheus Labor
 Communications](http://prometheuslabor.com), a US Navy submarine veteran and
 former labor organizer for UFCW Local 1459 in Springfield, MA. I've had an

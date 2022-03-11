@@ -1,8 +1,8 @@
-# Super Guide to the `split-window` tmux Subcommand (and Beyond)
+# Super Guide to the `Split-window` Tmux Subcommand (and beyond)
 
 # On This Page
 
-- [Super Guide to the `split-window` tmux Subcommand (and Beyond)](#super-guide-to-the-split-window-tmux-subcommand-and-beyond)
+- [Super Guide to the `Split-window` Tmux Subcommand (and beyond)](#super-guide-to-the-split-window-tmux-subcommand-and-beyond)
     - [Guide overview](#guide-overview)
         - [Important note on turning off existing tmux customizations](#important-note-on-turning-off-existing-tmux-customizations)
     - [What does the `split-window` subcommand do for you?](#what-does-the-split-window-subcommand-do-for-you)

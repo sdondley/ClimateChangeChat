@@ -1,4 +1,4 @@
-# Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)
+# Setting up a Language Server with Nvim-lspconfig and Perl in Neovim 0.6.1 in Well under 5 Minutes (If You're Lucky)
 **PREFACE:** I knew zilch about language servers or using them with neovim until recently. It took many hours of fiddling, experimenting and some [head-banging](https://www.reddit.com/r/neovim/comments/t37alb/anyone_out_there_have_nvimlspconfig_working_100/) to get things working. This tutorial is the tutorial I wish existed when I started and should make it dead simple for you. Good luck! 
 
 **DISCLAIMER:** This tutorial isn't exhaustive or set out to be the authority on setting up language servers with neovim. I'm not an expert on the topic. It's meant to get you up to speed faster and save you frustration. When in doubt, [RTFM](#rtfm). If you find any bad mistakes or bad information in this tutorial, email me at s@dondley.com or [do a pull request](https://github.com/sdondley/ClimateChangeChat/blob/main/setting_up_lsp_nvim-lspconfig_and_perl_in_neovim.md) to suggest a change to this page.
@@ -9,7 +9,7 @@
 
 # On This Page
 
-- [Setting up a language server with nvim-lspconfig and Perl in Neovim 0.6.1 in well under 5 minutes (if you're lucky)](#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
+- [Setting up a Language Server with Nvim-lspconfig and Perl in Neovim 0.6.1 in Well under 5 Minutes (If You're Lucky)](#setting-up-a-language-server-with-nvim-lspconfig-and-perl-in-neovim-061-in-well-under-5-minutes-if-youre-lucky)
 - [TLDR;](#tldr)
     - [Basic setup: Get a Perl language server up and running with neovim](#basic-setup-get-a-perl-language-server-up-and-running-with-neovim)
         - [Step 1: Install the language server(s)](#step-1-install-the-language-servers)
@@ -30,7 +30,7 @@
     - [My relevant background](#my-relevant-background)
     - [Assumptions about your background](#assumptions-about-your-background)
     - [Will this work for Windows?](#will-this-work-for-windows)
-- [The more technical stuff](#the-more-technical-stuff)
+- [The More Technical Stuff](#the-more-technical-stuff)
     - [Smaller picture stuff](#smaller-picture-stuff)
     - [The stuff in between (probably what you really want to know)](#the-stuff-in-between-probably-what-you-really-want-to-know)
         - [There are two Perl language servers that work with neovim (that I know of)](#there-are-two-perl-language-servers-that-work-with-neovim-that-i-know-of)
@@ -457,7 +457,7 @@ I've googled these for you. You're welcome.
         * using a virtual linux box is better 
             * but I'm not looking for another box to administer 
  
-# The more technical stuff
+# The More Technical Stuff
 
 ## Smaller picture stuff 
 * as mentioned above, my knowledge of language servers is basically zero

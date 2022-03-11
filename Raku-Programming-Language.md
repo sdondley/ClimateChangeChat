@@ -5,10 +5,10 @@ I haven't done much with Raku since about early February; not from lack of inter
 # On This Page
 
 - [Raku Programming Language](#raku-programming-language)
-- [What is Raku?](#what-is-raku)
+- [What Is Raku?](#what-is-raku)
 - [Why Raku?](#why-raku)
-- [Raku-related tech](#raku-related-tech)
-- [My Adventures with Raku To Date](#my-adventures-with-raku-to-date)
+- [Raku-related Tech](#raku-related-tech)
+- [My Adventures with Raku to Date](#my-adventures-with-raku-to-date)
     - [Problems I've encounted](#problems-ive-encounted)
     - [Ongoing project](#ongoing-project)
     - [Tips and Tutorials](#tips-and-tutorials)
@@ -19,7 +19,7 @@ I haven't done much with Raku since about early February; not from lack of inter
             - [Documentation](#documentation)
             - [Elsewhere](#elsewhere)
 
-# What is Raku?
+# What Is Raku?
 * Fork/rewrite of the Perl programming language
 * Ambitious project launched in early 2000s
     * Goal is to be the programming language for the next 100 years 
@@ -43,7 +43,7 @@ I haven't done much with Raku since about early February; not from lack of inter
     * Grammars 
 * It's just fun to play around with and see what I can do with it
 
-# Raku-related tech
+# Raku-related Tech
 * [Cro](Cro)
     * a framework for building websites 
     * written in Raku 
@@ -67,7 +67,7 @@ I haven't done much with Raku since about early February; not from lack of inter
         * not sure how hard it is to build a language server
             * probably pretty tough
 
-# My Adventures with Raku To Date
+# My Adventures with Raku to Date
 * Began learning the language in late Dec. 2021
 * Good, helpful community
     * IRC
