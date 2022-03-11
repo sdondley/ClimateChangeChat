@@ -55,7 +55,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * kept getting errors trying to set md_private_dir
     * just removed it from server
     * potential fix:
-        * [fatal: remote error: upload-pack: not our ref 8bc7d87e088fdcd53c47ebf5460acc004f6b4fc4 · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
+        * [fatal: remote error: upload-pack: not our ref · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
 #### Jon Steward interview Shell CEO
 * first interesting thing I've seen Jon do on his new show
     * I haven't watched the show at all 
