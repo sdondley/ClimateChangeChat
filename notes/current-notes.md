@@ -7,6 +7,17 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 11th
+#### Early CO₂ experiment from the 1850s
+* woman named Eunice Newton Foote did an experiment with CO₂ to show it would heat up the planet
+* [How scientists found out that climate change is real and dangerous | Science News: www.sciencenews.org](https://www.sciencenews.org/article/climate-change-crisis-history-research-carbon-human-impact)
+#### Possible to mirror tmux pane in another window?
+* [tmux - mirroring a pane between two windows - Unix & Linux Stack Exchange: unix.stackexchange.com](https://unix.stackexchange.com/questions/105424/mirroring-a-pane-between-two-windows)
+    * apparently not a feature
+    * some hacks offered in thread as possible solutions 
+#### What is good acting?
+* https://www.youtube.com/watch?v=opHii8PBrQU&t=3s
+    * an amateur, non-actor's take
+    * why am I watching this?
 #### On the term "note stream"
 * I never heard the term before thinking of it tonight     
 * apparently it's a product from Microsoft
@@ -108,62 +119,62 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 * [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
 
 ### 8th
-* more notes on my new computing setup (imac 2020/2014 combo)
-    * things seems to be faster when primary machine is not on wifi 
-    * connected directly to router
-    * may break handoff though?
-        * nope, still works 
-    * so far, use it for notes
-        * ssh into primary
-            * attach to an existing tmux session
-            * don't have to worry about managing config files
-            * commands issued on client machine get played out on primary machine
-    * frees up a lot of real estate
-    * use f13/f14 hotkeys to toggle betwen machines
-        * bit of a reach but:
-            * just a single key press
-            * can easily feel way to the correct key
-            * swiching between two different apps now just takes one keystroke
-            * nice side benefit
-    * my main programming machine is now right in front of me instead of off to the side
-    * there is a slight bit of lag on client machine
-    * best not to use mouse on client machine
-        * also a little laggy 
-* 2014 iMac software installs
-    * homebrew 
-    * perlbrew
-        * 5.34.0 installed 
-    * karabiner-elements
-* resurrected old 2014 imac workhorse today
-    * using it as a second machine/slash 3rd monitor 
-    * I now have 3 monitors again
-        * I now have 33,523,200 pixels at my command
-            * way bigger than Putin's army
-        * 2 5K monitors and an old thunderbolt display
-        * you can never have enough screen real estate
-    * it's actually pretty snappy
-    * connected the computers using software that acts as a "virtual" KVM switch
-        * called "Synergy"
-            *  [Synergy - Share one mouse & keyboard across computers: symless.com](https://symless.com/synergy)
-        * works pretty well
-        * sometimes there mouse is a bit laggy on second machine 
-        * just move mouse cursor over the 2nd machine and the kvm automatically kicks in
-        * you can use hotkeys to switch between machines as well
-    * this should open up more possibilities for me
-    * maybe even better than having the 2nd machine in "target" mode
-        * had target mode set up with old 2010 iMac 
-            * target mode not compatible with "newer" macs like my 2014 iMac
-        * but now I can use this third machine for running tasks I wouldn't want bogging down my main machine
-            * maybe smoke tests for perl
-            * or for safari, a memory hog, on the old machine
-            * or for note taking
-                * share the files via icloud 
-                    * or synology drive
-    * upgrading old imac to latest versino of big sur
-        * nearly 6 GB large
-        * download speed is very slow
-            * perhaps heavily throttled by apple? 
-    * and now I get to enjoy installing and configuring software for hours
+#### more notes on my new computing setup (imac 2020/2014 combo)
+* things seems to be faster when primary machine is not on wifi 
+* connected directly to router
+* may break handoff though?
+    * nope, still works 
+* so far, use it for notes
+    * ssh into primary
+        * attach to an existing tmux session
+        * don't have to worry about managing config files
+        * commands issued on client machine get played out on primary machine
+* frees up a lot of real estate
+* use f13/f14 hotkeys to toggle betwen machines
+    * bit of a reach but:
+        * just a single key press
+        * can easily feel way to the correct key
+        * swiching between two different apps now just takes one keystroke
+        * nice side benefit
+* my main programming machine is now right in front of me instead of off to the side
+* there is a slight bit of lag on client machine
+* best not to use mouse on client machine
+    * also a little laggy 
+#### 2014 iMac software installs
+* homebrew 
+* perlbrew
+    * 5.34.0 installed 
+* karabiner-elements
+#### resurrected old 2014 imac workhorse today
+* using it as a second machine/slash 3rd monitor 
+* I now have 3 monitors again
+    * I now have 33,523,200 pixels at my command
+        * way bigger than Putin's army
+    * 2 5K monitors and an old thunderbolt display
+    * you can never have enough screen real estate
+* it's actually pretty snappy
+* connected the computers using software that acts as a "virtual" KVM switch
+    * called "Synergy"
+        *  [Synergy - Share one mouse & keyboard across computers: symless.com](https://symless.com/synergy)
+    * works pretty well
+    * sometimes there mouse is a bit laggy on second machine 
+    * just move mouse cursor over the 2nd machine and the kvm automatically kicks in
+    * you can use hotkeys to switch between machines as well
+* this should open up more possibilities for me
+* maybe even better than having the 2nd machine in "target" mode
+    * had target mode set up with old 2010 iMac 
+        * target mode not compatible with "newer" macs like my 2014 iMac
+    * but now I can use this third machine for running tasks I wouldn't want bogging down my main machine
+        * maybe smoke tests for perl
+        * or for safari, a memory hog, on the old machine
+        * or for note taking
+            * share the files via icloud 
+                * or synology drive
+* upgrading old imac to latest versino of big sur
+    * nearly 6 GB large
+    * download speed is very slow
+        * perhaps heavily throttled by apple? 
+* and now I get to enjoy installing and configuring software for hours
 #### Mac Studio: To Buy or Not to Buy?
 * make studio ultra looks tempting as hell
     * lots of sticker shock, though
@@ -301,6 +312,9 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [2022](#2022)
     - [March](#march)
         - [11th](#11th)
+            - [Early CO₂ experiment from the 1850s](#early-co-experiment-from-the-1850s)
+            - [Possible to mirror tmux pane in another window?](#possible-to-mirror-tmux-pane-in-another-window)
+            - [What is good acting?](#what-is-good-acting)
             - [On the term "note stream"](#on-the-term-note-stream)
             - [adding "Notes" to menu](#adding-notes-to-menu)
             - [Listening music while I code my site tonight](#listening-music-while-i-code-my-site-tonight)
@@ -322,6 +336,9 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
             - [switched over to Barrier](#switched-over-to-barrier)
             - [debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier](#debugged-a-problem-where-i-was-losing-ctrl-jk-functionality-on-client-computer-with-barrier)
         - [8th](#8th)
+            - [more notes on my new computing setup (imac 2020/2014 combo)](#more-notes-on-my-new-computing-setup-imac-20202014-combo)
+            - [2014 iMac software installs](#2014-imac-software-installs-2)
+            - [resurrected old 2014 imac workhorse today](#resurrected-old-2014-imac-workhorse-today)
             - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
             - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
             - [Stack overflow question on inline perl raku module](#stack-overflow-question-on-inline-perl-raku-module)
