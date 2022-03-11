@@ -9,7 +9,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 * old/new imacs connected well through ethernet
     * faster transfer speeds 
     * can also be used to stream audio from 2020 to 2014
-        * using audio hijack (see below) 
+        * using audio hijack/loopback (see below) 
 * 2014 imac software installs
     * vlc, via homebrew
     * audio hijack
