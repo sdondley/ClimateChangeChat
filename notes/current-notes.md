@@ -7,6 +7,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 10th
 ##### having issues with disply of youtube videos with note headers
+* https://www.youtube.com/watch?v=o_HPLf3lmb4
 * showing up as raw html wrapped in a `<pre>` tag 
 * probably will require more modifications to raku post processor script
     * put youtube videos in a bulleted list
@@ -55,40 +56,43 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
  
 #### 9th
-* battled a lot today wem crashes on imac 2014
-    * having kernel panic every 15 min or so 
-    * pram reset seems to have finally fixed the issue 
-        * nope, still happening 
-    * crashes not happening in safe mode
-        * screen res is lower in safe mode 
-            * maybe part of the problem 
-        * think I need a technician to look at this
-    * does not seem to crash at lower screen resolutions when not in safe mod
-        * indicates a problem with the gpu?
-* power to chernobyl plant cut off
-    * only 48 hours of fuel left on backup generators
-    * Ukrainian official claims there is grave risk of radiation leak 
-    * IAEA, a UN body of atomic scientists, says there is no reason for alarm
-    * Ukrainian utility company says there is a danger
-* debug of responsive issue with this website
-    * the site slides a little from left to right while scrolling up and down
-        * a litle annoying 
-    * possible solution: 
-        ```
-            html, body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        ```
-        * solution from: [how to prevent website sliding left and right Code Example: www.codegrepper.com](https://www.codegrepper.com/code-examples/whatever/how+to+prevent+website+sliding+left+and+right)
-* switched over to Barrier
-    * open source version of Synergy 
-    * they are the same piece of software
-    * both pretty buggy and not user friendly
-    * but Barrier is free
-    * will ask for a refund for synergy
-* debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier
-    * [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
+##### battled a lot today wem crashes on imac 2014
+* having kernel panic every 15 min or so 
+* pram reset seems to have finally fixed the issue 
+    * nope, still happening 
+* crashes not happening in safe mode
+    * screen res is lower in safe mode 
+        * maybe part of the problem 
+    * think I need a technician to look at this
+* does not seem to crash at lower screen resolutions when not in safe mod
+    * indicates a problem with the gpu?
+
+##### power to chernobyl plant cut off
+* only 48 hours of fuel left on backup generators
+* Ukrainian official claims there is grave risk of radiation leak 
+* IAEA, a UN body of atomic scientists, says there is no reason for alarm
+* Ukrainian utility company says there is a danger
+
+##### debug of responsive issue with this website
+* the site slides a little from left to right while scrolling up and down
+    * a litle annoying 
+* possible solution: 
+    ```
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    ```
+    * solution from: [how to prevent website sliding left and right Code Example: www.codegrepper.com](https://www.codegrepper.com/code-examples/whatever/how+to+prevent+website+sliding+left+and+right)
+##### switched over to Barrier
+* open source version of Synergy 
+* they are the same piece of software
+* both pretty buggy and not user friendly
+* but Barrier is free
+* will ask for a refund for synergy
+ 
+##### debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier
+* [Frequently losing ctrl-j/k functionality after switching over to client · Issue #1604 · debauchee/barrier: github.com](https://github.com/debauchee/barrier/issues/1604)
 
 #### 8th
 * more notes on my new computing setup (imac 2020/2014 combo)
@@ -223,57 +227,61 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * Russians are behaving badly
     * Putin is scared of an 80 year old womand protesting
         * sign of weakness and fear 
+
 ##### Computering expert talks about why crypto is bullshit
 * Listened with half an ear to while coding
 * https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
     * The Economict 
-        * Babbage 
+        * Babbage is the name of the podcast
+            * started to listen to it but fell asleep 
 
 #### 7th
+##### Watching bill joy ted x talk from 2008
+* https://www.youtube.com/watch?v=LN2shXeJNz8
+* from 2008
+* seems like a bit of a doom an gloomer
+    * but still named "joy" 
+* civiliation is engaged in an asymmetric warfare against individual bad actors
+    * because they have extraorindary amounts of power as a result of new tech tools
+    * hard to stop bad actors
+* venture capitalist now
+* founded Sun microsystems
+* wrote vi text editor in 1976
+* concerned about future
+    * climate change
 
-* Watching bill joy ted x talk from 2008
-    * https://www.youtube.com/watch?v=LN2shXeJNz8
-    * from 2008
-    * seems like a bit of a doom an gloomer
-        * but still named "joy" 
-    * civiliation is engaged in an asymmetric warfare against individual bad actors
-        * because they have extraorindary amounts of power as a result of new tech tools
-        * hard to stop bad actors
-    * venture capitalist now
-    * founded Sun microsystems
-    * wrote vi text editor in 1976
-    * concerned about future
-        * climate change
-* What is Bill Joy up to now?
-    * seems to have dropped off the map 
-    * looks like he's retired from venture capitalism
-    * good chance he's disillusioned 
-        * seems to have gone silent on things 
-        * or could just be trying to enjoy the rest of his life
-    * more recent video about crispr genetic tech
-    * https://www.youtube.com/watch?v=lRJvtYttNNY
-* Tried out HackMD
-    * collaborate with others using git markup 
-        * an idea I have long had 
-    * pretty impressive but a bit confusing
-        * not easy to figure out how to create navigation between pages 
-            * got it working, but menu items are tiny 
-            * want it to look somethingmore like this
-                * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
-    * editor kind of sucks
-        * has a vim mode, but no key repeat
-        * it most respects, much easier to work with vim 
-        * but can make it easier to add media
-    * changes to documents are instant
-    * you can allow anyone to make changes to docs
-        * unsure how you might revert vandalism 
-    * integrates with github
-        * unclear why this was built into their offering
-            * do versioning? 
-                * if so, kind of kludgy as far as I can tell
-                    * doesn't seem to integrate in with live edits 
-        * can presumably get exported to a proper website from there 
+##### What is Bill Joy up to now?
+* seems to have dropped off the map 
+* looks like he's retired from venture capitalism
+* good chance he's disillusioned 
+    * seems to have gone silent on things 
+    * or could just be trying to enjoy the rest of his life
+* more recent video about crispr genetic tech
+* https://www.youtube.com/watch?v=lRJvtYttNNY
+
+##### Tried out HackMD
+* collaborate with others using git markup 
+    * an idea I have long had 
+* pretty impressive but a bit confusing
+    * not easy to figure out how to create navigation between pages 
+        * got it working, but menu items are tiny 
+        * want it to look somethingmore like this
+            * [Home - HackMD: hackmd.io](https://hackmd.io/@rimworldmultiplayer/docs/https%253A%252F%252Fhackmd.io%252F%2540rimworldmultiplayer%252Fhome)
+* editor kind of sucks
+    * has a vim mode, but no key repeat
+    * it most respects, much easier to work with vim 
+    * but can make it easier to add media
+* changes to documents are instant
+* you can allow anyone to make changes to docs
+    * unsure how you might revert vandalism 
+* integrates with github
+    * unclear why this was built into their offering
+        * do versioning? 
+            * if so, kind of kludgy as far as I can tell
+                * doesn't seem to integrate in with live edits 
+    * can presumably get exported to a proper website from there 
+
 # On This Page
 
 - [Current Notes](#current-notes)
@@ -291,6 +299,11 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 - [set up private part of climate change chat website for private notes](#set-up-private-part-of-climate-change-chat-website-for-private-notes)
                 - [investigating why old mac crashes at high resolutions](#investigating-why-old-mac-crashes-at-high-resolutions)
             - [9th](#9th)
+                - [battled a lot today wem crashes on imac 2014](#battled-a-lot-today-wem-crashes-on-imac-2014)
+                - [power to chernobyl plant cut off](#power-to-chernobyl-plant-cut-off)
+                - [debug of responsive issue with this website](#debug-of-responsive-issue-with-this-website)
+                - [switched over to Barrier](#switched-over-to-barrier)
+                - [debugged a problem where I was losing ctrl-j/k functionality on client computer with Barrier](#debugged-a-problem-where-i-was-losing-ctrl-jk-functionality-on-client-computer-with-barrier)
             - [8th](#8th)
                 - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
                 - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
@@ -298,3 +311,6 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 - [Anderson Cooper on Stephen Colbert](#anderson-cooper-on-stephen-colbert)
                 - [Computering expert talks about why crypto is bullshit](#computering-expert-talks-about-why-crypto-is-bullshit)
             - [7th](#7th)
+                - [Watching bill joy ted x talk from 2008](#watching-bill-joy-ted-x-talk-from-2008)
+                - [What is Bill Joy up to now?](#what-is-bill-joy-up-to-now)
+                - [Tried out HackMD](#tried-out-hackmd)
