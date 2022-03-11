@@ -98,6 +98,10 @@ p strong {
     margin-left: 30px;
 }
 
+div.scrollsync ul:first-of-type {
+    margin-left: 15px;
+}
+
 #update_label { display: inline-block; font-weight: bold; text-align: right; }
 #publish_label { display: inline-block; font-weight: bold; text-align: right; margin-right: 5px;}
 #toc div#update_date { margin-top: 3px; font-size: .85em; text-align: right; max-height: 25px; color: lightgreen;}
