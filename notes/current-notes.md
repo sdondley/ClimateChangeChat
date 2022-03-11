@@ -7,8 +7,12 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 10th
 ##### having issues with disply of youtube videos with note headers
-    * showing up as raw html wrapped in a `<pre>` tag 
-    * probably will require more modifications to raku post processor script
+* showing up as raw html wrapped in a `<pre>` tag 
+* probably will require more modifications to raku post processor script
+    * put youtube videos in a bulleted list
+    * look for iframe element in a bullet 
+    * add class to parent bullet
+    * modify css to remove bullets for li items in that class
 ##### old/new imacs connected well through ethernet
 * having issues with disply of youtube videos with note headers
     * showing up as raw html in a `<pre>` tag 
@@ -37,10 +41,12 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * just removed it from server
     * potential fix:
         * [fatal: remote error: upload-pack: not our ref 8bc7d87e088fdcd53c47ebf5460acc004f6b4fc4 · Issue #704 · darlinghq/darling: github.com](https://github.com/darlinghq/darling/issues/704)
-* Jon Steward interview Shell CEO
-    https://www.youtube.com/watch?v=E_-9Uk3xnkU
-* Reaction to new mac Studio
-    https://www.youtube.com/watch?v=CMm7UZKtGNk
+##### Jon Steward interview Shell CEO
+* first interesting thing I've seen Jon do on his new show
+    * I haven't watched the show at all 
+* https://www.youtube.com/watch?v=E_-9Uk3xnkU
+##### Reaction to new mac Studio
+* https://www.youtube.com/watch?v=CMm7UZKtGNk
 ##### set up private part of climate change chat website for private notes
 * "private" directory set up as a git submodule
 * directory on server is password protected with apache auth_basic
@@ -198,32 +204,35 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     * will be faster macs by then 
     * what I have is perfectly fine
 ##### Galaxy Brain newsletter
-    *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
-    * about the spread of info during wartime on the net
-    * discusses what we know about following disinformation networks
-    * quotes experts on dissemination of Russian propaganda and their operations
-    * upshot: it's too early to tell how prop war is going
+*  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
+* about the spread of info during wartime on the net
+* discusses what we know about following disinformation networks
+* quotes experts on dissemination of Russian propaganda and their operations
+* upshot: it's too early to tell how prop war is going
 ##### Stack overflow question on inline perl raku module
-    * Yup, I can be a real dummy sometimes 
-    *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
+* Yup, I can be a real dummy sometimes 
+*  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
 ##### Anderson Cooper on Stephen Colbert
-    * talks about coomplications of covering war and what he think Putin is afraid of 
-        https://www.youtube.com/watch?v=9r_8jhtcUIo
-    * Upshots:
-        * it's hard collecting news during wartime
-        * CNN is working hard
-        * war is horrible
-        * Russians are behaving badly
-        * Putin is scared of an 80 year old womand protesting
-            * sign of weakness and fear 
+* talks about coomplications of covering war and what he think Putin is afraid of 
+    * https://www.youtube.com/watch?v=9r_8jhtcUIo
+* Upshots:
+    * it's hard collecting news during wartime
+    * CNN is working hard
+    * war is horrible
+    * Russians are behaving badly
+    * Putin is scared of an 80 year old womand protesting
+        * sign of weakness and fear 
+##### Computering expert talks about why crypto is bullshit
 * Listened with half an ear to while coding
-    https://www.youtube.com/watch?v=twrduL8aNGE
+* https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
+    * The Economict 
+        * Babbage 
 
 #### 7th
 
 * Watching bill joy ted x talk from 2008
-        https://www.youtube.com/watch?v=LN2shXeJNz8
+    * https://www.youtube.com/watch?v=LN2shXeJNz8
     * from 2008
     * seems like a bit of a doom an gloomer
         * but still named "joy" 
@@ -276,6 +285,8 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 - [moved tech notes to their own folder](#moved-tech-notes-to-their-own-folder)
                 - [set up streaming between 2020 imac and 2014](#set-up-streaming-between-2020-imac-and-2014)
                 - [this guy has a site pretty similar to mine:](#this-guy-has-a-site-pretty-similar-to-mine)
+                - [Jon Steward interview Shell CEO](#jon-steward-interview-shell-ceo)
+                - [Reaction to new mac Studio](#reaction-to-new-mac-studio)
                 - [set up private part of climate change chat website for private notes](#set-up-private-part-of-climate-change-chat-website-for-private-notes)
                 - [investigating why old mac crashes at high resolutions](#investigating-why-old-mac-crashes-at-high-resolutions)
             - [9th](#9th)
@@ -284,4 +295,5 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
                 - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
                 - [Stack overflow question on inline perl raku module](#stack-overflow-question-on-inline-perl-raku-module)
                 - [Anderson Cooper on Stephen Colbert](#anderson-cooper-on-stephen-colbert)
+                - [Computering expert talks about why crypto is bullshit](#computering-expert-talks-about-why-crypto-is-bullshit)
             - [7th](#7th)

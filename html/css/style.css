@@ -310,6 +310,10 @@ pre code {
     margin-top: 20px;
 }
 
+#page ul li.li-youtube::before {
+    display: none;
+}
+
 #toc {
     display: inline-block;
     max-width: 370px;
