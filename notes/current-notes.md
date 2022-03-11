@@ -6,6 +6,9 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
+##### having issues with disply of youtube videos with note headers
+    * showing up as raw html wrapped in a `<pre>` tag 
+    * probably will require more modifications to raku post processor script
 ##### old/new imacs connected well through ethernet
 * having issues with disply of youtube videos with note headers
     * showing up as raw html in a `<pre>` tag 
@@ -267,6 +270,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     - [2022](#2022)
         - [March](#march)
             - [10th](#10th)
+                - [having issues with disply of youtube videos with note headers](#having-issues-with-disply-of-youtube-videos-with-note-headers)
                 - [old/new imacs connected well through ethernet](#oldnew-imacs-connected-well-through-ethernet)
                 - [2014 imac software installs](#2014-imac-software-installs)
                 - [moved tech notes to their own folder](#moved-tech-notes-to-their-own-folder)
