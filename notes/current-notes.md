@@ -7,6 +7,10 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 11th
+#### Password protection of directories
+* set up site with basic auth to password protect directories
+* needed to add in apached `authz_groupfile` module
+* clients will be able to see the content in their that I've posted but will be restricted from navigating to other directories
 #### Early CO₂ experiment from the 1850s
 * woman named Eunice Newton Foote did an experiment with CO₂ to show it would heat up the planet
 * [How scientists found out that climate change is real and dangerous | Science News: www.sciencenews.org](https://www.sciencenews.org/article/climate-change-crisis-history-research-carbon-human-impact)
@@ -312,6 +316,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [2022](#2022)
     - [March](#march)
         - [11th](#11th)
+            - [Password protection of directories](#password-protection-of-directories)
             - [Early CO₂ experiment from the 1850s](#early-co-experiment-from-the-1850s)
             - [Possible to mirror tmux pane in another window?](#possible-to-mirror-tmux-pane-in-another-window)
             - [What is good acting?](#what-is-good-acting)
