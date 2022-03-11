@@ -1,3 +1,9 @@
+# Tech Stuff
+
+Here you'll find a loosely organized compendium of tech tutorials, notes and code snippets. It's probably of little interest unless you dig computers and inhabit my problem space.
+
+This page represents my futile attempt at returning the favor to all of those who have shared their knowledge with me over the web.
+
 # On This Page
 
 - [Tech Stuff](#tech-stuff)
@@ -7,12 +13,6 @@
         - [Language servers](#language-servers)
 - [Tech snips](#tech-snips)
 - [Notes](#notes)
-
-# Tech Stuff
-
-Here you'll find a loosely organized compendium of tech tutorials, notes and code snippets. It's probably of little interest unless you dig computers and inhabit my problem space.
-
-This page represents my futile attempt at returning the favor to all of those who have shared their knowledge with me over the web.
 
 # Toots
 
