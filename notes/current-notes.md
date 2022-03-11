@@ -134,7 +134,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * download speed is very slow
             * perhaps heavily throttled by apple? 
     * and now I get to enjoy installing and configuring software for hours
-* apple new product line up
+##### Mac Studio: To Buy or Not to Buy?
     * make studio ultra looks tempting as hell
         * lots of sticker shock, though
             * 4k starting price with no monitor 
@@ -266,5 +266,5 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
             - [10th](#10th)
             - [9th](#9th)
             - [8th](#8th)
+                - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
             - [7th](#7th)
-
