@@ -91,6 +91,17 @@ p strong {
     padding-right: 10px;
 }
 
+#page #toc div.scrollsync h6 + ul > li {
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+#page #toc div.scrollsync h6 + ul > li > ul > li a {
+    font-weight: normal;
+    font-size: 1.0em;
+}
+
 
 #content  div:first-of-type > h1 { background-color: #121212; border-radius: 15px; color: #33a774; font-size: 3.0em; margin-top: 20px; margin-bottom: 30px; padding: 20px; display: block;}
 
@@ -316,7 +327,6 @@ pre code {
 
 #toc div.scrollsync h6 + ul > li:before {
     display: none;
-    margin-left: px;
 }
 
 #toc div.scrollsync h6 + ul > li > ul  {
