@@ -6,25 +6,25 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
-* old/new imacs connected well through ethernet
-    * faster transfer speeds 
-    * can also be used to stream audio from 2020 to 2014
-        * using audio hijack/loopback (see below) 
-* 2014 imac software installs
-    * vlc, via homebrew
-    * audio hijack
-    * loopback 
-* moved tech notes to their own folder
-    * Is there any good reason to separate snips from notes? 
-        * I may just fold them into the notes. 
-        * Even better by may to have them get copied out automatically from notes file and then separated out into separate files automatically.
-* set up streaming between 2020 imac and 2014
-    * using audio hijack/loopback 
-    * I can now use dictation using a high-quality mic which gets streamed over via ethernet to the old iMac 
-* this guy has a site pretty similar to mine:
-    * [Git errors and how to solve them - Technotes: technotes.adelerhof.eu](https://technotes.adelerhof.eu/git/git_errors/)
-    * also done in markdown
-    * less of a wiki, though
+##### old/new imacs connected well through ethernet
+* faster transfer speeds 
+* can also be used to stream audio from 2020 to 2014
+    * using audio hijack/loopback (see below) 
+##### 2014 imac software installs
+* vlc, via homebrew
+* audio hijack
+* loopback 
+##### moved tech notes to their own folder
+* Is there any good reason to separate snips from notes? 
+    * I may just fold them into the notes. 
+    * Even better by may to have them get copied out automatically from notes file and then separated out into separate files automatically.
+##### set up streaming between 2020 imac and 2014
+* using audio hijack/loopback 
+* I can now use dictation using a high-quality mic which gets streamed over via ethernet to the old iMac 
+##### this guy has a site pretty similar to mine:
+* [Git errors and how to solve them - Technotes: technotes.adelerhof.eu](https://technotes.adelerhof.eu/git/git_errors/)
+* also done in markdown
+* less of a wiki, though
 * finally got private pages working with submodule on ccc site
     * had a lot of trouble with submodules 
     * kept getting errors trying to set md_private_dir
@@ -35,11 +35,11 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     https://www.youtube.com/watch?v=E_-9Uk3xnkU
 * Reaction to new mac Studio
     https://www.youtube.com/watch?v=CMm7UZKtGNk
-* set up private part of climate change chat website for private notes
-    * "private" directory set up as a git submodule
-    * directory on server is password protected with apache auth_basic
-* investigating why old mac crashes at high resolutions
-    *  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
+##### set up private part of climate change chat website for private notes
+* "private" directory set up as a git submodule
+* directory on server is password protected with apache auth_basic
+##### investigating why old mac crashes at high resolutions
+*  [What might cause my old late 2014 iMac to constantly crash at the highest resolution? : mac: www.reddit.com](https://www.reddit.com/r/mac/comments/tb19cx/what_might_cause_my_old_late_2014_imac_to/)
  
 #### 9th
 * battled a lot today wem crashes on imac 2014
@@ -135,72 +135,72 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
             * perhaps heavily throttled by apple? 
     * and now I get to enjoy installing and configuring software for hours
 ##### Mac Studio: To Buy or Not to Buy?
-    * make studio ultra looks tempting as hell
-        * lots of sticker shock, though
-            * 4k starting price with no monitor 
-                * thought I do get a 10% vet disounted 
-                * so 3600
-            * I **could** trade in my imac 2020 though...
-                * apple will only give me $1500 for it 
-                    * would bring cost down to 2100
-                    * if it were 2 grand I might be tempted 
-                    * disappointing
-                        * the computer has lost almost 2/3rds of its value in just 18 months 
-                            * that's nuts 
-                    * going for well over $2500  on ebay
-                        * knock off maybe about $300 in fees 
-                            * net $2200 
-                * and i'd be stuck wih just one crappy thunderbolt monitor 
-                    * would have to spring for a new screen 
-                        * about 1450 for their cheapest display
-                        * total package would be close to 4 grand with taxes 
-                        * ugh, no 
-                        * but I may 
-                        * but wait, I have a used car I'm looking to sell
-                            * how much could I get for that?
-    * other option is to get the one with the max chip
-        * much more reasonably priced at two grand (to start)
-        * with trade in, could get for just $300 after vet discount
-            * extremely tempting 
-        * still have to buy a monitor
-            * or coud just use the one crappy thunderbolt display
-                * not really an option 
-        * however, that monitor could be used for newer computers I buy
-            * so could end up saving me money 
-        * but would take a huge hit on storage space
-            * 4 TB hard drive is $1200! 
-                * that's insane 
-        * $400 extra for memory upgrade to 64GB
-            * what I have now but need much less for m1 chips 
-            * likely not needed
-        * also still have the 2015 imac
-            * could maybe get 4 or 500 hundred for it 
-            * which means I would only have to spend about $1000 out of pocket
-                * $2200 with 4tb of storage
-                    * probably not needed 
-                * for a much faster computer 
-                * maybe slightly better screen 
-                * selling old imac would offset that down to about $1800
-        * I could probably scale it back to a 1TB drive and get away with it
-            * would save me $1000
-        * far fewer ports than I need
-            * would need to drop about $100 for adapters and such 
-        * other options is to live with just the thunderbolt display for a while
-        * so (2399 + 1800) - 10% discount - 1500 trade-in = 2699
-        * OK, after a lot of hemming an hawing, I'm not going to do this
-    * going to wait another year or two 
-        * will be faster macs by then 
-        * what I have is perfectly fine
-* Galaxy Brain newsletter
+* make studio ultra looks tempting as hell
+    * lots of sticker shock, though
+        * 4k starting price with no monitor 
+            * thought I do get a 10% vet disounted 
+            * so 3600
+        * I **could** trade in my imac 2020 though...
+            * apple will only give me $1500 for it 
+                * would bring cost down to 2100
+                * if it were 2 grand I might be tempted 
+                * disappointing
+                    * the computer has lost almost 2/3rds of its value in just 18 months 
+                        * that's nuts 
+                * going for well over $2500  on ebay
+                    * knock off maybe about $300 in fees 
+                        * net $2200 
+            * and i'd be stuck wih just one crappy thunderbolt monitor 
+                * would have to spring for a new screen 
+                    * about 1450 for their cheapest display
+                    * total package would be close to 4 grand with taxes 
+                    * ugh, no 
+                    * but I may 
+                    * but wait, I have a used car I'm looking to sell
+                        * how much could I get for that?
+* other option is to get the one with the max chip
+    * much more reasonably priced at two grand (to start)
+    * with trade in, could get for just $300 after vet discount
+        * extremely tempting 
+    * still have to buy a monitor
+        * or coud just use the one crappy thunderbolt display
+            * not really an option 
+    * however, that monitor could be used for newer computers I buy
+        * so could end up saving me money 
+    * but would take a huge hit on storage space
+        * 4 TB hard drive is $1200! 
+            * that's insane 
+    * $400 extra for memory upgrade to 64GB
+        * what I have now but need much less for m1 chips 
+        * likely not needed
+    * also still have the 2015 imac
+        * could maybe get 4 or 500 hundred for it 
+        * which means I would only have to spend about $1000 out of pocket
+            * $2200 with 4tb of storage
+                * probably not needed 
+            * for a much faster computer 
+            * maybe slightly better screen 
+            * selling old imac would offset that down to about $1800
+    * I could probably scale it back to a 1TB drive and get away with it
+        * would save me $1000
+    * far fewer ports than I need
+        * would need to drop about $100 for adapters and such 
+    * other options is to live with just the thunderbolt display for a while
+    * so (2399 + 1800) - 10% discount - 1500 trade-in = 2699
+    * OK, after a lot of hemming an hawing, I'm not going to do this
+* going to wait another year or two 
+    * will be faster macs by then 
+    * what I have is perfectly fine
+##### Galaxy Brain newsletter
     *  [The Information War Between Ukraine and Russia Is Far From Over - The Atlantic: www.theatlantic.com](https://www.theatlantic.com/technology/archive/2022/03/russia-ukraine-war-propaganda/626975/)
     * about the spread of info during wartime on the net
     * discusses what we know about following disinformation networks
     * quotes experts on dissemination of Russian propaganda and their operations
     * upshot: it's too early to tell how prop war is going
-* Stack overflow question on inline perl raku module
+##### Stack overflow question on inline perl raku module
     * Yup, I can be a real dummy sometimes 
     *  [raku - Inline::Perl5 not working with Lingua::En::Titlecase perl 5 module - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71391287/inlineperl5-not-working-with-linguaentitlecase-perl-5-module?noredirect=1#comment126200198_71391287)
-* Anderson Cooper on Stephen Colbert
+##### Anderson Cooper on Stephen Colbert
     * talks about coomplications of covering war and what he think Putin is afraid of 
         https://www.youtube.com/watch?v=9r_8jhtcUIo
     * Upshots:
@@ -210,7 +210,7 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
         * Russians are behaving badly
         * Putin is scared of an 80 year old womand protesting
             * sign of weakness and fear 
-* Listed with half an ear to while coding
+* Listened with half an ear to while coding
     https://www.youtube.com/watch?v=twrduL8aNGE
 * guest mentions podcast at end which sounds good
 
@@ -264,7 +264,17 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
     - [2022](#2022)
         - [March](#march)
             - [10th](#10th)
+                - [old/new imacs connected well through ethernet](#oldnew-imacs-connected-well-through-ethernet)
+                - [2014 imac software installs](#2014-imac-software-installs)
+                - [moved tech notes to their own folder](#moved-tech-notes-to-their-own-folder)
+                - [set up streaming between 2020 imac and 2014](#set-up-streaming-between-2020-imac-and-2014)
+                - [this guy has a site pretty similar to mine:](#this-guy-has-a-site-pretty-similar-to-mine)
+                - [set up private part of climate change chat website for private notes](#set-up-private-part-of-climate-change-chat-website-for-private-notes)
+                - [investigating why old mac crashes at high resolutions](#investigating-why-old-mac-crashes-at-high-resolutions)
             - [9th](#9th)
             - [8th](#8th)
                 - [Mac Studio: To Buy or Not to Buy?](#mac-studio-to-buy-or-not-to-buy)
+                - [Galaxy Brain newsletter](#galaxy-brain-newsletter)
+                - [Stack overflow question on inline perl raku module](#stack-overflow-question-on-inline-perl-raku-module)
+                - [Anderson Cooper on Stephen Colbert](#anderson-cooper-on-stephen-colbert)
             - [7th](#7th)
