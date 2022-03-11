@@ -7,6 +7,9 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 
 #### 10th
 ##### old/new imacs connected well through ethernet
+* having issues with disply of youtube videos with note headers
+    * showing up as raw html in a `<pre>` tag 
+    * probably will require more modifications to raku post processor script
 * faster transfer speeds 
 * can also be used to stream audio from 2020 to 2014
     * using audio hijack/loopback (see below) 
