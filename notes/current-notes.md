@@ -6,6 +6,13 @@ Diary of rather random stuff I'm taking notes on to keep track of shit. I can du
 ### March
 
 #### 10th
+* moved tech notes to their own folder
+    * Is there any good reason to separate snips from notes? 
+        * I may just fold them into the notes. 
+        * Even better by may to have them get copied out automatically from notes file and then separated out into separate files automatically.
+* set up streaming between 2020 imac and 2014
+    * using audio hijack/loopback 
+    * I can now use dictation using a high-quality mic which gets streamed over via ethernet to the old iMac 
 * this guy has a site pretty similar to mine:
     * [Git errors and how to solve them - Technotes: technotes.adelerhof.eu](https://technotes.adelerhof.eu/git/git_errors/)
     * also done in markdown

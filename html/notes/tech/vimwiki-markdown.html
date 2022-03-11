@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+    <head>
+        <title>Vimwiki_markdown Plugin</title>
+       
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../tech-stuff.html">Tech Stuff</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              <div><h1>
+<a aria-hidden="true" class="anchor" href="#vimwiki_markdown-plugin" id="vimwiki_markdown-plugin"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vimwiki_markdown Plugin</h1><ul>
+<li><a href="https://github.com/patrickdavey/vimwiki_markdown">Github repo</a></li>
+</ul></div>
+
+
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#description" id="description"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h1><ul>
+<li>a ruby script</li>
+<li>to be used with with vimwiki plugin
+<ul>
+<li>vimwiki does not support export of markdown syntax
+<ul>
+<li>3rd party plugin necessary</li>
+</ul>
+</li>
+<li>if you don&#39;t use vimwiki, you have no need for this plugin</li>
+</ul>
+</li>
+<li>converts markdown text to html</li>
+<li>
+<del>uses <a href="pygments.html">Pygments</a> to do syntax highlighting of code embedded in the markdown document</del>
+<ul>
+<li>throw <code>%pygments</code> into the template</li>
+<li>actually, it doesn&#39;t use Pygments despite tag name
+<ul>
+<li>uses a ruby gem called <code>rouge</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#integration-with-rouge" id="integration-with-rouge"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integration with Rouge</h1><ul>
+<li>simple to use</li>
+<li>use it with &quot;fenced&quot; markdown code to highlight code</li>
+</ul><pre><code>my $code = &#39;is highlighted&#39;
+my $there_are_problems_however = &quot;overrides local css code&quot;;
+</code></pre><ul>
+<li>used like this:</li>
+</ul><p>```perl</p><p># perl code goes here</p><p>```</p><ul>
+<li>simply put the name of the language immediately after the first line of backticks</li>
+</ul></div>
+
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#integration-with-rouge-creates-problems-for-me" id="integration-with-rouge-creates-problems-for-me"><span aria-hidden="true" class="octicon octicon-link"></span></a>integration with rouge creates problems for me</h2><ul>
+<li>rouge embeds its css directly into the html page
+<ul>
+<li>the css I have for <code>&lt;pre&gt;&lt;code&gt;</code> tags gets overridden</li>
+<li>need to figure out a way to prevent it from overriding my code</li>
+<li>quick and dirty way?
+<ul>
+<li>add <code>!important</code> to my css?
+<ul>
+<li>yes, this worked</li>
+</ul>
+</li>
+<li>but default highlighting does not looks good with black background
+<ul>
+<li>black text is invisible</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>also conflicting with js for creating line numbers
+<ul>
+<li>ugh, this is a bigger headache than I thought</li>
+<li>looks like it gets rid of the <code>&lt;code&gt;</code> tag</li>
+<li>now have to dig around and figure out how to control the output of rouge</li>
+<li>maybe rouge can generate line numbers for me?
+<ul>
+<li>would have to match what my js generates for js
+<ul>
+<li>for consistency</li>
+<li>ugh, more headaches</li>
+<li>rouge doesn&#39;t seem to touch fenced code without a programming language name
+<ul>
+<li>ugh more headaches</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>maybe figure out if I can inject <code>&lt;code&gt;</code> tags with rouge?</li>
+</ul>
+</li>
+<li>maybe a good idea to turn pygmetize off and find a js plugin to do highlighting?
+<ul>
+<li>IIRC, vimwiki-markdown will throw errors if you remove <code>%pygments</code> tag from template
+<ul>
+<li>testing...
+<ul>
+<li>yeah, removing tag from template breaks the command</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>got in touch with author of vimwiki_markdown
+<ul>
+<li>he confirmed there is no easy way to turn off rouge</li>
+<li>I rolled my own solution
+<ul>
+<li>I just modify the html after it&#39;s published with my raku post processing script
+<ul>
+<li>removes the css from the dom entirely</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li><a href="#vimwiki_markdown-plugin">Vimwiki_markdown Plugin</a></li>
+<li><a href="#description">Description</a></li>
+<li>
+<a href="#integration-with-rouge">Integration with Rouge</a>
+<ul>
+<li><a href="#integration-with-rouge-creates-problems-for-me">integration with rouge creates problems for me</a></li>
+</ul>
+</li>
+</ul></div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
+            </div>
+        </div>
+        <script src="../../js/scroll_sync.js"></script>
+        <script src="../../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+

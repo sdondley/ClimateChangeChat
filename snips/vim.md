@@ -1,8 +1,8 @@
 # On This Page
 
-- [vim snips](#vim-snips)
+- [Vim Snips](#vim-snips)
 
-# vim snips
+# Vim Snips
 
 * Read/insert another file into vim
     :r foo.txt

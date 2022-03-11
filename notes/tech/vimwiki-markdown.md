@@ -1,12 +1,12 @@
-# vimwiki_markdown plugin
+# Vimwiki_markdown Plugin
 
 * [Github repo](https://github.com/patrickdavey/vimwiki_markdown)
 
 # On This Page
 
-- [vimwiki_markdown plugin](#vimwiki_markdown-plugin)
+- [Vimwiki_markdown Plugin](#vimwiki_markdown-plugin)
 - [Description](#description)
-- [Integration with rouge](#integration-with-rouge)
+- [Integration with Rouge](#integration-with-rouge)
     - [integration with rouge creates problems for me](#integration-with-rouge-creates-problems-for-me)
 
 # Description
@@ -21,7 +21,7 @@
     * actually, it doesn't use Pygments despite tag name
         * uses a ruby gem called `rouge` 
 
-# Integration with rouge
+# Integration with Rouge
 * simple to use
 * use it with "fenced" markdown code to highlight code
 ```

@@ -1,10 +1,4 @@
-# neovim notes
-
-# On This Page
-
-- [neovim notes](#neovim-notes)
-    - [Configuration](#configuration)
-        - [Configuring nvim from scratch](#configuring-nvim-from-scratch)
+# Neovim Notes
 
 vim is something a not-so-modern software miracle. Originally written
 in 1976 by Bill Joy, it still manages to a the text editor of choice
@@ -13,22 +7,29 @@ flexible and configurable text editor. It would take a lifetime to truly master
 it. neovim, a direct fork of vim, has come along in recent years to give vim a
 run for it's money and improve upon it.
 
-* What is neovim?
-    * neo = "new" vim
-    * It's a fork of the vim text editor
-    * Popular with newer developers
-    * Big advantage over vim is many more people work on it
-        * Faster development cycle
-        * Does more innovative stuff than vim
-            * Examples:
-                * Language server protocol implementation
-                    * useful for editing code like an IDE 
-                * Lua integration
-                    * claims to better to work with than vimscript 
-                    * vimscript can still be used with neovim
-    * Basically backward compatible with vim but with extra features
+# On This Page
 
-## Configuration
+- [Neovim Notes](#neovim-notes)
+- [What Is Neovim?](#what-is-neovim)
+- [Configuration](#configuration)
+    - [Configuring nvim from scratch](#configuring-nvim-from-scratch)
+
+# What Is Neovim?
+* neo = "new" vim
+* It's a fork of the vim text editor
+* Popular with newer developers
+* Big advantage over vim is many more people work on it
+    * Faster development cycle
+    * Does more innovative stuff than vim
+        * Examples:
+            * Language server protocol implementation
+                * useful for editing code like an IDE 
+            * Lua integration
+                * claims to better to work with than vimscript 
+                * vimscript can still be used with neovim
+* Basically backward compatible with vim but with extra features
+
+# Configuration
 Note: all notes below apply to default macOS. While the descriptions are accurate, directory locations may be different on your machine.
 
 * two main directories
@@ -38,7 +39,7 @@ Note: all notes below apply to default macOS. While the descriptions are accurat
         * this is where the user can configure vim to their liking
         * Most time is spent here configuring vim to your heart's desire
 
-### Configuring nvim from scratch
+## Configuring nvim from scratch
 * if you already have a neovim config:
     * good idea to create git repo of the nvim directory in .config
         * create new branch called 'clean'

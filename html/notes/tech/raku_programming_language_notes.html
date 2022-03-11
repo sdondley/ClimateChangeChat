@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Pygments</title>
+        <title>Raku Programming Language Notes</title>
        
 
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
@@ -28,15 +28,46 @@
         <div id="page">
             <div id="content">
               <div><h1>
-<a aria-hidden="true" class="anchor" href="#pygments" id="pygments"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pygments</h1></div>
+<a aria-hidden="true" class="anchor" href="#raku-programming-language-notes" id="raku-programming-language-notes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Raku Programming Language Notes</h1></div>
+
 
 
 <div><h1>
-<a aria-hidden="true" class="anchor" href="#what-is-it" id="what-is-it"><span aria-hidden="true" class="octicon octicon-link"></span></a>What Is It?</h1><ul>
-<li>Software for code syntax highlighting</li>
-<li><a href="https://pygments.org/">Pygments project home page</a></li>
-<li><a href="https://github.com/pygments/pygments">Github repo</a></li>
-<li>I don&#39;t use this software myself</li>
+<a aria-hidden="true" class="anchor" href="#regexes" id="regexes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Regexes</h1><ul>
+<li>regexes almost have to be relearned coming from perl
+<ul>
+<li>fortunately, compiler can be very helpful pointing out mistakes if you are coming from perl</li>
+</ul>
+</li>
+<li>
+<code>#</code> (hash sign) must be commented out</li>
+<li>matching beginning and end of lines
+<ul>
+<li>
+<code>^^</code> and <code>$$</code>
+</li>
+</ul>
+</li>
+<li>capture marker: <code>&lt;( )&gt;</code>
+</li>
+<li>Ranges:
+<ul>
+<li>perl: <code>a-z</code>
+</li>
+<li>raku: <code>a..z</code>
+</li>
+</ul>
+</li>
+<li>character classes
+<ul>
+<li>&lt;[oneofthesechars]&gt;</li>
+<li>is not <em>this</em> characters
+<ul>
+<li><code>&lt;-[b]&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul></div>
 
 
@@ -45,9 +76,9 @@
                 <div class="scrollsync">
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#pygments">Pygments</a></li>
-<li><a href="#what-is-it">What Is It?</a></li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 10, 2022  8:51 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
+<li><a href="#raku-programming-language-notes">Raku Programming Language Notes</a></li>
+<li><a href="#regexes">Regexes</a></li>
+</ul><p>These are quick reference notes for myself so I don&#39;t have to keep looking up the same thing in the docs months later after I forget them. Not meant to be pedagogical.</p></div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
             </div>
         </div>
         <script src="../../js/scroll_sync.js"></script>

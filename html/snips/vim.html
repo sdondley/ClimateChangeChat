@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Bash Snips</title>
+        <title>Vim Snips</title>
        
 
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
@@ -27,26 +27,13 @@
         </div>
         <div id="page">
             <div id="content">
-              <div><h1>
-<a aria-hidden="true" class="anchor" href="#bash-snips" id="bash-snips"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bash Snips</h1></div>
-
+              
 
 <div><h1>
-<a aria-hidden="true" class="anchor" href="#change-the-name-of-the-current-directory-from-the-command-line" id="change-the-name-of-the-current-directory-from-the-command-line"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change the Name of the Current Directory from the Command Line</h1><p>A simple bash function for renaming the current directory you are in from the command line:</p><ul>
-<li>Add this to the appropriate shell config file:
-<pre><code>rename_current_dir() {
-   cd=${PWD##*/}
-   cd ..
-   mv $cd $1
-   cd $1
-}
-</code></pre>
-</li>
-<li>Create an alias of your choice to this command so it&#39;s easier to type:
-<code>alias rncd=&#39;rename_current_dir&#39;</code>
-</li>
+<a aria-hidden="true" class="anchor" href="#vim-snips" id="vim-snips"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vim Snips</h1><ul>
+<li>Read/insert another file into vim
+:r foo.txt</li>
 </ul></div>
-
 
 
             </div>
@@ -54,9 +41,8 @@
                 <div class="scrollsync">
                 <h6>
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
-<li><a href="#bash-snips">Bash Snips</a></li>
-<li><a href="#change-the-name-of-the-current-directory-from-the-command-line">Change the Name of the Current Directory from the Command Line</a></li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 10, 2022  8:51 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
+<li><a href="#vim-snips">Vim Snips</a></li>
+</ul></div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>

@@ -7,6 +7,7 @@
     - [htpasswd command](#htpasswd-command)
     - [apache config file](#apache-config-file)
     - [prevent brute force attacks](#prevent-brute-force-attacks)
+    - [Reset password?](#reset-password)
 
 # Basic Authentication
 * [official docs](https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html)
@@ -35,3 +36,6 @@
     * how to determine if it's turned on?
         * `fail2ban-client status` 
             * will show up there if it's on
+
+## Reset password?
+* is there any way for a user to reset their password if they don't have access to the command line?     
