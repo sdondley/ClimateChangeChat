@@ -28,6 +28,7 @@ endfunction
 ```
 ##### way to suppress css?
 * done with vimscript in function
+* css added to `css/style.css` file
 
 #### client portals
 * building private one-page portals for client to share information with them about the status of projects
@@ -42,6 +43,10 @@ endfunction
 * seems broken with current config
 * setting up clean nvim config to test
 ### 11th
+#### Got taskwarrior working
+* seems to have crashed
+* certificate was also expired
+* will be used more as part of the new client portal feature I'm building
 #### Problems embedding youtube vids with time codes
 * need to parse out the time argument in query string
     * then modify embed code with it
@@ -365,6 +370,7 @@ endfunction
             - [client portals](#client-portals)
             - [choosing files with vimwiki](#choosing-files-with-vimwiki)
         - [11th](#11th)
+            - [Got taskwarrior working](#got-taskwarrior-working)
             - [Problems embedding youtube vids with time codes](#problems-embedding-youtube-vids-with-time-codes)
             - [Password protection of directories](#password-protection-of-directories)
             - [Early CO₂ experiment from the 1850s](#early-co-experiment-from-the-1850s)
