@@ -7,6 +7,14 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 11th
+#### Problems embedding youtube vids with time codes
+* need to parse out the time argument in query string
+    * then modify embed code with it
+    * check examples on youtube
+    ```
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NAvLEXK3jaI?start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    ```
+    * query string key gets changed to "start" followed by number of seconds for value
 #### Password protection of directories
 * set up site with basic auth to password protect directories
 * needed to add in apached `authz_groupfile` module
@@ -20,8 +28,9 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * some hacks offered in thread as possible solutions 
 #### What is good acting?
 * https://www.youtube.com/watch?v=opHii8PBrQU&t=3s
-    * an amateur, non-actor's take
-    * why am I watching this?
+* an amateur, non-actor's take
+    * so why am I watching this?
+        * clickbait works
 #### On the term "note stream"
 * I never heard the term before thinking of it tonight     
 * apparently it's a product from Microsoft
@@ -316,6 +325,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [2022](#2022)
     - [March](#march)
         - [11th](#11th)
+            - [Problems embedding youtube vids with time codes](#problems-embedding-youtube-vids-with-time-codes)
             - [Password protection of directories](#password-protection-of-directories)
             - [Early CO₂ experiment from the 1850s](#early-co-experiment-from-the-1850s)
             - [Possible to mirror tmux pane in another window?](#possible-to-mirror-tmux-pane-in-another-window)

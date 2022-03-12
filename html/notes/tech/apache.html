@@ -40,6 +40,7 @@
 
 <div><h2>
 <a aria-hidden="true" class="anchor" href="#htpasswd-command" id="htpasswd-command"><span aria-hidden="true" class="octicon octicon-link"></span></a>htpasswd command</h2><ul>
+<li><a href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html">official docs</a></li>
 <li>used for managing user names and password
 <ul>
 <li>create password file with new user
@@ -69,6 +70,22 @@
 &lt;/Directory&gt;
 </code></pre>
 </li>
+<li>With groups (<code>authz_groupfile</code> module)
+<pre><code>        &lt;Directory &quot;/var/www/html/path/to/dir/subdir&quot;&gt;
+            AllowOverride AuthConfig
+            AuthType Basic
+            AuthName &quot;Restricted Files&quot;
+            # (Following line optional)
+            AuthBasicProvider file
+            AuthUserFile &quot;/var/www/html/password_file_name&quot;
+            Require user user_name
+            AuthGroupFile &quot;/var/www/html/groups&quot;
+            Require group group1 group2
+            ErrorDocument 401 &quot;&lt;html&gt;&lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=/path/to/file.html\&quot;&gt;&lt;/html&gt;&quot;
+    &lt;/Directory&gt;
+</code></pre>
+</li>
+<li>ErrorDocument setting</li>
 </ul></div>
 
 <div><h2>
@@ -93,6 +110,14 @@
 <div><h2>
 <a aria-hidden="true" class="anchor" href="#reset-password" id="reset-password"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reset password?</h2><ul>
 <li>is there any way for a user to reset their password if they don&#39;t have access to the command line?</li>
+<li>
+<a href="https://github.com/rafaelgou/php-apache2-basic-auth-manager">PHP Apache2 Basic Auth Manager: github.com</a>
+<ul>
+<li>looks promising</li>
+<li>but not password reset interface</li>
+<li>
+</li></ul>
+</li>
 </ul></div>
 
 
@@ -111,7 +136,7 @@
 <li><a href="#reset-password">Reset password?</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 11, 2022  1:26 AM</div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 11, 2022  8:28 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
             </div>
         </div>
         <script src="../../js/scroll_sync.js"></script>

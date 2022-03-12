@@ -31,6 +31,22 @@
             Require user user_name
     </Directory>
     ``` 
+* With groups (`authz_groupfile` module)
+    ```
+            <Directory "/var/www/html/path/to/dir/subdir">
+                AllowOverride AuthConfig
+                AuthType Basic
+                AuthName "Restricted Files"
+                # (Following line optional)
+                AuthBasicProvider file
+                AuthUserFile "/var/www/html/password_file_name"
+                Require user user_name
+                AuthGroupFile "/var/www/html/groups"
+                Require group group1 group2
+                ErrorDocument 401 "<html><meta http-equiv=\"refresh\" content=\"0;url=/path/to/file.html\"></html>"
+        </Directory>
+    ```
+* ErrorDocument setting
 ## prevent brute force attacks    
 * fail2ban
 * has an [apache-auth] config
