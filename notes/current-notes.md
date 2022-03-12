@@ -8,7 +8,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ### 12th
 #### client portals
-* building private webpages for client to share information with them
+* building private one-page portals for client to share information with them about the status of projects
 * mostly one-way now
     * will add more two-way communication later 
         * upload files

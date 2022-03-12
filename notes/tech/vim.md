@@ -7,6 +7,8 @@
 - [Plugins](#plugins)
     - [fzf](#fzf)
         - [RTFM](#rtfm)
+- [Vim scripting](#vim-scripting)
+    - [assign output of command to a variable](#assign-output-of-command-to-a-variable)
 
 # Alphabeticlly Sorting of Lines
 * `:sort`
@@ -25,4 +27,5 @@
         use { 'junegunn/fzf', cmd = 'fzf#install()', ft = 'vimwiki' }
         use { 'junegunn/fzf.vim', ft = 'vimwiki' }
         ```
-
+# Vim scripting
+## assign output of command to a variable
