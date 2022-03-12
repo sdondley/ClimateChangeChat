@@ -4,6 +4,9 @@
 
 - [Vim Notes](#vim-notes)
 - [Alphabeticlly Sorting of Lines](#alphabeticlly-sorting-of-lines)
+- [Plugins](#plugins)
+    - [fzf](#fzf)
+        - [RTFM](#rtfm)
 
 # Alphabeticlly Sorting of Lines
 * `:sort`
@@ -11,3 +14,15 @@
     * :`sort i`
 * can also sort on selected lines in visual mode
 * `:h sort`
+
+# Plugins
+## fzf
+### RTFM
+* [junegunn/fzf.vim: fzf vim: github.com](https://github.com/junegunn/fzf.vim)
+* add plugin to config
+    * for packer
+        ```
+        use { 'junegunn/fzf', cmd = 'fzf#install()', ft = 'vimwiki' }
+        use { 'junegunn/fzf.vim', ft = 'vimwiki' }
+        ```
+

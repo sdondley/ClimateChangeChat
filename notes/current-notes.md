@@ -6,6 +6,10 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ## March
 
+### 12th
+#### choosing files with vimwiki
+* seems broken with current config
+* setting up clean nvim config to test
 ### 11th
 #### Problems embedding youtube vids with time codes
 * need to parse out the time argument in query string
@@ -324,6 +328,8 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [March](#march)
+        - [12th](#12th)
+            - [choosing files with vimwiki](#choosing-files-with-vimwiki)
         - [11th](#11th)
             - [Problems embedding youtube vids with time codes](#problems-embedding-youtube-vids-with-time-codes)
             - [Password protection of directories](#password-protection-of-directories)
