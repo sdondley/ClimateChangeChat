@@ -13,7 +13,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     *  [Recommendations to inserting links to all the files in a directory (preferably using vimwiki) : vim: www.reddit.com](https://www.reddit.com/r/vim/comments/tchfey/recommendations_to_inserting_links_to_all_the/i0dffh0/?context=3)
 * ended up rolling my own simple solution using `tree` command as a basis for the output
 * problems with my solution that have to be ironed out are spelled out there
-* most ironed out in the code below
+* most now ironed out in the code below
 ```
 function! ListFiles()
     let path = expand('%:p:h') . '/files'
