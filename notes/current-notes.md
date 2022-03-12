@@ -7,6 +7,13 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 12th
+#### client portals
+* building private webpages for client to share information with them
+* mostly one-way now
+    * will add more two-way communication later 
+        * upload files
+        * asking questions
+        * adding tasks
 #### choosing files with vimwiki
 * seems broken with current config
 * setting up clean nvim config to test
@@ -329,6 +336,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [2022](#2022)
     - [March](#march)
         - [12th](#12th)
+            - [client portals](#client-portals)
             - [choosing files with vimwiki](#choosing-files-with-vimwiki)
         - [11th](#11th)
             - [Problems embedding youtube vids with time codes](#problems-embedding-youtube-vids-with-time-codes)
