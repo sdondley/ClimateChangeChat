@@ -620,7 +620,7 @@ pre code.hljs td div.hljs-ln-n {
     border-radius: 20px;
 }
 
-.file-listing  A:visited { text-decoration : none; margin : 0px; padding : 0px;}
+.file-listing  A:visited { text-decoration : none; margin : 0px; padding : 0px; color: yellow;}
 .file-listing A:link    { text-decoration : none; margin : 0px; padding : 0px; color: yellow}
 .file-listing A:hover   { text-decoration: underline; background-color : green; margin : 0px; padding : 0px;}
 .file-listing A:active  { margin : 0px; padding : 0px;}
