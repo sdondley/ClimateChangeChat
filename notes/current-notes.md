@@ -7,6 +7,28 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 12th
+#### added a way to inject output of tree command into file
+* could not find a plug-in
+* I asked on reddit
+    *  [Recommendations to inserting links to all the files in a directory (preferably using vimwiki) : vim: www.reddit.com](https://www.reddit.com/r/vim/comments/tchfey/recommendations_to_inserting_links_to_all_the/i0dffh0/?context=3)
+* ended up rolling my own simple solution using `tree` command as a basis for the output
+* problems with my solution that have to be ironed out are spelled out there
+* most ironed out in the code below
+```
+function! ListFiles()
+    let path = expand('%:p:h') . '/files'
+    let out = '# Files' . "\n" . '<ul><div class="file-listing">'
+    let html = system("tree -nDhH files" . ' ' . path)
+    let html = substitute(html, '<.*Tree</h1><p>', '', 'g')
+    let html = substitute(html, '\s\+<hr>.*</html>', '', 'g')
+    let html = html . '</div></ul>'
+
+    :put =(out . html)
+endfunction
+```
+##### way to suppress css?
+* done with vimscript in function
+
 #### client portals
 * building private one-page portals for client to share information with them about the status of projects
 * mostly one-way now
@@ -14,6 +36,8 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
         * upload files
         * asking questions
         * adding tasks
+* password protected
+* need to write server-side script to automate getting them set up
 #### choosing files with vimwiki
 * seems broken with current config
 * setting up clean nvim config to test
@@ -336,6 +360,8 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 - [2022](#2022)
     - [March](#march)
         - [12th](#12th)
+            - [added a way to inject output of tree command into file](#added-a-way-to-inject-output-of-tree-command-into-file)
+                - [way to suppress css?](#way-to-suppress-css)
             - [client portals](#client-portals)
             - [choosing files with vimwiki](#choosing-files-with-vimwiki)
         - [11th](#11th)

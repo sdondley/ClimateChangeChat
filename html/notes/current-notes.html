@@ -20,7 +20,7 @@
     <body>
         <div id="menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../">Home</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../notes/current-notes.html">Notes</a></li>
                 <li><a href="../tech-stuff.html">Tech Stuff</a></li>
@@ -38,8 +38,37 @@
 <div><h3>
 <a aria-hidden="true" class="anchor" href="#12th" id="12th"><span aria-hidden="true" class="octicon octicon-link"></span></a>12th</h3></div>
 <div><h4>
+<a aria-hidden="true" class="anchor" href="#added-a-way-to-inject-output-of-tree-command-into-file" id="added-a-way-to-inject-output-of-tree-command-into-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>added a way to inject output of tree command into file</h4><ul>
+<li>could not find a plug-in</li>
+<li>I asked on reddit
+<ul>
+<li><a href="https://www.reddit.com/r/vim/comments/tchfey/recommendations_to_inserting_links_to_all_the/i0dffh0/?context=3">Recommendations to inserting links to all the files in a directory (preferably using vimwiki) : vim: www.reddit.com</a></li>
+</ul>
+</li>
+<li>ended up rolling my own simple solution using <code>tree</code> command as a basis for the output</li>
+<li>problems with my solution that have to be ironed out are spelled out there</li>
+<li>most ironed out in the code below</li>
+</ul><pre><code>function! ListFiles()
+    let path = expand(&#39;%:p:h&#39;) . &#39;/files&#39;
+    let out = &#39;# Files&#39; . &quot;\n&quot; . &#39;&lt;ul&gt;&lt;div class=&quot;file-listing&quot;&gt;&#39;
+    let html = system(&quot;tree -nDhH files&quot; . &#39; &#39; . path)
+    let html = substitute(html, &#39;&lt;.*Tree&lt;/h1&gt;&lt;p&gt;&#39;, &#39;&#39;, &#39;g&#39;)
+    let html = substitute(html, &#39;\s&lt;hr&gt;.*&lt;/html&gt;&#39;, &#39;&#39;, &#39;g&#39;)
+    let html = html . &#39;&lt;/div&gt;&lt;/ul&gt;&#39;
+
+    :put =(out . html)
+endfunction
+</code></pre></div>
+
+
+<div><h5>
+<a aria-hidden="true" class="anchor" href="#way-to-suppress-css" id="way-to-suppress-css"><span aria-hidden="true" class="octicon octicon-link"></span></a>way to suppress css?</h5><ul>
+<li>done with vimscript in function</li>
+</ul></div>
+
+<div><h4>
 <a aria-hidden="true" class="anchor" href="#client-portals" id="client-portals"><span aria-hidden="true" class="octicon octicon-link"></span></a>client portals</h4><ul>
-<li>building private webpages for client to share information with them</li>
+<li>building private one-page portals for client to share information with them about the status of projects</li>
 <li>mostly one-way now
 <ul>
 <li>will add more two-way communication later
@@ -51,6 +80,8 @@
 </li>
 </ul>
 </li>
+<li>password protected</li>
+<li>need to write server-side script to automate getting them set up</li>
 </ul></div>
 
 <div><h4>
@@ -756,6 +787,12 @@
 <li>
 <a href="#12th">12th</a>
 <ul>
+<li>
+<a href="#added-a-way-to-inject-output-of-tree-command-into-file">added a way to inject output of tree command into file</a>
+<ul>
+<li><a href="#way-to-suppress-css">way to suppress css?</a></li>
+</ul>
+</li>
 <li><a href="#client-portals">client portals</a></li>
 <li><a href="#choosing-files-with-vimwiki">choosing files with vimwiki</a></li>
 </ul>
@@ -823,7 +860,7 @@
 </li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 12, 2022  1:33 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 7, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 12, 2022  4:58 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 7, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>
