@@ -609,4 +609,28 @@ pre code.hljs td div.hljs-ln-n {
     //padding: 0 var(--default-padding);
 }
 
+.file-listing { 
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    padding-top: 40px;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.file-listing  A:visited { text-decoration : none; margin : 0px; padding : 0px;}
+.file-listing A:link    { text-decoration : none; margin : 0px; padding : 0px; color: yellow}
+.file-listing A:hover   { text-decoration: underline; background-color : green; margin : 0px; padding : 0px;}
+.file-listing A:active  { margin : 0px; padding : 0px;}
+.file-listing .NORM  { color: yellow;  }
+.file-listing .FIFO  { color: green; }
+.file-listing .CHAR  { color: yellow; }
+.file-listing .DIR   { color: green;   }
+.file-listing .BLOCK { color: yellow; }
+.file-listing .LINK  { color: yellow;   }
+.file-listing .SOCK  { color: red;}
+.file-listing .EXEC  { color: brown;  }
+
 
