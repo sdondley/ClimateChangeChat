@@ -625,7 +625,7 @@ code.task-id {
     float: right;
 }
 
-li.done4 {
+li.done4, li.done4 code {
     text-decoration: line-through;
     color: grey;
 }
