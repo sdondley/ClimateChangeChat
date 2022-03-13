@@ -620,6 +620,12 @@ pre code.hljs td div.hljs-ln-n {
     border-radius: 20px;
 }
 
+code.task-id {
+    margin-left: 20px;
+    float: right;
+}
+
+
 .file-listing  A:visited { text-decoration : none; margin : 0px; padding : 0px; color: yellow;}
 .file-listing A:link    { text-decoration : none; margin : 0px; padding : 0px; color: yellow}
 .file-listing A:hover   { text-decoration: underline; background-color : green; margin : 0px; padding : 0px;}

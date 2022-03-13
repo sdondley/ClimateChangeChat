@@ -7,6 +7,8 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 12th
+#### need to theme the task id numbers
+* another job for the raku post processor
 #### added a way to inject output of tree command into file
 * could not find a plug-in
 * I asked on reddit
@@ -365,6 +367,7 @@ endfunction
 - [2022](#2022)
     - [March](#march)
         - [12th](#12th)
+            - [need to theme the task id numbers](#need-to-theme-the-task-id-numbers)
             - [added a way to inject output of tree command into file](#added-a-way-to-inject-output-of-tree-command-into-file)
                 - [way to suppress css?](#way-to-suppress-css)
             - [client portals](#client-portals)
