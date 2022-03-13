@@ -6,6 +6,10 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ## March
 
+### 13th
+* need to find an easy way to add images to vimwiki
+* ![the](/Users/stevedondley/Desktop/Screen%20Shot%202022-03-13%20at%201.22.47%20AM.png)
+
 ### 12th
 #### cleaned up task list
 * got rid of a lot of stale tasks from taskwarrior
@@ -370,6 +374,7 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [March](#march)
+        - [13th](#13th)
         - [12th](#12th)
             - [cleaned up task list](#cleaned-up-task-list)
             - [small problems/annoyances with taskwarrior completion](#small-problemsannoyances-with-taskwarrior-completion)

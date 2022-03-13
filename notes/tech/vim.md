@@ -9,6 +9,8 @@
         - [RTFM](#rtfm)
 - [Vim scripting](#vim-scripting)
     - [assign output of command to a variable](#assign-output-of-command-to-a-variable)
+    - [run "normal" keystroke commands in a function](#run-normal-keystroke-commands-in-a-function)
+    - [get character under cursor](#get-character-under-cursor)
 
 # Alphabeticlly Sorting of Lines
 * `:sort`
@@ -29,3 +31,13 @@
         ```
 # Vim scripting
 ## assign output of command to a variable
+* use `system()` function
+* Example:
+    * `let html = system("tree -nDhH files" . ' ' . path)`
+
+## run "normal" keystroke commands in a function
+* `:execute "normal \<c-w>\<c-w>"`
+* `:normal ^W^W`
+
+## get character under cursor
+* `matchstr(getline('.'), '\%' . col('.') . 'c.')`
