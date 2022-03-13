@@ -7,7 +7,9 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 12th
-#### small problem with taskwarrior completion
+#### cleaned up task list
+* got rid of a lot of stale tasks from taskwarrior
+#### small problems/annoyances with taskwarrior completion
 * report filed: [Not getting zsh completion for `project:` in commands · Issue #2747 · GothenburgBitFactory/taskwarrior: github.com](https://github.com/GothenburgBitFactory/taskwarrior/issues/2747)
 #### need to theme the task id numbers
 * another job for the raku post processor
@@ -369,7 +371,8 @@ endfunction
 - [2022](#2022)
     - [March](#march)
         - [12th](#12th)
-            - [small problem with taskwarrior completion](#small-problem-with-taskwarrior-completion)
+            - [cleaned up task list](#cleaned-up-task-list)
+            - [small problems/annoyances with taskwarrior completion](#small-problemsannoyances-with-taskwarrior-completion)
             - [need to theme the task id numbers](#need-to-theme-the-task-id-numbers)
             - [added a way to inject output of tree command into file](#added-a-way-to-inject-output-of-tree-command-into-file)
                 - [way to suppress css?](#way-to-suppress-css)
