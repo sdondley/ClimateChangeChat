@@ -6,9 +6,12 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ## March
 
+### 14th
+* worked more hours on set configuration scripts for client portals
 ### 13th
 #### working on automation tasks today
 * mostly for getting new clients set up with portals
+* got a lot done, pretty much all I did
 #### need to find an easy way to add images to vimwiki
 * need to resize images
 * ![this is a test image](/Users/stevedondley/Desktop/Screen%20Shot%202022-03-13%20at%201.22.47%20AM.png)
@@ -377,6 +380,7 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [March](#march)
+        - [14th](#14th)
         - [13th](#13th)
             - [working on automation tasks today](#working-on-automation-tasks-today)
             - [need to find an easy way to add images to vimwiki](#need-to-find-an-easy-way-to-add-images-to-vimwiki)
