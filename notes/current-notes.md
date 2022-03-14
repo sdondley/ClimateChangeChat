@@ -7,6 +7,10 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ## March
 
 ### 14th
+#### Raku: rewriting for loops
+* a question I posed on SO
+    * [raku - What are some other ways this loop can be rewritten? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71463573/what-are-some-other-ways-this-loop-can-be-rewritten/71464608#71464608)
+#### workin' workin'
 * worked more hours on set configuration scripts for client portals
 ### 13th
 #### WW III is looking more possible with every passing day
@@ -385,6 +389,8 @@ endfunction
 - [2022](#2022)
     - [March](#march)
         - [14th](#14th)
+            - [Raku: rewriting for loops](#raku-rewriting-for-loops)
+            - [workin' workin'](#workin-workin)
         - [13th](#13th)
             - [WW III is looking more possible with every passing day](#ww-iii-is-looking-more-possible-with-every-passing-day)
             - [working on automation tasks today](#working-on-automation-tasks-today)
