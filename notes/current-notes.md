@@ -9,6 +9,10 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 ### 14th
 * worked more hours on set configuration scripts for client portals
 ### 13th
+#### WW III is looking more possible with every passing day
+* really not good
+* Russia now looking for weapons from China
+* Russia threatening to nationalize companies that pull out
 #### working on automation tasks today
 * mostly for getting new clients set up with portals
 * got a lot done, pretty much all I did
@@ -382,6 +386,7 @@ endfunction
     - [March](#march)
         - [14th](#14th)
         - [13th](#13th)
+            - [WW III is looking more possible with every passing day](#ww-iii-is-looking-more-possible-with-every-passing-day)
             - [working on automation tasks today](#working-on-automation-tasks-today)
             - [need to find an easy way to add images to vimwiki](#need-to-find-an-easy-way-to-add-images-to-vimwiki)
         - [12th](#12th)
