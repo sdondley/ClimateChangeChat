@@ -16,6 +16,12 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 * can never have enough 
     * but I think I got at least 90% of what I need 
 * got m1 on synergy 
+    * going to use it primarily for messaging apps 
+        * use 4 regularly 
+            * discord 
+            * skype 
+            * messages
+            * messenger
 * ipad now controlled via universal control
     * seems a bit buggy 
     * no hot keys to switch between screens
