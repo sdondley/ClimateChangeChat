@@ -5,6 +5,11 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 # 2022
 
 ## March
+### 15th
+* working with TW context
+    * found a way to create contexts for different shells 
+        * easier than switching betwen vimwiki files with tasks by client
+        * see TW notes
 ### 14th
 #### Raku: rewriting for loops
 * upgraded apples devices
@@ -411,6 +416,7 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [March](#march)
+        - [15th](#15th)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
             - [40 million pixels of screen space now at my fingertips](#40-million-pixels-of-screen-space-now-at-my-fingertips)
