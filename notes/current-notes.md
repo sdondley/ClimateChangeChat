@@ -12,7 +12,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * upgrading my 5 main computing devices simultaneously
         * this is what I do for fun
     * let's hope universal control doesn't break synergy
-* 40 million pixels of screen space now
+#### 40 million pixels of screen space now
     * got m1 on synergy 
     * ipad now controlled via universal control
         * seems a bit buggy 
@@ -23,7 +23,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * [What is OpenCore? | OpenCore Legacy Patcher: dortania.github.io](https://dortania.github.io/OpenCore-Legacy-Patcher/START.html)
     * looks interest for a project for another day
         * would allow me to use universal control on 2014 imac 
-* a question I posed on SO
+#### a question I posed on SO
     * [raku - What are some other ways this loop can be rewritten? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71463573/what-are-some-other-ways-this-loop-can-be-rewritten/71464608#71464608)
 #### workin' workin'
 * worked more hours on set configuration scripts for client portals
@@ -405,6 +405,8 @@ endfunction
     - [March](#march)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
+            - [40 million pixels of screen space now](#40-million-pixels-of-screen-space-now)
+            - [a question I posed on SO](#a-question-i-posed-on-so)
             - [workin' workin'](#workin-workin)
         - [13th](#13th)
             - [WW III is looking more possible with every passing day](#ww-iii-is-looking-more-possible-with-every-passing-day)
