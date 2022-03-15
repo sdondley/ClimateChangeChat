@@ -12,19 +12,21 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * upgrading my 5 main computing devices simultaneously
         * this is what I do for fun
     * let's hope universal control doesn't break synergy
-#### 40 million pixels of screen space now
-    * got m1 on synergy 
-    * ipad now controlled via universal control
-        * seems a bit buggy 
-        * no hot keys to switch between screens
+#### 40 million pixels of screen space now at my fingertips
+* can never have enough 
+    * but I think I got at least 90% of what I need 
+* got m1 on synergy 
+* ipad now controlled via universal control
+    * seems a bit buggy 
+    * no hot keys to switch between screens
 * possible to upgrqde late 2014 imac to monterey?
-    *  [Trying to install Monterey on late 2014 iMac 5k with Open core, receiving an error in making a bootable flash drive on terminal. : MacOSBeta: www.reddit.com](https://www.reddit.com/r/MacOSBeta/comments/qgz41p/trying_to_install_monterey_on_late_2014_imac_5k/)
-    * [Working great on Imac 5k Late 2014 : MontereyPatcher: www.reddit.com](https://www.reddit.com/r/MontereyPatcher/comments/nz1896/working_great_on_imac_5k_late_2014/)
-    * [What is OpenCore? | OpenCore Legacy Patcher: dortania.github.io](https://dortania.github.io/OpenCore-Legacy-Patcher/START.html)
-    * looks interest for a project for another day
-        * would allow me to use universal control on 2014 imac 
+*  [Trying to install Monterey on late 2014 iMac 5k with Open core, receiving an error in making a bootable flash drive on terminal. : MacOSBeta: www.reddit.com](https://www.reddit.com/r/MacOSBeta/comments/qgz41p/trying_to_install_monterey_on_late_2014_imac_5k/)
+* [Working great on Imac 5k Late 2014 : MontereyPatcher: www.reddit.com](https://www.reddit.com/r/MontereyPatcher/comments/nz1896/working_great_on_imac_5k_late_2014/)
+* [What is OpenCore? | OpenCore Legacy Patcher: dortania.github.io](https://dortania.github.io/OpenCore-Legacy-Patcher/START.html)
+* looks interest for a project for another day
+    * would allow me to use universal control on 2014 imac 
 #### a question I posed on SO
-    * [raku - What are some other ways this loop can be rewritten? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71463573/what-are-some-other-ways-this-loop-can-be-rewritten/71464608#71464608)
+* [raku - What are some other ways this loop can be rewritten? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71463573/what-are-some-other-ways-this-loop-can-be-rewritten/71464608#71464608)
 #### workin' workin'
 * worked more hours on set configuration scripts for client portals
 ### 13th
@@ -405,7 +407,7 @@ endfunction
     - [March](#march)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
-            - [40 million pixels of screen space now](#40-million-pixels-of-screen-space-now)
+            - [40 million pixels of screen space now at my fingertips](#40-million-pixels-of-screen-space-now-at-my-fingertips)
             - [a question I posed on SO](#a-question-i-posed-on-so)
             - [workin' workin'](#workin-workin)
         - [13th](#13th)
