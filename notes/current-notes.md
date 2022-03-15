@@ -6,7 +6,11 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ## March
 ### 15th
-* working with TW context
+#### workin'  more
+* lara logan is a nutjob
+* working on improving integration of TW with vimwiki and projec portals
+* more tweaking of scripts
+* working with TW contexts
     * found a way to create contexts for different shells 
         * easier than switching betwen vimwiki files with tasks by client
         * see TW notes
@@ -418,6 +422,7 @@ endfunction
 - [2022](#2022)
     - [March](#march)
         - [15th](#15th)
+            - [workin'  more](#workin-more)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
             - [40 million pixels of screen space now at my fingertips](#40-million-pixels-of-screen-space-now-at-my-fingertips)
