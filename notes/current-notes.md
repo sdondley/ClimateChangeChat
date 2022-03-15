@@ -29,8 +29,9 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
             * messenger
 * ipad now controlled via universal control
     * seems a bit buggy 
+        * m1 would frequently disappear 
     * no hot keys to switch between screens
-* possible to upgrqde late 2014 imac to monterey?
+#### possible to upgrqde late 2014 imac to monterey?
 *  [Trying to install Monterey on late 2014 iMac 5k with Open core, receiving an error in making a bootable flash drive on terminal. : MacOSBeta: www.reddit.com](https://www.reddit.com/r/MacOSBeta/comments/qgz41p/trying_to_install_monterey_on_late_2014_imac_5k/)
 * [Working great on Imac 5k Late 2014 : MontereyPatcher: www.reddit.com](https://www.reddit.com/r/MontereyPatcher/comments/nz1896/working_great_on_imac_5k_late_2014/)
 * [What is OpenCore? | OpenCore Legacy Patcher: dortania.github.io](https://dortania.github.io/OpenCore-Legacy-Patcher/START.html)
@@ -420,6 +421,7 @@ endfunction
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
             - [40 million pixels of screen space now at my fingertips](#40-million-pixels-of-screen-space-now-at-my-fingertips)
+            - [possible to upgrqde late 2014 imac to monterey?](#possible-to-upgrqde-late-2014-imac-to-monterey)
             - [a question I posed on SO](#a-question-i-posed-on-so)
             - [workin' workin'](#workin-workin)
         - [13th](#13th)
