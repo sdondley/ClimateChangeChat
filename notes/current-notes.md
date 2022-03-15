@@ -5,9 +5,24 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 # 2022
 
 ## March
-
 ### 14th
 #### Raku: rewriting for loops
+* upgraded apples devices
+    * universal control is here 
+    * upgrading my 5 main computing devices simultaneously
+        * this is what I do for fun
+    * let's hope universal control doesn't break synergy
+* 40 million pixels of screen space now
+    * got m1 on synergy 
+    * ipad now controlled via universal control
+        * seems a bit buggy 
+        * no hot keys to switch between screens
+* possible to upgrqde late 2014 imac to monterey?
+    *  [Trying to install Monterey on late 2014 iMac 5k with Open core, receiving an error in making a bootable flash drive on terminal. : MacOSBeta: www.reddit.com](https://www.reddit.com/r/MacOSBeta/comments/qgz41p/trying_to_install_monterey_on_late_2014_imac_5k/)
+    * [Working great on Imac 5k Late 2014 : MontereyPatcher: www.reddit.com](https://www.reddit.com/r/MontereyPatcher/comments/nz1896/working_great_on_imac_5k_late_2014/)
+    * [What is OpenCore? | OpenCore Legacy Patcher: dortania.github.io](https://dortania.github.io/OpenCore-Legacy-Patcher/START.html)
+    * looks interest for a project for another day
+        * would allow me to use universal control on 2014 imac 
 * a question I posed on SO
     * [raku - What are some other ways this loop can be rewritten? - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/71463573/what-are-some-other-ways-this-loop-can-be-rewritten/71464608#71464608)
 #### workin' workin'
