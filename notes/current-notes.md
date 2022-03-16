@@ -6,6 +6,16 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 ## March
 ### 15th
+#### no way to wrap plain text for outgoing mail in Apple mail
+* some old plugin to try to fix. Doesn't install:
+    * https://github.com/arachsys/mailwrap
+    * looks like it's written in python2 
+    * python2 has been removed from macos
+#### annoying zsh problem
+* https://unix.stackexchange.com/questions/694544/what-triggers-the-j-k-keys-to-scroll-through-prev-next-commands-and-how-do-i-pro
+#### jon stewart gets panned on his piece on fossil fuels company
+* [Jon Stewart to Big Oil: You Are Valid: www.gawker.com](https://www.gawker.com/culture/jon-stewart-to-big-oil-you-are-valid?utm_source=digg)
+* I didn't watch the full piece, doesn't sound good
 #### workin'  more
 * lara logan is a nutjob
 * working on improving integration of TW with vimwiki and projec portals
@@ -422,6 +432,9 @@ endfunction
 - [2022](#2022)
     - [March](#march)
         - [15th](#15th)
+            - [no way to wrap plain text for outgoing mail in Apple mail](#no-way-to-wrap-plain-text-for-outgoing-mail-in-apple-mail)
+            - [annoying zsh problem](#annoying-zsh-problem)
+            - [jon stewart gets panned on his piece on fossil fuels company](#jon-stewart-gets-panned-on-his-piece-on-fossil-fuels-company)
             - [workin'  more](#workin-more)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)

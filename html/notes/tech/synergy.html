@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <head>
+        <title>Synergy</title>
+       
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../../">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../notes/current-notes.html">Notes</a></li>
+                <li><a href="../../tech-stuff.html">Tech Stuff</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#synergy" id="synergy"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synergy</h1><p>A virtual kvm device. Allows you to share mouse and keyboard across multiple computing devices that can be on different platforms (e.g. windows, mac, linux)</p></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#settings" id="settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Settings</h1></div>
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#advanced-server-settings" id="advanced-server-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>advanced server settings</h2><ul>
+<li>
+<code>Use relative mouse motion</code>
+<ul>
+<li>what does this do?</li>
+<li>doesn&#39;t seem to make a discernable difference</li>
+<li>maybe internally the coordinates are relative to the screen you&#39;re in?</li>
+<li>from the docs:
+<ul>
+<li>If set to true then secondary screens move the mouse using relative rather than absolute mouse moves when and only when the cursor is locked to the screen (by Scroll Lock or a configured hot key). This is intended to make Synergy work better with certain games. If set to false or not set then all mouse moves are absolute.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#docs-from-website" id="docs-from-website"><span aria-hidden="true" class="octicon octicon-link"></span></a>docs from website</h2><p>Options</p><p>args is a list of lines of the form name = value. These set the global options.</p><p>section: options
+heartbeat.        = 5000
+switchDelay.    = 500
+end</p><p>List of options</p><p>heartbeat = N - The server will expect each client to send a message no less than every N milliseconds. If no message arrives from a client within 3N seconds the server forces that client to disconnect.If synergy fails to detect clients disconnecting while the server is sleeping or vice versa, try using this option.</p><p>switchCorners = <corners> - Synergy won&#39;t switch screens when the mouse reaches the edge of the screen if it&#39;s in a listed corner. The size of all corners is given by the switchCornerSize option.Corners are specified by a list using the following names:</corners></p><p>none -- no corners
+top-left -- the top left corner
+top-right -- the top right corner
+bottom-left -- the bottom left corner
+bottom-right -- the bottom right corner
+left -- top and bottom left corners
+right -- top and bottom right corners
+top -- left and right top corners
+bottom -- left and right bottom corners
+all -- all corners</p><p>The first name in the list is one of the above names and defines the initial set of corners. Subsequent names are prefixed with + or - to add the corner to or remove the corner from the set, respectively. For example: all -left +top-left starts will all corners, removes the left corners (top and bottom) then adds the top-left back in, resulting in the top-left, bottom-left and bottom-right corners.</p><p>switchCornerSize = N - Sets the size of all corners in pixels. The cursor must be within N pixels of the corner to be considered to be in the corner.</p><p>switchDelay = N - Synergy won&#39;t switch screens when the mouse reaches the edge of a screen unless it stays on the edge for N milliseconds. This helps prevent unintentional switching when working near the edge of a screen.</p><p>switchDoubleTap = N - Synergy won&#39;t switch screens when the mouse reaches the edge of a screen unless it&#39;s moved away from the edge and then back to the edge within N milliseconds. With the option you have to quickly tap the edge twice to switch. This helps prevent unintentional switching when working near the edge of a screen.</p><p>screenSaverSync = {true|false} - If set to false then Synergy won&#39;t synchronize screen savers. Client screen savers will start according to their individual configurations. The server screen saver won&#39;t start if there is input, even if that input is directed toward a client screen.</p><p>relativeMouseMoves = {true|false} - If set to true then secondary screens move the mouse using relative rather than absolute mouse moves when and only when the cursor is locked to the screen (by Scroll Lock or a configured hot key). This is intended to make Synergy work better with certain games. If set to false or not set then all mouse moves are absolute.</p><p>clipboardSharing = {true|false} - If set to true then clipboard sharing will be enabled and the clipboardSharingSize setting will be used. If set to false, then clipboard sharing will be disabled and the the clipboardSharingSize setting will be ignored.</p><p>clipboardSharingSize = N - Synergy will send a maximum of N kilobytes of clipboard data to another computer when the mouse transitions to that computer.</p><p>win32KeepForeground = {true|false} - If set to true (the default), Synergy will grab the foreground focus on a Windows server (thereby putting all other windows in the background) upon switching to a client. If set to false, it will leave the currently foreground window in the foreground. Synergy grabs the focus to avoid issues with other apps interfering with Synergy&#39;s ability to read the hardware inputs.</p><p>keystroke(key) = actions - key combination key to the given actions. key is an optional list of modifiers (shift, control, alt, meta or super) optionally followed by a character or a key name, all separated by + (plus signs). You must have either modifiers or a character/key name or both. See below for valid key names and actions.Keyboard hot keys are handled while the cursor is on the primary screen and secondary screens. Separate actions can be assigned to press and release.</p><p>mousebutton(button) = actions - Binds the modifier and mouse button combination button to the given actions. button is an optional list of modifiers (shift, control, alt, meta or super) followed by a button number. The primary button (the left button for right handed users) is button 1, the middle button is 2, etc. Actions can be found below.
+Mouse button actions are not handled while the cursor is on the primary screen. You cannot use these to perform an action while on the primary screen. Separate actions can be assigned to press and release.</p><p>You can use both the switchDelay and switchDoubleTap options at the same time. Synergy will switch when either requirement is satisfied.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li><a href="#synergy">Synergy</a></li>
+<li>
+<a href="#settings">Settings</a>
+<ul>
+<li><a href="#advanced-server-settings">advanced server settings</a></li>
+<li><a href="#docs-from-website">docs from website</a></li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 15, 2022  4:43 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 15, 2022</div>
+            </div>
+        </div>
+        <script src="../../js/scroll_sync.js"></script>
+        <script src="../../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+
