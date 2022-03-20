@@ -5,6 +5,15 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 # 2022
 
 ## March
+### 19th
+#### Taskwarrior
+* lots of taskwarrior configuration and troubleshooting last couple of days
+    * see taskwarrior notes 
+### 16th
+#### copying file from remote server that you don't have permissions for
+* typically, you'd use `scp` command to copy a fie
+* but if credentials you are using for ssh don't have permission to copy, use rsync
+    * `rsync --rsync-path="sudo rsync" <LOCALFILE> USER@SERVER2:/root`
 ### 15th
 #### no way to wrap plain text for outgoing mail in Apple mail
 * some old plugin to try to fix. Doesn't install:
@@ -13,7 +22,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * python2 has been removed from macos
 #### annoying zsh problem
 * https://unix.stackexchange.com/questions/694544/what-triggers-the-j-k-keys-to-scroll-through-prev-next-commands-and-how-do-i-pro
-#### jon stewart gets panned on his piece on fossil fuels company
+#/Users/sean/Desktop/Solidarity\ plan\ contract\ \#1\ for\ awu-ny.pdf ### jon stewart gets panned on his piece on fossil fuels company
 * [Jon Stewart to Big Oil: You Are Valid: www.gawker.com](https://www.gawker.com/culture/jon-stewart-to-big-oil-you-are-valid?utm_source=digg)
 * I didn't watch the full piece, doesn't sound good
 #### workin'  more
@@ -431,10 +440,14 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [March](#march)
+        - [19th](#19th)
+            - [Taskwarrior](#taskwarrior)
+        - [16th](#16th)
+            - [copying file from remote server that you don't have permissions for](#copying-file-from-remote-server-that-you-dont-have-permissions-for)
         - [15th](#15th)
             - [no way to wrap plain text for outgoing mail in Apple mail](#no-way-to-wrap-plain-text-for-outgoing-mail-in-apple-mail)
             - [annoying zsh problem](#annoying-zsh-problem)
-            - [jon stewart gets panned on his piece on fossil fuels company](#jon-stewart-gets-panned-on-his-piece-on-fossil-fuels-company)
+- [/Users/sean/Desktop/Solidarity\ plan\ contract\ \#1\ for\ awu-ny.pdf ### jon stewart gets panned on his piece on fossil fuels company](#usersseandesktopsolidarity-plan-contract-1-for-awu-nypdf-jon-stewart-gets-panned-on-his-piece-on-fossil-fuels-company)
             - [workin'  more](#workin-more)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)
