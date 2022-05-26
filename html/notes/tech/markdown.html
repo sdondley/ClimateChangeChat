@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            %title%
+        </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Libre Franklin">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source Code Pro">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../../">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../notes/current-notes.html">Notes</a></li>
+                <li><a href="../../tech-stuff.html">Tech Stuff</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              <h1>Markdown Notes</h1>
+<h1>On This Page</h1>
+<ul>
+<li><a href="#markdown-notes">Markdown Notes</a></li>
+<li><a href="#headers">Headers</a>
+<ul>
+<li><a href="#atx-style-headers-with-no-matched-closing-characters">Atx-style Headers with no matched closing characters</a></li>
+</ul>
+</li>
+<li><a href="#header-1">Header 1</a>
+<ul>
+<li><a href="#header-2">Header 2</a>
+<ul>
+<li><a href="#header-3">Header 3</a>
+<ul>
+<li><a href="#header-4">Header 4</a>
+<ul>
+<li><a href="#header-5">Header 5</a>
+<ul>
+<li><a href="#header-6">Header 6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#closed-atx-style-headers-with-matched-closing-characters">&quot;Closed&quot; atx-style headers with matched closing characters</a></li>
+<li><a href="#closed-atx-style-headers-with-unmatched-closing-characters">&quot;Closed&quot; atx-style headers with unmatched closing characters</a></li>
+</ul>
+</li>
+<li><a href="#setext-style-headers">Setext-style headers</a></li>
+</ul>
+</li>
+<li><a href="#header-1-2">Header 1</a>
+<ul>
+<li><a href="#header-2-2">Header 2</a>
+<ul>
+<li><a href="#number-of-underline-characters-dont-matter">Number of underline characters don't matter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#paragraphs">Paragraphs</a></li>
+</ul>
+<h1>Headers</h1>
+<h2>Atx-style Headers with no matched closing characters</h2>
+<pre><code>    # Header 1
+    ## Header 2
+    ### Header 3
+    #### Header 4
+    ##### Header 5
+    ###### Header 6
+</code></pre>
+<p><strong>Produces:</strong></p>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+<h3>&quot;Closed&quot; atx-style headers with matched closing characters</h3>
+<p>This closing sytle is optional and is for improving appearance only.</p>
+<pre><code>    # Header 1 #
+    ## Header 2 ##
+    ### Header 3 ###
+    #### Header 4 ####
+    ##### Header 5 #####
+    ###### Header 6 ######
+</code></pre>
+<h3>&quot;Closed&quot; atx-style headers with unmatched closing characters</h3>
+<pre><code>    # Header 1 #
+    ## Header 2 #
+    ### Header 3 #
+    #### Header 4 #
+    ##### Header 5 #
+    ###### Header 6 #
+</code></pre>
+<h2>Setext-style headers</h2>
+<pre><code>Header 1
+========
+Header 2
+--------
+</code></pre>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Number of underline characters don't matter</h3>
+<pre><code>    Header 1
+    =
+    Header 2
+    -
+</code></pre>
+<p><strong>Still produces:</strong></p>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h1>Paragraphs</h1>
+<p><strong>Paragraph are just text with no blank lines between them. Paragraphs can contain single line breaks:</strong></p>
+<pre><code>This is a paragraph
+with line breaks between
+the lines.
+
+This is the start
+of a new paragraph.
+</code></pre>
+<p><strong>This renders as:</strong></p>
+<p>This is a paragraph
+with no line break between
+the lines.</p>
+<p>This is the start
+of a new paragraph.</p>
+<p>AT&amp;T</p>
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                </div>
+            </div>
+        </div>
+        <script src="../../js/scroll_sync.js"></script>
+        <script src="../../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+</html>

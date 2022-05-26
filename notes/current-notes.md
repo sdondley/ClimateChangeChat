@@ -3,15 +3,31 @@
 A streaming diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website if they warrant it. These notes are mostly for me but feel free to take a peek from time to time to see what I'm up to.
 
 # 2022
-
-## March
+## May
+## 26th
+* getting this rolling again
+## march
+### 24th
+* tmux-navigator-like navigation in Comma/IntelliJ
+    * [intellij idea - Navigating between splits - Stack Overflow: stackoverflow.com](https://stackoverflow.com/questions/31295519/navigating-between-splits/71606534#71606534)
+* downloaded fig from fig.io
+    * visuall completion in shell like with an IDE 
+    * looks interesting
+### 22nd
+* bash function to find arguments in a command
+    * actually, going to do everything in perl 
+    * zsh wrappers for perl script, use zsh functions as a wrapper
+        *  [Is there any good reason not to use perl scripts in place of bash logic? : perl: www.reddit.com](https://www.reddit.com/r/perl/comments/tk9t75/is_there_any_good_reason_not_to_use_perl_scripts/)
+### 20th
+* spent a good chunk of time getting familiar with [Command IDE](notes/tech/comma_ide_notes.md)
+* [Markdown](tech/markdown.md)
 ### 19th
 #### Taskwarrior
 * lots of taskwarrior configuration and troubleshooting last couple of days
     * see taskwarrior notes 
 ### 16th
 #### copying file from remote server that you don't have permissions for
-* typically, you'd use `scp` command to copy a fie
+* typically, you'd use `scp` command to copy a [fie](fie)
 * but if credentials you are using for ssh don't have permission to copy, use rsync
     * `rsync --rsync-path="sudo rsync" <LOCALFILE> USER@SERVER2:/root`
 ### 15th
@@ -22,7 +38,7 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
     * python2 has been removed from macos
 #### annoying zsh problem
 * https://unix.stackexchange.com/questions/694544/what-triggers-the-j-k-keys-to-scroll-through-prev-next-commands-and-how-do-i-pro
-#/Users/sean/Desktop/Solidarity\ plan\ contract\ \#1\ for\ awu-ny.pdf ### jon stewart gets panned on his piece on fossil fuels company
+#### jon stewart gets panned on his piece on fossil fuels company
 * [Jon Stewart to Big Oil: You Are Valid: www.gawker.com](https://www.gawker.com/culture/jon-stewart-to-big-oil-you-are-valid?utm_source=digg)
 * I didn't watch the full piece, doesn't sound good
 #### workin'  more
@@ -439,7 +455,12 @@ endfunction
 
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
-    - [March](#march)
+    - [May](#may)
+    - [26th](#26th)
+    - [march](#march)
+        - [24th](#24th)
+        - [22nd](#22nd)
+        - [20th](#20th)
         - [19th](#19th)
             - [Taskwarrior](#taskwarrior)
         - [16th](#16th)
@@ -447,7 +468,7 @@ endfunction
         - [15th](#15th)
             - [no way to wrap plain text for outgoing mail in Apple mail](#no-way-to-wrap-plain-text-for-outgoing-mail-in-apple-mail)
             - [annoying zsh problem](#annoying-zsh-problem)
-- [/Users/sean/Desktop/Solidarity\ plan\ contract\ \#1\ for\ awu-ny.pdf ### jon stewart gets panned on his piece on fossil fuels company](#usersseandesktopsolidarity-plan-contract-1-for-awu-nypdf-jon-stewart-gets-panned-on-his-piece-on-fossil-fuels-company)
+            - [jon stewart gets panned on his piece on fossil fuels company](#jon-stewart-gets-panned-on-his-piece-on-fossil-fuels-company)
             - [workin'  more](#workin-more)
         - [14th](#14th)
             - [Raku: rewriting for loops](#raku-rewriting-for-loops)

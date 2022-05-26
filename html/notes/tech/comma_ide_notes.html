@@ -20,7 +20,7 @@
     <body>
         <div id="menu">
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../">Home</a></li>
                 <li><a href="../../about.html">About</a></li>
                 <li><a href="../../notes/current-notes.html">Notes</a></li>
                 <li><a href="../../tech-stuff.html">Tech Stuff</a></li>
@@ -36,9 +36,24 @@
 <a aria-hidden="true" class="anchor" href="#about" id="about"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h1><ul>
 <li>based on IntelliJ IDE</li>
 <li class="li-youtube">presentation about building IDE for Raku with intellij
-  <div class="iframe-container"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/zDP9uUMYrvs?controls=1" title="YouTube video player" width="560"></iframe></div>
+  <div class="iframe-container"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/zDP9uUMYrvs?controls=1?controls=1" title="YouTube video player" width="560"></iframe></div>
 </li>
 <li>is open source</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#run-current-file" id="run-current-file"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run Current File</h1><ul>
+<li>
+<code>^r</code>
+<ul>
+<li>make sure conflict with IDE is resolved if usig ideavim</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#display-function-signature" id="display-function-signature"><span aria-hidden="true" class="octicon octicon-link"></span></a>Display Function Signature</h1><ul>
+<li>insert cursor in function name and hit command-p</li>
 </ul></div>
 
 <div><h1>
@@ -61,6 +76,14 @@
 <tr>
 <td>⌘-backtick</td>
 <td>open preferences</td>
+</tr>
+<tr>
+<td>⌘-p</td>
+<td>show function sig</td>
+</tr>
+<tr>
+<td>^-r</td>
+<td>execute file</td>
 </tr>
 </tbody>
 </table></div>
@@ -101,8 +124,78 @@
 <li>IdeaVim
 <ul>
 <li><a href="https://plugins.jetbrains.com/plugin/164-ideavim/versions">IdeaVim plug-in</a></li>
+<li><a href="https://github.com/JetBrains/ideavim">JetBrains/ideavim: Vim emulation plugin for IDEs based on the IntelliJ Platform: github.com</a></li>
 </ul>
 </li>
+<li>Modifying maps
+<ul>
+<li>your .vimrc file is ~/.ideavimrc (by default)</li>
+<li>add key maps to this file
+<ul>
+<li>to reload/edit:
+<ul>
+<li>click IdeaVim logo in lower right</li>
+<li>click &quot;open ~/.ideavimrc</li>
+<li>make edits</li>
+<li>click the little refresh logo on the right to save changes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#raku-module-development" id="raku-module-development"><span aria-hidden="true" class="octicon octicon-link"></span></a>Raku Module Development</h1><ul>
+<li>
+<a href="https://commaide.com/docs/creating-project">Comma - Raku IDE Documentation: commaide.com</a>
+<ul>
+<li>SDK is just the compiler</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#selecting-a-compiler" id="selecting-a-compiler"><span aria-hidden="true" class="octicon octicon-link"></span></a>selecting a compiler</h2><pre><code>* there doesn&#39;t seem to be a way to 
+* the rakudo executable it darkened out 
+    * old directions talk about selecting perl6 
+* selecting the bin folder worked
+</code></pre><ul>
+<li>selecting a package manager
+<ul>
+<li>zef?
+<ul>
+<li>selected it</li>
+<li>&lt;rakudo_dir&gt;/share/perl6/site/bin/zef</li>
+<li>seemed to accept it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#no-test-source-roots-in-the-project" id="no-test-source-roots-in-the-project"><span aria-hidden="true" class="octicon octicon-link"></span></a>no test source roots in the project</h2><ul>
+<li>happened after I changed the name of the module</li>
+<li>reimported project to fix</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#testing-warnings" id="testing-warnings"><span aria-hidden="true" class="octicon octicon-link"></span></a>testing warnings</h2><ul>
+<li>test functions are throwing &quot;Subroutine X is not declared&quot; warnings</li>
+<li>
+<a href="https://stackoverflow.com/questions/71544246/comma-reporting-subroutine-x-not-declared-for-test-function">raku - Comma reporting &quot;subroutine X not declared&quot; for test function - Stack Overflow: stackoverflow.com</a>
+<ul>
+<li>Quitting and restarting Comma IDE made the warnings go away</li>
+</ul>
+</li>
+</ul></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#markdown-headings-arent-printed-to-the-console" id="markdown-headings-arent-printed-to-the-console"><span aria-hidden="true" class="octicon octicon-link"></span></a>markdown headings aren&#39;t printed to the console</h2><ul>
+<li><a href="https://stackoverflow.com/questions/71548158/intellij-not-showing-lines-that-begin-with-in-test-output">IntelliJ not showing lines that begin with &#39;#&#39; in test output - Stack Overflow: stackoverflow.com</a></li>
 </ul></div>
 
 
@@ -113,10 +206,21 @@
 <a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
 <li><a href="#comma-ide-notes">Comma IDE Notes</a></li>
 <li><a href="#about">About</a></li>
+<li><a href="#run-current-file">Run Current File</a></li>
+<li><a href="#display-function-signature">Display Function Signature</a></li>
 <li><a href="#hotkeys">Hotkeys</a></li>
 <li><a href="#recipes">Recipes</a></li>
 <li><a href="#plugins">Plugins</a></li>
-</ul></div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
+<li>
+<a href="#raku-module-development">Raku Module Development</a>
+<ul>
+<li><a href="#selecting-a-compiler">selecting a compiler</a></li>
+<li><a href="#no-test-source-roots-in-the-project">no test source roots in the project</a></li>
+<li><a href="#testing-warnings">testing warnings</a></li>
+<li><a href="#markdown-headings-arent-printed-to-the-console">markdown headings aren&#39;t printed to the console</a></li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> March 20, 2022  9:10 PM</div><div id="publish_date"><span id="publish_label">First published: </span>March 10, 2022</div>
             </div>
         </div>
         <script src="../../js/scroll_sync.js"></script>
