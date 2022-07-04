@@ -92,6 +92,7 @@ I haven't done much with Raku since about early February; not from lack of inter
 * Objects and classes
 
 ## My Raku questions on stackoverflow
+* [Newest posts containing 'user:1641112' and Raku](https://stackoverflow.com/search?tab=newest&q=user%253a1641112%2520%255braku%255d)
 * [Posts containing 'user:1641112' - Stack Overflow: stackoverflow.com](https://stackoverflow.com/search?q=user:1641112+[raku])
 ## My contributions to the cause
 

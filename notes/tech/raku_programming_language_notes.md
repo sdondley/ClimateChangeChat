@@ -15,7 +15,7 @@ These are quick reference notes for myself so I don't have to keep looking up th
 * [routine run: docs.raku.org](https://docs.raku.org/routine/run)
 
 # Regexes
-* regexes almost have to be relearned coming from perl
+* regexes almost have to be relearned coming from nerl
     * fortunately, compiler can be very helpful pointing out mistakes if you are coming from perl 
 * `#` (hash sign) must be commented out
 * matching beginning and end of lines

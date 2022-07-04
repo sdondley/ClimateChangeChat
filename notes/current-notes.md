@@ -4,8 +4,23 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 # 2022
 ## May
-## 26th
+### 29th
+
+### 27th
+* https://twitter.com/JamieOGrady/status/1530164048205160449?s=20&t=m5vjRhwOZMbkQd91BOW9HA 
+### 26th
 * getting this rolling again
+* got caught up on github notificationg
+* re-installed some raku modules
+* check taskwarrior server still works
+* set netgear router to work in AP mode to free up a port
+    * can now plug into WAN
+* https://www.youtube.com/watch?v=SXt3-iZpQQc
+* slow wifi problems
+    * seems work fine on speed test
+    * sean says it's dropping out on facetime calls
+    * netgear router
+        * password in lastpass works
 ## march
 ### 24th
 * tmux-navigator-like navigation in Comma/IntelliJ
@@ -456,7 +471,9 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [May](#may)
-    - [26th](#26th)
+        - [29th](#29th)
+        - [27th](#27th)
+        - [26th](#26th)
     - [march](#march)
         - [24th](#24th)
         - [22nd](#22nd)
