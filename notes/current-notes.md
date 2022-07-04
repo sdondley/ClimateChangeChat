@@ -3,6 +3,9 @@
 A streaming diary of rather random stuff I'm taking notes on to keep track of shit. I can dump notes from here and organize them later into the website if they warrant it. These notes are mostly for me but feel free to take a peek from time to time to see what I'm up to.
 
 # 2022
+## July
+### 4th
+* worked on a Raku tutorial notes/raku/Cool-Raku.html
 ## May
 ### 29th
 
@@ -470,6 +473,8 @@ endfunction
 
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
+    - [July](#july)
+        - [4th](#4th)
     - [May](#may)
         - [29th](#29th)
         - [27th](#27th)
