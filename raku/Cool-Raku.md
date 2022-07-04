@@ -1,9 +1,16 @@
+# On This Page
+
+- [Cool Raku](#cool-raku)
+    - [Math](#math)
+        - [Finding prime numbers](#finding-prime-numbers)
+
 # Cool Raku
 
 Selected code examples showcasing the power of Raku. Watch it flex!
 
 ## Math
-### Finding prime numberb
+### Finding prime numbers
+
 ```
 say (^Inf .grep: *.is-prime)[5]; # print the 5th prime number
 say (^Inf .grep: *.is-prime)[500]; # print the 500th prime number
