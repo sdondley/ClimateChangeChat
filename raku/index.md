@@ -1,3 +1,7 @@
+# On This Page
+
+- [My Foul-mouthed Raku Notes](#my-foul-mouthed-raku-notes)
+
 # My Foul-mouthed Raku Notes
 
 **Caution!** F-bombs planted ahead for shock value. Yes, it's juvenile. That's why I do it.
