@@ -1,8 +1,8 @@
 # On This Page
 
 - [Cool Raku](#cool-raku)
-    - [Finding Specific Prime Numbers](#finding-specific-prime-numbers)
-            - [How it works](#how-it-works)
+- [Finding Specific Prime Numbers](#finding-specific-prime-numbers)
+    - [How it works](#how-it-works)
 
 # Cool Raku
 
