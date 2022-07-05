@@ -103,11 +103,13 @@ argument we will be passing to the `grep` method.
 So what exactly is the `*.is-prime` doing? It tells grep which stuff to place
 into the Sequence. You can think of it as a test that runs on every number in
 the range. First we look at the first number in the range, '0', and determine
-if it's prime with the `is-prime` method. This method returns `True` if the
-number is prime and `False` if it isn't. If it's prime, grep will add the
-number to the Sequence. If it isn't prime, grep will filter it out and it won't
-get added to the Sequence. Then we go to the next number to determine if it's
-prime and so on until we reach infinity.
+if it's prime with the `is-prime` method, one of the many math functions baked
+into Raku, making it a great language for those interested in solving math
+problems. This method returns `True` if the number is prime and `False` if it
+isn't. If it's prime, grep will add the number to the Sequence. If it isn't
+prime, grep will filter it out and it won't get added to the Sequence. Then we
+go to the next number to determine if it's prime and so on until we reach
+infinity.
 
 But again we have to stress–and what makes this code so fast–is that we only
 do these calculations for the prime numbers we are interested in. It would be
