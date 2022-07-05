@@ -87,7 +87,7 @@ we don't want all numbers, we only want a list of all the primary numbers. So
 what we do is run the `grep` method on our infinite list of numbers by placing
 a `.` after `$x` follwed by a method called `grep`. `grep` is named after the
 command `grep` found on computers since the 70s to find text inside of lots of
-computer files on your storage deviced. You can think of `grep` as a filter
+computer files on your storage device. You can think of `grep` as a filter
 that creates a list of stuff. It puts the stuff you want on a list and keeps
 the stuff you don't want off of it. As you might guess, it's the `grep` method
 that generates our Sequence of prime numbers for us.
