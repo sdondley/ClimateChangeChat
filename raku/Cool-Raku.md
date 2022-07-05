@@ -114,7 +114,7 @@ in the 5th.
 You can you think of the `*` symbol, what Raku calls the "Whatever" object, as
 a placeholder for each number in our infinite list (kind of like how the "glob"
 character is used in popular OS shells). The `.is-prime` method gets run on the
-"Whatever." Together, this expression can be read as "Whatever is prime." The
+"Whatever." Together, this expression can be read as "whatever is prime." The
 express returns `True` if "Whatever" is prime or `False` if it isn't. If
 `True`, grep puts the tested number into the Sequence, the list of all the
 prime numbers, which again, isn't actaullly calculated (an impossible task).
