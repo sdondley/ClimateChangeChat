@@ -23,11 +23,11 @@ for (5, 50, 500, 5000, 50000) { get-prime $_ };
 
 When we run this, we get the following output after just a second or two:
 ```
-13     # 5th prime
-233    # 50th prime
-3581   # 500th prime
-48619  # 5000th prime
-61195  # 50000th prime
+11      # 5th prime
+229     # 50th prime
+3571    # 500th prime
+48611   # 5000th prime
+611953  # 50000th prime
 ```
 
 Can you match this speed and conciseness of this simple bit of code in your
@@ -86,7 +86,8 @@ new to programming may be wondering why we subtract "1" from `$nth`. This small
 nice touch makes the subroutine more intuitive to use because a Sequence's
 index number starts at '0', not '1'. So to get the first element, we pass in a
 value of "1" which we gets reduced to "0" for us. If we didn't subtract one,
-passing in a "5" would actually return the 6th prime number.
+passing in a "5" would actually return the 6th prime number, which is
+confusing.
 
 You can imagine that in between the parentheses is every prime number that can
 exist from 0 to infinity (but that hasn't actually been calculated and so uses

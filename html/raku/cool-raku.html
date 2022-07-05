@@ -41,11 +41,11 @@ sub get-prime(Int:D $nth where * &gt; 0) {
     say ($x.grep: *.is-prime)[$nth - 1];
 }
 for (5, 50, 500, 5000, 50000) { get-prime $_ };
-</code></pre><p>When we run this, we get the following output after just a second or two:</p><pre><code>13     # 5th prime
-233    # 50th prime
-3581   # 500th prime
-48619  # 5000th prime
-61195  # 50000th prime
+</code></pre><p>When we run this, we get the following output after just a second or two:</p><pre><code>11      # 5th prime
+229     # 50th prime
+3571    # 500th prime
+48611   # 5000th prime
+611953  # 50000th prime
 </code></pre><p>Can you match this speed and conciseness of this simple bit of code in your
 favorite language? I&#39;ll bet you have a hard time writing and executing this
 problem in a reasonable time. With Raku, it&#39;s a snap.</p><p>Let&#39;s walk through the code in detail.</p></div>
@@ -94,7 +94,8 @@ new to programming may be wondering why we subtract &quot;1&quot; from <code>$nt
 nice touch makes the subroutine more intuitive to use because a Sequence&#39;s
 index number starts at &#39;0&#39;, not &#39;1&#39;. So to get the first element, we pass in a
 value of &quot;1&quot; which we gets reduced to &quot;0&quot; for us. If we didn&#39;t subtract one,
-passing in a &quot;5&quot; would actually return the 6th prime number.</p><p>You can imagine that in between the parentheses is every prime number that can
+passing in a &quot;5&quot; would actually return the 6th prime number, which is
+confusing.</p><p>You can imagine that in between the parentheses is every prime number that can
 exist from 0 to infinity (but that hasn&#39;t actually been calculated and so uses
 no memory). The number in the brackets chooses which number in that list to
 select, whether it be the 1st, 2nd, 3rd, 10th, or 10,232nd.</p><p>Now let&#39;s look inside the parentheses in our line of code in the subroutine,
@@ -185,7 +186,7 @@ that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
 <li><a href="#how-it-works">How it works</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022  1:05 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022  1:08 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>
