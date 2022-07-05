@@ -4,6 +4,11 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 
 # 2022
 ## July
+### 5th
+* Two different shootings yesterday that caused chaos
+    * both at 4th of July events
+        * one outside of Chicago
+        * the other in Philadelphia
 ### 4th
 * worked on a Raku tutorial notes/raku/Cool-Raku.html
 ## May
@@ -474,6 +479,7 @@ endfunction
 - [My "Note Stream"](#my-note-stream)
 - [2022](#2022)
     - [July](#july)
+        - [5th](#5th)
         - [4th](#4th)
     - [May](#may)
         - [29th](#29th)
