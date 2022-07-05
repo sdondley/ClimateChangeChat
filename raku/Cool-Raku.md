@@ -30,9 +30,9 @@ When we run this, we get the following output after just a second or two:
 611953  # 50000th prime
 ```
 
-Can you match this speed and conciseness of this simple bit of code in your
-favorite language? I'll bet you have a hard time writing and executing this
-problem in a reasonable time. With Raku, it's a snap.
+Can you match the speed and conciseness of this code in your favorite language?
+More than likely, you'll have a hard time writing and executing this problem in
+a reasonable time. But with Raku, it's a snap.
 
 Let's walk through the code in detail.
 
