@@ -93,9 +93,9 @@ the stuff you don't want off of it. As you might guess, it's the `grep` method
 that generates our Sequence of prime numbers for us.
 
 Now all that's left to do is tell grep what numbers we are interested in. We do
-that by passing an argument to `grep` called `*.is-prime`. Notice the colon
-immediately after `grep`. That indicates that what follows is the argument
-we will be passing to the `grep` method.
+that by passing an argument to `grep`, expressed as `*.is-prime`. Notice the
+colon immediately after `grep`. That indicates that what follows is the
+argument we will be passing to the `grep` method.
 
 So what exactly is the `*.is-prime` doing? It tells grep which stuff to place
 into the Sequence. You can think of it as a test that runs on every number in
@@ -114,12 +114,13 @@ in the 5th.
 You can you think of the `*` symbol, what Raku calls the "Whatever" object, as
 a placeholder for each number in our infinite list (kind of like how the "glob"
 character is used in popular OS shells). The `.is-prime` method gets run on the
-"Whatever" object, returning `True` for each number that is prime or `False` if
-it isn't. If `True`, grep puts the tested number into the Sequence, the list of
-all the prime numbers, which again, isn't actaullly calculated (an impossible
-task). Only the minimum work necessary is done to determine the specific prime
-number we are looking for out of the theoretical series of all prime numbers
-that exist.
+"Whatever." Together, this expression can be read as "Whatever is prime." The
+express returns `True` if "Whatever" is prime or `False` if it isn't. If
+`True`, grep puts the tested number into the Sequence, the list of all the
+prime numbers, which again, isn't actaullly calculated (an impossible task).
+Only the minimum work necessary is done to determine the specific prime number
+we are looking for out of the theoretical series of all prime numbers that
+exist.
 
 After the `get-prime` subroutine, we call it five different times, using a list of
 5 numbers using a `for loop`:

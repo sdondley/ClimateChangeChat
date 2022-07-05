@@ -98,9 +98,9 @@ computer files on your storage device. You can think of <code>grep</code> as a f
 that creates a list of stuff. It puts the stuff you want on a list and keeps
 the stuff you don&#39;t want off of it. As you might guess, it&#39;s the <code>grep</code> method
 that generates our Sequence of prime numbers for us.</p><p>Now all that&#39;s left to do is tell grep what numbers we are interested in. We do
-that by passing an argument to <code>grep</code> called <code>*.is-prime</code>. Notice the colon
-immediately after <code>grep</code>. That indicates that what follows is the argument
-we will be passing to the <code>grep</code> method.</p><p>So what exactly is the <code>*.is-prime</code> doing? It tells grep which stuff to place
+that by passing an argument to <code>grep</code>, expressed as <code>*.is-prime</code>. Notice the
+colon immediately after <code>grep</code>. That indicates that what follows is the
+argument we will be passing to the <code>grep</code> method.</p><p>So what exactly is the <code>*.is-prime</code> doing? It tells grep which stuff to place
 into the Sequence. You can think of it as a test that runs on every number in
 the range. First we look at the first number in the range, &#39;0&#39;, and determine
 if it&#39;s prime with the <code>is-prime</code> method. This method returns <code>True</code> if the
@@ -113,12 +113,13 @@ very wasteful to calculate the 1,000th prime number when we are only interested
 in the 5th.</p><p>You can you think of the <code>*</code> symbol, what Raku calls the &quot;Whatever&quot; object, as
 a placeholder for each number in our infinite list (kind of like how the &quot;glob&quot;
 character is used in popular OS shells). The <code>.is-prime</code> method gets run on the
-&quot;Whatever&quot; object, returning <code>True</code> for each number that is prime or <code>False</code> if
-it isn&#39;t. If <code>True</code>, grep puts the tested number into the Sequence, the list of
-all the prime numbers, which again, isn&#39;t actaullly calculated (an impossible
-task). Only the minimum work necessary is done to determine the specific prime
-number we are looking for out of the theoretical series of all prime numbers
-that exist.</p><p>After the <code>get-prime</code> subroutine, we call it five different times, using a list of
+&quot;Whatever.&quot; Together, this expression can be read as &quot;Whatever is prime.&quot; The
+express returns <code>True</code> if &quot;Whatever&quot; is prime or <code>False</code> if it isn&#39;t. If
+<code>True</code>, grep puts the tested number into the Sequence, the list of all the
+prime numbers, which again, isn&#39;t actaullly calculated (an impossible task).
+Only the minimum work necessary is done to determine the specific prime number
+we are looking for out of the theoretical series of all prime numbers that
+exist.</p><p>After the <code>get-prime</code> subroutine, we call it five different times, using a list of
 5 numbers using a <code>for loop</code>:</p><p><code>for 5, 50, 500, 5000, 50000 { get-prime $_ };</code></p><p>For each number in the list of numbers we supply, we run the code in the curly
 braces which, in turn, calls the <code>get-prime</code> subroutine for us. The technical
 term for this kind of looping process is called &quot;iteration&quot;.</p><p>Note the <code>$_</code> variable in the curly braces. It has a special meaning in Raku.
@@ -167,7 +168,7 @@ that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
 <li><a href="#how-it-works">How it works</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 4, 2022 11:49 PM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 4, 2022 11:59 PM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>
