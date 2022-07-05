@@ -49,9 +49,9 @@ you'd certainly run out of memory long before then anyway!
 Next we create a simple subroutine called `get-prime` that accepts a single
 argument called `$nth`, which is placed inside a set of parentheses. The
 parentheses and the code inside of it is part the function's Signature, which
-is itself an object. The Signature tells calling code what kind of parameters
-are acceptable to send to the subroutine. In `get-prime`'s signature, we ensure
-that `$nth` is a defined integer object by slapping `Int:D` in front of it. The
+is itself an object. The Signature tells code calling `get-prime` what kind of
+parameters are acceptable to send. In `get-prime`'s signature, we ensure that
+`$nth` is a defined integer object by slapping `Int:D` in front of it. The
 `Int` requires the caller to pass an Integer object. The `:D` bit ensures that
 it's a "definite" object, meaning that it actually has a value. We also add a
 nice touch by ensuring the number passed is greater than 0 with the `where * >
