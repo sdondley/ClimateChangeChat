@@ -36,9 +36,9 @@ problem in a reasonable time. With Raku, it's a snap.
 Let's walk through the code in detail.
 
 ## How it works
-First we assign variable `$x` to `^Inf` to generate a Range of numbers from 0
-to infinity. In Raku, a Range is a class which generates Range objects. A Range
-object is "lazy," which means the actual set of numbers in the Range aren't
+First we assign variable `$x` to `^Inf` which represents a Range of Integers
+from 0 to infinity. In Raku, a Range is a class which generates Range objects.
+Range are "lazy," which means the actual set of numbers in the Range aren't
 actually calculated. This is unlike an Array where each element is calculated
 ahead of time by the compiler and inserted into the array and eats up memory.
 And so laziness makes your program much more efficient. You certainly don't
