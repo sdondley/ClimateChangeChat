@@ -117,7 +117,7 @@ character is used in popular OS shells). The `.is-prime` method gets run on the
 "Whatever." Together, this expression can be read as "whatever is prime." The
 express returns `True` if "Whatever" is prime or `False` if it isn't. If
 `True`, grep puts the tested number into the Sequence, the list of all the
-prime numbers, which again, isn't actaully calculated (an impossible task).
+prime numbers, which again, isn't actually calculated (an impossible task).
 Only the minimum work necessary is done to determine the specific prime number
 we are looking for out of the theoretical series of all prime numbers that
 exist.
