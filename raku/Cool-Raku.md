@@ -140,7 +140,7 @@ It is called the "topic variable." It's helpful to think of it to mean the
 topic variable gets assigned to the next number in the list and this becomes
 the `$nth` parameter the `get-prime` sub receives for its `$nth` argument.
 
-Wow, so that's over 1,000 words to explain just four lines of Raku code. It
+Wow, so that's well over 1,000 words to explain just four lines of Raku code. It
 demonstrates the power of Raku and how how efficient it can be. Amazingly, we
 can make this bit of code even more concise:
 
