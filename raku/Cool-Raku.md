@@ -38,12 +38,12 @@ Let's walk through the code in detail.
 ## How it works
 First we assign variable `$x` to `^Inf` which represents a Range of Integers
 from 0 to infinity. In Raku, a Range is a class which generates Range objects.
-Range objects are "lazy," which means the actual set of numbers in the Range aren't
-actually calculated. This is unlike an Array where each element is calculated
-ahead of time by the compiler and inserted into the array and eats up memory.
-And so laziness makes your program much more efficient. You certainly don't
-want to wait around for your computer to count to infinity but you'd certainly
-run out of memory long before then anyway!
+Range objects are "lazy," which means the actual set of numbers in the Range
+aren't actually calculated or generated. This is unlike an Array where each
+element is calculated ahead of time by the compiler and inserted into the array
+and eats up memory. And so laziness makes your program much more efficient. You
+certainly don't want to wait around for your computer to count to infinity but
+you'd certainly run out of memory long before then anyway!
 
 Next we create a simple subroutine called `get-prime` that accepts a single
 argument called `$nth`, which is placed inside a set of parentheses. The

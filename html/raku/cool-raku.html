@@ -57,12 +57,12 @@ problem in a reasonable time. With Raku, it&#39;s a snap.</p><p>Let&#39;s walk t
 <div><h2>
 <a aria-hidden="true" class="anchor" href="#how-it-works" id="how-it-works"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works</h2><p>First we assign variable <code>$x</code> to <code>^Inf</code> which represents a Range of Integers
 from 0 to infinity. In Raku, a Range is a class which generates Range objects.
-Range objects are &quot;lazy,&quot; which means the actual set of numbers in the Range aren&#39;t
-actually calculated. This is unlike an Array where each element is calculated
-ahead of time by the compiler and inserted into the array and eats up memory.
-And so laziness makes your program much more efficient. You certainly don&#39;t
-want to wait around for your computer to count to infinity but you&#39;d certainly
-run out of memory long before then anyway!</p><p>Next we create a simple subroutine called <code>get-prime</code> that accepts a single
+Range objects are &quot;lazy,&quot; which means the actual set of numbers in the Range
+aren&#39;t actually calculated or generated. This is unlike an Array where each
+element is calculated ahead of time by the compiler and inserted into the array
+and eats up memory. And so laziness makes your program much more efficient. You
+certainly don&#39;t want to wait around for your computer to count to infinity but
+you&#39;d certainly run out of memory long before then anyway!</p><p>Next we create a simple subroutine called <code>get-prime</code> that accepts a single
 argument called <code>$nth</code>, which is placed inside a set of parentheses. The
 parentheses and the code inside of it is part the function&#39;s Signature,
 which is itself an object. We ensure that <code>$nth</code> is a defined integer object by
