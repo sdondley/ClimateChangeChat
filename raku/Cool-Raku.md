@@ -6,7 +6,8 @@
 
 # Rockin' with Raku
 
-Selected code examples showcasing the power of Raku. Watch it flex!
+Selected code examples showcasing the power of the Raku programming language.
+Watch it flex!
 
 ## A Detailed Walk Through of Code for Finding Specific Prime Numbers
 
