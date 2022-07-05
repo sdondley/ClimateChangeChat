@@ -106,7 +106,7 @@ number to the Sequence. If it isn't prime, grep will filter it out and it won't
 get added to the Sequence. Then we go to the next number to determine if it's
 prime and so on until we reach infinity.
 
-But again we have to stress, and what makes this code so fast, is that we only
+But again we have to stress–and what makes this code so fast–is that we only
 do these calculations for the prime numbers we are interested in. It would be
 very wasteful to calculate the 1,000th prime number when we are only interested
 in the 5th.
