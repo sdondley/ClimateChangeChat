@@ -66,7 +66,7 @@ separate line. Here it is:
 
 `say ($x.grep: *.is-prime)[$nth];`
 
-So how do this calculate which number to print? Well, the first thing you have
+So how is the number printed calculated? Well, the first thing you have
 to understand is that the code generated inside parentheses results in a data
 strcuture called a Sequence which is basically a list of data in a specific
 order. This means Sequences are a type of Positional data structure. For the
