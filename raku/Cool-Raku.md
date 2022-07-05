@@ -69,7 +69,7 @@ unnecessarily tedious.
 Inside the subroutine is a single line of code consisting of a `say` routine
 that prints out the result of the expression to the right of it to standard
 output, followed  by a newline character. Every time `get-prime` is called, a
-new number, the prime number calculated by the expression, and is printed out on a
+new number, the prime number calculated by the expression, is printed out on a
 separate line. Here it is:
 
 `say ($x.grep: *.is-prime)[$nth];`
@@ -126,7 +126,7 @@ prime, grep will filter it out and it won't get added to the Sequence. Then we
 go to the next number to determine if it's prime and so on until we reach
 infinity.
 
-But again we have to stress–and what makes this code so fast–is that we only
+But again we have to stress--and what makes this code so fast--is that we only
 do these calculations for the prime numbers we are interested in. It would be
 very wasteful to calculate the 1,000th prime number when we are only interested
 in the 5th.
