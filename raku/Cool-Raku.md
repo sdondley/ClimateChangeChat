@@ -164,8 +164,8 @@ can make this bit of code even more concise:
 `(for 5, 50, 500, 5000, 50000 { (^Inf :grep *.is-prime)[$_] }).say`
 
 And don't worry if this seems a little overwhelming. Most of Raku is much more
-straightforward than this example so don't let yourself get scared off. But as
-you can begin to see, Raku excels at taking hard problems and making them a
+straightforward than this example so don't let yourself get scared off. The
+larger takeaway is Raku excels at taking hard problems and making them a
 whole lot easier, even problems that are nearly impossible or impractical in
 many other programming languages.
 
