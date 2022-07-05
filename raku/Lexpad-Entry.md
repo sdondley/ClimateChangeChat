@@ -1,4 +1,4 @@
-# Lexpad entry
+# Lexpad Entry
 
 ## what is it?
 * a per-scope data structure that stores a pointer for each variable

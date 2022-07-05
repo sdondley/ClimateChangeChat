@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <head>
+        <title>Rockin' with Raku</title>
+
+
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+        <link href="https://fonts.googleapis.com/css?family=Libre Franklin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="../js/highlightjs-line-numbers.js"></script>
+        <script>
+          hljs.highlightAll();
+          hljs.initLineNumbersOnLoad();
+
+
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../notes/current-notes.html">Notes</a></li>
+                <li><a href="../tech-stuff.html">Tech Stuff</a></li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="content">
+              
+
+<div><h1>
+<a aria-hidden="true" class="anchor" href="#rockin-with-raku" id="rockin-with-raku"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rockin&#39; with Raku</h1><p>Selected code examples showcasing the power of Raku. Watch it flex!</p></div>
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#a-detailed-walk-through-of-code-for-finding-specific-prime-numbers" id="a-detailed-walk-through-of-code-for-finding-specific-prime-numbers"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Detailed Walk Through of Code for Finding Specific Prime Numbers</h2><p>What&#39;s the 5th prime number? How about the 500th? 50,000th?! Easy (and super fast):</p><pre><code>my $x = ^Inf;
+sub get-prime(Int:D $nth) {
+    say ($x.grep: *.is-prime)[$nth];
+}
+for (5, 50, 500, 5000, 50000) { get-prime $_ };
+</code></pre><p>When we run this, we get the following output after just a second or two:</p><pre><code>13     # 5th prime
+233    # 50th prime
+3581   # 500th prime
+48619  # 5000th prime
+61195  # 50000th prime
+</code></pre><p>Can you match this speed and conciseness of this simple bit of code in your
+favorite language? I&#39;ll bet you have a hard time writing and executing this
+line of code in a reasonable amount of time. But in Raku it&#39;s a snap.</p><p>Let&#39;s walk through this code and see in detail.</p></div>
+
+
+
+
+
+
+<div><h2>
+<a aria-hidden="true" class="anchor" href="#how-it-works" id="how-it-works"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works</h2><p>First we assign variable <code>$x</code> to <code>^Inf</code> to generate a Range of numbers from 0
+to infinity. The Range is &quot;lazy,&quot; which means that none of the numbers are
+actually generated until we need them. This is unlike an Array where each
+element gets calculated ahead of time by the compiler and inserted into the
+array and eats up memory. This laziness makes your program much more
+efficient. You certainly don&#39;t want to wait around for your computer to count
+to infinity but you&#39;d probably run out of memory before then anyway!</p><p>Next we create a simple subroutine called <code>get-prime</code> that accepts a single
+argument called <code>$nth</code>. We ensure that <code>$nth</code> is a defined integer object by
+slapping <code>Int:D</code> in front of it. The <code>Int</code> means that we must pass an Integer
+object and the <code>:D</code> bit ensure that it&#39;s a &quot;definite&quot; object, meaning that it
+actually has a value. But thanks to Raku&#39;s flexibility, we could choose to not
+<code>Int:D</code> type check our arguments at all. So if need to dash out a simple script
+without a lot of hassle and headache trying to keep the compiler happy, Raku
+can accomodate your desires, not its own.</p><p>Inside the subroutine is just one line of code consisting of a <code>say</code> routine
+that prints out the result of the expression to the right of it to standard
+output, followed  by a newline character. Every time <code>get-prime</code> is called, a
+new number, the prime number calculated, will be printed out on a separate
+line. Here it is:</p><p><code>say ($x.grep: *.is-prime)[$nth];</code></p><p>So how do this calculate which number to print? Well, the first thing you have
+to understand is that the code generated inside parentheses results in a data
+strcuture called a Sequence, which is basically a list of data in a specific
+order. This means Sequences are a type of Positional data structure. For our
+purposes of this discussion, that means we can find a specific value in the
+Sequence using the square bracket notation, the <code>[$nth]</code> bit you see there on
+the end. This is the same number we passed into the subroutines. So this is how
+we tell the code in the parentheses which prime number to pull out.</p><p>You can imagine that in between the parentheses is every prime number that can
+exist from 0 to infinity (but that hasn&#39;t actually been calculated and so uses
+no memory). The number in the brackets chooses which number in that list to
+select, whether it be the 1st, 2nd, 3rd, 10th, or 10,232nd.</p><p>Now let&#39;s look at what&#39;s inside the parentheses in our line of code in the
+subroutine, the code that generates the Sequence. We can see our value <code>$x</code> in
+there representing every number possible, both primary and non-primary numbers.
+But, we don&#39;t want all numbers, we only want a list of all the primary numbers.
+So what we do is run the <code>grep</code> method on our infinite list of numbers by
+placing a <code>.</code> after <code>$x</code> and then <code>grep</code>. <code>grep</code> is named after
+the command <code>grep</code> which has been found on computers since the 70s to find text
+inside of lots of computer files on your hard disk. It&#39;s best to think of
+<code>grep</code> as a filter that keeps the stuff we want and removes the stuff we don&#39;t
+want from a list of things. And it is the <code>grep</code> method that generates our
+Sequence of prime numbers.</p><p>Now all that&#39;s left to do is tell grep what numbers we are interested in. We do
+that by passing an argument to <code>grep</code> called <code>*.is-prime</code>. Notice the colon
+immediately after <code>grep</code>. That indicates that that what follows is the argument
+we will be passing to the <code>grep</code> method.</p><p>So what exactly is the <code>*.is-prime</code> doing? You can think of it as a test that
+can be run on every number in the range. First we look at the first number 0 in
+the range and determine if it&#39;s prime with the <code>is-prime</code> method, which returns
+<code>True</code> if the number is prime and <code>False</code> if it isn&#39;t. If it&#39;s prime, grep puts
+it on our list of prime numbers. If it isn&#39;t prime, grep will filter it out and
+it won&#39;t go into the Sequence. Then we go to the next number to determine if
+it&#39;s prime and so on until we reach infinity.</p><p>But again we have to stress, and what makes this code so fast, is that we only
+do these calculations for the prime numbers we are interested in. It would be
+very wasteful to calculate the 1,000th prime number when we are only interested
+in the 5th.</p><p>You can you think of the <code>*</code> symbol, what Raku calls the &quot;Whatever&quot; object, as
+a placeholder for each number in our infinite list (kind of like how the &quot;glob&quot;
+character does in popular shell scripts). The <code>.is-prime</code> method which is run
+on the &quot;Whatever&quot; object runs a test on each number that will return <code>True</code> if
+the number is prime or <code>False</code> if it isn&#39;t. If <code>True</code>, grep puts the tested
+number into the Sequence, the list of all the prime numbers, which again, isn&#39;t
+actaullly calculated (an impossible task). It just does the minimum work
+necessary to determine the specific prime number we are looking for out of the
+theoretical series of all prime numbers that exist.</p><p>After the <code>get-prime</code> subroutine, we call it five different times, using a list of
+5 numbers using a <code>for loop</code>:</p><p><code>for 5, 50, 500, 5000, 50000 { get-prime $_ };</code></p><p>For each number in the list of numbers we supply, we run the code in the curly
+braces which, in turn, calls the <code>get-prime</code> subroutine for us. The technical
+term for this kind of looping process is called &quot;iteration&quot;.</p><p>Note the <code>$_</code> variable in the curly braces. It has a special meaning in Raku.
+It is called the &quot;topic variable.&quot; It&#39;s helpful to think of it to mean the
+&quot;topic&quot; of discussion. Each time we iterate over the list of our numbers, the
+topic variable gets assigned to the next number in the list and this becomes
+the value the <code>get-prime</code> receives for its <code>$nth</code> argument.</p><p>Wow, so that&#39;s a lot words to explain just a little bit of code. It
+demonstrates the power of Raku and how how efficient it can be. Amazingly, we
+can make this bit of code even more concise:</p><p><code>(for 5, 50, 500, 5000, 50000 { (^Inf :grep *.is-prime)[$_] }).say</code></p><p>And don&#39;t worry if this seems a little overwhelming. Most of Raku is much more
+straightforward than this example so don&#39;t let yourself get scared off. But as
+you can begin to see, Raku excels at taking hard problems and making them a
+whole lot easier, even problems that are nearly impossible or impractical in
+many other programming languages.</p><p>The brevity of Raku&#39;s code also makes it much easier to understand what a large
+code base is doing because the code won&#39;t be cluttered with dozens of lines of
+code. And, of course, fewer lines of code means fewer bugs. And for the bugs
+that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <div id="toc">
+                <div class="scrollsync">
+                <h6>
+<a aria-hidden="true" class="anchor" href="#on-this-page" id="on-this-page"><span aria-hidden="true" class="octicon octicon-link"></span></a>On This Page</h6><ul>
+<li>
+<a href="#rockin-with-raku">Rockin&#39; with Raku</a>
+<ul>
+<li><a href="#a-detailed-walk-through-of-code-for-finding-specific-prime-numbers">A Detailed Walk Through of Code for Finding Specific Prime Numbers</a></li>
+<li><a href="#how-it-works">How it works</a></li>
+</ul>
+</li>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 4, 2022  8:41 PM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
+            </div>
+        </div>
+        <script src="../js/scroll_sync.js"></script>
+        <script src="../js/zenscroll/zenscroll-min.js"></script>
+        <script>
+          zenscroll.setup(200, 50);
+          </script>
+    </body>
+
