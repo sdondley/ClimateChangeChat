@@ -46,16 +46,17 @@ want to wait around for your computer to count to infinity but you'd certainly
 run out of memory long before then anyway!
 
 Next we create a simple subroutine called `get-prime` that accepts a single
-argument called `$nth`, which is place inside a set of parentheses. We ensure
-that `$nth` is a defined integer object by slapping `Int:D` in front of it. The
-`Int` requires the caller to pass an Integer object. The `:D` bit ensures that
-it's a "definite" object, meaning that it actually has a value. Restricting the
-kinds of argument that can be passed to a subroutine is known as "type
-checking." But thanks to Raku's flexibility, we could have chosen to not type
-check our arguments. If you want to bang out a simple script without a lot of
-hassle and headache trying to keep the compiler happy, Raku will accomodate
-your desires and not make onerous demands that make your work unnecessarily
-tedious.
+argument called `$nth`, which is placed inside a set of parentheses. The
+parenthese and the code inside of it is part the the function's Signature,
+which is itself an object. We ensure that `$nth` is a defined integer object by
+slapping `Int:D` in front of it. The `Int` requires the caller to pass an
+Integer object. The `:D` bit ensures that it's a "definite" object, meaning
+that it actually has a value. Restricting the kinds of argument that can be
+passed to a subroutine is known as "type checking." But thanks to Raku's
+flexibility, we could have chosen to not type check our arguments. If you want
+to bang out a simple script without a lot of hassle and headache trying to keep
+the compiler happy, Raku will accomodate your desires and not make onerous
+demands that make your work unnecessarily tedious.
 
 Inside the subroutine is a single line of code consisting of a `say` routine
 that prints out the result of the expression to the right of it to standard
