@@ -47,7 +47,7 @@ run out of memory long before then anyway!
 
 Next we create a simple subroutine called `get-prime` that accepts a single
 argument called `$nth`, which is placed inside a set of parentheses. The
-parenthese and the code inside of it is part the the function's Signature,
+parentheses and the code inside of it is part the function's Signature,
 which is itself an object. We ensure that `$nth` is a defined integer object by
 slapping `Int:D` in front of it. The `Int` requires the caller to pass an
 Integer object. The `:D` bit ensures that it's a "definite" object, meaning
@@ -55,7 +55,7 @@ that it actually has a value. Restricting the kinds of argument that can be
 passed to a subroutine is known as "type checking." But thanks to Raku's
 flexibility, we could have chosen to not type check our arguments. If you want
 to bang out a simple script without a lot of hassle and headache trying to keep
-the compiler happy, Raku will accomodate your desires and not make onerous
+the compiler happy, Raku will accommodate your desires and not make onerous
 demands that make your work unnecessarily tedious.
 
 Inside the subroutine is a single line of code consisting of a `say` routine
@@ -68,7 +68,7 @@ separate line. Here it is:
 
 So how is the number printed calculated? Well, the first thing you have
 to understand is that the code inside the parentheses results in a data
-strcuture called a Sequence which is basically a list of data in a specific
+structure called a Sequence which is basically a list of data in a specific
 order. This means Sequences are a type of Positional data structure. For the
 purposes of this discussion, that means we can find a specific value in the
 Sequence using the square bracket notation, the `[$nth]` bit you see there on
@@ -85,7 +85,7 @@ the code that generates the Sequence. We can see our value `$x` in there
 representing every number possible, both primary and non-primary numbers. But,
 we don't want all numbers, we only want a list of all the primary numbers. So
 what we do is run the `grep` method on our infinite list of numbers by placing
-a `.` after `$x` follwed by a method called `grep`. `grep` is named after the
+a `.` after `$x`, followed by a method called `grep`. `grep` is named after the
 command `grep` found on computers since the 70s to find text inside of lots of
 computer files on your storage device. You can think of `grep` as a filter
 that creates a list of stuff. It puts the stuff you want on a list and keeps
