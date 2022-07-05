@@ -72,7 +72,7 @@ output, followed  by a newline character. Every time `get-prime` is called, a
 new number, the prime number calculated by the expression, is printed out on a
 separate line. Here it is:
 
-`say ($x.grep: *.is-prime)[$nth];`
+`say ($x.grep: *.is-prime)[$nth - 1];`
 
 So how is the number printed calculated? Well, the first thing you have
 to understand is that the code inside the parentheses results in a data
