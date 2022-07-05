@@ -37,8 +37,8 @@ Watch it flex!</p></div>
 
 <div><h2>
 <a aria-hidden="true" class="anchor" href="#a-detailed-walk-through-of-code-for-finding-specific-prime-numbers" id="a-detailed-walk-through-of-code-for-finding-specific-prime-numbers"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Detailed Walk Through of Code for Finding Specific Prime Numbers</h2><p>What&#39;s the 5th prime number? How about the 500th? 50,000th?! Easy (and super fast):</p><pre><code>my $x = ^Inf;
-sub get-prime(Int:D $nth) {
-    say ($x.grep: *.is-prime)[$nth];
+sub get-prime(Int:D $nth where * &gt; 0) {
+    say ($x.grep: *.is-prime)[$nth - 1];
 }
 for (5, 50, 500, 5000, 50000) { get-prime $_ };
 </code></pre><p>When we run this, we get the following output after just a second or two:</p><pre><code>13     # 5th prime
@@ -70,13 +70,15 @@ is itself an object. The Signature tells calling code what kind of parameters
 are acceptable to send to the subroutine. In <code>get-prime</code>&#39;s signature, we ensure
 that <code>$nth</code> is a defined integer object by slapping <code>Int:D</code> in front of it. The
 <code>Int</code> requires the caller to pass an Integer object. The <code>:D</code> bit ensures that
-it&#39;s a &quot;definite&quot; object, meaning that it actually has a value. Restricting the
-kinds of argument that can be passed to a subroutine is known as &quot;type
-checking.&quot; But thanks to Raku&#39;s flexibility, we could have chosen to not type
-check our arguments. If you want to bang out a simple script without a lot of
-hassle and headache trying to keep the compiler happy, Raku will accommodate
-your desires and not make onerous demands that make your work unnecessarily
-tedious.</p><p>Inside the subroutine is a single line of code consisting of a <code>say</code> routine
+it&#39;s a &quot;definite&quot; object, meaning that it actually has a value. We also add a
+nice touch by ensuring the number passed is greater than 0 with the <code>where * &gt; 0</code> because it doesn&#39;t make sense to ask for the 0th or -1st prime number. If
+you&#39;re you&#39;re wondering what the <code>*</code> symbol is, hang tight. We&#39;ll cover this
+symbol again shortly.</p><p>Restricting the kinds of argument that can be passed to a subroutine is known
+as &quot;type checking.&quot; But thanks to Raku&#39;s flexibility, we could have chosen to
+not type check our arguments. If you want to bang out a simple script without a
+lot of hassle and headache trying to keep the compiler happy, Raku will
+accommodate your desires and not make onerous demands that make your work
+unnecessarily tedious.</p><p>Inside the subroutine is a single line of code consisting of a <code>say</code> routine
 that prints out the result of the expression to the right of it to standard
 output, followed  by a newline character. Every time <code>get-prime</code> is called, a
 new number, the prime number calculated by the expression, and is printed out on a
@@ -85,9 +87,13 @@ to understand is that the code inside the parentheses results in a data
 structure called a Sequence which is basically a list of data in a specific
 order. This means Sequences are a type of Positional data structure. For the
 purposes of this discussion, that means we can find a specific value in the
-Sequence using the square bracket notation, the <code>[$nth]</code> bit you see there on
-the end where <code>$nth</code> is the value passed into the subroutine. So this is how we
-tell the code in the parentheses which prime number to pull out.</p><p>You can imagine that in between the parentheses is every prime number that can
+Sequence using the square bracket notation, the <code>[$nth - 1]</code> bit you see there
+on the end where <code>$nth</code> is the value passed into the subroutine.  So this is
+how we tell the code in the parentheses which prime number to pull out. Those
+new to programming may be wondering why we subtract &quot;1&quot; from <code>$nth</code>. This small
+touch makes the subroutine more intuitive to use because a Sequence&#39;s index
+number starts at &#39;0&#39;, not &#39;1&#39;. So to get the first element, we pass in a value
+of &quot;1&quot; which we gets reduced to &quot;0&quot; for us.</p><p>You can imagine that in between the parentheses is every prime number that can
 exist from 0 to infinity (but that hasn&#39;t actually been calculated and so uses
 no memory). The number in the brackets chooses which number in that list to
 select, whether it be the 1st, 2nd, 3rd, 10th, or 10,232nd.</p><p>Now let&#39;s look inside the parentheses in our line of code in the subroutine,
@@ -165,6 +171,7 @@ that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
 
 
 
+
             </div>
             <div id="toc">
                 <div class="scrollsync">
@@ -177,7 +184,7 @@ that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
 <li><a href="#how-it-works">How it works</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022 12:36 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022  1:03 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>

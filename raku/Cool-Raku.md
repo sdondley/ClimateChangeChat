@@ -15,8 +15,8 @@ What's the 5th prime number? How about the 500th? 50,000th?! Easy (and super fas
 
 ```
 my $x = ^Inf;
-sub get-prime(Int:D $nth) {
-    say ($x.grep: *.is-prime)[$nth];
+sub get-prime(Int:D $nth where * > 0) {
+    say ($x.grep: *.is-prime)[$nth - 1];
 }
 for (5, 50, 500, 5000, 50000) { get-prime $_ };
 ```
@@ -53,13 +53,18 @@ is itself an object. The Signature tells calling code what kind of parameters
 are acceptable to send to the subroutine. In `get-prime`'s signature, we ensure
 that `$nth` is a defined integer object by slapping `Int:D` in front of it. The
 `Int` requires the caller to pass an Integer object. The `:D` bit ensures that
-it's a "definite" object, meaning that it actually has a value. Restricting the
-kinds of argument that can be passed to a subroutine is known as "type
-checking." But thanks to Raku's flexibility, we could have chosen to not type
-check our arguments. If you want to bang out a simple script without a lot of
-hassle and headache trying to keep the compiler happy, Raku will accommodate
-your desires and not make onerous demands that make your work unnecessarily
-tedious.
+it's a "definite" object, meaning that it actually has a value. We also add a
+nice touch by ensuring the number passed is greater than 0 with the `where * >
+0` because it doesn't make sense to ask for the 0th or -1st prime number. If
+you're you're wondering what the `*` symbol is, hang tight. We'll cover this
+symbol again shortly.
+
+Restricting the kinds of argument that can be passed to a subroutine is known
+as "type checking." But thanks to Raku's flexibility, we could have chosen to
+not type check our arguments. If you want to bang out a simple script without a
+lot of hassle and headache trying to keep the compiler happy, Raku will
+accommodate your desires and not make onerous demands that make your work
+unnecessarily tedious.
 
 Inside the subroutine is a single line of code consisting of a `say` routine
 that prints out the result of the expression to the right of it to standard
@@ -74,9 +79,13 @@ to understand is that the code inside the parentheses results in a data
 structure called a Sequence which is basically a list of data in a specific
 order. This means Sequences are a type of Positional data structure. For the
 purposes of this discussion, that means we can find a specific value in the
-Sequence using the square bracket notation, the `[$nth]` bit you see there on
-the end where `$nth` is the value passed into the subroutine. So this is how we
-tell the code in the parentheses which prime number to pull out.
+Sequence using the square bracket notation, the `[$nth - 1]` bit you see there
+on the end where `$nth` is the value passed into the subroutine.  So this is
+how we tell the code in the parentheses which prime number to pull out. Those
+new to programming may be wondering why we subtract "1" from `$nth`. This small
+touch makes the subroutine more intuitive to use because a Sequence's index
+number starts at '0', not '1'. So to get the first element, we pass in a value
+of "1" which we gets reduced to "0" for us.
 
 You can imagine that in between the parentheses is every prime number that can
 exist from 0 to infinity (but that hasn't actually been calculated and so uses
