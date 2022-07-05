@@ -53,7 +53,7 @@ is itself an object. The Signature tells code calling `get-prime` what kind of
 parameters are acceptable to send. In `get-prime`'s signature, we ensure that
 `$nth` is a defined integer object by slapping `Int:D` in front of it. The
 `Int` requires the caller to pass an Integer object. The `:D` bit ensures that
-it's a "definite" object, meaning that it actually has a value. We also add a
+it's a "defined" object, meaning that it actually has a value. We also add a
 nice touch by ensuring the number passed is greater than 0 with the `where * >
 0` because it doesn't make sense to ask for the 0th or -1st prime number. If
 you're you're wondering what the `*` symbol is, hang tight. We'll cover this

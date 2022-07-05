@@ -5,6 +5,8 @@ A streaming diary of rather random stuff I'm taking notes on to keep track of sh
 # 2022
 ## July
 ### 5th
+* zef still seems broken
+    * https://github.com/Raku/ecosystem/issues/606#issuecomment-1171592334
 * Two different shootings yesterday that caused chaos
     * both at 4th of July events
         * one outside of Chicago
