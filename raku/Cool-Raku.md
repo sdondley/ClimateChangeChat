@@ -85,18 +85,18 @@ select, whether it be the 1st, 2nd, 3rd, 10th, or 10,232nd.
 
 Now let's look inside the parentheses in our line of code in the subroutine,
 the code that generates the Sequence. We can see our value `$x` in there
-representing every positive integer possible, both primary and non-primary numbers. But,
-we don't want all numbers, we only want a list of all the primary numbers. So
-what we do is run the `grep` method on our infinite list of numbers by placing
-a `.` after `$x`, followed by a method called `grep`. `grep` is named after the
-command `grep` found on computers since the 70s to find text inside of lots of
-computer files on your storage device. You can think of `grep` as a filter
-that creates a list of stuff. It puts the stuff you want on a list and keeps
-the stuff you don't want off of it. As you might guess, it's the `grep` method
-that generates our Sequence of prime numbers for us.
+representing every positive integer possible, both primary and non-primary
+numbers. But, we don't want all numbers, we only want a list of all the primary
+numbers. So what we do is run the `grep` method on our infinite list of numbers
+by placing a `.` after `$x`, followed by a method called `grep`. `grep` is
+named after the command `grep` found on computers since the 70s to find text
+inside of lots of computer files on your storage device. You can think of
+`grep` as a filter that creates a list of stuff. It puts the stuff you want on
+a list and keeps the stuff you don't want off of it. As you might guess, it's
+the `grep` method that generates our Sequence of prime numbers for us.
 
-Now all that's left to do is tell grep what numbers we are interested in. We do
-that by passing an argument to `grep`, expressed as `*.is-prime`. Notice the
+Now all that's left to do is to tell grep what numbers we want on our list. We
+do that by passing an argument to `grep`, expressed as `*.is-prime`. Notice the
 colon immediately after `grep`. That indicates that what follows is the
 argument we will be passing to the `grep` method.
 
