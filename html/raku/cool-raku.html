@@ -103,7 +103,11 @@ a list and keeps the stuff you don&#39;t want off of it. As you might guess, it&
 the <code>grep</code> method that generates our Sequence of prime numbers for us.</p><p>Now all that&#39;s left to do is to tell grep what numbers we want on our list. We
 do that by passing an argument to <code>grep</code>, expressed as <code>*.is-prime</code>. Notice the
 colon immediately after <code>grep</code>. That indicates that what follows is the
-argument we will be passing to the <code>grep</code> method.</p><p>So what exactly is the <code>*.is-prime</code> doing? It tells grep which stuff to place
+argument we will be passing to the <code>grep</code> method. Alternatively, we could do
+away with the colon and surround the <code>*.is-primate</code> argument with a set of
+parentheses. In line with one of Raku&#39;s mantras, &quot;There is more than one way to
+do it&quot; (TIMTOWTDI), it&#39;s up to you to decide what you think is most readable
+in a given situation.</p><p>So what exactly is the <code>*.is-prime</code> doing? It tells grep which stuff to place
 into the Sequence. You can think of it as a test that runs on every number in
 the range. First we look at the first number in the range, &#39;0&#39;, and determine
 if it&#39;s prime with the <code>is-prime</code> method, one of the many math functions baked
@@ -173,7 +177,7 @@ that do crop up, they&#39;ll be easier for you to isolate and squash.</p></div>
 <li><a href="#how-it-works">How it works</a></li>
 </ul>
 </li>
-</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022 12:32 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
+</ul></div><div id="update_date"><span id="update_label">Last updated: </span> July 5, 2022 12:36 AM</div><div id="publish_date"><span id="publish_label">First published: </span>July 4, 2022</div>
             </div>
         </div>
         <script src="../js/scroll_sync.js"></script>

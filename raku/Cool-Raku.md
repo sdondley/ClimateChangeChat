@@ -98,7 +98,11 @@ the `grep` method that generates our Sequence of prime numbers for us.
 Now all that's left to do is to tell grep what numbers we want on our list. We
 do that by passing an argument to `grep`, expressed as `*.is-prime`. Notice the
 colon immediately after `grep`. That indicates that what follows is the
-argument we will be passing to the `grep` method.
+argument we will be passing to the `grep` method. Alternatively, we could do
+away with the colon and surround the `*.is-primate` argument with a set of
+parentheses. In line with one of Raku's mantras, "There is more than one way to
+do it" (TIMTOWTDI), it's up to you to decide what you think is most readable
+in a given situation.
 
 So what exactly is the `*.is-prime` doing? It tells grep which stuff to place
 into the Sequence. You can think of it as a test that runs on every number in
