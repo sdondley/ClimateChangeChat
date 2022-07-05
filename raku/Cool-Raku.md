@@ -85,7 +85,7 @@ select, whether it be the 1st, 2nd, 3rd, 10th, or 10,232nd.
 
 Now let's look inside the parentheses in our line of code in the subroutine,
 the code that generates the Sequence. We can see our value `$x` in there
-representing every number possible, both primary and non-primary numbers. But,
+representing every positive integer possible, both primary and non-primary numbers. But,
 we don't want all numbers, we only want a list of all the primary numbers. So
 what we do is run the `grep` method on our infinite list of numbers by placing
 a `.` after `$x`, followed by a method called `grep`. `grep` is named after the
