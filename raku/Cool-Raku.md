@@ -83,10 +83,10 @@ Sequence using the square bracket notation, the `[$nth - 1]` bit you see there
 on the end where `$nth` is the value passed into the subroutine.  So this is
 how we tell the code in the parentheses which prime number to pull out. Those
 new to programming may be wondering why we subtract "1" from `$nth`. This small
-touch makes the subroutine more intuitive to use because a Sequence's index
-number starts at '0', not '1'. So to get the first element, we pass in a value
-of "1" which we gets reduced to "0" for us. If we didn't subtract one, passing
-in a "5" would actually return the 6th prime number.
+nice touch makes the subroutine more intuitive to use because a Sequence's
+index number starts at '0', not '1'. So to get the first element, we pass in a
+value of "1" which we gets reduced to "0" for us. If we didn't subtract one,
+passing in a "5" would actually return the 6th prime number.
 
 You can imagine that in between the parentheses is every prime number that can
 exist from 0 to infinity (but that hasn't actually been calculated and so uses
