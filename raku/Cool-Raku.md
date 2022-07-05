@@ -61,7 +61,7 @@ demands that make your work unnecessarily tedious.
 Inside the subroutine is a single line of code consisting of a `say` routine
 that prints out the result of the expression to the right of it to standard
 output, followed  by a newline character. Every time `get-prime` is called, a
-new number, the prime number calculated by the express, and is printed out on a
+new number, the prime number calculated by the expression, and is printed out on a
 separate line. Here it is:
 
 `say ($x.grep: *.is-prime)[$nth];`
