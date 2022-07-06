@@ -10,6 +10,7 @@
         - [Links](#links-3)
 - [What Do They Talk about?](#what-do-they-talk-about)
         - [Highlights of Show](#highlights-of-show)
+        - [Related Writings of Mine](#related-writings-of-mine)
 
 # Decoding the Gurus
 
@@ -60,4 +61,5 @@
 * interview with Sam Harris
     * Came on the rebut Chris and Matt 
 
-...more soon
+### Related Writings of Mine
+* [Marshall McLuhan vs. Jordan Peterson](Marshall McLuhan vs Jordan Peterson.md)
