@@ -41,3 +41,5 @@ about state of the world today? Well, let's take a look, shall we?
 | Most controversial idea   | "Hot" media vs. "Cool" media                  | Fat women are ugly                                              |
 | Disposition               | Sober-minded, scholarly, objective            | Choleric and opinionated with frequent bouts of weepiness       |
 | Had the ear of            | Successful corporate marketing men            | Depressed incels                                                |
+
+It would appear that the more things stay the same, the more they change.
