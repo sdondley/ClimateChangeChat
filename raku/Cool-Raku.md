@@ -159,7 +159,7 @@ the `$nth` parameter the `get-prime` sub receives for its `$nth` argument.
 
 Wow, so that's well over 1,000 words to explain just four lines of Raku code. It
 demonstrates the power of Raku and how how efficient it can be. Amazingly, we
-can make this bit of code even more concise:
+can [make](make) this bit of code even more concise:
 
 for (5, 50, 500, 5000, 50000) { ((^Inf).grep: *.is-prime)[$_ - 1].say };
 
