@@ -161,7 +161,7 @@ Wow, so that's well over 1,000 words to explain just four lines of Raku code. It
 demonstrates the power of Raku and how how efficient it can be. Amazingly, we
 can make this bit of code even more concise:
 
-`(for 5, 50, 500, 5000, 50000 { (^Inf :grep *.is-prime)[$_] }).say`
+for (5, 50, 500, 5000, 50000) { ((^Inf).grep: *.is-prime)[$_ - 1].say };
 
 And don't worry if this seems a little overwhelming. Most of Raku is much more
 straightforward than this example so don't let yourself get scared off. The

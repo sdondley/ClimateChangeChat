@@ -7,6 +7,7 @@
 * [Cool Raku](Cool-Raku)
 * [Variables](Variables)
 * [Lists](Lists)
+* [Enumeration](Enumeration)
 * [Rakubrew](Rakubrew)
 * [Pairs](Pairs)
 * [Lexpad Entry](Lexpad-Entry)
