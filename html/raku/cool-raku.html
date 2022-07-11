@@ -391,7 +391,7 @@ the <code>$nth</code> parameter the <code>get-prime</code> sub receives for its 
 <p>Wow, so that's well over 1,000 words to explain just four lines of Raku code. It
 demonstrates the power of Raku and how how efficient it can be. Amazingly, we
 can <a href="make">make</a> this bit of code even more concise:</p>
-<p>for (5, 50, 500, 5000, 50000) { ((^Inf).grep: *.is-prime)[$_ - 1].say };</p>
+<p><code>for (5, 50, 500, 5000, 50000) { ((^Inf).grep: *.is-prime)[$_ - 1].say };</code></p>
 <p>And don't worry if this seems a little overwhelming. Most of Raku is much more
 straightforward than this example so don't let yourself get scared off. The
 larger takeaway is Raku excels at taking hard problems and making them a
